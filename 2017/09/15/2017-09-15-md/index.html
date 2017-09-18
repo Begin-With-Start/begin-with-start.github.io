@@ -97,13 +97,13 @@
 
 
 
-<meta name="description" content="android寻找资源策略 values 两种系统识别文件夹，细分三种values-XXXXxXXXX values-swXXXdp values-whXXXdp三种系统识别的文件夹命令分别是指定分辨率，适配优先宽度，宽高适配 几种方式系统加载策略的探索项目中使用到了多个values来进行适配的问题，想从根本上弄清楚系统在加载的时候，对文件夹取用策略的判断问题，用实际例子对比了一下swXXXdp">
+<meta name="description" content="android寻找资源策略 values 两种系统识别文件夹，细分三种values-XXXXxXXXX values-swXXXdp (values-hXXXdp values-wXXXdp)三种系统识别的文件夹命令分别是指定分辨率，适配优先宽度，宽高适配 几种方式系统加载策略的探索项目中使用到了多个values来进行适配的问题，想从根本上弄清楚系统在加载的时候，对文件夹取用策略的判断问题，用实">
 <meta name="keywords" content="工程中values实战总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="values在碎片化各种屏幕中的系统加载策略问题探讨及ui适配的选择">
 <meta property="og:url" content="https://begin-with-start.github.io/hexiaofei.github.io/2017/09/15/2017-09-15-md/index.html">
 <meta property="og:site_name" content="minifly">
-<meta property="og:description" content="android寻找资源策略 values 两种系统识别文件夹，细分三种values-XXXXxXXXX values-swXXXdp values-whXXXdp三种系统识别的文件夹命令分别是指定分辨率，适配优先宽度，宽高适配 几种方式系统加载策略的探索项目中使用到了多个values来进行适配的问题，想从根本上弄清楚系统在加载的时候，对文件夹取用策略的判断问题，用实际例子对比了一下swXXXdp">
+<meta property="og:description" content="android寻找资源策略 values 两种系统识别文件夹，细分三种values-XXXXxXXXX values-swXXXdp (values-hXXXdp values-wXXXdp)三种系统识别的文件夹命令分别是指定分辨率，适配优先宽度，宽高适配 几种方式系统加载策略的探索项目中使用到了多个values来进行适配的问题，想从根本上弄清楚系统在加载的时候，对文件夹取用策略的判断问题，用实">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://cc.cocimg.com/api/uploads/20151029/1446106231700434.jpg">
 <meta property="og:image" content="https://developer.android.com/images/resources/res-selection-flowchart.png">
@@ -115,10 +115,10 @@
 <meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/4-2.png">
 <meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/1-1.png">
 <meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/1-2.png">
-<meta property="og:updated_time" content="2017-09-18T02:51:22.281Z">
+<meta property="og:updated_time" content="2017-09-18T03:03:11.400Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="values在碎片化各种屏幕中的系统加载策略问题探讨及ui适配的选择">
-<meta name="twitter:description" content="android寻找资源策略 values 两种系统识别文件夹，细分三种values-XXXXxXXXX values-swXXXdp values-whXXXdp三种系统识别的文件夹命令分别是指定分辨率，适配优先宽度，宽高适配 几种方式系统加载策略的探索项目中使用到了多个values来进行适配的问题，想从根本上弄清楚系统在加载的时候，对文件夹取用策略的判断问题，用实际例子对比了一下swXXXdp">
+<meta name="twitter:description" content="android寻找资源策略 values 两种系统识别文件夹，细分三种values-XXXXxXXXX values-swXXXdp (values-hXXXdp values-wXXXdp)三种系统识别的文件夹命令分别是指定分辨率，适配优先宽度，宽高适配 几种方式系统加载策略的探索项目中使用到了多个values来进行适配的问题，想从根本上弄清楚系统在加载的时候，对文件夹取用策略的判断问题，用实">
 <meta name="twitter:image" content="http://cc.cocimg.com/api/uploads/20151029/1446106231700434.jpg">
 
 
@@ -341,7 +341,7 @@
       
         <p><img src="http://cc.cocimg.com/api/uploads/20151029/1446106231700434.jpg" alt="image"></p>
 <h2 id="android寻找资源策略"><a href="#android寻找资源策略" class="headerlink" title="android寻找资源策略"></a>android寻找资源策略</h2><p><img src="https://developer.android.com/images/resources/res-selection-flowchart.png" alt="image"></p>
-<h2 id="values-两种系统识别文件夹，细分三种"><a href="#values-两种系统识别文件夹，细分三种" class="headerlink" title="values 两种系统识别文件夹，细分三种"></a>values 两种系统识别文件夹，细分三种</h2><p>values-XXXXxXXXX values-swXXXdp values-whXXXdp三种系统识别的文件夹命令分别是指定分辨率，适配优先宽度，宽高适配</p>
+<h2 id="values-两种系统识别文件夹，细分三种"><a href="#values-两种系统识别文件夹，细分三种" class="headerlink" title="values 两种系统识别文件夹，细分三种"></a>values 两种系统识别文件夹，细分三种</h2><p>values-XXXXxXXXX values-swXXXdp (values-hXXXdp values-wXXXdp)三种系统识别的文件夹命令分别是指定分辨率，适配优先宽度，宽高适配</p>
 <h2 id="几种方式系统加载策略的探索"><a href="#几种方式系统加载策略的探索" class="headerlink" title="几种方式系统加载策略的探索"></a>几种方式系统加载策略的探索</h2><p>项目中使用到了多个values来进行适配的问题，想从根本上弄清楚系统在加载的时候，对文件夹取用策略的判断问题，用实际例子对比了一下swXXXdp与values-1920X1080和默认的values的加载其中的策略指定问题，混合模式下，系统对values的取用问题。<br>ok，开始吧。</p>
 <p>添加values-1790X1080,values-1794X1076,values-1794X1080与values-sw361dp<br>前三个文件夹用来对比在跟屏幕真实分辨率相差一些数值的时候，系统会加载那个文件夹下的配置。<br>先用三个文件夹运行，观察结果：</p>
 <p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/2-1.png" alt="image"></p>
@@ -358,7 +358,7 @@
 <p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/1-1.png" alt="image"></p>
 <p>运行结果：</p>
 <p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/1-2.png" alt="image"></p>
-<p>google还是对dp情有独钟啊，1152/3= 384dp跟360还差那么多，要是在一个水平线上来进行对比的话，真真的应该加载1920X1152啊，完美适配的呢，说好的做彼此的天屎的，呸，天屎，算了。<br>但是不管google怎么优先级，从细分上来说，如果是为了适配smartbar这个坑的话，一般来说，用px的values-1920X1152方式来进行细分适配要更加的精确，更能完美处理掉这个问题，毕竟还是在同一个水平上来处理的。但是官方是推sw-XXXdp的。<br>综上所述：<br>values-swXXXdp  &gt; values-XXXXxXXXX  &gt; values ;<br>注： values-XXXXXxXXXXX 方式的时候，通过宽高跟屏幕分辨率的差值绝对值来进行对比，优先高。<br>好吧，可能有人在等源码，我一起放上来吧</p>
+<h2 id="算是一个小总结"><a href="#算是一个小总结" class="headerlink" title="算是一个小总结"></a>算是一个小总结</h2><p>google还是对dp情有独钟啊，1152/3= 384dp跟360还差那么多，要是在一个水平线上来进行对比的话，真真的应该加载1920X1152啊，完美适配的呢，说好的做彼此的天屎的，呸，天屎，算了。<br>但是不管google怎么优先级，从细分上来说，如果是为了适配smartbar这个坑的话，一般来说，用px的values-1920X1152方式来进行细分适配要更加的精确，更能完美处理掉这个问题，毕竟还是在同一个水平上来处理的。但是官方是推sw-XXXdp的。<br>综上所述：<br>values-swXXXdp  &gt; values-XXXXxXXXX  &gt; values ;<br>注： values-XXXXXxXXXXX 方式的时候，通过宽高跟屏幕分辨率的差值绝对值来进行对比，优先高。<br>好吧，可能有人在等源码，我一起放上来吧</p>
 <p><a href="https://github.com/Begin-With-Start/Adaptation.git" target="_blank" rel="external">传送门之大传送之术</a></p>
 
       
@@ -386,6 +386,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/hexiaofei.github.io/2017/09/18/so-source-design/" rel="prev" title="so���ܽ��ȹ����е�so�Ᵽ������">
+                so���ܽ��ȹ����е�so�Ᵽ������ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -462,7 +478,7 @@
             
               <a href="/hexiaofei.github.io/archives">
             
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -475,7 +491,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -517,7 +533,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#android寻找资源策略"><span class="nav-number">1.</span> <span class="nav-text">android寻找资源策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#values-两种系统识别文件夹，细分三种"><span class="nav-number">2.</span> <span class="nav-text">values 两种系统识别文件夹，细分三种</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几种方式系统加载策略的探索"><span class="nav-number">3.</span> <span class="nav-text">几种方式系统加载策略的探索</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#android寻找资源策略"><span class="nav-number">1.</span> <span class="nav-text">android寻找资源策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#values-两种系统识别文件夹，细分三种"><span class="nav-number">2.</span> <span class="nav-text">values 两种系统识别文件夹，细分三种</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几种方式系统加载策略的探索"><span class="nav-number">3.</span> <span class="nav-text">几种方式系统加载策略的探索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算是一个小总结"><span class="nav-number">4.</span> <span class="nav-text">算是一个小总结</span></a></li></ol></div>
             
 
           </div>
