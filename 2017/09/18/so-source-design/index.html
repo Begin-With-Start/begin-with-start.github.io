@@ -108,7 +108,7 @@
 <meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20170918113924.jpg">
 <meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%AF%BC%E5%9B%BE.png">
 <meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/demo3.gif.gif">
-<meta property="og:updated_time" content="2017-09-18T04:43:20.820Z">
+<meta property="og:updated_time" content="2017-09-18T04:44:56.839Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="so库全解析">
 <meta name="twitter:description" content="google android系统so库比较多的原因为适配众多的cpu架构，实际就是指令集的区别，在开始从复杂指令集改动到简易指令集的微软架构之后，又分出若干阵营，那么这个地方就不展开了，展开我怕篇幅不太够啊，少年。 android cpu架构分类android 当前支持的七种cpu架构Android系统目前支持以下七种不同的CPU架构：ARMv5，ARMv7 (从2010年起)，x86 (从20">
@@ -214,9 +214,9 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/hexiaofei.github.io/tags" rel="section">
+          <a href="/hexiaofei.github.io/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -344,7 +344,7 @@
 <h2 id="android找so库对于软件开发影响"><a href="#android找so库对于软件开发影响" class="headerlink" title="android找so库对于软件开发影响"></a>android找so库对于软件开发影响</h2><p>从根本上来说，系统只会把他区分架构的文件夹整个复制到data目录，那么造成一个问题就是，每个架构的文件夹下都应该是so库的全量，如果三方服务供应商，只给了一个armeabi-v7a 的架构，而工程中准备只放一个armeabi的文件夹来减小包大小，那么应该将v7a中的so库拷贝到armeabi中。</p>
 <p>同时在运行在androidstudio工程中的build.gradle defaultConfig 中添加：<br>    ndk {<br>            abiFilters “armeabi”<br>        }<br>在打包中，只包含armeabi的架构。</p>
 <h1 id="大厂对于so架构的一些取舍"><a href="#大厂对于so架构的一些取舍" class="headerlink" title="大厂对于so架构的一些取舍"></a>大厂对于so架构的一些取舍</h1><p>armeabi-v7a : facebook , twitter<br>armeabi:    淘宝 微信<br>armeabi :   淘票票</p>
-<p>还是来一个图来说明这个东西吧，毕竟没图你说个**啊：</p>
+<p>还是来一个图来说明这个东西吧，毕竟没图你说个啥啊：</p>
 <p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/demo3.gif.gif" alt="image"></p>
 <h1 id="我可以大概算一个总结"><a href="#我可以大概算一个总结" class="headerlink" title="我可以大概算一个总结"></a>我可以大概算一个总结</h1><p>那么实际中我们的取舍遵从的原则：<br>1.为减小体积，只保留armeabi与armeabi-v7a，一般只保留一个<br>2.若只有一个架构，那么其他架构中的so，保留的文件夹下有有全量。</p>
 
