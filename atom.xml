@@ -3,11 +3,11 @@
   <title>Begin-With-Start</title>
   
   
-  <link href="/hexiaofei.github.io/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="https://begin-with-start.github.io/hexiaofei.github.io/"/>
+  <link href="https://begin-with-start.github.io/"/>
   <updated>2017-09-18T06:35:57.905Z</updated>
-  <id>https://begin-with-start.github.io/hexiaofei.github.io/</id>
+  <id>https://begin-with-start.github.io/</id>
   
   <author>
     <name>hexiaofei</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>so库全解析</title>
-    <link href="https://begin-with-start.github.io/hexiaofei.github.io/2017/09/18/so-source-design/"/>
-    <id>https://begin-with-start.github.io/hexiaofei.github.io/2017/09/18/so-source-design/</id>
+    <link href="https://begin-with-start.github.io/2017/09/18/so-source-design/"/>
+    <id>https://begin-with-start.github.io/2017/09/18/so-source-design/</id>
     <published>2017-09-18T03:05:25.000Z</published>
     <updated>2017-09-18T06:35:57.905Z</updated>
     
@@ -31,23 +31,23 @@
     
     </summary>
     
-      <category term="so库实战" scheme="https://begin-with-start.github.io/hexiaofei.github.io/categories/so%E5%BA%93%E5%AE%9E%E6%88%98/"/>
+      <category term="so库实战" scheme="https://begin-with-start.github.io/categories/so%E5%BA%93%E5%AE%9E%E6%88%98/"/>
     
     
-      <category term="so" scheme="https://begin-with-start.github.io/hexiaofei.github.io/tags/so/"/>
+      <category term="工程" scheme="https://begin-with-start.github.io/tags/%E5%B7%A5%E7%A8%8B/"/>
     
-      <category term="工程" scheme="https://begin-with-start.github.io/hexiaofei.github.io/tags/%E5%B7%A5%E7%A8%8B/"/>
+      <category term="实战" scheme="https://begin-with-start.github.io/tags/%E5%AE%9E%E6%88%98/"/>
     
-      <category term="实战" scheme="https://begin-with-start.github.io/hexiaofei.github.io/tags/%E5%AE%9E%E6%88%98/"/>
+      <category term="so" scheme="https://begin-with-start.github.io/tags/so/"/>
     
-      <category term="应用" scheme="https://begin-with-start.github.io/hexiaofei.github.io/tags/%E5%BA%94%E7%94%A8/"/>
+      <category term="应用" scheme="https://begin-with-start.github.io/tags/%E5%BA%94%E7%94%A8/"/>
     
   </entry>
   
   <entry>
     <title>values在碎片化各种屏幕中的系统加载策略问题探讨及ui适配的选择</title>
-    <link href="https://begin-with-start.github.io/hexiaofei.github.io/2017/09/15/2017-09-15-md/"/>
-    <id>https://begin-with-start.github.io/hexiaofei.github.io/2017/09/15/2017-09-15-md/</id>
+    <link href="https://begin-with-start.github.io/2017/09/15/2017-09-15-md/"/>
+    <id>https://begin-with-start.github.io/2017/09/15/2017-09-15-md/</id>
     <published>2017-09-15T08:58:25.000Z</published>
     <updated>2017-09-18T06:33:15.665Z</updated>
     
@@ -59,16 +59,16 @@
     
     </summary>
     
-      <category term="values解析" scheme="https://begin-with-start.github.io/hexiaofei.github.io/categories/values%E8%A7%A3%E6%9E%90/"/>
+      <category term="values解析" scheme="https://begin-with-start.github.io/categories/values%E8%A7%A3%E6%9E%90/"/>
     
     
-      <category term="工程" scheme="https://begin-with-start.github.io/hexiaofei.github.io/tags/%E5%B7%A5%E7%A8%8B/"/>
+      <category term="工程" scheme="https://begin-with-start.github.io/tags/%E5%B7%A5%E7%A8%8B/"/>
     
-      <category term="实战" scheme="https://begin-with-start.github.io/hexiaofei.github.io/tags/%E5%AE%9E%E6%88%98/"/>
+      <category term="values" scheme="https://begin-with-start.github.io/tags/values/"/>
     
-      <category term="values" scheme="https://begin-with-start.github.io/hexiaofei.github.io/tags/values/"/>
+      <category term="实战" scheme="https://begin-with-start.github.io/tags/%E5%AE%9E%E6%88%98/"/>
     
-      <category term="总结" scheme="https://begin-with-start.github.io/hexiaofei.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+      <category term="总结" scheme="https://begin-with-start.github.io/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
