@@ -276,7 +276,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/hexiaofei.github.io/2017/09/18/so-source-design/" itemprop="url">so���ܽ��ȹ����е�so�Ᵽ������</a></h1>
+                <a class="post-title-link" href="/hexiaofei.github.io/2017/09/18/so-source-design/" itemprop="url">so库总结既工程中的so库保留建议</a></h1>
         
 
         <div class="post-meta">
@@ -329,18 +329,18 @@
         
           
             <p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20170918113924.jpg" alt="image"></p>
-<h1 id="google-androidϵͳso���L϶���ԭ��"><a href="#google-androidϵͳso���L϶���ԭ��" class="headerlink" title="google androidϵͳso���Ƚ϶���ԭ��"></a>google androidϵͳso���Ƚ϶���ԭ��</h1><p>Ϊ�����ڶ���cpu�ܹ���ʵ�ʾ���ָ����������ڿ�ʼ�Ӹ���ָ��Ķ�������ָ���΢���ܹ�֮�����ֳַ�������Ӫ����ô�����ط��Ͳ�չ���ˣ�չ������ƪ����̫���������ꡣ</p>
-<h1 id="anroidcpu�ܹ�����"><a href="#anroidcpu�ܹ�����" class="headerlink" title="anroidcpu�ܹ�����"></a>anroidcpu�ܹ�����</h1><h2 id="android-��j֧�ֵ�����cpu�ܹ�"><a href="#android-��j֧�ֵ�����cpu�ܹ�" class="headerlink" title="android ��ǰ֧�ֵ�����cpu�ܹ�"></a>android ��ǰ֧�ֵ�����cpu�ܹ�</h2><p>AndroidϵͳĿǰ֧���������ֲ�ͬ��CPU�ܹ���ARMv5��ARMv7 (��2010����)��x86 (��2011����)��MIPS (��2012����)��ARMv8��MIPS64��x86_64 (��2014����)��ÿһ�ֶ�������һ����Ӧ��ABI��<br>~ABI Ӧ�ó��������ƽӿ�(Application binary interface)�����˶������ļ�(so��)������������Ӧ��ϵͳ�ϡ�</p>
-<h2 id="y��cpu�ܹ���Ӧ��һ��ABI"><a href="#y��cpu�ܹ���Ӧ��һ��ABI" class="headerlink" title="ÿ��cpu�ܹ���Ӧ��һ��ABI"></a>ÿ��cpu�ܹ���Ӧ��һ��ABI</h2><p>armeabi��armeabi-v7a��x86��mips��arm64-v8a��mips64��x86_64</p>
-<h1 id="android����zѰ��so��ԭ��"><a href="#android����zѰ��so��ԭ��" class="headerlink" title="android����ȥѰ��so��ԭ��"></a>android����ȥѰ��so��ԭ��</h1><h2 id="android����zѰ��so��ԭ��ͼ��"><a href="#android����zѰ��so��ԭ��ͼ��" class="headerlink" title="android����ȥѰ��so��ԭ��ͼ��"></a>android����ȥѰ��so��ԭ��ͼ��</h2><p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%AF%BC%E5%9B%BE.png" alt="image"></p>
-<p>androidϵͳѰ��so����˳���������ּܹ�����ȥѰ�����������ļܹ��ļ��У������Ҳ������������ݵļܹ�Ѱ�ң�ƥ���ܹ��ɹ��󣬼��������ܹ������е�so��data�ļ����У�������data���Ҳ���Ӧ����ʹ�õ���so�⣬��ô�ᱨ�쳣��so link�����ȵȣ������ٵ������ܹ���ȥɨ�衣</p>
-<h2 id="������Ҫ���׵ĸ���"><a href="#������Ҫ���׵ĸ���" class="headerlink" title="������Ҫ���׵ĸ���"></a>������Ҫ���׵ĸ���</h2><h3 id="��ABI��"><a href="#��ABI��" class="headerlink" title="��ABI��"></a>��ABI��</h3><p>��ABI�⣺ ��ϵͳӰ�챾��������Ӧ��ABI��<br>����ABI�⣺ ��ϵͳҲ֧�ֵ�ABI��Ӧ<br>����Ϊʵ���������ܣ�Ӧ���ṩ��abi��</p>
-<h3 id="�����ܹ���֧�ֵ�ABI"><a href="#�����ܹ���֧�ֵ�ABI" class="headerlink" title="�����ܹ���֧�ֵ�ABI"></a>�����ܹ���֧�ֵ�ABI</h3><p>X86 �� ����������armeabi/armeabi-v7a ��Ҫ��ABI��X86,����ABI��armeabi-v7a<br>mips:  ֻ��������ABI��mips(���Ǽ��������ֻ������Ժ���)<br>armeabi-v7a �� �� armeabi-v7a �� ����armeabi</p>
-<h3 id="ֻ�sһ�ּܹ���o��"><a href="#ֻ�sһ�ּܹ���o��" class="headerlink" title="ֻ�ṩһ�ּܹ���ȱ��"></a>ֻ�ṩһ�ּܹ���ȱ��</h3><p>ֻ�ṩһ�ּܹ��ŵ㣺���Լ�С��������<br>ȱ�㣺 ֻ�ṩһ�ּܹ��������������ܹ�����ô��Ӱ�쵽���ܺͼ��ݣ�ͬʱҲ����ʧ��ר��Ϊ64λ�Ż������ܡ�</p>
-<h2 id="android��so��������������Ӱ��"><a href="#android��so��������������Ӱ��" class="headerlink" title="android��so��������������Ӱ��"></a>android��so��������������Ӱ��</h2><p>�Ӹ�������˵��ϵͳֻ���������ּܹ����ļ����������Ƶ�dataĿ¼����ô����һ���������ǣ�ÿ���ܹ����ļ����¶�Ӧ����so����ȫ������������������Ӧ�̣�ֻ����һ��armeabi-v7a �ļܹ�����������׼��ֻ��һ��armeabi���ļ�������С����С����ôӦ�ý�v7a�е�so�⿽����armeabi�С�</p>
-<p>ͬʱ��������androidstudio�����е�build.gradle defaultConfig �����ӣ�<br>    ndk {<br>            abiFilters “armeabi”<br>        }<br>�ڴ����У�ֻ����armeabi�ļܹ���</p>
-<h1 id="�󳧶���so�ܹ���һЩȡ��"><a href="#�󳧶���so�ܹ���һЩȡ��" class="headerlink" title="�󳧶���so�ܹ���һЩȡ��"></a>�󳧶���so�ܹ���һЩȡ��</h1><p>armeabi-v7a : facebook , twitter<br>armeabi:    �Ա� ΢��<br>armeabi :   ��ƱƱ</p>
-<p>������һ��ͼ��˵�����������ɣ��Ͼ�ûͼ��˵��**����</p>
+<h1 id="google-android系统so库比较多的原因"><a href="#google-android系统so库比较多的原因" class="headerlink" title="google android系统so库比较多的原因"></a>google android系统so库比较多的原因</h1><p>为适配众多的cpu架构，实际就是指令集的区别，在开始从复杂指令集改动到简易指令集的微软架构之后，又分出若干阵营，那么这个地方就不展开了，展开我怕篇幅不太够啊，少年。</p>
+<h1 id="anroidcpu架构分类"><a href="#anroidcpu架构分类" class="headerlink" title="anroidcpu架构分类"></a>anroidcpu架构分类</h1><h2 id="android-当前支持的七种cpu架构"><a href="#android-当前支持的七种cpu架构" class="headerlink" title="android 当前支持的七种cpu架构"></a>android 当前支持的七种cpu架构</h2><p>Android系统目前支持以下七种不同的CPU架构：ARMv5，ARMv7 (从2010年起)，x86 (从2011年起)，MIPS (从2012年起)，ARMv8，MIPS64和x86_64 (从2014年起)，每一种都关联着一个相应的ABI。<br>~ABI 应用程序二进制接口(Application binary interface)定义了二进制文件(so库)如何运行在相应的系统上。</p>
+<h2 id="每种cpu架构对应着一个ABI"><a href="#每种cpu架构对应着一个ABI" class="headerlink" title="每种cpu架构对应着一个ABI"></a>每种cpu架构对应着一个ABI</h2><p>armeabi，armeabi-v7a，x86，mips，arm64-v8a，mips64，x86_64</p>
+<h1 id="android如何去寻找so库原理"><a href="#android如何去寻找so库原理" class="headerlink" title="android如何去寻找so库原理"></a>android如何去寻找so库原理</h1><h2 id="android如何去寻找so库原理图解"><a href="#android如何去寻找so库原理图解" class="headerlink" title="android如何去寻找so库原理图解"></a>android如何去寻找so库原理图解</h2><p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%AF%BC%E5%9B%BE.png" alt="image"></p>
+<p>android系统寻找so库的顺序，先区分架构，再去寻找完美适配的架构文件夹，若果找不到继续向兼容的架构寻找，匹配架构成功后，加载这个架构下所有的so到data文件夹中，如果在data中找不到应用中使用到的so库，那么会报异常，so link错误等等，不会再到其他架构中去扫描。</p>
+<h2 id="几个需要明白的概念"><a href="#几个需要明白的概念" class="headerlink" title="几个需要明白的概念"></a>几个需要明白的概念</h2><h3 id="主ABI库"><a href="#主ABI库" class="headerlink" title="主ABI库"></a>主ABI库</h3><p>主ABI库： 与系统影响本身机器对应的ABI库<br>辅助ABI库： 与系统也支持的ABI对应<br>而，为实现最佳性能，应该提供主abi库</p>
+<h3 id="各个架构库支持的ABI"><a href="#各个架构库支持的ABI" class="headerlink" title="各个架构库支持的ABI"></a>各个架构库支持的ABI</h3><p>X86 ： 可以运行在armeabi/armeabi-v7a 主要的ABI是X86,辅助ABI是armeabi-v7a<br>mips:  只定义了主ABI是mips(但是极少用于手机，可以忽略)<br>armeabi-v7a ： 主 armeabi-v7a ， 辅助armeabi</p>
+<h3 id="只提供一种架构优缺点"><a href="#只提供一种架构优缺点" class="headerlink" title="只提供一种架构优缺点"></a>只提供一种架构优缺点</h3><p>只提供一种架构优点：可以减小包的体积<br>缺点： 只提供一种架构，而忽视其他架构，那么会影响到性能和兼容，同时也将丢失掉专门为64位优化的性能。</p>
+<h2 id="android找so库对于软件开发影响"><a href="#android找so库对于软件开发影响" class="headerlink" title="android找so库对于软件开发影响"></a>android找so库对于软件开发影响</h2><p>从根本上来说，系统只会把他区分架构的文件夹整个复制到data目录，那么造成一个问题就是，每个架构的文件夹下都应该是so库的全量，如果三方服务供应商，只给了一个armeabi-v7a 的架构，而工程中准备只放一个armeabi的文件夹来减小包大小，那么应该将v7a中的so库拷贝到armeabi中。</p>
+<p>同时在运行在androidstudio工程中的build.gradle defaultConfig 中添加：<br>    ndk {<br>            abiFilters “armeabi”<br>        }<br>在打包中，只包含armeabi的架构。</p>
+<h1 id="大厂对于so架构的一些取舍"><a href="#大厂对于so架构的一些取舍" class="headerlink" title="大厂对于so架构的一些取舍"></a>大厂对于so架构的一些取舍</h1><p>armeabi-v7a : facebook , twitter<br>armeabi:    淘宝 微信<br>armeabi :   淘票票</p>
+<p>还是来一个图来说明这个东西吧，毕竟没图你说个**啊：</p>
 <p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/demo3.gif.gif" alt="image"></p>
 
           
