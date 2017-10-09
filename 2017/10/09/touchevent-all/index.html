@@ -107,7 +107,7 @@
 <meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/944365-79b1e86793514e99.png">
 <meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/944365-37be4474ef7a1741.png">
 <meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/%E6%97%A0%E6%A0%87%E9%A2%98.png">
-<meta property="og:updated_time" content="2017-10-09T12:17:12.867Z">
+<meta property="og:updated_time" content="2017-10-09T12:19:12.380Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android event 事件分发的一些实用解析与源码分析汇总">
 <meta name="twitter:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/blog_3.jpg?imageMogr2/crop/900x500">
@@ -430,7 +430,7 @@ e.g 在有多个viewgroup嵌套的时候，遵循一层一层往下传递的规�
 </code></pre><p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/%E6%97%A0%E6%A0%87%E9%A2%98.png" alt="image"><br>    而当我们放开view的ontouchevent让而调用super的事件，那么会得到相应的结果。会响应view的onclick事件，所以，返回false和返回super是不一样的，对于onclick事件绑定来说，必须要把view的ontouchevent给到super，才能够让docview把事件给到view。</p>
 <pre><code>2.在上个实验中我们看到了acitivty中调用了两次的ontouchevent。
 用户的一次点击实际上是一个action_down和一次action_up组成的，所以，是传递了两个motionevent出来，那么activity--&gt;viewgroup---&gt;view是需要走两次的。
-</code></pre><p><a href="git@github.com:Begin-With-Start/TouchEventDemo.git">传送门之大传送之术</a></p>
+</code></pre><p><a href="https://github.com/Begin-With-Start/TouchEventDemo" target="_blank" rel="external">传送门之大传送之术</a></p>
 
       
     </div>
