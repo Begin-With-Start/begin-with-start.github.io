@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[touchevent_all]]></title>
+    <title><![CDATA[android event 事件传递的一些实用解析与源码分析汇总]]></title>
     <url>%2F2017%2F10%2F09%2Ftouchevent-all%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[传送门之大传送之术]]></content>
+      <categories>
+        <category>android技能</category>
+      </categories>
+      <tags>
+        <tag>工程</tag>
+        <tag>event事件解析</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[so库全解析]]></title>
