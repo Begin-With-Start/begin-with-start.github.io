@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://begin-with-start.github.io/"/>
-  <updated>2017-11-09T03:26:01.476Z</updated>
+  <updated>2017-11-09T03:27:53.210Z</updated>
   <id>https://begin-with-start.github.io/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>����Ƭ���ļ��ܵ㵽Ƭ�Ľ�����������֪�ı�</title>
+    <title>从碎片化的技能点到片的解决方案的认知改变</title>
     <link href="https://begin-with-start.github.io/2017/11/09/learn-structer/"/>
     <id>https://begin-with-start.github.io/2017/11/09/learn-structer/</id>
     <published>2017-11-09T01:27:59.594Z</published>
-    <updated>2017-11-09T03:26:01.476Z</updated>
+    <updated>2017-11-09T03:27:53.210Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/blog_3_mind.jpg?imageMogr2/crop/900x500" alt="image"><br><a id="more"></a></p><h2 id="��֪�i�"><a href="#��֪�i�" class="headerlink" title="��֪�ı�"></a>��֪�ı�</h2><p>���濪�������ڸ����漼���ɣ����ּ��ܣ�ϲ�������ܶ༼��������Ȼ��Щ�껹�ǱȽ�����˼�ģ��Ͼ����о�ʲô���о�ʲô��python�ű��ļ��࣬h5�Ļ��ȣ�java��̨���˽⣬android������ѧϰ���������Է������о���<br>��Ȼ��Щ֪ʶ�ڹ���һ����ҵ�Ľ���������ʱ����һ���ǻ���Ч���ģ���ҵ�񵹱��ż����ĳɳ�������֪ʶ�㹹��һ��֪ʶ�ṹ�����Դӿ�ʼ��֪ʶ�����õ����飬������ҵ�Ľ���������������ȫ��ҵ��ͨ�üܹ�������һֱû�еõ�����ѵ������Ȼ�������Ƚ���ϵ��������ʱ����û�к��Ż��ķ�����<br>ǰ�����ԣ������еġ��ӡ��ǶԿ͹۵Ĳ��˽��벻ͨ����������Э��ȷʵ������˭˵�ģ����ǱȽ��е�������һ��ʹ���е����������ļ��ĳ����˽��ټ���java�Ŀ�Դ���ԣ�ʹ��������Դ�Ŀ��������ڵ��г��ֵ������£��ǲ�����ʲô�ӵġ�  </p><h2 id="���ν��иi�"><a href="#���ν��иi�" class="headerlink" title="���ν��иı�"></a>���ν��иı�</h2><p>����˵�������⣬��ô��Ӧ���������ν��иı䣬�ɳ����ǰ����Ų�ϰ�߲���Ӧ��������Щ�ı��������Ѿ���Ӧ���������ıȽϵĲ��ʣ����ǲ������������γ���ǿ�ҵĲ��ʣ�������һ����������һ���йٴ̼��������浫��ζ���Ƚϵ�С�尾�Ĺ��̡�</p><h3 id="˼������"><a href="#˼������" class="headerlink" title="˼������"></a>˼������</h3><blockquote><ol><li>���������ܽ���ʲô���⣨why�� </li><li>�Ƚ��ʺ�����Щ����Ӧ�ã�where + when) </li><li>�������������Ѿ����յ��ĸ�֪ʶ���������ƣ���ʲô��������ʲô�ص㡢 &gt; ��ʲô�ŵ���ȱ�㣨what��</li><li>�˽�ǰ�������������ҲŻῪʼȥ����ддDemo�����߸���һ��ȥӦ�ã�How to use�� </li><li>��������Ȥ������ʵ�ֺ�ţ�Ƶ������£��Ҿ�ȥ�о�һ��ԭ�����ƣ�����Դ���� ��How it implements��</li></ol></blockquote><p>ָ��˼�����ǣ�����ҵ������������һ�������ܼ����ľ��</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/blog_3_mind.jpg?imageMogr2/crop/900x500" alt="image"><br><a id="more"></a></p><h2 id="认知改变"><a href="#认知改变" class="headerlink" title="认知改变"></a>认知改变</h2><p>初涉开发醉心于各种奇技淫巧，各种技能，喜欢堆砌很多技能数，当然这些年还是比较有意思的，毕竟想研究什么就研究什么。python脚本的简洁，h5的火热，java后台的了解，android的深度学习，各种语言方向的研究。<br>当然这些知识在构建一个行业的解决方案的时候，一样是会其效果的，像业务倒逼着技术的成长，对于知识点构建一个知识结构，可以从开始的知识构建得到经验，但是行业的解决方案，乃至于全行业的通用架构的提炼一直没有得到可以训练。当然在遇到比较体系的问题的时候，没有很优化的方案。<br>前贤有言：开发中的“坑”是对客观的不了解与不通达的主观妥协，确实忘了是谁说的，但是比较有道理。对一个使用中的三方库与文件的彻底了解再加上java的开源特性，使用三方开源的库与资料在调研充分的情况下，是不会有什么坑的。  </p><h2 id="如何进行改变"><a href="#如何进行改变" class="headerlink" title="如何进行改变"></a>如何进行改变</h2><p>上面说道了问题，那么就应该想想如何进行改变，成长总是伴随着不习惯不适应，所以这些改变可能让已经适应了舒适区的比较的不适，但是不适那种坐车晕车的强烈的不适，仅仅是一个像冬天吃一个感官刺激体验新奇但是味觉比较的小煎熬的过程。</p><h3 id="思考问题"><a href="#思考问题" class="headerlink" title="思考问题"></a>思考问题</h3><blockquote><ol><li>这个技术能解决什么问题（why） </li><li>比较适合在哪些场景应用（where + when) </li><li>这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 &gt; 有什么优点和缺点（what）</li><li>了解前面的问题后，我才会开始去尝试写写Demo，或者更进一步去应用（How to use） </li><li>觉得有兴趣或者其实现很牛逼的情况下，我就去研究一下原理机制，看看源码等 （How it implements）</li></ol></blockquote><p>指导思想就是：从行业解决方案，进一步到技能技术的精深。</p>]]></content>
     
     <summary type="html">
     
@@ -31,12 +31,12 @@
     
     </summary>
     
-      <category term="android����" scheme="https://begin-with-start.github.io/categories/android%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
+      <category term="android技能" scheme="https://begin-with-start.github.io/categories/android%E6%8A%80%E8%83%BD/"/>
     
     
-      <category term="����" scheme="https://begin-with-start.github.io/tags/%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
+      <category term="工程" scheme="https://begin-with-start.github.io/tags/%E5%B7%A5%E7%A8%8B/"/>
     
-      <category term="�۵�" scheme="https://begin-with-start.github.io/tags/%EF%BF%BD%DB%B5%EF%BF%BD/"/>
+      <category term="观点" scheme="https://begin-with-start.github.io/tags/%E8%A7%82%E7%82%B9/"/>
     
   </entry>
   
