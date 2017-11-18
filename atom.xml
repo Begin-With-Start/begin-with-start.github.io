@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://begin-with-start.github.io/"/>
-  <updated>2017-11-18T09:30:53.479Z</updated>
+  <updated>2017-11-18T09:34:11.252Z</updated>
   <id>https://begin-with-start.github.io/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>����ͨ������-�����������������ƹ��̽�������(java,res,libȫ��λ��������)</title>
+    <title>工程通用能力-变体包衍生多个定制工程解决方案(java,res,lib全方位定制问题)</title>
     <link href="https://begin-with-start.github.io/2017/11/18/project-productflavor-newproject/"/>
     <id>https://begin-with-start.github.io/2017/11/18/project-productflavor-newproject/</id>
     <published>2017-11-18T08:32:45.000Z</published>
-    <updated>2017-11-18T09:30:53.479Z</updated>
+    <updated>2017-11-18T09:34:11.252Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%B7%A5%E7%A8%8B%E5%AE%9A%E5%88%B6%E9%97%AE%E9%A2%98%E5%8F%98%E4%BD%93%E5%8C%85%E7%9A%84%E9%97%AE%E9%A2%98.png?imageMogr2/crop/900x500" alt="image"><a id="more"></a></p><h2 id="��������������ʲo����"><a href="#��������������ʲo����" class="headerlink" title="��������������ʲô����"></a>��������������ʲô����</h2><p>ҵ����������һ��������Ҫ����һ���汾�������������󣬵���������ҵ���߼����ܲ��ô󶯣���Ҫ���Ƶ�ҳ�����ǵ�¼ҳ�������еĸ����������ص�����������Ҫȫ���滻������ɫ���壬����ҳ����������<br>������Ҫ�����ݸ��룬�ں��˵�����֮�󣬱��������ˣ���ô���ƵĹ������䵽�˿ͻ��˵�ͷ�ϡ�Ҳ����һ���ȽϺõĳɳ�ʱ�䣬������Ȼ���ܰɡ�ҵ������������Ҳ�ǲ����ġ�����ҵ����Ҫ�ͻ��˳е��������Ż��붨�ƣ����ڸ��˵ĳɳ�Ҳ�Ǻܲ����ġ�Ŷ���е�˵���ˣ����ǽ��������ɡ�<br>�Ӱ�׿�Ĺٷ��ĵ���Ҳ���Բ��ĵ�һЩ���ڱ����������ϣ�<a href="https://developer.android.google.cn/studio/build/build-variants.html" target="_blank" rel="external">������֮�ٷ��ĵ��й�վ������</a><br>��Ȼ����ֻ�ǹٷ��ĵ��İ��ˣ��ǲ�������ƪ���µġ�  </p><h2 id="�ʺ������ֳ���ʹ��"><a href="#�ʺ������ֳ���ʹ��" class="headerlink" title="�ʺ������ֳ���ʹ��"></a>�ʺ������ֳ���ʹ��</h2><p>������Ҫ���Ʋ�ͬ������(��Ȼ����google����ͨ���������������滻),��ɫֵ(Ҳ����ͨ����̨��̬�Ľ����л�)����������ҳ�����ֵ�¼ҳ������������ʾ����־�Ķ��ơ���ô��Щ�Ķ������漰��javaԴ�����Ķ��ƣ�res��string��values��colors�Ķ��ƣ�������lib,so���Ķ��ơ���ô����֧�л��������ϲ���ͻ��ÿ�εĲ�ͬ�汾�������ڵ�Ҫ��Ҫ�����㣬���Կ���ʹ��һ��google�����׶�����</p><h2 id="�������������Ѿ����յ��ĸ�֪ʶ���������oi���ʲo��������ʲo�ص㡢-��ʲo�w���o��"><a href="#�������������Ѿ����յ��ĸ�֪ʶ���������oi���ʲo��������ʲo�ص㡢-��ʲo�w���o��" class="headerlink" title="�������������Ѿ����յ��ĸ�֪ʶ���������ƣ���ʲô��������ʲô�ص㡢 ��ʲô�ŵ���ȱ��"></a>�������������Ѿ����յ��ĸ�֪ʶ���������ƣ���ʲô��������ʲô�ص㡢 ��ʲô�ŵ���ȱ��</h2><p>���ڽ��������еķ���ȷʵ���٣�������·ͨ���������潲������ʱ����˳�����Ѿ�˵���ˡ���ô���ڿ�����˵˵��ȱ����<br>�ŵ�:<br>1.�������߼�����ͨ��<br>2.�Ķ��빲ͨ�Ĳ���������ά��<br>ȱ�㣺<br>1.ͬ��Ҫ����һ���ֵĶ���֮��</p><h2 id="�����ˣ��sou��ϴ�������"><a href="#�����ˣ��sou��ϴ�������" class="headerlink" title="�����ˣ��ȿȣ��ϴ�������"></a>�����ˣ��ȿȣ��ϴ�������</h2><p>�������幤��ֻ��һ�������������ң������������ƵĿ�����ô�����������Ͳ�ֹһ�������ܽ������ˣ�����Ҳ���С�����������ֻ��һ��������������<br><img src="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%8F%98%E4%BD%93%E9%85%8D%E7%BD%AE.png?imageMogr2/crop/900x500" alt="image"><br>�����������ֹ�����Ӹ��е����ã���Ϊ���Ǵ�������һ�����ţ�һ�������Ĺ�˾����Ŀ�������漰���Ķ���Ҳ�����������ˡ�<br>ǰ����ǩ�������ã��������ض�˵����Ϊ�������ı�������ͬ��ǩ�������ڵģ��������ǲ���ͬһ�������ܲ��ܱ�װ��ͬһ���ֻ��ϣ�����ͨ��������ǩ���Ĳ�ͬ���ģ��������������Ķ��Ʊز����١�<br>���µ�productflavor�����ã�������������֧���������ֿ������⸴��groovy���Թ��������ֶ����ԣ��½�֮����Ҫ����Ŀ�½�һ����mainͬ������������֧����ͬ���ļ���<br><img src="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%8F%98%E4%BD%93%E5%8C%85-%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9.png?imageMogr2/crop/900x500" alt="image"><br>�ļ��������½���Ҫ�Ķ����ļ���main�ļ������е��ļ��ж������½�Ҳ�����Զ��ơ�<br><img src="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%8F%98%E4%BD%93%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9-%E5%AE%9A%E5%88%B6%E9%A2%84%E7%95%99%E6%96%87%E4%BB%B6%E5%A4%B9.png" alt="image"><br>��ô�����Ƚ��������ļ��У��½��ı�����֧��buildvariants�п��Խ��ж�̬���л�������������custom�ķ�֧�£�����custom��java�Ǽ��ص��������ģ�res�Ǽ��ع��ġ�</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%B7%A5%E7%A8%8B%E5%AE%9A%E5%88%B6%E9%97%AE%E9%A2%98%E5%8F%98%E4%BD%93%E5%8C%85%E7%9A%84%E9%97%AE%E9%A2%98.png?imageMogr2/crop/900x500" alt="image"><a id="more"></a></p><h2 id="这个技术解决了什么问题"><a href="#这个技术解决了什么问题" class="headerlink" title="这个技术解决了什么问题"></a>这个技术解决了什么问题</h2><p>业务中遇到了一个问题需要定制一个版本给到另外的需求，但是主体的业务逻辑功能不用大动，需要定制的页面就是登录页面与所有的跟本软件相关的主体名称需要全部替换掉，颜色字体，启动页，升级包。<br>本身想要的数据隔离，在后端的评估之后，被舍弃掉了，那么定制的工作都落到了客户端的头上。也算是一个比较好的成长时间，所以欣然接受吧。业务来倒逼输出也是不错的。如果业务需要客户端承担更大的优化与定制，对于个人的成长也是很不错的。哦，有点说教了，还是进入主题吧。<br>从安卓的官方文档中也可以查阅到一些关于变体包的资料，<a href="https://developer.android.google.cn/studio/build/build-variants.html" target="_blank" rel="external">传送门之官方文档中国站传送门</a><br>当然如果只是官方文档的搬运，是不会有这篇文章的。  </p><h2 id="适合在哪种场景使用"><a href="#适合在哪种场景使用" class="headerlink" title="适合在哪种场景使用"></a>适合在哪种场景使用</h2><p>当有需要定制不同的字体(当然现在google可以通过下载字体进行替换),颜色值(也可以通过后台动态的进行切换)，各种启动页，各种登录页，各种主体提示与标志的定制。那么这些改动可能涉及到java源代码的定制，res中string，values，colors的定制，甚至是lib,so库的定制。那么被分支切换与升级合并冲突，每次的不同版本升级折腾的要死要死的你，可以考虑使用一下google的这套东西。</p><h2 id="这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、-有什么优点和缺点"><a href="#这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、-有什么优点和缺点" class="headerlink" title="这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点"></a>这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点</h2><p>关于解决场景中的方法确实不少，条条大路通罗马，上面讲场景的时候，顺带就已经说过了。那么现在可以来说说优缺点吧<br>优点:<br>1.主体的逻辑可以通用<br>2.改动与共通的部分清晰好维护<br>缺点：<br>1.同样要承受一部分的定制之苦</p><h2 id="上酸菜，咳咳，上代码例子"><a href="#上酸菜，咳咳，上代码例子" class="headerlink" title="上酸菜，咳咳，上代码例子"></a>上酸菜，咳咳，上代码例子</h2><p>假设变体工程只有一个，但是相信我，开了这个定制的口子那么后面的事情就不止一个变体能解决的了，两个也不行。我们先讨论只有一个变体的情况：<br><img src="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%8F%98%E4%BD%93%E9%85%8D%E7%BD%AE.png?imageMogr2/crop/900x500" alt="image"><br>这个配置里，不止有例子该有的配置，还为你们打开了另一个大门，一个完整的公司级项目里面会涉及到的定制也包含在里面了。<br>前面是签名的配置，这个不必多说，是为了下面的变体包不同的签名而存在的，包区分是不是同一个包，能不能被装在同一个手机上，就是通过报名和签名的不同来的，所以这两方面的定制必不可少。<br>往下到productflavor的配置，产生的两个分支，这个名字可以任意复合groovy语言规则的名字都可以，新建之后需要在项目新建一个跟main同级的命名跟分支名相同的文件夹<br><img src="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%8F%98%E4%BD%93%E5%8C%85-%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9.png?imageMogr2/crop/900x500" alt="image"><br>文件夹下面新建需要的定制文件夹main文件夹下有的文件夹都可以新建也都可以定制。<br><img src="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%8F%98%E4%BD%93%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9-%E5%AE%9A%E5%88%B6%E9%A2%84%E7%95%99%E6%96%87%E4%BB%B6%E5%A4%B9.png" alt="image"><br>那么我们先建这两个文件夹，新建的变体分支在buildvariants中可以进行动态的切换，我们现在在custom的分支下，所以custom的java是加载到编译器的，res是加载过的。</p>]]></content>
     
     <summary type="html">
     
@@ -31,12 +31,12 @@
     
     </summary>
     
-      <category term="android����" scheme="https://begin-with-start.github.io/categories/android%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
+      <category term="android技能" scheme="https://begin-with-start.github.io/categories/android%E6%8A%80%E8%83%BD/"/>
     
     
-      <category term="����" scheme="https://begin-with-start.github.io/tags/%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
+      <category term="工程" scheme="https://begin-with-start.github.io/tags/%E5%B7%A5%E7%A8%8B/"/>
     
-      <category term="�۵�" scheme="https://begin-with-start.github.io/tags/%EF%BF%BD%DB%B5%EF%BF%BD/"/>
+      <category term="观点" scheme="https://begin-with-start.github.io/tags/%E8%A7%82%E7%82%B9/"/>
     
   </entry>
   
