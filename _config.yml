@@ -87,12 +87,22 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: next
 
+# RSS订阅
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
 
  type: git
 
- repo: git@github.com:Begin-With-Start/begin-with-start.github.io.git
+ repo: git@github.com:Begin-With-Start/hexiaofei.github.io.git
 
  branch: master
