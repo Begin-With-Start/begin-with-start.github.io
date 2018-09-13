@@ -93,6 +93,6 @@ deploy:
 
  type: git
 
- repo: git@github.com:Begin-With-Start/hexiaofei.github.io.git
+ repo: git@github.com:Begin-With-Start/begin-with-start.github.io.git
 
  branch: master
