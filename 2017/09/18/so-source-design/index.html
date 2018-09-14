@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="工程,so库实战," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Begin-With-Start" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="keywords" content="工程,so库实战">
+<meta property="og:type" content="article">
+<meta property="og:title" content="so库全解析">
+<meta property="og:url" content="https://begin-with-start.github.io/2017/09/18/so-source-design/index.html">
+<meta property="og:site_name" content="Begin-With-Start">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/storm.png?imageMogr2/crop/900x500">
+<meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%AF%BC%E5%9B%BE.png">
+<meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/demo3.gif.gif">
+<meta property="og:updated_time" content="2018-09-13T02:27:51.416Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="so库全解析">
+<meta name="twitter:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/storm.png?imageMogr2/crop/900x500">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://begin-with-start.github.io/2017/09/18/so-source-design/"/>
+
+
+
+
+
+  <title>so库全解析 | Begin-With-Start</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Begin-With-Start</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://begin-with-start.github.io/2017/09/18/so-source-design/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hexiaofei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Begin-With-Start">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">so库全解析</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T11:05:25+08:00">
+                2017-09-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/android技能/" itemprop="url" rel="index">
+                    <span itemprop="name">android技能</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/storm.png?imageMogr2/crop/900x500" alt="image"><br><a id="more"></a></p>
+<h1 id="google-android系统so库比较多的原因"><a href="#google-android系统so库比较多的原因" class="headerlink" title="google android系统so库比较多的原因"></a>google android系统so库比较多的原因</h1><p>为适配众多的cpu架构，实际就是指令集的区别，在开始从复杂指令集改动到简易指令集的微软架构之后，又分出若干阵营，那么这个地方就不展开了，展开我怕篇幅不太够啊，少年。</p>
+<h1 id="android-cpu架构分类"><a href="#android-cpu架构分类" class="headerlink" title="android cpu架构分类"></a>android cpu架构分类</h1><h2 id="android-当前支持的七种cpu架构"><a href="#android-当前支持的七种cpu架构" class="headerlink" title="android 当前支持的七种cpu架构"></a>android 当前支持的七种cpu架构</h2><p>Android系统目前支持以下七种不同的CPU架构：ARMv5，ARMv7 (从2010年起)，x86 (从2011年起)，MIPS (从2012年起)，ARMv8，MIPS64和x86_64 (从2014年起)，每一种都关联着一个相应的ABI。<br>~ABI 应用程序二进制接口(Application binary interface)定义了二进制文件(so库)如何运行在相应的系统上。</p>
+<h2 id="每种cpu架构对应着一个ABI"><a href="#每种cpu架构对应着一个ABI" class="headerlink" title="每种cpu架构对应着一个ABI"></a>每种cpu架构对应着一个ABI</h2><p>armeabi，armeabi-v7a，x86，mips，arm64-v8a，mips64，x86_64</p>
+<h1 id="android如何去寻找so库原理"><a href="#android如何去寻找so库原理" class="headerlink" title="android如何去寻找so库原理"></a>android如何去寻找so库原理</h1><h2 id="android如何去寻找so库原理图解"><a href="#android如何去寻找so库原理图解" class="headerlink" title="android如何去寻找so库原理图解"></a>android如何去寻找so库原理图解</h2><p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%AF%BC%E5%9B%BE.png" alt="image"></p>
+<p>android系统寻找so库的顺序，先区分架构，再去寻找完美适配的架构文件夹，若果找不到继续向兼容的架构寻找，匹配架构成功后，加载这个架构下所有的so到data文件夹中，如果在data中找不到应用中使用到的so库，那么会报异常，so link错误等等，不会再到其他架构中去扫描。</p>
+<h2 id="几个需要明白的概念"><a href="#几个需要明白的概念" class="headerlink" title="几个需要明白的概念"></a>几个需要明白的概念</h2><h3 id="主ABI库"><a href="#主ABI库" class="headerlink" title="主ABI库"></a>主ABI库</h3><p>主ABI库： 与系统影响本身机器对应的ABI库<br>辅助ABI库： 与系统也支持的ABI对应<br>而，为实现最佳性能，应该提供主abi库</p>
+<h3 id="各个架构库支持的ABI"><a href="#各个架构库支持的ABI" class="headerlink" title="各个架构库支持的ABI"></a>各个架构库支持的ABI</h3><p>X86 ： 可以运行在armeabi/armeabi-v7a 主要的ABI是X86,辅助ABI是armeabi-v7a<br>mips:  只定义了主ABI是mips(但是极少用于手机，可以忽略)<br>armeabi-v7a ： 主 armeabi-v7a ， 辅助armeabi</p>
+<h3 id="只提供一种架构优缺点"><a href="#只提供一种架构优缺点" class="headerlink" title="只提供一种架构优缺点"></a>只提供一种架构优缺点</h3><p>只提供一种架构优点：可以减小包的体积<br>缺点： 只提供一种架构，而忽视其他架构，那么会影响到性能和兼容，同时也将丢失掉专门为64位优化的性能。</p>
+<h2 id="android找so库对于软件开发影响"><a href="#android找so库对于软件开发影响" class="headerlink" title="android找so库对于软件开发影响"></a>android找so库对于软件开发影响</h2><p>从根本上来说，系统只会把他区分架构的文件夹整个复制到data目录，那么造成一个问题就是，每个架构的文件夹下都应该是so库的全量，如果三方服务供应商，只给了一个armeabi-v7a 的架构，而工程中准备只放一个armeabi的文件夹来减小包大小，那么应该将v7a中的so库拷贝到armeabi中。</p>
+<p>同时在运行在androidstudio工程中的build.gradle defaultConfig 中添加：<br>    ndk {<br>            abiFilters “armeabi”<br>        }<br>在打包中，只包含armeabi的架构。</p>
+<h1 id="大厂对于so架构的一些取舍"><a href="#大厂对于so架构的一些取舍" class="headerlink" title="大厂对于so架构的一些取舍"></a>大厂对于so架构的一些取舍</h1><p>armeabi-v7a : facebook , twitter<br>armeabi:    淘宝 微信<br>armeabi :   淘票票</p>
+<p>还是来一个图来说明这个东西吧，毕竟没图你说个啥啊：</p>
+<p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/demo3.gif.gif" alt="image"></p>
+<h1 id="我可以大概算一个总结"><a href="#我可以大概算一个总结" class="headerlink" title="我可以大概算一个总结"></a>我可以大概算一个总结</h1><p>那么实际中我们的取舍遵从的原则：<br>1.为减小体积，只保留armeabi与armeabi-v7a，一般只保留一个<br>2.若只有一个架构，那么其他架构中的so，保留的文件夹下有有全量。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/工程/" rel="tag"># 工程</a>
+          
+            <a href="/tags/so库实战/" rel="tag"># so库实战</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/15/2017-09-15-md/" rel="next" title="values在碎片化各种屏幕中的系统加载策略问题探讨及ui适配的选择">
+                <i class="fa fa-chevron-left"></i> values在碎片化各种屏幕中的系统加载策略问题探讨及ui适配的选择
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/09/touchevent-all/" rel="prev" title="android event 事件分发的一些实用解析与源码分析汇总">
+                android event 事件分发的一些实用解析与源码分析汇总 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="hexiaofei" />
+            
+              <p class="site-author-name" itemprop="name">hexiaofei</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#google-android系统so库比较多的原因"><span class="nav-number">1.</span> <span class="nav-text">google android系统so库比较多的原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#android-cpu架构分类"><span class="nav-number">2.</span> <span class="nav-text">android cpu架构分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#android-当前支持的七种cpu架构"><span class="nav-number">2.1.</span> <span class="nav-text">android 当前支持的七种cpu架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#每种cpu架构对应着一个ABI"><span class="nav-number">2.2.</span> <span class="nav-text">每种cpu架构对应着一个ABI</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#android如何去寻找so库原理"><span class="nav-number">3.</span> <span class="nav-text">android如何去寻找so库原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#android如何去寻找so库原理图解"><span class="nav-number">3.1.</span> <span class="nav-text">android如何去寻找so库原理图解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几个需要明白的概念"><span class="nav-number">3.2.</span> <span class="nav-text">几个需要明白的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主ABI库"><span class="nav-number">3.2.1.</span> <span class="nav-text">主ABI库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各个架构库支持的ABI"><span class="nav-number">3.2.2.</span> <span class="nav-text">各个架构库支持的ABI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#只提供一种架构优缺点"><span class="nav-number">3.2.3.</span> <span class="nav-text">只提供一种架构优缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#android找so库对于软件开发影响"><span class="nav-number">3.3.</span> <span class="nav-text">android找so库对于软件开发影响</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#大厂对于so架构的一些取舍"><span class="nav-number">4.</span> <span class="nav-text">大厂对于so架构的一些取舍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我可以大概算一个总结"><span class="nav-number">5.</span> <span class="nav-text">我可以大概算一个总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hexiaofei</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
