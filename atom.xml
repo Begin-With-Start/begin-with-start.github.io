@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://begin-with-start.github.io/"/>
-  <updated>2018-09-17T06:28:59.297Z</updated>
+  <updated>2018-09-23T09:42:28.317Z</updated>
   <id>https://begin-with-start.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gradientdrawable相关问题</title>
+    <link href="https://begin-with-start.github.io/2018/09/23/gradientdrawable%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"/>
+    <id>https://begin-with-start.github.io/2018/09/23/gradientdrawable相关问题/</id>
+    <published>2018-09-23T09:14:55.000Z</published>
+    <updated>2018-09-23T09:42:28.317Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://7xjiyb.com1.z0.glb.clouddn.com/android_pie.jpeg?imageMogr2/crop/900x500&quot; alt=&quot;image&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="android技能" scheme="https://begin-with-start.github.io/tags/android%E6%8A%80%E8%83%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>自动化测试简介</title>
@@ -82,11 +100,11 @@
     <link href="https://begin-with-start.github.io/2018/09/13/arouter-thinking/"/>
     <id>https://begin-with-start.github.io/2018/09/13/arouter-thinking/</id>
     <published>2018-09-13T02:41:22.000Z</published>
-    <updated>2018-09-13T02:47:08.999Z</updated>
+    <updated>2018-09-23T09:50:44.218Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://7xjiyb.com1.z0.glb.clouddn.com/timg.jpg?imageMogr2/crop/900x500&quot; alt=&quot;image&quot;&gt;&lt;br&gt;
+      &lt;p&gt;&lt;img src=&quot;http://7xjiyb.com1.z0.glb.clouddn.com/arouter_ali.jpeg?imageMogr2/crop/900x500&quot; alt=&quot;image&quot;&gt;&lt;br&gt;
     
     </summary>
     
@@ -148,7 +166,7 @@
     <link href="https://begin-with-start.github.io/2017/11/18/project-productflavor-newproject/"/>
     <id>https://begin-with-start.github.io/2017/11/18/project-productflavor-newproject/</id>
     <published>2017-11-18T08:32:45.000Z</published>
-    <updated>2018-09-13T02:27:51.415Z</updated>
+    <updated>2018-09-23T09:16:45.820Z</updated>
     
     <summary type="html">
     
