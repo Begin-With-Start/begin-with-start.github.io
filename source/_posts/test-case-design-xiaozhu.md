@@ -10,6 +10,7 @@ categories: 测试技能
 - 边界值
 2. 功能测试（页面刷新、用户习惯性使用Tab、Enter等、权限）显示功能性需求
 3. 安全性测试
+![image](test-case-design-xiaozhu/sky_blue_sowild.jpeg)
 <!-- more -->
 - 加密（存储、网络传输）
 - 网络传输是否加密

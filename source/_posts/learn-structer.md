@@ -4,7 +4,7 @@ date: 2017-11-09 09.29
 tags: [工程,观点]
 categories: android技能
 ---
-![image](http://7xjiyb.com1.z0.glb.clouddn.com/blog_3_mind.jpg?imageMogr2/crop/900x500)
+![image](learn-structer/river_bridge.jpg)
 <!-- more -->
 ## 认知改变
 初涉开发醉心于各种奇技淫巧，各种技能，喜欢堆砌很多技能数，当然这些年还是比较有意思的，毕竟想研究什么就研究什么。python脚本的简洁，h5的火热，java后台的了解，android的深度学习，各种语言方向的研究。   

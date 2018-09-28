@@ -5,7 +5,7 @@ tags: [工程,so库实战]
 categories: android技能
 ---
 
-![image](http://7xjiyb.com1.z0.glb.clouddn.com/storm.png?imageMogr2/crop/900x500)
+![image](so-source-design/blue_blue.jpg)
 <!-- more -->
 # google android系统so库比较多的原因
 

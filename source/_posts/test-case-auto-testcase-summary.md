@@ -5,6 +5,8 @@ tags: [理论知识,自动化测试技能]
 categories: 测试技能
 ---
 ## 软件开发生命周期各个阶段的自动化测试技术
+![image](test-case-auto-testcase-summary/tree_xiaozhu.jpeg)
+<!-- more -->
 #### 1、单元测试的自动化技术
 1. 用例框架代码生成的自动化
 2. 部分测试输入数据的自动化生成

@@ -4,7 +4,7 @@ date: 2018-09-23 17:14:55
 tags: [gradientdrawable,工程技能]
 categories: android技能
 ---
-![image](http://7xjiyb.com1.z0.glb.clouddn.com/android_pie.jpeg?imageMogr2/crop/900x500)
+![image](gradientdrawable相关问题/wild_picture.jpg)
 <!-- more -->
 ## 这个技术解决了什么问题 ## 
 ```

@@ -4,7 +4,7 @@ date: 2017-12-10 12:09
 tags: [工程,定制]
 categories: android技能
 ---
-![image](http://7xjiyb.com1.z0.glb.clouddn.com/blog_4_headimage.jpg?imageMogr2/crop/900x500)
+![image](inputbox-forbiddeninput/montain_high.jpg)
 <!-- more -->
 ## 技术解决了什么问题 ##
 这是一个典型的项目倒逼输入的例子。公司有蓝牙组件的需求，那么衍生出的定制需求也是很正常的。需求需要，输入框在保留光标的时候，同时有禁用键盘和启用键盘的操作。这个功能点的技术开始的诞生就是解决在edittext的控件使用时候，保留光标的时候还要禁用掉键盘的自动弹出(如果自定义键盘是同样这个套路的话，可能会有些问题，需要特殊处理)  

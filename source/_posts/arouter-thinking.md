@@ -4,7 +4,7 @@ date: 2018-09-13 10:41:22
 tags: [工程,arouter]
 categories: android技能
 ---
-![image](http://7xjiyb.com1.z0.glb.clouddn.com/arouter_ali.jpeg?imageMogr2/crop/900x500)
+![image](arouter-thinking/city.jpg)
 <!-- more -->
 ## arouter 问题总结： ## 
 ```

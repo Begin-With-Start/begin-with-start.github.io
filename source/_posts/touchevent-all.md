@@ -4,7 +4,7 @@ date: 2017-10-09 15:12:27
 tags: [工程,event事件解析]
 categories: android技能
 ---
-![image](http://7xjiyb.com1.z0.glb.clouddn.com/blog_3.jpg?imageMogr2/crop/900x500)
+![image](touchevent-all/grey.jpeg)
 <!-- more -->
 # 前言 #
 工程中的一些需求需要定制很多的view，而定制的view如何进行这里不进行展开，但是其中遇到的一个问题足以引起重视，那就是view需要处理action事件(如 down , up , move ,cancle )，而总是出现处理了view的touch事件之后，在对view的onclicklistener监听的时候，监听不到点击事件，开始的处理是在网上查(zhan)找(tie)了下。现在好整以暇，可以看看究竟是什么样的机制让ontouch的事件监听了之后，没有onclicklistener的。或者是自己的使用姿势不对。
