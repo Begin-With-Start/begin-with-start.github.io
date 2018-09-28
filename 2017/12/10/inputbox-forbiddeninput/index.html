@@ -14,11 +14,11 @@
 <meta property="og:url" content="https://begin-with-start.github.io/2017/12/10/inputbox-forbiddeninput/index.html">
 <meta property="og:site_name" content="Begin-With-Start">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/blog_4_headimage.jpg?imageMogr2/crop/900x500">
-<meta property="og:updated_time" content="2018-09-13T02:27:51.415Z">
+<meta property="og:image" content="https://begin-with-start.github.io/2017/12/10/inputbox-forbiddeninput/montain_high.jpg">
+<meta property="og:updated_time" content="2018-09-28T12:31:17.542Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工程定制输入框是否可输入保留光标定制">
-<meta name="twitter:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/blog_4_headimage.jpg?imageMogr2/crop/900x500">
+<meta name="twitter:image" content="https://begin-with-start.github.io/2017/12/10/inputbox-forbiddeninput/montain_high.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Begin-With-Start" type="application/atom+xml">
   
@@ -172,7 +172,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/blog_4_headimage.jpg?imageMogr2/crop/900x500" alt="image"><br><a id="more"></a></p>
+        <p><img src="/2017/12/10/inputbox-forbiddeninput/montain_high.jpg" alt="image"><br><a id="more"></a></p>
 <h2 id="技术解决了什么问题"><a href="#技术解决了什么问题" class="headerlink" title="技术解决了什么问题"></a>技术解决了什么问题</h2><p>这是一个典型的项目倒逼输入的例子。公司有蓝牙组件的需求，那么衍生出的定制需求也是很正常的。需求需要，输入框在保留光标的时候，同时有禁用键盘和启用键盘的操作。这个功能点的技术开始的诞生就是解决在edittext的控件使用时候，保留光标的时候还要禁用掉键盘的自动弹出(如果自定义键盘是同样这个套路的话，可能会有些问题，需要特殊处理)<br>同时功能需求在有多个edittext时候依旧能够统一控制输入框的弹出软键盘功能。</p>
 <h2 id="比较适合在哪些场景应用"><a href="#比较适合在哪些场景应用" class="headerlink" title="比较适合在哪些场景应用"></a>比较适合在哪些场景应用</h2><p>该技术适用于产品的具体场景，也可以稍微摘出来作为一个共用控件使用。</p>
 <h2 id="源码研究过程"><a href="#源码研究过程" class="headerlink" title="源码研究过程"></a>源码研究过程</h2><p>这个需求开始肯定要先看看edittext对于软件盘唤起的操作的源码。在edittext父类textview中找到了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">* Sets whether the soft input method will be made visible when this  </span><br><span class="line"> * TextView gets focused. The default is true.  </span><br><span class="line"> */  </span><br><span class="line">@android.view.RemotableViewMethod  </span><br><span class="line">public final void setShowSoftInputOnFocus(boolean show) &#123;  </span><br><span class="line">    createEditorIfNeeded();  </span><br><span class="line">    mEditor.mShowSoftInputOnFocus = show;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -486,11 +486,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">so库实战</a>
+                <a href="javascript:void(0)" class="js-tag color3">定制</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">观点</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">so库实战</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -502,15 +506,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">定制</a>
+                <a href="javascript:void(0)" class="js-tag color2">test用例</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">event事件解析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">test用例</a>
               </li>
             
             <div class="clearfix"></div>
