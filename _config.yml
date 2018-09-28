@@ -6,7 +6,7 @@
 title: Begin-With-Start
 subtitle:
 description:
-author: hexiaofei
+author: Begin-With-Start
 language: zh-Hans
 timezone: 
 
@@ -97,6 +97,26 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
 
+jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: false
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+
+      
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
