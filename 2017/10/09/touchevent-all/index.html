@@ -8,22 +8,22 @@
   <link rel="dns-prefetch" href="https://begin-with-start.github.io">
   <title>android event 事件分发的一些实用解析与源码分析汇总 | Begin-With-Start</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12341.前言2.事件分发的一些概念3.QA4.源码链接">
+  <meta name="description" content="前言 事件分发的一些概念 QA 源码链接">
 <meta name="keywords" content="工程,event事件解析">
 <meta property="og:type" content="article">
 <meta property="og:title" content="android event 事件分发的一些实用解析与源码分析汇总">
 <meta property="og:url" content="https://begin-with-start.github.io/2017/10/09/touchevent-all/index.html">
 <meta property="og:site_name" content="Begin-With-Start">
-<meta property="og:description" content="12341.前言2.事件分发的一些概念3.QA4.源码链接">
+<meta property="og:description" content="前言 事件分发的一些概念 QA 源码链接">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://begin-with-start.github.io/2017/10/09/touchevent-all/grey.jpeg">
 <meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/944365-79b1e86793514e99.png">
 <meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/944365-37be4474ef7a1741.png">
 <meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/%E6%97%A0%E6%A0%87%E9%A2%98.png">
-<meta property="og:updated_time" content="2018-09-29T07:07:27.956Z">
+<meta property="og:updated_time" content="2018-09-29T07:27:43.126Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android event 事件分发的一些实用解析与源码分析汇总">
-<meta name="twitter:description" content="12341.前言2.事件分发的一些概念3.QA4.源码链接">
+<meta name="twitter:description" content="前言 事件分发的一些概念 QA 源码链接">
 <meta name="twitter:image" content="https://begin-with-start.github.io/2017/10/09/touchevent-all/grey.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="Begin-With-Start" type="application/atom+xml">
@@ -178,19 +178,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.前言</span><br><span class="line">2.事件分发的一些概念</span><br><span class="line">3.QA</span><br><span class="line">4.源码链接</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p><img src="/2017/10/09/touchevent-all/grey.jpeg" alt="image"></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>工程中的一些需求需要定制很多的view，而定制的view如何进行这里不进行展开，但是其中遇到的一个问题足以引起重视，那就是view需要处理action事件(如 down , up , move ,cancle )，而总是出现处理了view的touch事件之后，在对view的onclicklistener监听的时候，监听不到点击事件，开始的处理是在网上查(zhan)找(tie)了下。现在好整以暇，可以看看究竟是什么样的机制让ontouch的事件监听了之后，没有onclicklistener的。或者是自己的使用姿势不对。</p>
-<h1 id="事件分发的一些概念"><a href="#事件分发的一些概念" class="headerlink" title="事件分发的一些概念"></a>事件分发的一些概念</h1><pre><code>事件：用户触摸屏幕产生的点击事件
-系统将用户的操作事件包装成了一个motionevent的对象。(包含发生触摸的位置，时间，历史记录，手势动作等)
-从源码的区分上来说：
-MOtionEvent.ACTION_DOWN: 用户按下事件
-MotionEvent.ACTION_MOVE: 用户移动手指事件
-MotionEvent.ACTION_CANCLE: 非用户操作取消事件
-MotionEvent.ACTION_UP:  用户手指抬起事件
-</code></pre><h2 id="用户的一次操作的事件列"><a href="#用户的一次操作的事件列" class="headerlink" title="用户的一次操作的事件列"></a>用户的一次操作的事件列</h2><pre><code>用户的一次手指从按下到抬起的产生的一系列事件。
-</code></pre><p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/944365-79b1e86793514e99.png" alt="image"></p>
+        <ul>
+<li>前言</li>
+<li>事件分发的一些概念</li>
+<li>QA</li>
+<li>源码链接<a id="more"></a>
+<img src="/2017/10/09/touchevent-all/grey.jpeg" alt="image"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1>工程中的一些需求需要定制很多的view，而定制的view如何进行这里不进行展开，但是其中遇到的一个问题足以引起重视，那就是view需要处理action事件(如 down , up , move ,cancle )，而总是出现处理了view的touch事件之后，在对view的onclicklistener监听的时候，监听不到点击事件，开始的处理是在网上查(zhan)找(tie)了下。现在好整以暇，可以看看究竟是什么样的机制让ontouch的事件监听了之后，没有onclicklistener的。或者是自己的使用姿势不对。<h1 id="事件分发的一些概念"><a href="#事件分发的一些概念" class="headerlink" title="事件分发的一些概念"></a>事件分发的一些概念</h1>  事件：用户触摸屏幕产生的点击事件<br>  系统将用户的操作事件包装成了一个motionevent的对象。(包含发生触摸的位置，时间，历史记录，手势动作等)<br>  从源码的区分上来说：<br>  MOtionEvent.ACTION_DOWN: 用户按下事件<br>  MotionEvent.ACTION_MOVE: 用户移动手指事件<br>  MotionEvent.ACTION_CANCLE: 非用户操作取消事件<br>  MotionEvent.ACTION_UP:  用户手指抬起事件<h2 id="用户的一次操作的事件列"><a href="#用户的一次操作的事件列" class="headerlink" title="用户的一次操作的事件列"></a>用户的一次操作的事件列</h2>  用户的一次手指从按下到抬起的产生的一系列事件。<br><img src="http://7xjiyb.com1.z0.glb.clouddn.com/944365-79b1e86793514e99.png" alt="image"></li>
+</ul>
 <h1 id="事件分发的几个分类"><a href="#事件分发的几个分类" class="headerlink" title="事件分发的几个分类"></a>事件分发的几个分类</h1><h2 id="window-activity-viewgroup-与-view"><a href="#window-activity-viewgroup-与-view" class="headerlink" title="window/activity , viewgroup 与 view"></a>window/activity , viewgroup 与 view</h2><p>讨论的事件分发除了是由docview分发的onclicklistener之外的诸如：dispatchevent,onintercepttouchevent,ontouchevent的一些事件，其中：</p>
 <pre><code>widow/activity:dispatchevent,ontouchevent(没有onintercepttouchevent)
 viewgroup :  dispatchevent,ontouchevent(没有onintercepttouchevent)
@@ -509,15 +503,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">so库实战</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">理论知识</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">自动化测试技能</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">so库实战</a>
               </li>
              
               <li class="article-tag-list-item">

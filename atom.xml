@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://begin-with-start.github.io/"/>
-  <updated>2018-09-29T07:03:16.598Z</updated>
+  <updated>2018-09-29T07:24:39.324Z</updated>
   <id>https://begin-with-start.github.io/</id>
   
   <author>
@@ -21,11 +21,15 @@
     <link href="https://begin-with-start.github.io/2018/09/23/gradientdrawable%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"/>
     <id>https://begin-with-start.github.io/2018/09/23/gradientdrawable相关问题/</id>
     <published>2018-09-23T09:14:55.000Z</published>
-    <updated>2018-09-29T07:03:16.598Z</updated>
+    <updated>2018-09-29T07:24:39.324Z</updated>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1.这个技术解决了什么问题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.适合在哪种场景使用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3.这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4.解决方案&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;ul&gt;
+&lt;li&gt;这个技术解决了什么问题&lt;/li&gt;
+&lt;li&gt;适合在哪种场景使用&lt;/li&gt;
+&lt;li&gt;这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点&lt;/li&gt;
+&lt;li&gt;解决方案&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -43,11 +47,12 @@
     <link href="https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/"/>
     <id>https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/</id>
     <published>2018-09-17T06:24:26.000Z</published>
-    <updated>2018-09-29T07:07:29.797Z</updated>
+    <updated>2018-09-29T07:27:06.097Z</updated>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;软件开发生命周期各个阶段的自动化测试技术&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;ul&gt;
+&lt;li&gt;软件开发生命周期各个阶段的自动化测试技术&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -65,11 +70,12 @@
     <link href="https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/"/>
     <id>https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/</id>
     <published>2018-09-17T06:24:26.000Z</published>
-    <updated>2018-09-29T07:07:30.620Z</updated>
+    <updated>2018-09-29T07:27:13.615Z</updated>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;测试用例的设计&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;ul&gt;
+&lt;li&gt;测试用例的设计&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -87,11 +93,14 @@
     <link href="https://begin-with-start.github.io/2018/09/13/arouter-thinking/"/>
     <id>https://begin-with-start.github.io/2018/09/13/arouter-thinking/</id>
     <published>2018-09-13T02:41:22.000Z</published>
-    <updated>2018-09-29T07:02:39.961Z</updated>
+    <updated>2018-09-29T07:23:51.101Z</updated>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1.arouter 问题总结&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.有没有改造之法？&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3.改造之后的注意点？&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;ul&gt;
+&lt;li&gt;arouter 问题总结&lt;/li&gt;
+&lt;li&gt;values 两种系统识别文件夹，细分三种&lt;/li&gt;
+&lt;li&gt;有没有改造之法？&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -109,11 +118,14 @@
     <link href="https://begin-with-start.github.io/2018/09/13/learn-structer/"/>
     <id>https://begin-with-start.github.io/2018/09/13/learn-structer/</id>
     <published>2018-09-13T02:27:51.415Z</published>
-    <updated>2018-09-29T07:04:33.860Z</updated>
+    <updated>2018-09-29T07:25:42.730Z</updated>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1.认知改变&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.如何进行改变&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3.思考问题&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;ul&gt;
+&lt;li&gt;认知改变&lt;/li&gt;
+&lt;li&gt;如何进行改变&lt;/li&gt;
+&lt;li&gt;思考问题&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -131,11 +143,17 @@
     <link href="https://begin-with-start.github.io/2017/12/10/inputbox-forbiddeninput/"/>
     <id>https://begin-with-start.github.io/2017/12/10/inputbox-forbiddeninput/</id>
     <published>2017-12-10T04:09:00.000Z</published>
-    <updated>2018-09-29T07:04:05.547Z</updated>
+    <updated>2018-09-29T07:25:23.500Z</updated>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1.这个技术解决了什么问题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.比较适合在哪些场景应用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3.源码研究过程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4.最后的方案&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5.效果实现&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6.资源链接&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;ul&gt;
+&lt;li&gt;这个技术解决了什么问题&lt;/li&gt;
+&lt;li&gt;比较适合在哪些场景应用&lt;/li&gt;
+&lt;li&gt;源码研究过程&lt;/li&gt;
+&lt;li&gt;最后的方案&lt;/li&gt;
+&lt;li&gt;效果实现&lt;/li&gt;
+&lt;li&gt;资源链接&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -153,11 +171,15 @@
     <link href="https://begin-with-start.github.io/2017/11/18/project-productflavor-newproject/"/>
     <id>https://begin-with-start.github.io/2017/11/18/project-productflavor-newproject/</id>
     <published>2017-11-18T08:32:45.000Z</published>
-    <updated>2018-09-29T07:05:11.100Z</updated>
+    <updated>2018-09-29T07:26:04.065Z</updated>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1.这个技术解决了什么问题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.适合在哪种场景使用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3.这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4.上酸菜，咳咳，上代码例子&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;ul&gt;
+&lt;li&gt;这个技术解决了什么问题&lt;/li&gt;
+&lt;li&gt;适合在哪种场景使用&lt;/li&gt;
+&lt;li&gt;这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点&lt;/li&gt;
+&lt;li&gt;上酸菜，咳咳，上代码例子&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -175,11 +197,15 @@
     <link href="https://begin-with-start.github.io/2017/10/09/touchevent-all/"/>
     <id>https://begin-with-start.github.io/2017/10/09/touchevent-all/</id>
     <published>2017-10-09T07:12:27.000Z</published>
-    <updated>2018-09-29T07:07:27.956Z</updated>
+    <updated>2018-09-29T07:27:43.126Z</updated>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1.前言&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.事件分发的一些概念&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3.QA&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4.源码链接&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;ul&gt;
+&lt;li&gt;前言&lt;/li&gt;
+&lt;li&gt;事件分发的一些概念&lt;/li&gt;
+&lt;li&gt;QA&lt;/li&gt;
+&lt;li&gt;源码链接&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -197,11 +223,17 @@
     <link href="https://begin-with-start.github.io/2017/09/18/so-source-design/"/>
     <id>https://begin-with-start.github.io/2017/09/18/so-source-design/</id>
     <published>2017-09-18T03:05:25.000Z</published>
-    <updated>2018-09-29T07:05:52.610Z</updated>
+    <updated>2018-09-29T07:26:38.537Z</updated>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1.google android系统so库比较多的原因&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.android cpu架构分类&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3.android如何去寻找so库原理&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4.几个需要明白的概念&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5.大厂对于so架构的一些取舍&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6.总结&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;ul&gt;
+&lt;li&gt;google android系统so库比较多的原因&lt;/li&gt;
+&lt;li&gt;android cpu架构分类&lt;/li&gt;
+&lt;li&gt;android如何去寻找so库原理&lt;/li&gt;
+&lt;li&gt;几个需要明白的概念&lt;/li&gt;
+&lt;li&gt;大厂对于so架构的一些取舍&lt;/li&gt;
+&lt;li&gt;总结&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -219,11 +251,14 @@
     <link href="https://begin-with-start.github.io/2017/09/15/2017-09-15-md/"/>
     <id>https://begin-with-start.github.io/2017/09/15/2017-09-15-md/</id>
     <published>2017-09-15T08:58:25.000Z</published>
-    <updated>2018-09-29T07:02:06.326Z</updated>
+    <updated>2018-09-29T07:24:05.413Z</updated>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1.android寻找资源策略&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.values 两种系统识别文件夹，细分三种&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3.几种方式系统加载策略的探索&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4.总结&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;ul&gt;
+&lt;li&gt;android寻找资源策略&lt;/li&gt;
+&lt;li&gt;values 两种系统识别文件夹，细分三种&lt;/li&gt;
+&lt;li&gt;几种方式系统加&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     

@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://begin-with-start.github.io">
   <title>工程定制输入框是否可输入保留光标定制 | Begin-With-Start</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1234561.这个技术解决了什么问题2.比较适合在哪些场景应用3.源码研究过程4.最后的方案5.效果实现6.资源链接">
+  <meta name="description" content="这个技术解决了什么问题 比较适合在哪些场景应用 源码研究过程 最后的方案 效果实现 资源链接">
 <meta name="keywords" content="工程,定制">
 <meta property="og:type" content="article">
 <meta property="og:title" content="工程定制输入框是否可输入保留光标定制">
 <meta property="og:url" content="https://begin-with-start.github.io/2017/12/10/inputbox-forbiddeninput/index.html">
 <meta property="og:site_name" content="Begin-With-Start">
-<meta property="og:description" content="1234561.这个技术解决了什么问题2.比较适合在哪些场景应用3.源码研究过程4.最后的方案5.效果实现6.资源链接">
+<meta property="og:description" content="这个技术解决了什么问题 比较适合在哪些场景应用 源码研究过程 最后的方案 效果实现 资源链接">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://begin-with-start.github.io/2017/12/10/inputbox-forbiddeninput/montain_high.jpg">
-<meta property="og:updated_time" content="2018-09-29T07:04:05.547Z">
+<meta property="og:updated_time" content="2018-09-29T07:25:23.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工程定制输入框是否可输入保留光标定制">
-<meta name="twitter:description" content="1234561.这个技术解决了什么问题2.比较适合在哪些场景应用3.源码研究过程4.最后的方案5.效果实现6.资源链接">
+<meta name="twitter:description" content="这个技术解决了什么问题 比较适合在哪些场景应用 源码研究过程 最后的方案 效果实现 资源链接">
 <meta name="twitter:image" content="https://begin-with-start.github.io/2017/12/10/inputbox-forbiddeninput/montain_high.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Begin-With-Start" type="application/atom+xml">
@@ -175,11 +175,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.这个技术解决了什么问题</span><br><span class="line">2.比较适合在哪些场景应用</span><br><span class="line">3.源码研究过程</span><br><span class="line">4.最后的方案</span><br><span class="line">5.效果实现</span><br><span class="line">6.资源链接</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p><img src="/2017/12/10/inputbox-forbiddeninput/montain_high.jpg" alt="image"></p>
-<h2 id="技术解决了什么问题"><a href="#技术解决了什么问题" class="headerlink" title="技术解决了什么问题"></a>技术解决了什么问题</h2><p>这是一个典型的项目倒逼输入的例子。公司有蓝牙组件的需求，那么衍生出的定制需求也是很正常的。需求需要，输入框在保留光标的时候，同时有禁用键盘和启用键盘的操作。这个功能点的技术开始的诞生就是解决在edittext的控件使用时候，保留光标的时候还要禁用掉键盘的自动弹出(如果自定义键盘是同样这个套路的话，可能会有些问题，需要特殊处理)<br>同时功能需求在有多个edittext时候依旧能够统一控制输入框的弹出软键盘功能。</p>
-<h2 id="比较适合在哪些场景应用"><a href="#比较适合在哪些场景应用" class="headerlink" title="比较适合在哪些场景应用"></a>比较适合在哪些场景应用</h2><p>该技术适用于产品的具体场景，也可以稍微摘出来作为一个共用控件使用。</p>
+        <ul>
+<li>这个技术解决了什么问题</li>
+<li>比较适合在哪些场景应用</li>
+<li>源码研究过程</li>
+<li>最后的方案</li>
+<li>效果实现</li>
+<li>资源链接<a id="more"></a>
+<img src="/2017/12/10/inputbox-forbiddeninput/montain_high.jpg" alt="image"><h2 id="技术解决了什么问题"><a href="#技术解决了什么问题" class="headerlink" title="技术解决了什么问题"></a>技术解决了什么问题</h2>这是一个典型的项目倒逼输入的例子。公司有蓝牙组件的需求，那么衍生出的定制需求也是很正常的。需求需要，输入框在保留光标的时候，同时有禁用键盘和启用键盘的操作。这个功能点的技术开始的诞生就是解决在edittext的控件使用时候，保留光标的时候还要禁用掉键盘的自动弹出(如果自定义键盘是同样这个套路的话，可能会有些问题，需要特殊处理)<br>同时功能需求在有多个edittext时候依旧能够统一控制输入框的弹出软键盘功能。<h2 id="比较适合在哪些场景应用"><a href="#比较适合在哪些场景应用" class="headerlink" title="比较适合在哪些场景应用"></a>比较适合在哪些场景应用</h2>该技术适用于产品的具体场景，也可以稍微摘出来作为一个共用控件使用。</li>
+</ul>
 <h2 id="源码研究过程"><a href="#源码研究过程" class="headerlink" title="源码研究过程"></a>源码研究过程</h2><p>这个需求开始肯定要先看看edittext对于软件盘唤起的操作的源码。在edittext父类textview中找到了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">* Sets whether the soft input method will be made visible when this  </span><br><span class="line"> * TextView gets focused. The default is true.  </span><br><span class="line"> */  </span><br><span class="line">@android.view.RemotableViewMethod  </span><br><span class="line">public final void setShowSoftInputOnFocus(boolean show) &#123;  </span><br><span class="line">    createEditorIfNeeded();  </span><br><span class="line">    mEditor.mShowSoftInputOnFocus = show;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>方法代码段。<br>但是直接使用调用方法来进行的时候会提示：<br>Call requires API level 21 (current min is 18): android.widget.TextView#setShowSoftInputOnFocus less…<br>android 18版本以上的才能够调用这个方法，为了兼容低版本，同时保证方法可用，想到了用反射来进行调用，处理掉反射的异常。  </p>
 <h3 id="最后的方案如下："><a href="#最后的方案如下：" class="headerlink" title="最后的方案如下："></a>最后的方案如下：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">     * 禁止Edittext弹出软件盘，光标依然正常显示。</span><br><span class="line">     */</span><br><span class="line">    public void disableShowSoftInput() &#123;</span><br><span class="line">        softinputSet(false);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 打开Edittext弹出软件盘，光标依然正常显示。</span><br><span class="line">     */</span><br><span class="line">    public void openShowSoftInput() &#123;</span><br><span class="line">        softinputSet(true);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void softinputSet(boolean isShow)&#123;</span><br><span class="line">        if (android.os.Build.VERSION.SDK_INT &lt;= 10) &#123;</span><br><span class="line">            this.setInputType(InputType.TYPE_NULL);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            Class&lt;EditText&gt; cls = EditText.class;</span><br><span class="line">            Method method;</span><br><span class="line">            try &#123;</span><br><span class="line">                method = cls.getMethod(&quot;setShowSoftInputOnFocus&quot;, boolean.class);</span><br><span class="line">                method.setAccessible(true);</span><br><span class="line">                method.invoke(this, isShow);</span><br><span class="line">            &#125; catch (Exception e) &#123;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            try &#123;</span><br><span class="line">                method = cls.getMethod(&quot;setSoftInputShownOnFocus&quot;, boolean.class);</span><br><span class="line">                method.setAccessible(true);</span><br><span class="line">                method.invoke(this, isShow);</span><br><span class="line">            &#125; catch (Exception e) &#123;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
@@ -499,15 +503,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">so库实战</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">理论知识</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">自动化测试技能</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">so库实战</a>
               </li>
              
               <li class="article-tag-list-item">
