@@ -8,17 +8,20 @@
   <link rel="dns-prefetch" href="https://begin-with-start.github.io">
   <title>values在碎片化各种屏幕中的系统加载策略问题探讨及ui适配的选择 | Begin-With-Start</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="工程,values实战">
+  <meta name="description" content="12341.android寻找资源策略2.values 两种系统识别文件夹，细分三种3.几种方式系统加载策略的探索4.总结">
+<meta name="keywords" content="工程,values实战">
 <meta property="og:type" content="article">
 <meta property="og:title" content="values在碎片化各种屏幕中的系统加载策略问题探讨及ui适配的选择">
 <meta property="og:url" content="https://begin-with-start.github.io/2017/09/15/2017-09-15-md/index.html">
 <meta property="og:site_name" content="Begin-With-Start">
+<meta property="og:description" content="12341.android寻找资源策略2.values 两种系统识别文件夹，细分三种3.几种方式系统加载策略的探索4.总结">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://begin-with-start.github.io/2017/09/15/2017-09-15-md/night.jpg">
 <meta property="og:image" content="https://begin-with-start.github.io/2017/09/15/2017-09-15-md/res-selection-flowchart.png">
-<meta property="og:updated_time" content="2018-09-28T12:24:02.595Z">
+<meta property="og:updated_time" content="2018-09-29T07:02:06.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="values在碎片化各种屏幕中的系统加载策略问题探讨及ui适配的选择">
+<meta name="twitter:description" content="12341.android寻找资源策略2.values 两种系统识别文件夹，细分三种3.几种方式系统加载策略的探索4.总结">
 <meta name="twitter:image" content="https://begin-with-start.github.io/2017/09/15/2017-09-15-md/night.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Begin-With-Start" type="application/atom+xml">
@@ -48,7 +51,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="source/img/hsq.jpeg" class="js-avatar">
+			<img src="/source/img/hsq.jpeg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Begin-With-Start</a></h1>
@@ -104,7 +107,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="source/img/hsq.jpeg" class="js-avatar">
+				<img src="/source/img/hsq.jpeg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Begin-With-Start</h1>
@@ -173,7 +176,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/2017/09/15/2017-09-15-md/night.jpg" alt="image"><br><a id="more"></a></p>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.android寻找资源策略</span><br><span class="line">2.values 两种系统识别文件夹，细分三种</span><br><span class="line">3.几种方式系统加载策略的探索</span><br><span class="line">4.总结</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><img src="/2017/09/15/2017-09-15-md/night.jpg" alt="image"></p>
 <h2 id="android寻找资源策略"><a href="#android寻找资源策略" class="headerlink" title="android寻找资源策略"></a>android寻找资源策略</h2><p><img src="/2017/09/15/2017-09-15-md/res-selection-flowchart.png" alt="image"></p>
 <h2 id="values-两种系统识别文件夹，细分三种"><a href="#values-两种系统识别文件夹，细分三种" class="headerlink" title="values 两种系统识别文件夹，细分三种"></a>values 两种系统识别文件夹，细分三种</h2><p>values-XXXXxXXXX values-swXXXdp (values-hXXXdp values-wXXXdp)三种系统识别的文件夹命令分别是指定分辨率，适配优先宽度，宽高适配</p>
 <h2 id="几种方式系统加载策略的探索"><a href="#几种方式系统加载策略的探索" class="headerlink" title="几种方式系统加载策略的探索"></a>几种方式系统加载策略的探索</h2><p>项目中使用到了多个values来进行适配的问题，想从根本上弄清楚系统在加载的时候，对文件夹取用策略的判断问题，用实际例子对比了一下swXXXdp与values-1920X1080和默认的values的加载其中的策略指定问题，混合模式下，系统对values的取用问题。<br>ok，开始吧。</p>
@@ -207,7 +212,7 @@
                   <div class="reward-box">
                     
                     <div class="reward-box-item">
-                      <img class="reward-img" src="http://7xjiyb.com1.z0.glb.clouddn.com/alipay.jpg">
+                      <img class="reward-img" src="/source/img/alipay.jpg">
                       <span class="reward-type">支付宝</span>
                     </div>
                     
@@ -494,15 +499,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">so库实战</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">理论知识</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">自动化测试技能</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">so库实战</a>
               </li>
              
               <li class="article-tag-list-item">
