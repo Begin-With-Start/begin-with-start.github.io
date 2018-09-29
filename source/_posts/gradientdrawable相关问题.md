@@ -4,8 +4,14 @@ date: 2018-09-23 17:14:55
 tags: [gradientdrawable,工程技能]
 categories: android技能
 ---
-![image](gradientdrawable相关问题/wild_picture.jpg)
+```
+1.这个技术解决了什么问题
+2.适合在哪种场景使用
+3.这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点
+4.解决方案
+```
 <!-- more -->
+![image](gradientdrawable相关问题/wild_picture.jpg)
 ## 这个技术解决了什么问题 ## 
 ```
 	一个项目中遇到的问题，在使用同drawable的实例，设置其中一个view的backgroundcolor为yellow时候，recycleveiw滚动的时候，造成了其他的item颜色发生问题。下面就讨论下这种情况发生的原因，和避免的方法；

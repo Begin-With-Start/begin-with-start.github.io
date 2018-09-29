@@ -4,14 +4,17 @@ date: 2018-09-17 14:24:26
 tags: [理论知识,test用例]
 categories: 测试技能
 ---
+```
+测试用例的设计
+```
+<!-- more -->
+![image](test-case-design-xiaozhu/sky_blue_sowild.jpeg)
 ## 测试用例的设计
 1. 黑盒测试
 - 等价类
 - 边界值
 2. 功能测试（页面刷新、用户习惯性使用Tab、Enter等、权限）显示功能性需求
 3. 安全性测试
-![image](test-case-design-xiaozhu/sky_blue_sowild.jpeg)
-<!-- more -->
 - 加密（存储、网络传输）
 - 网络传输是否加密
 - sql注入字符串

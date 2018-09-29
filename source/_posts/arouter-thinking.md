@@ -4,8 +4,13 @@ date: 2018-09-13 10:41:22
 tags: [工程,arouter]
 categories: android技能
 ---
-![image](arouter-thinking/city.jpg)
+```
+1.arouter 问题总结
+2.有没有改造之法？
+3.改造之后的注意点？
+```
 <!-- more -->
+![image](arouter-thinking/city.jpg)
 ## arouter 问题总结： ## 
 ```
 

@@ -4,9 +4,16 @@ date: 2017-09-18 11:05:25
 tags: [工程,so库实战]
 categories: android技能
 ---
-
-![image](so-source-design/blue_blue.jpg)
+```
+1.google android系统so库比较多的原因
+2.android cpu架构分类
+3.android如何去寻找so库原理
+4.几个需要明白的概念
+5.大厂对于so架构的一些取舍
+6.总结
+```
 <!-- more -->
+![image](so-source-design/blue_blue.jpg)
 # google android系统so库比较多的原因
 
 为适配众多的cpu架构，实际就是指令集的区别，在开始从复杂指令集改动到简易指令集的微软架构之后，又分出若干阵营，那么这个地方就不展开了，展开我怕篇幅不太够啊，少年。
