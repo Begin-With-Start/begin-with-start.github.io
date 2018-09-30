@@ -4,9 +4,7 @@ date: 2018-09-17 14:24:26
 tags: [理论知识,test用例]
 categories: 测试技能
 ---
-```
-测试用例的设计
-```
+* 测试用例的设计
 <!-- more -->
 ![image](test-case-design-xiaozhu/sky_blue_sowild.jpeg)
 ## 测试用例的设计

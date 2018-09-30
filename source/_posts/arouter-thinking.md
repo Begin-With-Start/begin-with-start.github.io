@@ -4,11 +4,9 @@ date: 2018-09-13 10:41:22
 tags: [工程,arouter]
 categories: android技能
 ---
-```
-1.arouter 问题总结
-2.有没有改造之法？
-3.改造之后的注意点？
-```
+* arouter 问题总结
+* values 两种系统识别文件夹，细分三种
+* 有没有改造之法？
 <!-- more -->
 ![image](arouter-thinking/city.jpg)
 ## arouter 问题总结： ## 

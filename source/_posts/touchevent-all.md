@@ -4,12 +4,10 @@ date: 2017-10-09 15:12:27
 tags: [工程,event事件解析]
 categories: android技能
 ---
-```
-1.前言
-2.事件分发的一些概念
-3.QA
-4.源码链接
-```
+* 前言
+* 事件分发的一些概念
+* QA
+* 源码链接
 <!-- more -->
 ![image](touchevent-all/grey.jpeg)
 # 前言 #

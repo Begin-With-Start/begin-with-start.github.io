@@ -4,30 +4,28 @@ date: 2017-09-18 11:05:25
 tags: [工程,so库实战]
 categories: android技能
 ---
-```
-1.google android系统so库比较多的原因
-2.android cpu架构分类
-3.android如何去寻找so库原理
-4.几个需要明白的概念
-5.大厂对于so架构的一些取舍
-6.总结
-```
+* google android系统so库比较多的原因
+* android cpu架构分类
+* android如何去寻找so库原理
+* 几个需要明白的概念
+* 大厂对于so架构的一些取舍
+* 总结
 <!-- more -->
 ![image](so-source-design/blue_blue.jpg)
-# google android系统so库比较多的原因
-
+# google android系统so库比较多的原因 # 
+ 
 为适配众多的cpu架构，实际就是指令集的区别，在开始从复杂指令集改动到简易指令集的微软架构之后，又分出若干阵营，那么这个地方就不展开了，展开我怕篇幅不太够啊，少年。
 
-# android cpu架构分类
+# android cpu架构分类 #
 
-## android 当前支持的七种cpu架构
-Android系统目前支持以下七种不同的CPU架构：ARMv5，ARMv7 (从2010年起)，x86 (从2011年起)，MIPS (从2012年起)，ARMv8，MIPS64和x86_64 (从2014年起)，每一种都关联着一个相应的ABI。
-~ABI 应用程序二进制接口(Application binary interface)定义了二进制文件(so库)如何运行在相应的系统上。
+## android 当前支持的七种cpu架构 ##
 
-## 每种cpu架构对应着一个ABI
+Android系统目前支持以下七种不同的CPU架构：ARMv5，ARMv7 (从2010年起)，x86 (从2011年起)，MIPS (从2012年起)，ARMv8，MIPS64和x86_64 (从2014年起)，每一种都关联着一个相应的ABI~ABI 应用程序二进制接口(Application binary interface)定义了二进制文件(so库)如何运行在相应的系统上。
+
+## 每种cpu架构对应着一个ABI ##
 armeabi，armeabi-v7a，x86，mips，arm64-v8a，mips64，x86_64
 
-# android如何去寻找so库原理
+# android如何去寻找so库原理 #
 
 ## android如何去寻找so库原理图解
 ![image](http://7xjiyb.com1.z0.glb.clouddn.com/%E5%AF%BC%E5%9B%BE.png)
