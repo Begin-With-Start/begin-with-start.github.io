@@ -14,16 +14,15 @@
 <meta property="og:url" content="https://begin-with-start.github.io/2018/09/29/nexus私有库带图版本/index.html">
 <meta property="og:site_name" content="Begin-With-Start">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://begin-with-start.github.io/2018/09/29/nexus私有库带图版本/so-source-design/nexus_setup.jpg">
-<meta property="og:image" content="https://begin-with-start.github.io/2018/09/29/nexus私有库带图版本/so-source-design/add_proxy_repository.jpg">
-<meta property="og:image" content="https://begin-with-start.github.io/2018/09/29/nexus私有库带图版本/so-source-design/new_repository_configration.png">
-<meta property="og:image" content="https://begin-with-start.github.io/2018/09/29/nexus私有库带图版本/so-source-design/nexus_discovery.png">
-<meta property="og:image" content="https://begin-with-start.github.io/2018/09/29/nexus私有库带图版本/so-source-design/nexus_error_m2repository.png">
-<meta property="og:image" content="https://begin-with-start.github.io/2018/09/29/nexus私有库带图版本/so-source-design/blue_blue.jpg">
-<meta property="og:updated_time" content="2018-09-30T03:56:24.223Z">
+<meta property="og:image" content="https://github.com/Begin-With-Start/begin-with-start.github.io/blob/hexo/source/images/nexus_setup.jpg">
+<meta property="og:image" content="https://github.com/Begin-With-Start/begin-with-start.github.io/blob/hexo/source/images/add_proxy_repository.jpg">
+<meta property="og:image" content="https://github.com/Begin-With-Start/begin-with-start.github.io/blob/hexo/source/images/new_repository_configration.png">
+<meta property="og:image" content="https://github.com/Begin-With-Start/begin-with-start.github.io/blob/hexo/source/images/nexus_discovery.png">
+<meta property="og:image" content="https://github.com/Begin-With-Start/begin-with-start.github.io/blob/hexo/source/images/nexus_error_m2repository.png">
+<meta property="og:updated_time" content="2018-09-30T03:59:49.568Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nexus私有库使用部署，与配置相关">
-<meta name="twitter:image" content="https://begin-with-start.github.io/2018/09/29/nexus私有库带图版本/so-source-design/nexus_setup.jpg">
+<meta name="twitter:image" content="https://github.com/Begin-With-Start/begin-with-start.github.io/blob/hexo/source/images/nexus_setup.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Begin-With-Start" type="application/atom+xml">
   
@@ -191,7 +190,7 @@
         nexus stop service
         nexus restart service
     ({ console | start | stop | restart | status | dump })
-</code></pre><p><img src="/2018/09/29/nexus私有库带图版本/so-source-design/nexus_setup.jpg" alt="image"></p>
+</code></pre><p><img src="https://github.com/Begin-With-Start/begin-with-start.github.io/blob/hexo/source/images/nexus_setup.jpg" alt="image"></p>
 <pre><code>* c.配置nexus代理到国内的镜像上：
     三种仓库： proxy repository , host repository , virtual repository , group repository;对应 代理仓库，本地仓库，虚拟仓库,仓库组
     添加proxy repositroy 仓库到nexus：
@@ -200,22 +199,21 @@
         https://maven.aliyun.com/repository/public/
         https://maven.aliyun.com/repository/google/
         https://maven.aliyun.com/repository/jcenter/
-</code></pre><p><img src="/2018/09/29/nexus私有库带图版本/so-source-design/add_proxy_repository.jpg" alt="image"><br>        点击save</p>
-<p><img src="/2018/09/29/nexus私有库带图版本/so-source-design/new_repository_configration.png" alt="image"></p>
+</code></pre><p><img src="https://github.com/Begin-With-Start/begin-with-start.github.io/blob/hexo/source/images/add_proxy_repository.jpg" alt="image"><br>        点击save</p>
+<p><img src="https://github.com/Begin-With-Start/begin-with-start.github.io/blob/hexo/source/images/new_repository_configration.png" alt="image"></p>
 <pre><code>* d.关闭discovery选项，打开的时候，不在prefix文件配置中的包下载不到,不勾选可以下载该仓库任意的包；
-</code></pre><p><img src="/2018/09/29/nexus私有库带图版本/so-source-design/nexus_discovery.png" alt="image"></p>
+</code></pre><p><img src="https://github.com/Begin-With-Start/begin-with-start.github.io/blob/hexo/source/images/nexus_discovery.png" alt="image"></p>
 <pre><code>* e.本地部署成功之后移植到测试机之后出现 remote access not allowed from M2Repository问题：
     将 auto Blocking enabled 设置为false；
     原因：nexus私有库，会发送head 和 get 请求到目标代理库，来判断目标代理库是否可用是否健康，未响应或者是响应错误会导致nexus认为目标代理库不可用，会返回这个错误；
-</code></pre><p><img src="/2018/09/29/nexus私有库带图版本/so-source-design/nexus_error_m2repository.png" alt="image"></p>
+</code></pre><p><img src="https://github.com/Begin-With-Start/begin-with-start.github.io/blob/hexo/source/images/nexus_error_m2repository.png" alt="image"></p>
 <pre><code>* f.将本地依赖配置为 respository path 
     //切换到私有库
         maven { url &apos;http://maven.leoao.com/nexus/content/repositories/google/&apos; }
         maven { url &apos;http://maven.leoao.com/nexus/content/repositories/aliyun-public/&apos; }
         maven { url &apos;http://maven.leoao.com/nexus/content/repositories/jcenter/&apos; }
     私有库在遍历下载三方依赖的同时，会直接把依赖在本地缓存一份，下次的取用速度会直接先判断私有库是否已有这个版本，已有的三方库下载速度会非常快；
-</code></pre><p><img src="/2018/09/29/nexus私有库带图版本/so-source-design/blue_blue.jpg" alt="image"></p>
-<h2 id="对于代理仓库没有依赖的情况"><a href="#对于代理仓库没有依赖的情况" class="headerlink" title="对于代理仓库没有依赖的情况"></a>对于代理仓库没有依赖的情况</h2><h2 id="对于三方自建仓库管理库的情况"><a href="#对于三方自建仓库管理库的情况" class="headerlink" title="对于三方自建仓库管理库的情况"></a>对于三方自建仓库管理库的情况</h2>
+</code></pre><h2 id="对于代理仓库没有依赖的情况"><a href="#对于代理仓库没有依赖的情况" class="headerlink" title="对于代理仓库没有依赖的情况"></a>对于代理仓库没有依赖的情况</h2><h2 id="对于三方自建仓库管理库的情况"><a href="#对于三方自建仓库管理库的情况" class="headerlink" title="对于三方自建仓库管理库的情况"></a>对于三方自建仓库管理库的情况</h2>
       
 
       
@@ -499,15 +497,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">定制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gradientdrawable</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">工程技能</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">定制</a>
               </li>
              
               <li class="article-tag-list-item">
