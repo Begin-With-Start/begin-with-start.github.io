@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[nexus私有库使用部署，与配置相关]]></title>
+    <url>%2F2018%2F09%2F29%2Fnexus%E7%A7%81%E6%9C%89%E5%BA%93%E5%B8%A6%E5%9B%BE%E7%89%88%E6%9C%AC%2F</url>
+    <content type="text"><![CDATA[部署私有库目的12针对于在工程中依赖三方库的时候，报出的find in location ，链接实际可用的问题，也针对在三方库莫名的time out的问题；搭建一个私有库，出现问题及时处理及时重启及时管理离线包的方式更能从根本上杜绝这种事情的发生；同时，Nexus在代理远程仓库并且缓存的同时维护本地仓库，节省外网带宽和时间，Nexus私服就可以满足这样的需要。 搭建步骤搭建一个nexus的私有库，在流程是是比较简单的，麻烦的是调通依赖的代理；下面从自搭建私有库的步骤上来进行一步步引导： * a.安装nexus库服务，使用homebrew安装nexus少了很多繁琐的配置，默认安装的版本是：Nexus Repository Manager OSS 2.14.8-01 * b.nexus服务的管理命令： 服务启动与关闭： nexus start service nexus stop service nexus restart service ({ console | start | stop | restart | status | dump }) * c.配置nexus代理到国内的镜像上： 三种仓库： proxy repository , host repository , virtual repository , group repository;对应 代理仓库，本地仓库，虚拟仓库,仓库组 添加proxy repositroy 仓库到nexus： ![image](so-source-design/blue_blue.jpg) configration 添加 remote storage location 添加 阿里云的国内镜像，根据乐刻工程依赖的情况添加三个依赖仓库： https://maven.aliyun.com/repository/public/ https://maven.aliyun.com/repository/google/ https://maven.aliyun.com/repository/jcenter/ 点击save * d.关闭discovery选项，打开的时候，不在prefix文件配置中的包下载不到,不勾选可以下载该仓库任意的包； * e.本地部署成功之后移植到测试机之后出现 remote access not allowed from M2Repository问题： 将 auto Blocking enabled 设置为false； 原因：nexus私有库，会发送head 和 get 请求到目标代理库，来判断目标代理库是否可用是否健康，未响应或者是响应错误会导致nexus认为目标代理库不可用，会返回这个错误； * f.将本地依赖配置为 respository path //切换到私有库 maven { url &apos;http://maven.leoao.com/nexus/content/repositories/google/&apos; } maven { url &apos;http://maven.leoao.com/nexus/content/repositories/aliyun-public/&apos; } maven { url &apos;http://maven.leoao.com/nexus/content/repositories/jcenter/&apos; } 私有库在遍历下载三方依赖的同时，会直接把依赖在本地缓存一份，下次的取用速度会直接先判断私有库是否已有这个版本，已有的三方库下载速度会非常快； 对于代理仓库没有依赖的情况对于三方自建仓库管理库的情况]]></content>
+      <categories>
+        <category>android技能</category>
+      </categories>
+      <tags>
+        <tag>工程</tag>
+        <tag>ci相关</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nexus私有库使用部署，与配置相关]]></title>
+    <url>%2F2018%2F09%2F29%2Fnexus%E7%A7%81%E6%9C%89%E5%BA%93%E4%BD%BF%E7%94%A8%E9%83%A8%E7%BD%B2%EF%BC%8C%E4%B8%8E%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3%2F</url>
+    <content type="text"><![CDATA[部署私有库目的12针对于在工程中依赖三方库的时候，报出的find in location ，链接实际可用的问题，也针对在三方库莫名的time out的问题；搭建一个私有库，出现问题及时处理及时重启及时管理离线包的方式更能从根本上杜绝这种事情的发生；同时，Nexus在代理远程仓库并且缓存的同时维护本地仓库，节省外网带宽和时间，Nexus私服就可以满足这样的需要。 搭建nexus仓库搭建一个nexus的私有库，在流程是是比较简单的，麻烦的是调通依赖的代理；下面从自搭建私有库的步骤上来进行一步步引导： * a.安装nexus库服务，使用homebrew安装nexus少了很多繁琐的配置，默认安装的版本是：Nexus Repository Manager OSS 2.14.8-01 * b.nexus服务的管理命令： 服务启动与关闭： nexus start service nexus stop service nexus restart service * c.配置nexus代理到国内的镜像上： configration 添加 remote storage location 添加 阿里云的国内镜像，根据乐刻工程依赖的情况添加三个依赖仓库： https://maven.aliyun.com/repository/public/ https://maven.aliyun.com/repository/google/ https://maven.aliyun.com/repository/jcenter/ * d.关闭discovery选项，打开的时候，不在prefix文件配置中的包下载不到,不勾选可以下载该仓库任意的包； * e.本地部署成功之后移植到测试机之后出现 remote access not allowed from M2Repository问题： 将 auto Blocking enabled 设置为false； 原因：nexus私有库，会发送head 和 get 请求到目标代理库，来判断目标代理库是否可用是否健康，未响应或者是响应错误会导致nexus认为目标代理库不可用，会返回这个错误； * f.将本地依赖配置为 respository path //切换到私有库 maven { url &apos;http://maven.leoao.com/nexus/content/repositories/google/&apos; } maven { url &apos;http://maven.leoao.com/nexus/content/repositories/aliyun-public/&apos; } maven { url &apos;http://maven.leoao.com/nexus/content/repositories/jcenter/&apos; } 私有库在遍历下载三方依赖的同时，会直接把依赖在本地缓存一份，下次的取用速度会直接先判断私有库是否已有这个版本，已有的三方库下载速度会非常快； 对于代理仓库没有依赖的情况对于三方自建仓库管理库的情况]]></content>
+      <categories>
+        <category>android技能</category>
+      </categories>
+      <tags>
+        <tag>工程</tag>
+        <tag>ci相关</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[gradientdrawable相关问题]]></title>
     <url>%2F2018%2F09%2F23%2Fgradientdrawable%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[这个技术解决了什么问题 适合在哪种场景使用 这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点 解决方案 这个技术解决了什么问题1一个项目中遇到的问题，在使用同drawable的实例，设置其中一个view的backgroundcolor为yellow时候，recycleveiw滚动的时候，造成了其他的item颜色发生问题。下面就讨论下这种情况发生的原因，和避免的方法； 适合在哪种场景使用1当使用git上的statebutton或者是statetextview的时候，不会产生的这个问题，下文我们会探讨一下，为什么同样适用了gradientdrawable的对象，没有让该控件发生这个问题； 这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点1用这种方式来实现动态改动背景颜色的方式，原因在于这个标签是不规则的形状，使用了shape的方式来进行设置样式，需要改动shape的背景颜色的时候，只有用gradientdrawable的方式来进行，---（不过引入了statebutton之后，这个问题就不会有了） 1234567891011121314151617181920212223242526从官方的说法上来说：/** * Changes this drawable to use a single color instead of a gradient. * &lt;p&gt; * &lt;strong&gt;Note&lt;/strong&gt;: changing color will affect all instances of a * drawable loaded from a resource. It is recommended to invoke * &#123;@link #mutate()&#125; before changing the color. * * @param argb The color used to fill the shape * * @see #mutate() * @see #setColors(int[]) * @see #getColor */ public void setColor(@ColorInt int argb) &#123; mGradientState.setSolidColors(ColorStateList.valueOf(argb)); mFillPaint.setColor(argb); invalidateSelf(); &#125; 当使用同一个resource的同一个实例来进行背景色管理的时候，改动其中一个颜色那么会影响到其他的背景色，在内存优化上，特别是在recycleview重用机制上来说，都会进行重用，产生随着内存的吃紧而来的问题； 当使用： view获取 GradientDrawable gradientDrawable = (GradientDrawable) viewHolder.mTxtType.getBackground(); gradientDrawable.setColor(color); 的时候，会造成重用； 而在git上的statebutton组件上，也使用gradientdrawable，没有发生这个情况，是因为底层使用的时候，每次的gradientdrawable都重新创建了一次，执行到button的构造方式的时候，都会new一个实例出来。 解决方案1那么我们避免这个问题的方案也大概可以出来了，就是避免掉重用同一个resource出来的drawable实例，而使用创建的实例来进行；可以使用引入组件的方式来简单解决也可以自己建立一个机制，来新建即可；]]></content>
@@ -13,18 +37,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[自动化测试简介]]></title>
-    <url>%2F2018%2F09%2F17%2Ftest-case-auto-testcase-summary%2F</url>
-    <content type="text"><![CDATA[软件开发生命周期各个阶段的自动化测试技术 软件开发生命周期各个阶段的自动化测试技术1、单元测试的自动化技术 用例框架代码生成的自动化 部分测试输入数据的自动化生成 自动生成边界值 自动桩代码的生成 桩代码（stub code）是用来替代真正代买的临时代码 单元测试开发者只需要关注桩代码内的具体逻辑实现，以及桩代码的返回值 最好还能实现‘抽桩’或拔桩 被测代码的自动化静态分析 常用工具：Sonar、Coverity 测试覆盖率的自动统计与分析2、代码级集成测试的自动化技术 代码级集成测试与单元测试的最大区别：代码级集成测试调用的其他函数都为真实的，不允许使用桩代码代替；单元测试可以；Web Service 测试的自动化技术 Web Service 测试主要指 SOUP API 和 REST API这两类API测试，最典型的是采用SoupUI和Postman等类似的工具，但这种工具一般都是界面手动发起Request并验证Response，难以CI/CD集成，所以出现了API自动化测试框架 代码级API测试用例，一般包括三个步骤： 准备API测试数据 准备调用参数，并调用 验证返回结果 目前JAVA最流行的API测试框架是REST Assured Web Service 还包括： 测试脚手架代码的自动化生成 部分测试输入数据的自动生成 生成遵循边界值原则 Response验证的自动化 关注：返回状态码（state code）、Scheme结构（数据结构）以及具体的字段值 核心思想：自动识别出有差异的字段值，比较过程可以通过规则配置去掉类似：时间戳、会话ID（Session ID）等动态值 基于SoupUI或Postman的自动化脚本生成 开发自动化代码转换生成工具，工具的输入为SoupUI或Postman的测试用例元数据（即JSON元文件），输出为符合API测试框架规范的基于代码实现的测试用例GUI 测试的自动化技术 GUI 自动化测试的两大方向：传统Web浏览器和移动端原生应用（Native App）的GUI自动化 Web浏览器：主流开源方案：Selenium，商业方案：Micro Focus的UFT（前身是HP的QTP） 移动端：主流Appium，IOS集成了XCUITest，Android集成了UIAutomator和Espresso 评论：已有案例：Postman+服务器部署Newman+jenkins 小众全英文（不支持英文）：Katalon Studio jmeter做接口测试 我们现有的API:Python + Selenium + unittest GUI：Python + Appium总结：]]></content>
-      <categories>
-        <category>测试技能</category>
-      </categories>
-      <tags>
-        <tag>理论知识</tag>
-        <tag>自动化测试技能</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[测试用例的设计]]></title>
     <url>%2F2018%2F09%2F17%2Ftest-case-design-xiaozhu%2F</url>
     <content type="text"><![CDATA[测试用例的设计 测试用例的设计 黑盒测试 等价类 边界值 功能测试（页面刷新、用户习惯性使用Tab、Enter等、权限）显示功能性需求 安全性测试 加密（存储、网络传输） 网络传输是否加密 sql注入字符串 同一用户同一终端，多浏览器，登录互斥性 同一用户多终端的浏览器，先后登录互斥性 ‘XSS跨站脚本攻击’，系统行为是否被篡改 多次登录失败，是否阻止暴力破解 兼容性测试 不同浏览器，页面和功能正确 相同浏览器不同版本，页面和功能正确 不同移动设备下浏览器，页面和功能正确 不同分辨率终端，页面和功能正确 性能测试 单用户响应时间小于3s 请求数量是否过多 高并发下响应时间小于5s 高并发下服务器监控指标是否符合预期 高集合点并发场景下，是否存在资源死锁和不合理的资源等待 长时间大量用户，登录登出，服务器端是否存在内存泄漏 网络测试 弱网测试或切换网络或网络延迟如何设计“好的”测试用例 “好的”测试用例必备特征 整体完备性：完全覆盖测试需求 等价类划分的准确性：保证其中一个通过，其他输入也一定测试通过 等价类集合的完备性：所有可能的边界值和边界条件都已经正确识别 三种最常用的测试用例设计方法 等价类划分 有效等价类和无效等价类 边界值分析 正好等于、刚刚大于或刚刚小于 错误推测 基于对被测软件系统设计的理解、过往经验以及个人直觉，推测软件可能的缺陷，从而有针对性的设计测试用例。该方法强调对被测软件的需求理解和对设计实现的细节把握，还有个人的能力。 打造缺陷知识库用例设计的其他经验 深入理解被测软件的架构才能设计出有的放矢的测试用例集，去发现系统边界以及系统集成上的潜在缺陷 必须深入理解被测软件的设计与实现细节，深入理解软件内部的处理逻辑 需要引入需求覆盖率和代码覆盖率来衡量测试执行的完备性，并以此为依据来找出遗漏的测试点 需求合理性测试 测试后的漏测率和问题的严重程度上评估]]></content>
@@ -34,6 +46,18 @@
       <tags>
         <tag>理论知识</tag>
         <tag>test用例</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[自动化测试简介]]></title>
+    <url>%2F2018%2F09%2F17%2Ftest-case-auto-testcase-summary%2F</url>
+    <content type="text"><![CDATA[软件开发生命周期各个阶段的自动化测试技术 软件开发生命周期各个阶段的自动化测试技术1、单元测试的自动化技术 用例框架代码生成的自动化 部分测试输入数据的自动化生成 自动生成边界值 自动桩代码的生成 桩代码（stub code）是用来替代真正代买的临时代码 单元测试开发者只需要关注桩代码内的具体逻辑实现，以及桩代码的返回值 最好还能实现‘抽桩’或拔桩 被测代码的自动化静态分析 常用工具：Sonar、Coverity 测试覆盖率的自动统计与分析2、代码级集成测试的自动化技术 代码级集成测试与单元测试的最大区别：代码级集成测试调用的其他函数都为真实的，不允许使用桩代码代替；单元测试可以；Web Service 测试的自动化技术 Web Service 测试主要指 SOUP API 和 REST API这两类API测试，最典型的是采用SoupUI和Postman等类似的工具，但这种工具一般都是界面手动发起Request并验证Response，难以CI/CD集成，所以出现了API自动化测试框架 代码级API测试用例，一般包括三个步骤： 准备API测试数据 准备调用参数，并调用 验证返回结果 目前JAVA最流行的API测试框架是REST Assured Web Service 还包括： 测试脚手架代码的自动化生成 部分测试输入数据的自动生成 生成遵循边界值原则 Response验证的自动化 关注：返回状态码（state code）、Scheme结构（数据结构）以及具体的字段值 核心思想：自动识别出有差异的字段值，比较过程可以通过规则配置去掉类似：时间戳、会话ID（Session ID）等动态值 基于SoupUI或Postman的自动化脚本生成 开发自动化代码转换生成工具，工具的输入为SoupUI或Postman的测试用例元数据（即JSON元文件），输出为符合API测试框架规范的基于代码实现的测试用例GUI 测试的自动化技术 GUI 自动化测试的两大方向：传统Web浏览器和移动端原生应用（Native App）的GUI自动化 Web浏览器：主流开源方案：Selenium，商业方案：Micro Focus的UFT（前身是HP的QTP） 移动端：主流Appium，IOS集成了XCUITest，Android集成了UIAutomator和Espresso 评论：已有案例：Postman+服务器部署Newman+jenkins 小众全英文（不支持英文）：Katalon Studio jmeter做接口测试 我们现有的API:Python + Selenium + unittest GUI：Python + Appium总结：]]></content>
+      <categories>
+        <category>测试技能</category>
+      </categories>
+      <tags>
+        <tag>理论知识</tag>
+        <tag>自动化测试技能</tag>
       </tags>
   </entry>
   <entry>
@@ -51,7 +75,7 @@
   <entry>
     <title><![CDATA[从碎片化的技能点到片的解决方案的认知改变]]></title>
     <url>%2F2018%2F09%2F13%2Flearn-structer%2F</url>
-    <content type="text"><![CDATA[认知改变 如何进行改变 思考问题 认知改变初涉开发醉心于各种奇技淫巧，各种技能，喜欢堆砌很多技能数，当然这些年还是比较有意思的，毕竟想研究什么就研究什么。python脚本的简洁，h5的火热，java后台的了解，android的深度学习，各种语言方向的研究。当然这些知识在构建一个行业的解决方案的时候，一样是会其效果的，像业务倒逼着技术的成长，对于知识点构建一个知识结构，可以从开始的知识构建得到经验，但是行业的解决方案，乃至于全行业的通用架构的提炼一直没有得到可以训练。当然在遇到比较体系的问题的时候，没有很优化的方案。前贤有言：开发中的“坑”是对客观的不了解与不通达的主观妥协，确实忘了是谁说的，但是比较有道理。对一个使用中的三方库与文件的彻底了解再加上java的开源特性，使用三方开源的库与资料在调研充分的情况下，是不会有什么坑的。 如何进行改变上面说道了问题，那么就应该想想如何进行改变，成长总是伴随着不习惯不适应，所以这些改变可能让已经适应了舒适区的比较的不适，但是不适那种坐车晕车的强烈的不适，仅仅是一个像冬天吃一个冰激凌感官刺激体验新奇但是味觉比较的小煎熬的过程。 思考问题 这个技术能解决什么问题（why） 比较适合在哪些场景应用（where + when) 这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 &gt; 有什么优点和缺点（what） 了解前面的问题后，我才会开始去尝试写写Demo，或者更进一步去应用（How to use） 觉得有兴趣或者其实现很牛逼的情况下，我就去研究一下原理机制，看看源码等 （How it implements） 指导思想就是：从行业解决方案，进一步到技能技术的精深。]]></content>
+    <content type="text"><![CDATA[认知改变 如何进行改变 思考问题 认知改变初涉开发醉心于各种奇技淫巧，各种技能，喜欢堆砌很多技能数，当然这些年还是比较有意思的，毕竟想研究什么就研究什么。python脚本的简洁，h5的火热，java后台的了解，android的深度学习，各种语言方向的研究。 当然这些知识在构建一个行业的解决方案的时候，一样是会其效果的，像业务倒逼着技术的成长，对于知识点构建一个知识结构，可以从开始的知识构建得到经验，但是行业的解决方案，乃至于全行业的通用架构的提炼一直没有得到可以训练。当然在遇到比较体系的问题的时候，没有很优化的方案。 前贤有言：开发中的“坑”是对客观的不了解与不通达的主观妥协，确实忘了是谁说的，但是比较有道理。对一个使用中的三方库与文件的彻底了解再加上java的开源特性，使用三方开源的库与资料在调研充分的情况下，是不会有什么坑的。 如何进行改变上面说道了问题，那么就应该想想如何进行改变，成长总是伴随着不习惯不适应，所以这些改变可能让已经适应了舒适区的比较的不适，但是不适那种坐车晕车的强烈的不适，仅仅是一个像冬天吃一个冰激凌感官刺激体验新奇但是味觉比较的小煎熬的过程。 在接触到一个新的方向知识点的时候，希望能够想想这个点，能够加入到知识树中的哪个层级是解决哪个层级的问题，同时能够知道比之前的解决方案优化在哪，原理能不能探求清楚，能不能给别人讲述出来，在之后的一些场景能不能够适用上去；从来知识，路和书都没有白看的，都会在未来的某个时间，在某个转角探出头来，轻声跟你说你好，我过来看你了。无需多言，沉默，相视。 针对当前的方向如何进行成长当前主要的技能集中在安卓端，之后的方向，大变的可能小，但是按照现在软件市场的情况，不变是不可能的。之前的后端知识也需要在某个时间点直接引发出来。非常大的方向改动，需要非常多的业余时间来进行扩充知识面； 当前方向问题：1.后端，已经从事过，初级水平，还需要很多的项目与锻炼到高级； 2.机器学习与人工智能很想深入，但是可能入门基础准备比较多； 3.大数据处理，对于算法要求比较高，需要有技能储备； 当前已着手：后端有相关项目就投入一下；机器学习训练学习模型可以开始了； 当前方向成长路径技能图谱： https://blog.csdn.net/qq_39331713/article/details/82590218 外围与必须技能： https://mp.weixin.qq.com/s/XREOq821aaY0gwrlwrOQJA 思考问题 这个技术能解决什么问题（why） 比较适合在哪些场景应用（where + when) 这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 &gt; 有什么优点和缺点（what） 了解前面的问题后，我才会开始去尝试写写Demo，或者更进一步去应用（How to use） 觉得有兴趣或者其实现很牛逼的情况下，我就去研究一下原理机制，看看源码等 （How it implements） 指导思想就是：从行业解决方案，进一步到技能技术的精深。]]></content>
       <categories>
         <category>android技能</category>
       </categories>
@@ -99,7 +123,7 @@
   <entry>
     <title><![CDATA[so库全解析]]></title>
     <url>%2F2017%2F09%2F18%2Fso-source-design%2F</url>
-    <content type="text"><![CDATA[google android系统so库比较多的原因 android cpu架构分类 android如何去寻找so库原理 几个需要明白的概念 大厂对于so架构的一些取舍 总结 google android系统so库比较多的原因 为适配众多的cpu架构，实际就是指令集的区别，在开始从复杂指令集改动到简易指令集的微软架构之后，又分出若干阵营，那么这个地方就不展开了，展开我怕篇幅不太够啊，少年。 android cpu架构分类android 当前支持的七种cpu架构Android系统目前支持以下七种不同的CPU架构：ARMv5，ARMv7 (从2010年起)，x86 (从2011年起)，MIPS (从2012年起)，ARMv8，MIPS64和x86_64 (从2014年起)，每一种都关联着一个相应的ABI。~ABI 应用程序二进制接口(Application binary interface)定义了二进制文件(so库)如何运行在相应的系统上。 每种cpu架构对应着一个ABIarmeabi，armeabi-v7a，x86，mips，arm64-v8a，mips64，x86_64 android如何去寻找so库原理android如何去寻找so库原理图解 android系统寻找so库的顺序，先区分架构，再去寻找完美适配的架构文件夹，若果找不到继续向兼容的架构寻找，匹配架构成功后，加载这个架构下所有的so到data文件夹中，如果在data中找不到应用中使用到的so库，那么会报异常，so link错误等等，不会再到其他架构中去扫描。 几个需要明白的概念主ABI库主ABI库： 与系统影响本身机器对应的ABI库辅助ABI库： 与系统也支持的ABI对应而，为实现最佳性能，应该提供主abi库 各个架构库支持的ABIX86 ： 可以运行在armeabi/armeabi-v7a 主要的ABI是X86,辅助ABI是armeabi-v7amips: 只定义了主ABI是mips(但是极少用于手机，可以忽略)armeabi-v7a ： 主 armeabi-v7a ， 辅助armeabi 只提供一种架构优缺点只提供一种架构优点：可以减小包的体积缺点： 只提供一种架构，而忽视其他架构，那么会影响到性能和兼容，同时也将丢失掉专门为64位优化的性能。 android找so库对于软件开发影响从根本上来说，系统只会把他区分架构的文件夹整个复制到data目录，那么造成一个问题就是，每个架构的文件夹下都应该是so库的全量，如果三方服务供应商，只给了一个armeabi-v7a 的架构，而工程中准备只放一个armeabi的文件夹来减小包大小，那么应该将v7a中的so库拷贝到armeabi中。 同时在运行在androidstudio工程中的build.gradle defaultConfig 中添加： ndk { abiFilters “armeabi” }在打包中，只包含armeabi的架构。 大厂对于so架构的一些取舍armeabi-v7a : facebook , twitterarmeabi: 淘宝 微信armeabi : 淘票票 还是来一个图来说明这个东西吧，毕竟没图你说个啥啊： 我可以大概算一个总结那么实际中我们的取舍遵从的原则：1.为减小体积，只保留armeabi与armeabi-v7a，一般只保留一个2.若只有一个架构，那么其他架构中的so，保留的文件夹下有有全量。]]></content>
+    <content type="text"><![CDATA[google android系统so库比较多的原因 android cpu架构分类 android如何去寻找so库原理 几个需要明白的概念 大厂对于so架构的一些取舍 总结 google android系统so库比较多的原因 为适配众多的cpu架构，实际就是指令集的区别，在开始从复杂指令集改动到简易指令集的微软架构之后，又分出若干阵营，那么这个地方就不展开了，展开我怕篇幅不太够啊，少年。 android cpu架构分类android 当前支持的七种cpu架构Android系统目前支持以下七种不同的CPU架构：ARMv5，ARMv7 (从2010年起)，x86 (从2011年起)，MIPS (从2012年起)，ARMv8，MIPS64和x86_64 (从2014年起)，每一种都关联着一个相应的ABI~ABI 应用程序二进制接口(Application binary interface)定义了二进制文件(so库)如何运行在相应的系统上。 每种cpu架构对应着一个ABIarmeabi，armeabi-v7a，x86，mips，arm64-v8a，mips64，x86_64 android如何去寻找so库原理android如何去寻找so库原理图解 android系统寻找so库的顺序，先区分架构，再去寻找完美适配的架构文件夹，若果找不到继续向兼容的架构寻找，匹配架构成功后，加载这个架构下所有的so到data文件夹中，如果在data中找不到应用中使用到的so库，那么会报异常，so link错误等等，不会再到其他架构中去扫描。 几个需要明白的概念主ABI库主ABI库： 与系统影响本身机器对应的ABI库辅助ABI库： 与系统也支持的ABI对应而，为实现最佳性能，应该提供主abi库 各个架构库支持的ABIX86 ： 可以运行在armeabi/armeabi-v7a 主要的ABI是X86,辅助ABI是armeabi-v7amips: 只定义了主ABI是mips(但是极少用于手机，可以忽略)armeabi-v7a ： 主 armeabi-v7a ， 辅助armeabi 只提供一种架构优缺点只提供一种架构优点：可以减小包的体积缺点： 只提供一种架构，而忽视其他架构，那么会影响到性能和兼容，同时也将丢失掉专门为64位优化的性能。 android找so库对于软件开发影响从根本上来说，系统只会把他区分架构的文件夹整个复制到data目录，那么造成一个问题就是，每个架构的文件夹下都应该是so库的全量，如果三方服务供应商，只给了一个armeabi-v7a 的架构，而工程中准备只放一个armeabi的文件夹来减小包大小，那么应该将v7a中的so库拷贝到armeabi中。 同时在运行在androidstudio工程中的build.gradle defaultConfig 中添加： ndk { abiFilters “armeabi” }在打包中，只包含armeabi的架构。 大厂对于so架构的一些取舍armeabi-v7a : facebook , twitterarmeabi: 淘宝 微信armeabi : 淘票票 还是来一个图来说明这个东西吧，毕竟没图你说个啥啊： 我可以大概算一个总结那么实际中我们的取舍遵从的原则：1.为减小体积，只保留armeabi与armeabi-v7a，一般只保留一个2.若只有一个架构，那么其他架构中的so，保留的文件夹下有有全量。]]></content>
       <categories>
         <category>android技能</category>
       </categories>

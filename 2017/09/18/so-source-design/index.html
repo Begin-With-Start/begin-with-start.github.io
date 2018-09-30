@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://begin-with-start.github.io/2017/09/18/so-source-design/blue_blue.jpg">
 <meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%AF%BC%E5%9B%BE.png">
 <meta property="og:image" content="http://7xjiyb.com1.z0.glb.clouddn.com/demo3.gif.gif">
-<meta property="og:updated_time" content="2018-09-29T07:26:38.537Z">
+<meta property="og:updated_time" content="2018-09-29T12:44:28.065Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="so库全解析">
 <meta name="twitter:description" content="google android系统so库比较多的原因 android cpu架构分类 android如何去寻找so库原理 几个需要明白的概念 大厂对于so架构的一些取舍 总结">
@@ -187,7 +187,7 @@
 <img src="/2017/09/18/so-source-design/blue_blue.jpg" alt="image"><h1 id="google-android系统so库比较多的原因"><a href="#google-android系统so库比较多的原因" class="headerlink" title="google android系统so库比较多的原因"></a>google android系统so库比较多的原因</h1></li>
 </ul>
 <p>为适配众多的cpu架构，实际就是指令集的区别，在开始从复杂指令集改动到简易指令集的微软架构之后，又分出若干阵营，那么这个地方就不展开了，展开我怕篇幅不太够啊，少年。</p>
-<h1 id="android-cpu架构分类"><a href="#android-cpu架构分类" class="headerlink" title="android cpu架构分类"></a>android cpu架构分类</h1><h2 id="android-当前支持的七种cpu架构"><a href="#android-当前支持的七种cpu架构" class="headerlink" title="android 当前支持的七种cpu架构"></a>android 当前支持的七种cpu架构</h2><p>Android系统目前支持以下七种不同的CPU架构：ARMv5，ARMv7 (从2010年起)，x86 (从2011年起)，MIPS (从2012年起)，ARMv8，MIPS64和x86_64 (从2014年起)，每一种都关联着一个相应的ABI。<br>~ABI 应用程序二进制接口(Application binary interface)定义了二进制文件(so库)如何运行在相应的系统上。</p>
+<h1 id="android-cpu架构分类"><a href="#android-cpu架构分类" class="headerlink" title="android cpu架构分类"></a>android cpu架构分类</h1><h2 id="android-当前支持的七种cpu架构"><a href="#android-当前支持的七种cpu架构" class="headerlink" title="android 当前支持的七种cpu架构"></a>android 当前支持的七种cpu架构</h2><p>Android系统目前支持以下七种不同的CPU架构：ARMv5，ARMv7 (从2010年起)，x86 (从2011年起)，MIPS (从2012年起)，ARMv8，MIPS64和x86_64 (从2014年起)，每一种都关联着一个相应的ABI~ABI 应用程序二进制接口(Application binary interface)定义了二进制文件(so库)如何运行在相应的系统上。</p>
 <h2 id="每种cpu架构对应着一个ABI"><a href="#每种cpu架构对应着一个ABI" class="headerlink" title="每种cpu架构对应着一个ABI"></a>每种cpu架构对应着一个ABI</h2><p>armeabi，armeabi-v7a，x86，mips，arm64-v8a，mips64，x86_64</p>
 <h1 id="android如何去寻找so库原理"><a href="#android如何去寻找so库原理" class="headerlink" title="android如何去寻找so库原理"></a>android如何去寻找so库原理</h1><h2 id="android如何去寻找so库原理图解"><a href="#android如何去寻找so库原理图解" class="headerlink" title="android如何去寻找so库原理图解"></a>android如何去寻找so库原理图解</h2><p><img src="http://7xjiyb.com1.z0.glb.clouddn.com/%E5%AF%BC%E5%9B%BE.png" alt="image"></p>
 <p>android系统寻找so库的顺序，先区分架构，再去寻找完美适配的架构文件夹，若果找不到继续向兼容的架构寻找，匹配架构成功后，加载这个架构下所有的so到data文件夹中，如果在data中找不到应用中使用到的so库，那么会报异常，so link错误等等，不会再到其他架构中去扫描。</p>
@@ -493,6 +493,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">定制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gradientdrawable</a>
               </li>
              
@@ -501,11 +505,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">定制</a>
+                <a href="javascript:void(0)" class="js-tag color3">观点</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">观点</a>
+                <a href="javascript:void(0)" class="js-tag color5">ci相关</a>
               </li>
              
               <li class="article-tag-list-item">

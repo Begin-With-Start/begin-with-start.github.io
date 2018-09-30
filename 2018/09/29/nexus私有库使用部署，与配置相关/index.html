@@ -6,16 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://begin-with-start.github.io">
-  <title>分类 | Begin-With-Start</title>
+  <title>nexus私有库使用部署，与配置相关 | Begin-With-Start</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="https://begin-with-start.github.io/categories/index.html">
+  <meta name="keywords" content="工程,ci相关">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nexus私有库使用部署，与配置相关">
+<meta property="og:url" content="https://begin-with-start.github.io/2018/09/29/nexus私有库使用部署，与配置相关/index.html">
 <meta property="og:site_name" content="Begin-With-Start">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-13T02:27:51.416Z">
+<meta property="og:updated_time" content="2018-09-30T01:54:31.590Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
+<meta name="twitter:title" content="nexus私有库使用部署，与配置相关">
   
     <link rel="alternative" href="/atom.xml" title="Begin-With-Start" type="application/atom+xml">
   
@@ -149,27 +150,58 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-nexus私有库使用部署，与配置相关" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      分类
+      nexus私有库使用部署，与配置相关
     </h1>
   
 
         
-        <a href="/categories/index.html" class="archive-article-date">
-  	<time datetime="2017-09-18T05:28:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-18</time>
+        <a href="/2018/09/29/nexus私有库使用部署，与配置相关/" class="archive-article-date">
+  	<time datetime="2018-09-29T07:45:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <ul>
+<li></li>
+<li><a id="more"></a>
+<h2 id="部署私有库目的"><a href="#部署私有库目的" class="headerlink" title="部署私有库目的"></a>部署私有库目的</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">针对于在工程中依赖三方库的时候，报出的find in location ，链接实际可用的问题，也针对在三方库莫名的time out的问题；搭建一个私有库，出现问题及时处理及时重启及时管理离线包的方式更能从根本上杜绝这种事情的发生；</span><br><span class="line">同时，Nexus在代理远程仓库并且缓存的同时维护本地仓库，节省外网带宽和时间，Nexus私服就可以满足这样的需要。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="搭建nexus仓库"><a href="#搭建nexus仓库" class="headerlink" title="搭建nexus仓库"></a>搭建nexus仓库</h2><pre><code>搭建一个nexus的私有库，在流程是是比较简单的，麻烦的是调通依赖的代理；下面从自搭建私有库的步骤上来进行一步步引导：
+* a.安装nexus库服务，使用homebrew安装nexus少了很多繁琐的配置，默认安装的版本是：Nexus Repository Manager OSS 2.14.8-01
+* b.nexus服务的管理命令：
+    服务启动与关闭：
+        nexus start service
+        nexus stop service
+        nexus restart service
+* c.配置nexus代理到国内的镜像上：
+    configration 添加 remote storage location 添加 阿里云的国内镜像，根据乐刻工程依赖的情况添加三个依赖仓库：
+        https://maven.aliyun.com/repository/public/
+        https://maven.aliyun.com/repository/google/
+        https://maven.aliyun.com/repository/jcenter/
+* d.关闭discovery选项，打开的时候，不在prefix文件配置中的包下载不到,不勾选可以下载该仓库任意的包；
+
+* e.本地部署成功之后移植到测试机之后出现 remote access not allowed from M2Repository问题：
+    将 auto Blocking enabled 设置为false；
+    原因：nexus私有库，会发送head 和 get 请求到目标代理库，来判断目标代理库是否可用是否健康，未响应或者是响应错误会导致nexus认为目标代理库不可用，会返回这个错误；
+
+
+* f.将本地依赖配置为 respository path 
+    //切换到私有库
+        maven { url &apos;http://maven.leoao.com/nexus/content/repositories/google/&apos; }
+        maven { url &apos;http://maven.leoao.com/nexus/content/repositories/aliyun-public/&apos; }
+        maven { url &apos;http://maven.leoao.com/nexus/content/repositories/jcenter/&apos; }
+    私有库在遍历下载三方依赖的同时，会直接把依赖在本地缓存一份，下次的取用速度会直接先判断私有库是否已有这个版本，已有的三方库下载速度会非常快；
+</code></pre><h2 id="对于代理仓库没有依赖的情况"><a href="#对于代理仓库没有依赖的情况" class="headerlink" title="对于代理仓库没有依赖的情况"></a>对于代理仓库没有依赖的情况</h2><h2 id="对于三方自建仓库管理库的情况"><a href="#对于三方自建仓库管理库的情况" class="headerlink" title="对于三方自建仓库管理库的情况"></a>对于三方自建仓库管理库的情况</h2>
       
 
       
@@ -203,7 +235,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工程</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ci相关</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/android技能//" class="article-tag-list-link color5">android技能</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -253,7 +311,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://begin-with-start.github.io/categories/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://begin-with-start.github.io/2018/09/29/nexus私有库使用部署，与配置相关/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -265,6 +323,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2018/09/29/nexus私有库带图版本/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          nexus私有库使用部署，与配置相关
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/09/23/gradientdrawable相关问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">gradientdrawable相关问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -287,7 +364,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="" data-title="分类" data-url="https://begin-with-start.github.io/categories/index.html"></div>
+	<div class="ds-thread" data-thread-key="nexus私有库使用部署，与配置相关" data-title="nexus私有库使用部署，与配置相关" data-url="https://begin-with-start.github.io/2018/09/29/nexus私有库使用部署，与配置相关/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -335,7 +412,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
