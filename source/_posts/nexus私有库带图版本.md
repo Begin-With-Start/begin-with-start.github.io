@@ -22,7 +22,7 @@ categories: android技能
 			nexus restart service
 		({ console | start | stop | restart | status | dump })
 
-![image](so-source-design/nexus_setup.jpg)
+![image](https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_setup.jpg)
 
 	* c.配置nexus代理到国内的镜像上：
 		三种仓库： proxy repository , host repository , virtual repository , group repository;对应 代理仓库，本地仓库，虚拟仓库,仓库组
@@ -34,20 +34,19 @@ categories: android技能
 			https://maven.aliyun.com/repository/jcenter/
 
 
-![image](so-source-design/add_proxy_repository.jpg)
+![image](https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/add_proxy_repository.jpg)
 		点击save
-
-![image](so-source-design/new_repository_configration.png)
+https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/new_repository_configration.png)
 
 	* d.关闭discovery选项，打开的时候，不在prefix文件配置中的包下载不到,不勾选可以下载该仓库任意的包；
 
-![image](so-source-design/nexus_discovery.png)
+![image](https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_discovery.png)
 
 	* e.本地部署成功之后移植到测试机之后出现 remote access not allowed from M2Repository问题：
 		将 auto Blocking enabled 设置为false；
 		原因：nexus私有库，会发送head 和 get 请求到目标代理库，来判断目标代理库是否可用是否健康，未响应或者是响应错误会导致nexus认为目标代理库不可用，会返回这个错误；
 
-![image](so-source-design/nexus_error_m2repository.png)
+![image](https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_error_m2repository.png)
 
 	* f.将本地依赖配置为 respository path 
 		//切换到私有库
@@ -55,10 +54,6 @@ categories: android技能
 	        maven { url 'http://maven.leoao.com/nexus/content/repositories/aliyun-public/' }
 	        maven { url 'http://maven.leoao.com/nexus/content/repositories/jcenter/' }
 	    私有库在遍历下载三方依赖的同时，会直接把依赖在本地缓存一份，下次的取用速度会直接先判断私有库是否已有这个版本，已有的三方库下载速度会非常快；
-
-	   
-
-![image](so-source-design/blue_blue.jpg)
 
 ## 对于代理仓库没有依赖的情况 ##
 	
