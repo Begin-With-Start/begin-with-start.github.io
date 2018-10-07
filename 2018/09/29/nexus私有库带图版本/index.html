@@ -17,9 +17,9 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_setup.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/add_proxy_repository.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_save_step.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_discovery.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_error_m2repository.png">
-<meta property="og:updated_time" content="2018-10-07T14:40:38.113Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_discory_close.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_auto_blocking_enable_m2_responsitory.jpg">
+<meta property="og:updated_time" content="2018-10-07T14:51:06.821Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nexus私有库使用部署，与配置相关">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_setup.jpg">
@@ -201,11 +201,11 @@
         https://maven.aliyun.com/repository/jcenter/
 </code></pre><p><img src="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/add_proxy_repository.jpg" alt="image"><br>        点击save<br><img src="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_save_step.jpg" alt="image"></p>
 <pre><code>* d.关闭discovery选项，打开的时候，不在prefix文件配置中的包下载不到,不勾选可以下载该仓库任意的包；
-</code></pre><p><img src="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_discovery.png" alt="image"></p>
+</code></pre><p><img src="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_discory_close.jpg" alt="image"></p>
 <pre><code>* e.本地部署成功之后移植到测试机之后出现 remote access not allowed from M2Repository问题：
     将 auto Blocking enabled 设置为false；
     原因：nexus私有库，会发送head 和 get 请求到目标代理库，来判断目标代理库是否可用是否健康，未响应或者是响应错误会导致nexus认为目标代理库不可用，会返回这个错误；
-</code></pre><p><img src="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_error_m2repository.png" alt="image"></p>
+</code></pre><p><img src="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_auto_blocking_enable_m2_responsitory.jpg" alt="image"></p>
 <pre><code>* f.将本地依赖配置为 respository path 
     //切换到私有库
         maven { url &apos;http://maven.leoao.com/nexus/content/repositories/google/&apos; }
@@ -340,18 +340,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/09/29/nexus私有库使用部署，与配置相关/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          nexus私有库使用部署，与配置相关
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/09/23/gradientdrawable相关问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">gradientdrawable相关问题</div>
+    <a href="/2018/09/29/nexus私有库使用部署，与配置相关/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">nexus私有库使用部署，与配置相关</div>
       <i class="icon-circle-right"></i>
     </a>
   
