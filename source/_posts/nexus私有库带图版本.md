@@ -36,7 +36,7 @@ categories: android技能
 
 ![image](https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/add_proxy_repository.jpg)
 		点击save
-![image](https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/new_repository_configration.png)
+![image](https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_save_step.jpg)
 
 	* d.关闭discovery选项，打开的时候，不在prefix文件配置中的包下载不到,不勾选可以下载该仓库任意的包；
 
