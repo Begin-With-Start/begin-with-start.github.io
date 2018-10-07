@@ -36,7 +36,7 @@ categories: android技能
 
 ![image](https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/add_proxy_repository.jpg)
 		点击save
-https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/new_repository_configration.png)
+![image](https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/new_repository_configration.png)
 
 	* d.关闭discovery选项，打开的时候，不在prefix文件配置中的包下载不到,不勾选可以下载该仓库任意的包；
 
@@ -53,7 +53,11 @@ https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/he
 	        maven { url 'http://maven.leoao.com/nexus/content/repositories/google/' }
 	        maven { url 'http://maven.leoao.com/nexus/content/repositories/aliyun-public/' }
 	        maven { url 'http://maven.leoao.com/nexus/content/repositories/jcenter/' }
-	    私有库在遍历下载三方依赖的同时，会直接把依赖在本地缓存一份，下次的取用速度会直接先判断私有库是否已有这个版本，已有的三方库下载速度会非常快；
+        切换到：
+	        maven { url 'http://127.0.0.1:8081/nexus/content/repositories/leoao-google/' }
+	        maven { url 'http://127.0.0.1:8081/nexus/content/repositories/leoao-jcenter/' }
+	        maven { url 'http://127.0.0.1:8081/nexus/content/repositories/leoao-public/' }
+	    私有库在遍历下载三方依赖的同时，会直接把依赖在本地缓存一份，下次的取用速度会直接先判断私有库是否已有这个版本，已被缓存过的的三方库下载速度会非常快；在三方库的查找上，依照以下的查找顺序来进行：
 
 ## 对于代理仓库没有依赖的情况 ##
 	
