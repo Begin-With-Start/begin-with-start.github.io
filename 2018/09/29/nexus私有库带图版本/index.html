@@ -16,9 +16,10 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_setup.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/add_proxy_repository.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/new_repository_configration.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_discovery.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_error_m2repository.png">
-<meta property="og:updated_time" content="2018-09-30T04:03:12.954Z">
+<meta property="og:updated_time" content="2018-10-07T14:33:14.586Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nexus私有库使用部署，与配置相关">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_setup.jpg">
@@ -198,7 +199,7 @@
         https://maven.aliyun.com/repository/public/
         https://maven.aliyun.com/repository/google/
         https://maven.aliyun.com/repository/jcenter/
-</code></pre><p><img src="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/add_proxy_repository.jpg" alt="image"><br>        点击save<br><a href="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/new_repository_configration.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/new_repository_configration.png</a>)</p>
+</code></pre><p><img src="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/add_proxy_repository.jpg" alt="image"><br>        点击save<br><img src="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/new_repository_configration.png" alt="image"></p>
 <pre><code>* d.关闭discovery选项，打开的时候，不在prefix文件配置中的包下载不到,不勾选可以下载该仓库任意的包；
 </code></pre><p><img src="https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_discovery.png" alt="image"></p>
 <pre><code>* e.本地部署成功之后移植到测试机之后出现 remote access not allowed from M2Repository问题：
@@ -210,7 +211,11 @@
         maven { url &apos;http://maven.leoao.com/nexus/content/repositories/google/&apos; }
         maven { url &apos;http://maven.leoao.com/nexus/content/repositories/aliyun-public/&apos; }
         maven { url &apos;http://maven.leoao.com/nexus/content/repositories/jcenter/&apos; }
-    私有库在遍历下载三方依赖的同时，会直接把依赖在本地缓存一份，下次的取用速度会直接先判断私有库是否已有这个版本，已有的三方库下载速度会非常快；
+    切换到：
+        maven { url &apos;http://127.0.0.1:8081/nexus/content/repositories/leoao-google/&apos; }
+        maven { url &apos;http://127.0.0.1:8081/nexus/content/repositories/leoao-jcenter/&apos; }
+        maven { url &apos;http://127.0.0.1:8081/nexus/content/repositories/leoao-public/&apos; }
+    私有库在遍历下载三方依赖的同时，会直接把依赖在本地缓存一份，下次的取用速度会直接先判断私有库是否已有这个版本，已被缓存过的的三方库下载速度会非常快；在三方库的查找上，依照以下的查找顺序来进行：
 </code></pre><h2 id="对于代理仓库没有依赖的情况"><a href="#对于代理仓库没有依赖的情况" class="headerlink" title="对于代理仓库没有依赖的情况"></a>对于代理仓库没有依赖的情况</h2><h2 id="对于三方自建仓库管理库的情况"><a href="#对于三方自建仓库管理库的情况" class="headerlink" title="对于三方自建仓库管理库的情况"></a>对于三方自建仓库管理库的情况</h2>
       
 
@@ -495,6 +500,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ci相关</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">定制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gradientdrawable</a>
               </li>
              
@@ -503,15 +516,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">定制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">观点</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ci相关</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -527,11 +532,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">event事件解析</a>
+                <a href="javascript:void(0)" class="js-tag color2">test用例</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">test用例</a>
+                <a href="javascript:void(0)" class="js-tag color5">event事件解析</a>
               </li>
             
             <div class="clearfix"></div>
