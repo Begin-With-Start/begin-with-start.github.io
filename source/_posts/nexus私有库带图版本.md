@@ -40,13 +40,13 @@ categories: android技能
 
 	* d.关闭discovery选项，打开的时候，不在prefix文件配置中的包下载不到,不勾选可以下载该仓库任意的包；
 
-![image](https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_discovery.png)
+![image](https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_discory_close.jpg)
 
 	* e.本地部署成功之后移植到测试机之后出现 remote access not allowed from M2Repository问题：
 		将 auto Blocking enabled 设置为false；
 		原因：nexus私有库，会发送head 和 get 请求到目标代理库，来判断目标代理库是否可用是否健康，未响应或者是响应错误会导致nexus认为目标代理库不可用，会返回这个错误；
 
-![image](https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_error_m2repository.png)
+![image](https://raw.githubusercontent.com/Begin-With-Start/begin-with-start.github.io/hexo/source/images/nexus_auto_blocking_enable_m2_responsitory.jpg)
 
 	* f.将本地依赖配置为 respository path 
 		//切换到私有库
