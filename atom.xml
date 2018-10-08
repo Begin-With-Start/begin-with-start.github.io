@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://begin-with-start.github.io/"/>
-  <updated>2018-10-07T15:28:05.518Z</updated>
+  <updated>2018-10-08T04:06:06.330Z</updated>
   <id>https://begin-with-start.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>trade_healthy_knowledge</title>
+    <link href="https://begin-with-start.github.io/2018/09/29/trade-healthy-knowledge/"/>
+    <id>https://begin-with-start.github.io/2018/09/29/trade-healthy-knowledge/</id>
+    <published>2018-09-29T07:45:03.000Z</published>
+    <updated>2018-10-08T04:06:06.330Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;部署私有库目的&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="行业认识" scheme="https://begin-with-start.github.io/categories/%E8%A1%8C%E4%B8%9A%E8%AE%A4%E8%AF%86/"/>
+    
+    
+      <category term="行业" scheme="https://begin-with-start.github.io/tags/%E8%A1%8C%E4%B8%9A/"/>
+    
+      <category term="健身" scheme="https://begin-with-start.github.io/tags/%E5%81%A5%E8%BA%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>nexus私有库使用部署，与配置相关</title>
