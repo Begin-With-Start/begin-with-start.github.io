@@ -17,7 +17,7 @@
 <meta property="og:description" content="arouter 问题总结 values 两种系统识别文件夹，细分三种 有没有改造之法？">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://begin-with-start.github.io/2018/09/13/arouter-thinking/city.jpg">
-<meta property="og:updated_time" content="2018-09-29T07:23:51.101Z">
+<meta property="og:updated_time" content="2018-10-11T13:06:08.328Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="arouter使用阶段性认知">
 <meta name="twitter:description" content="arouter 问题总结 values 两种系统识别文件夹，细分三种 有没有改造之法？">
@@ -185,10 +185,12 @@
 <li>arouter 问题总结</li>
 <li>values 两种系统识别文件夹，细分三种</li>
 <li>有没有改造之法？<a id="more"></a>
-<img src="/2018/09/13/arouter-thinking/city.jpg" alt="image"><h2 id="arouter-问题总结："><a href="#arouter-问题总结：" class="headerlink" title="arouter 问题总结："></a>arouter 问题总结：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">作为一个阿里系的框架，arouter在根本上是实现了，介绍里面所说的，解耦，传参，拦截器，注解，基本的方案实现。在单module中运行也还是可以的，可	能初学者写个把demo之后发现，哎，这阿里系的还是厉害啊。满足要求啊，不过别着急各位，早晚得报到身上的，来自于三方不可控框架造成的问题，或早或晚会给个教训。说好的太多了，我们可以来探讨一下阿里的这个框架的不足；</span><br><span class="line"></span><br><span class="line">不足一：</span><br><span class="line">	对于多个module的完全解耦是带了认知负担的，完全靠直接的信任度来进行保证；</span><br><span class="line">	arouter最基本的一点是实现字符串作为路由来完成页面-包含activity，fragment页面的跳转，但是也带来了对于其他的模块完全的黑盒问题，不过要是维护者说，这本就是不多的一些妥协，那确实也没什么好说得了，毕竟这是一个在已有框架中总结弊端的文章。这算是其中一个问题，arouter利用编译时注解来生成了，string与class的对应map，每次在router到相应的地址的时候，直接在map中找key，由此拿出对于的类引用，跳转或者是fragmentmanager跳转，确实也是把一些简单代码逻辑重复工作给封装起来。map处理这种的key-value形式的操作，速度也快，确是带来了完全解耦的无管理状态，这会带来什么呢？</span><br><span class="line"></span><br><span class="line">	带来问题挺多的，其中下文就会列举一个方面的影响；</span><br><span class="line"></span><br><span class="line">不足二：</span><br><span class="line">	组件化的支持，后期拆分会带来很大问题；</span><br><span class="line">	组件化拆分之前，无法知道一个业务会发展出多大的代码库，开始认为不用拆分的库，之后也会走入一个拆分的巷道，那么前期跟后台跟前段约定的路由就会变成一个巨大的负担。解决方案可以用intercepter来进行拦截和转发，当前的工程已经进入了这个怪圈；</span><br></pre></td></tr></table></figure>
+<img src="/2018/09/13/arouter-thinking/city.jpg" alt="image"><h2 id="arouter-问题总结："><a href="#arouter-问题总结：" class="headerlink" title="arouter 问题总结："></a>arouter 问题总结：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">作为一个阿里系的框架，arouter在根本上是实现了，介绍里面所说的，解耦，传参，拦截器，注解，基本的方案实现。在单module中运行也还是可以的，可	能初学者写个把demo之后发现，哎，这阿里系的还是厉害啊。满足要求啊，不过别着急各位，早晚得报到身上的，来自于三方不可控框架造成的问题，或早或晚会给个教训。说好的太多了，我们可以来探讨一下阿里的这个框架的不足；</span><br><span class="line"></span><br><span class="line">不足一：</span><br><span class="line">	对于多个module的完全解耦是带了认知负担的，完全靠直接的信任度来进行保证；</span><br><span class="line">	arouter最基本的一点是实现字符串作为路由来完成页面-包含activity，fragment页面的跳转，但是也带来了对于其他的模块完全的黑盒问题，不过要是维护者说，这本就是不多的一些妥协，那确实也没什么好说得了，毕竟这是一个在已有框架中总结弊端的文章。这算是其中一个问题，arouter利用编译时注解来生成了，string与class的对应map，每次在router到相应的地址的时候，直接在map中找key，由此拿出对于的类引用，跳转或者是fragmentmanager跳转，确实也是把一些简单代码逻辑重复工作给封装起来。map处理这种的key-value形式的操作，速度也快，确是带来了完全解耦的无管理状态，这会带来什么呢？</span><br><span class="line"></span><br><span class="line">	带来问题挺多的，其中下文就会列举一个方面的影响；</span><br><span class="line"></span><br><span class="line">不足二：</span><br><span class="line">	组件化的支持，后期拆分会带来很大问题；</span><br><span class="line">	组件化拆分之前，无法知道一个业务会发展出多大的代码库，开始认为不用拆分的库，之后也会走入一个拆分的巷道，那么前期跟后台跟前段约定的路由就会变成一个巨大的负担。解决方案可以用intercepter来进行拦截和转发，当前的工程已经进入了这个怪圈；</span><br><span class="line">不足三：</span><br><span class="line">	为了拆分，工程做了妥协，在原有的基础上，保留原始的分组；而新分出去的module就需要在interceptor中定义一些转发，同时要插桩，本身也不是不可接受，但是还有一个问题违背了我们拆分组件的初衷。组件之所以拆分就是因为需要划分职责，增加重用的概率，而且就算组建不重用，那么底层的很多公共的页面例如分享，选择照片，选择视频，之内的公共的一些页面可能由于没有上下级依赖需要arouter跳转的时候，都会遇到同一个问题：</span><br><span class="line">		作为转发的app层不在了，那么没有中间层进行转发，开始的分组件就变成了，离开中央集权之后就不可通讯的问题；</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="有没有改造之法？"><a href="#有没有改造之法？" class="headerlink" title="有没有改造之法？"></a>有没有改造之法？</h2><h2 id="改造之后的注意点？"><a href="#改造之后的注意点？" class="headerlink" title="改造之后的注意点？"></a>改造之后的注意点？</h2><p><a href="">传送门之大传送之术</a></p>
+<h2 id="有没有改造之法？"><a href="#有没有改造之法？" class="headerlink" title="有没有改造之法？"></a>有没有改造之法？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">改造的方法分为基础上改动和彻底重建两种，各有利弊吧；</span><br><span class="line">A.一般成熟的大公司，或者说人力比较充沛的大公司，一般都选择了自己自建一个路由转发系统来绕开对于三方框架的依赖，后期的改动和定制都会成为瓶颈；那么市面上已经使用比较多的几个路由框架分别是，美团+饿了么+阿里都有自己的一套路由框架；</span><br><span class="line"></span><br><span class="line">B.改造arouter的aop和加载核心：</span><br><span class="line">	arouter之所以有这个问题，根本原因在于，arouter通过aop生成类来做map映射的时候，是在同一个path中生成了诸多的以group为类名的类，那么肯定就有不同的module不能有相同的分组，问题的关键在于生成的逻辑是依赖group来进行的，同路径的自然不能同类名的；</span><br><span class="line">	针对这个限制，我们可以进行修改</span><br></pre></td></tr></table></figure>
+<h2 id="改造之后的注意点？"><a href="#改造之后的注意点？" class="headerlink" title="改造之后的注意点？"></a>改造之后的注意点？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">改动比较大一些的框架，基础的框架，随之而来的肯定是要经过大量的验证和测试的，一个大意可能会影响面非常的大；验证自己的逻辑对于老逻辑有没有影响，开发之中一定要遵循开闭原则，对于修改关闭对于扩展开放；</span><br></pre></td></tr></table></figure>
+<p><a href="">传送门之大传送之术</a></p>
 
       
 
@@ -478,7 +480,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">脚本语言，支持语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">arouter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">gson重构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">定制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ci相关</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -490,15 +508,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">定制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">观点</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ci相关</a>
               </li>
              
               <li class="article-tag-list-item">
