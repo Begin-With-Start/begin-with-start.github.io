@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://begin-with-start.github.io/"/>
-  <updated>2018-10-11T13:06:57.585Z</updated>
+  <updated>2018-10-17T09:19:57.186Z</updated>
   <id>https://begin-with-start.github.io/</id>
   
   <author>
@@ -17,16 +17,16 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>gson_project_reconfigratijon</title>
+    <title>gson与fastjson选取与部分原理解答</title>
     <link href="https://begin-with-start.github.io/2018/10/11/gson-project-reconfigratijon/"/>
     <id>https://begin-with-start.github.io/2018/10/11/gson-project-reconfigratijon/</id>
     <published>2018-10-11T12:50:28.000Z</published>
-    <updated>2018-10-11T13:06:57.585Z</updated>
+    <updated>2018-10-17T09:19:57.186Z</updated>
     
     <summary type="html">
     
       &lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;gson fastjson jackson&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;&lt;/ul&gt;
     
@@ -46,7 +46,7 @@
     <link href="https://begin-with-start.github.io/2018/10/10/grovy-script-language/"/>
     <id>https://begin-with-start.github.io/2018/10/10/grovy-script-language/</id>
     <published>2018-10-10T07:37:17.000Z</published>
-    <updated>2018-10-11T12:49:27.256Z</updated>
+    <updated>2018-10-16T11:17:18.803Z</updated>
     
     <summary type="html">
     
@@ -57,8 +57,12 @@
     
     </summary>
     
+      <category term="android技能" scheme="https://begin-with-start.github.io/categories/android%E6%8A%80%E8%83%BD/"/>
     
-      <category term="脚本语言，支持语言" scheme="https://begin-with-start.github.io/tags/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80%EF%BC%8C%E6%94%AF%E6%8C%81%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="工程" scheme="https://begin-with-start.github.io/tags/%E5%B7%A5%E7%A8%8B/"/>
+    
+      <category term="脚本支持" scheme="https://begin-with-start.github.io/tags/%E8%84%9A%E6%9C%AC%E6%94%AF%E6%8C%81/"/>
     
   </entry>
   
@@ -143,29 +147,6 @@
   </entry>
   
   <entry>
-    <title>测试用例的设计</title>
-    <link href="https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/"/>
-    <id>https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/</id>
-    <published>2018-09-17T06:24:26.000Z</published>
-    <updated>2018-09-29T07:27:13.615Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;测试用例的设计&lt;/li&gt;&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="测试技能" scheme="https://begin-with-start.github.io/categories/%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
-    
-    
-      <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
-    
-      <category term="test用例" scheme="https://begin-with-start.github.io/tags/test%E7%94%A8%E4%BE%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>自动化测试简介</title>
     <link href="https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/"/>
     <id>https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/</id>
@@ -185,6 +166,29 @@
       <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
     
       <category term="自动化测试技能" scheme="https://begin-with-start.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试用例的设计</title>
+    <link href="https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/"/>
+    <id>https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/</id>
+    <published>2018-09-17T06:24:26.000Z</published>
+    <updated>2018-09-29T07:27:13.615Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;测试用例的设计&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="测试技能" scheme="https://begin-with-start.github.io/categories/%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
+    
+    
+      <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="test用例" scheme="https://begin-with-start.github.io/tags/test%E7%94%A8%E4%BE%8B/"/>
     
   </entry>
   
