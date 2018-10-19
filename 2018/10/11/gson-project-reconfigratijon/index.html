@@ -8,19 +8,20 @@
   <link rel="dns-prefetch" href="https://begin-with-start.github.io">
   <title>gson与fastjson选取与部分原理解答 | Begin-With-Start</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="gson fastjson jackson">
+  <meta name="description" content="项目中使用了多个解析库的时候，总会遇到一些取舍，那么我们可以从原理和解析速度上面来进行取舍，同时提高基础库的了解，便于今后对库进行改动和提升操作，下面就一起来讨论一下json的序列化和反序列化库的一些区别，探讨一些库的原理；">
 <meta name="keywords" content="工程,gson重构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gson与fastjson选取与部分原理解答">
 <meta property="og:url" content="https://begin-with-start.github.io/2018/10/11/gson-project-reconfigratijon/index.html">
 <meta property="og:site_name" content="Begin-With-Start">
-<meta property="og:description" content="gson fastjson jackson">
+<meta property="og:description" content="项目中使用了多个解析库的时候，总会遇到一些取舍，那么我们可以从原理和解析速度上面来进行取舍，同时提高基础库的了解，便于今后对库进行改动和提升操作，下面就一起来讨论一下json的序列化和反序列化库的一些区别，探讨一些库的原理；">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://begin-with-start.github.io/2018/10/11/gson-project-reconfigratijon/fastspeed.jpg">
-<meta property="og:updated_time" content="2018-10-17T09:19:57.186Z">
+<meta property="og:image" content="https://begin-with-start.github.io/2018/10/11/gson-project-reconfigratijon/gson_show_main_flow.jpg">
+<meta property="og:updated_time" content="2018-10-19T03:58:35.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gson与fastjson选取与部分原理解答">
-<meta name="twitter:description" content="gson fastjson jackson">
+<meta name="twitter:description" content="项目中使用了多个解析库的时候，总会遇到一些取舍，那么我们可以从原理和解析速度上面来进行取舍，同时提高基础库的了解，便于今后对库进行改动和提升操作，下面就一起来讨论一下json的序列化和反序列化库的一些区别，探讨一些库的原理；">
 <meta name="twitter:image" content="https://begin-with-start.github.io/2018/10/11/gson-project-reconfigratijon/fastspeed.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Begin-With-Start" type="application/atom+xml">
@@ -182,9 +183,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>gson fastjson jackson</li>
-<li></li>
-<li><a id="more"></a>
+<li>项目中使用了多个解析库的时候，总会遇到一些取舍，那么我们可以从原理和解析速度上面来进行取舍，同时提高基础库的了解，便于今后对库进行改动和提升操作，下面就一起来讨论一下json的序列化和反序列化库的一些区别，探讨一些库的原理；<a id="more"></a>
 <img src="/2018/10/11/gson-project-reconfigratijon/fastspeed.jpg" alt="image"></li>
 </ul>
 <h2 id="gson-fastjson-jackson"><a href="#gson-fastjson-jackson" class="headerlink" title="gson fastjson jackson"></a>gson fastjson jackson</h2><p>三者都可以用来进行对象的序列化与反序列化操作，三者的速度对别，摘录下别人的结果，真实的结果估计也差不多，控制一下单一变量原则，对于各个序列方式擅长的方面，其实在开发中遇到的概率暂时不考虑；</p>
@@ -193,8 +192,11 @@
 <p>反序列化对比：</p>
 <p>类库             样本数量        执行次数    最长时间(毫秒)    最短时间(毫秒)    平均时间(毫秒)<br>FastJSON    100000        10        7942.31            340.55            6526.41<br>Jackson        100000        10        7957.22            6623.85            6815.41<br>Gson        100000        10        8235.15            7006.06            7364.75</p>
 <p>从序列化和反序列化的表现来看，三种方案速度相差不是很大，所以在项目中已经使用了fastjson作为业务解析，gson用在了底层解析的时候，应该直接选取其中一种解析方式即可，不需要凭空在引进集中方案来增加包体积;</p>
-<h2 id="项目中依赖了两种解析方案解决办法"><a href="#项目中依赖了两种解析方案解决办法" class="headerlink" title="项目中依赖了两种解析方案解决办法"></a>项目中依赖了两种解析方案解决办法</h2><p>两种序列化方案是不应该放到一起的，毕竟对于速度相差不多，在不考虑易用性的时候，其实何种解析方案都可；鉴于gson被放到了网络底层来进行了数据的解析，那么我们最终选择了gson来进行序列化，而且渐渐是需要移除掉fastjson的依赖的；<br>下面简单对比一下fastjson和gson在原理上的差异；<br>    gson：</p>
-
+<h2 id="gson与fastjson"><a href="#gson与fastjson" class="headerlink" title="gson与fastjson"></a>gson与fastjson</h2><p>两种序列化方案是不应该放到一起的，毕竟对于速度相差不多，在不考虑易用性的时候，其实何种解析方案都可；鉴于gson被放到了网络底层来进行了数据的解析，那么我们最终选择了gson来进行序列化，而且渐渐是需要移除掉fastjson的依赖的；<br>下面简单对比一下fastjson和gson在原理上的差异；<br>    gson解析原理：<br>    <img src="/2018/10/11/gson-project-reconfigratijon/gson_show_main_flow.jpg" alt="image"><br>    gson主要是通过遍历json和对象中的字段，遍历json进行类型判断，调取响应的TypeAdapter对象，再去bean中找到相对应的字段name生成一个boundfield，后续通过typeadapter进行数值的存入操作；直到解析结束，形成一个javabean，那么我们很容易就找到了gson会发生错误的最根本原因，在循环阶段就已经判断出来的字段类型，获取到bean中对应的typeadapter之后，尝试进行类型的转换时候，类型转换失败，自然会报出gson的一个自定义异常JsonSyntaxException，这个异常主要是针对于在类型强转过程中，统一catch之后，包装到自定义异常类中抛给调用方；</p>
+<pre><code>fastjson解析原理：
+基于反射，在解析过程中，经过预测算法优化，加上各种缓存来提升速度；
+</code></pre><h2 id="json解析取舍"><a href="#json解析取舍" class="headerlink" title="json解析取舍"></a>json解析取舍</h2><pre><code>两种解析在根本上，速度不会相差太大，那么只需要保留一种解析即可，没有必要维护多个库，gson已经被使用到了网络库的底层中，那么最方便的方式就是去掉fastjson的解析库；只保留gson的解析方式；
+</code></pre>
       
 
       
@@ -474,10 +476,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">脚本支持</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">arouter</a>
               </li>
              
@@ -490,15 +488,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">脚本支持</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">gson重构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">观点</a>
+                <a href="javascript:void(0)" class="js-tag color3">定制</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">定制</a>
+                <a href="javascript:void(0)" class="js-tag color3">观点</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -514,11 +516,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">test用例</a>
+                <a href="javascript:void(0)" class="js-tag color3">自动化测试技能</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">自动化测试技能</a>
+                <a href="javascript:void(0)" class="js-tag color2">test用例</a>
               </li>
              
               <li class="article-tag-list-item">

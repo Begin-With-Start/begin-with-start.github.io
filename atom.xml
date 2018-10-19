@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://begin-with-start.github.io/"/>
-  <updated>2018-10-17T09:19:57.186Z</updated>
+  <updated>2018-10-19T03:58:35.970Z</updated>
   <id>https://begin-with-start.github.io/</id>
   
   <author>
@@ -21,14 +21,12 @@
     <link href="https://begin-with-start.github.io/2018/10/11/gson-project-reconfigratijon/"/>
     <id>https://begin-with-start.github.io/2018/10/11/gson-project-reconfigratijon/</id>
     <published>2018-10-11T12:50:28.000Z</published>
-    <updated>2018-10-17T09:19:57.186Z</updated>
+    <updated>2018-10-19T03:58:35.970Z</updated>
     
     <summary type="html">
     
       &lt;ul&gt;
-&lt;li&gt;gson fastjson jackson&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;项目中使用了多个解析库的时候，总会遇到一些取舍，那么我们可以从原理和解析速度上面来进行取舍，同时提高基础库的了解，便于今后对库进行改动和提升操作，下面就一起来讨论一下json的序列化和反序列化库的一些区别，探讨一些库的原理；&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -46,7 +44,7 @@
     <link href="https://begin-with-start.github.io/2018/10/10/grovy-script-language/"/>
     <id>https://begin-with-start.github.io/2018/10/10/grovy-script-language/</id>
     <published>2018-10-10T07:37:17.000Z</published>
-    <updated>2018-10-16T11:17:18.803Z</updated>
+    <updated>2018-10-18T03:10:03.735Z</updated>
     
     <summary type="html">
     
@@ -63,33 +61,6 @@
       <category term="工程" scheme="https://begin-with-start.github.io/tags/%E5%B7%A5%E7%A8%8B/"/>
     
       <category term="脚本支持" scheme="https://begin-with-start.github.io/tags/%E8%84%9A%E6%9C%AC%E6%94%AF%E6%8C%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>健身行业认识</title>
-    <link href="https://begin-with-start.github.io/2018/09/29/trade-healthy-knowledge/"/>
-    <id>https://begin-with-start.github.io/2018/09/29/trade-healthy-knowledge/</id>
-    <published>2018-09-29T07:45:03.000Z</published>
-    <updated>2018-10-08T04:09:10.177Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;健身行业&lt;/li&gt;
-&lt;li&gt;公司正在做的事情&lt;/li&gt;
-&lt;li&gt;可能存在的问题&lt;/li&gt;
-&lt;li&gt;可能的解决办法&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="行业认识" scheme="https://begin-with-start.github.io/categories/%E8%A1%8C%E4%B8%9A%E8%AE%A4%E8%AF%86/"/>
-    
-    
-      <category term="行业" scheme="https://begin-with-start.github.io/tags/%E8%A1%8C%E4%B8%9A/"/>
-    
-      <category term="健身" scheme="https://begin-with-start.github.io/tags/%E5%81%A5%E8%BA%AB/"/>
     
   </entry>
   
@@ -117,6 +88,33 @@
       <category term="工程" scheme="https://begin-with-start.github.io/tags/%E5%B7%A5%E7%A8%8B/"/>
     
       <category term="ci相关" scheme="https://begin-with-start.github.io/tags/ci%E7%9B%B8%E5%85%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>健身行业认识</title>
+    <link href="https://begin-with-start.github.io/2018/09/29/trade-healthy-knowledge/"/>
+    <id>https://begin-with-start.github.io/2018/09/29/trade-healthy-knowledge/</id>
+    <published>2018-09-29T07:45:03.000Z</published>
+    <updated>2018-10-08T04:09:10.177Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;健身行业&lt;/li&gt;
+&lt;li&gt;公司正在做的事情&lt;/li&gt;
+&lt;li&gt;可能存在的问题&lt;/li&gt;
+&lt;li&gt;可能的解决办法&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="行业认识" scheme="https://begin-with-start.github.io/categories/%E8%A1%8C%E4%B8%9A%E8%AE%A4%E8%AF%86/"/>
+    
+    
+      <category term="行业" scheme="https://begin-with-start.github.io/tags/%E8%A1%8C%E4%B8%9A/"/>
+    
+      <category term="健身" scheme="https://begin-with-start.github.io/tags/%E5%81%A5%E8%BA%AB/"/>
     
   </entry>
   
