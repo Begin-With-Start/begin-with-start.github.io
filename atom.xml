@@ -40,27 +40,29 @@
   </entry>
   
   <entry>
-    <title>groovy语言在gradle中的一些用法</title>
-    <link href="https://begin-with-start.github.io/2018/10/10/grovy-script-language/"/>
-    <id>https://begin-with-start.github.io/2018/10/10/grovy-script-language/</id>
-    <published>2018-10-10T07:37:17.000Z</published>
-    <updated>2018-10-18T03:10:03.735Z</updated>
+    <title>健身行业认识</title>
+    <link href="https://begin-with-start.github.io/2018/09/29/trade-healthy-knowledge/"/>
+    <id>https://begin-with-start.github.io/2018/09/29/trade-healthy-knowledge/</id>
+    <published>2018-09-29T07:45:03.000Z</published>
+    <updated>2018-10-08T04:09:10.177Z</updated>
     
     <summary type="html">
     
       &lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;健身行业&lt;/li&gt;
+&lt;li&gt;公司正在做的事情&lt;/li&gt;
+&lt;li&gt;可能存在的问题&lt;/li&gt;
+&lt;li&gt;可能的解决办法&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
-      <category term="android技能" scheme="https://begin-with-start.github.io/categories/android%E6%8A%80%E8%83%BD/"/>
+      <category term="行业认识" scheme="https://begin-with-start.github.io/categories/%E8%A1%8C%E4%B8%9A%E8%AE%A4%E8%AF%86/"/>
     
     
-      <category term="工程" scheme="https://begin-with-start.github.io/tags/%E5%B7%A5%E7%A8%8B/"/>
+      <category term="行业" scheme="https://begin-with-start.github.io/tags/%E8%A1%8C%E4%B8%9A/"/>
     
-      <category term="脚本支持" scheme="https://begin-with-start.github.io/tags/%E8%84%9A%E6%9C%AC%E6%94%AF%E6%8C%81/"/>
+      <category term="健身" scheme="https://begin-with-start.github.io/tags/%E5%81%A5%E8%BA%AB/"/>
     
   </entry>
   
@@ -92,33 +94,6 @@
   </entry>
   
   <entry>
-    <title>健身行业认识</title>
-    <link href="https://begin-with-start.github.io/2018/09/29/trade-healthy-knowledge/"/>
-    <id>https://begin-with-start.github.io/2018/09/29/trade-healthy-knowledge/</id>
-    <published>2018-09-29T07:45:03.000Z</published>
-    <updated>2018-10-08T04:09:10.177Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;健身行业&lt;/li&gt;
-&lt;li&gt;公司正在做的事情&lt;/li&gt;
-&lt;li&gt;可能存在的问题&lt;/li&gt;
-&lt;li&gt;可能的解决办法&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="行业认识" scheme="https://begin-with-start.github.io/categories/%E8%A1%8C%E4%B8%9A%E8%AE%A4%E8%AF%86/"/>
-    
-    
-      <category term="行业" scheme="https://begin-with-start.github.io/tags/%E8%A1%8C%E4%B8%9A/"/>
-    
-      <category term="健身" scheme="https://begin-with-start.github.io/tags/%E5%81%A5%E8%BA%AB/"/>
-    
-  </entry>
-  
-  <entry>
     <title>gradientdrawable相关问题</title>
     <link href="https://begin-with-start.github.io/2018/09/23/gradientdrawable%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"/>
     <id>https://begin-with-start.github.io/2018/09/23/gradientdrawable相关问题/</id>
@@ -145,29 +120,6 @@
   </entry>
   
   <entry>
-    <title>自动化测试简介</title>
-    <link href="https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/"/>
-    <id>https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/</id>
-    <published>2018-09-17T06:24:26.000Z</published>
-    <updated>2018-09-29T07:27:06.097Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;软件开发生命周期各个阶段的自动化测试技术&lt;/li&gt;&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="测试技能" scheme="https://begin-with-start.github.io/categories/%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
-    
-    
-      <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
-    
-      <category term="自动化测试技能" scheme="https://begin-with-start.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
-    
-  </entry>
-  
-  <entry>
     <title>测试用例的设计</title>
     <link href="https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/"/>
     <id>https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/</id>
@@ -187,6 +139,29 @@
       <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
     
       <category term="test用例" scheme="https://begin-with-start.github.io/tags/test%E7%94%A8%E4%BE%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自动化测试简介</title>
+    <link href="https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/"/>
+    <id>https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/</id>
+    <published>2018-09-17T06:24:26.000Z</published>
+    <updated>2018-09-29T07:27:06.097Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;软件开发生命周期各个阶段的自动化测试技术&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="测试技能" scheme="https://begin-with-start.github.io/categories/%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
+    
+    
+      <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="自动化测试技能" scheme="https://begin-with-start.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
     
   </entry>
   
