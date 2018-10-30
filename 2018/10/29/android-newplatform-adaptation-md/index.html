@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://begin-with-start.github.io">
-  <title>Archives: 2017 | Begin-With-Start</title>
+  <title>android_newplatform_adaptation.md | Begin-With-Start</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Begin-With-Start">
-<meta property="og:url" content="https://begin-with-start.github.io/archives/2017/index.html">
+  <meta name="keywords" content="适配">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android_newplatform_adaptation.md">
+<meta property="og:url" content="https://begin-with-start.github.io/2018/10/29/android-newplatform-adaptation-md/index.html">
 <meta property="og:site_name" content="Begin-With-Start">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-30T06:48:46.040Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Begin-With-Start">
+<meta name="twitter:title" content="android_newplatform_adaptation.md">
   
     <link rel="alternative" href="/atom.xml" title="Begin-With-Start" type="application/atom+xml">
   
@@ -154,52 +156,81 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-android-newplatform-adaptation-md" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      android_newplatform_adaptation.md
+    </h1>
+  
+
+        
+        <a href="/2018/10/29/android-newplatform-adaptation-md/" class="archive-article-date">
+  	<time datetime="2018-10-29T12:43:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-29</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><a id="more"></a>
+<!-- ![image](arouter-thinking/city.jpg) -->
+</li>
+</ul>
+<h2 id="andorid-9-0"><a href="#andorid-9-0" class="headerlink" title="andorid 9.0"></a>andorid 9.0</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">google终于开始解决悬在自己头上的达摩斯之剑了，安全+卡顿两个被诟病的地方；这次在nogout的p升级上，开始对sdk中被各大厂商和黑科技玩坏的反射和对底层的各种调用问题开始着手解决；这个版本对于非sdk暴露api方法做了限制，不论是调用，反射还是jni，提升自己的兼容性；</span><br><span class="line">对限制的接口进行调用的时候，会奔溃或者弹窗或者弹出toast警告的方式来一个版本一个版本的把非法的sdk调用消灭掉；</span><br></pre></td></tr></table></figure>
+<h2 id="渐进的改进方式"><a href="#渐进的改进方式" class="headerlink" title="渐进的改进方式"></a>渐进的改进方式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对于sdk的限制，google出了几个列表，blacklist，dark-graylist， light-graylist；处理方式也有不同，对于黑名单这个版本必须改动，不然会带来奔溃；dark-graylist的接口，为p版本的时候不准调用，小于p的手机可调用，会警告；light-graylist的在》=p的版本的时候会进行警告，后续版本会移动到深灰列表中；</span><br></pre></td></tr></table></figure>
+<h2 id="sdk检查原理"><a href="#sdk检查原理" class="headerlink" title="sdk检查原理"></a>sdk检查原理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">start 准备阶段：</span><br><span class="line">	在c层对androidsdk的api权限进行检测从编译期的几个api列表中开始：</span><br><span class="line"></span><br><span class="line">	LOCAL_LIGHT_GREYLIST := $(INTERNAL_PLATFORM_HIDDENAPI_LIGHT_GREYLIST)</span><br><span class="line">	LOCAL_DARK_GREYLIST := $(INTERNAL_PLATFORM_HIDDENAPI_DARK_GREYLIST)</span><br><span class="line">	LOCAL_BLACKLIST := $(INTERNAL_PLATFORM_HIDDENAPI_BLACKLIST)</span><br><span class="line"></span><br><span class="line">	# File names of source files we will use to generate the final API lists.</span><br><span class="line">	LOCAL_SRC_GREYLIST := frameworks/base/config/hiddenapi-light-greylist.txt</span><br><span class="line">	LOCAL_SRC_VENDOR_LIST := frameworks/base/config/hiddenapi-vendor-list.txt</span><br><span class="line">	LOCAL_SRC_FORCE_BLACKLIST := frameworks/base/config/hiddenapi-force-blacklist.txt</span><br><span class="line">	LOCAL_SRC_PUBLIC_API := frameworks/base/config/hiddenapi-public-dex.txt</span><br><span class="line">	LOCAL_SRC_PRIVATE_API := frameworks/base/config/hiddenapi-private-dex.txt</span><br><span class="line">	LOCAL_SRC_REMOVED_API := frameworks/base/config/hiddenapi-removed-dex.txt</span><br><span class="line"></span><br><span class="line">	在定义light-greylist，black-list，dark-greylist中可以看出，系统开始就存储了两个列表hiddenapi-blacklist.txt，hiddenapi-dark-greylist.txt来源于Framework/base/config目录，而light-greylist来自于private-list减去dark-list和black-list表的并集之后的结果集；</span><br><span class="line"></span><br><span class="line">1.遍历class.dex中的函数或者字段列表</span><br><span class="line">	按照：</span><br><span class="line">	HiddenApiAccessFlags::kWhitelist =&gt; 0b00</span><br><span class="line">	hiddenapi-light-greylist.txt=&gt; HiddenApiAccessFlags::kLightGreylist =&gt; 0b01</span><br><span class="line">	hiddenapi-dark-greylist.txt =&gt; HiddenApiAccessFlags::kDarkGreylist=&gt; 0b10</span><br><span class="line">	hiddenapi-blacklist.txt =&gt; HiddenApiAccessFlags::kBlacklist =&gt; 0b11</span><br><span class="line">	的对应表将数值写入到ClassDataMethod/ClassDataField结构体中成员access_flags_原始值进行处理后重新写入</span><br><span class="line">2.最后一步，重新校验dex头部签名  Hiddenapi处理后，完成从3个文本文件数据与原始dex格式文件的合并，即生成新的dex。</span><br><span class="line"></span><br><span class="line">3.Art Runtime时期 将 access_flags_转换为需要的值；</span><br><span class="line">	hiddenapi-light-greylist.txt (0b01)</span><br><span class="line">	hiddenapi-dark-greylist.txt (0b10)</span><br><span class="line">	hiddenapi-blacklist.txt (0b11)</span><br><span class="line">	将转换之后的2进制值再存入进去，等待在运行期再使用；</span><br><span class="line"></span><br><span class="line">4.运行期：在app运行时，会校验artmethod结构体中access_flags_最高2位的值，校验的手段包括直接调用、反射、JNI获取</span><br><span class="line">	0(0b00) kAllow直接放过</span><br><span class="line">	1(0b01) kAllowButWarn放过，但日志警告</span><br><span class="line">	2(0b10) kAllowButWarnAndToast放过，且日志警告和弹窗</span><br><span class="line">	3(0b11) kDeny拒绝</span><br><span class="line"></span><br><span class="line">那么在用户和开发层面表现出来的现象就是：</span><br><span class="line">![image](android-newplatform-adaptation-md/google_apisdk_permission.jpg)</span><br></pre></td></tr></table></figure>
+<h2 id="工程中已经发现需要注意的三方库"><a href="#工程中已经发现需要注意的三方库" class="headerlink" title="工程中已经发现需要注意的三方库"></a>工程中已经发现需要注意的三方库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">作为一个已经运行了三年的工程在项目里面不可避免的引入了一些对于google不太友好的sdk进来，现在发现的是tinker和gson的低版本会造成引入比较多的非法sdkapi不过可以通过升级到最新的三方版本来进行规避；</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/10/inputbox-forbiddeninput/" class="archive-article-date">
-  	<time datetime="2017-12-10T04:09:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/10/inputbox-forbiddeninput/">工程定制输入框是否可输入保留光标定制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">定制</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">适配</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -212,229 +243,124 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://begin-with-start.github.io/2018/10/29/android-newplatform-adaptation-md/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/18/project-productflavor-newproject/" class="archive-article-date">
-  	<time datetime="2017-11-18T08:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/10/11/gson-project-reconfigratijon/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">gson与fastjson选取与部分原理解答</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/18/project-productflavor-newproject/">工程通用能力-变体包衍生多个定制工程解决方案(java,res,lib全方位定制问题)</a>
-    </h1>
-  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="android-newplatform-adaptation-md" data-title="android_newplatform_adaptation.md" data-url="https://begin-with-start.github.io/2018/10/29/android-newplatform-adaptation-md/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">观点</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/android技能//" class="article-tag-list-link color5">android技能</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/09/touchevent-all/" class="archive-article-date">
-  	<time datetime="2017-10-09T07:12:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/09/touchevent-all/">android event 事件分发的一些实用解析与源码分析汇总</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">event事件解析</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/android技能//" class="article-tag-list-link color5">android技能</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/18/so-source-design/" class="archive-article-date">
-  	<time datetime="2017-09-18T03:05:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/18/so-source-design/">so库全解析</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">so库实战</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/android技能//" class="article-tag-list-link color5">android技能</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/15/2017-09-15-md/" class="archive-article-date">
-  	<time datetime="2017-09-15T08:58:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/15/2017-09-15-md/">values在碎片化各种屏幕中的系统加载策略问题探讨及ui适配的选择</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">values实战</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/android技能//" class="article-tag-list-link color5">android技能</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -457,8 +383,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
