@@ -1,10 +1,13 @@
 ---
-title: trade_healthy_knowledge
+title: 健身行业认识
 date: 2018-09-29 15:45:03
 tags: [行业,健身]
 categories: 行业认识
 ---
-* 部署私有库目的
+* 健身行业
+* 公司正在做的事情
+* 可能存在的问题
+* 可能的解决办法
 
 <!-- more -->
 ![image](trade-healthy-knowledge/healthy_picture.jpg)
