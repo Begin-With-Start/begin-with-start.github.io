@@ -1,10 +1,15 @@
 ---
-title: android_newplatform_adaptation.md
+title: android9.0适配的前世今生
 date: 2018-10-29 20:43:20
 tags: [适配]
 categories: android技能
 ---
-* 
+
+* andorid 9.0
+* 渐进的改进方式
+* sdk检查原理 
+* 工程中已经发现需要注意的三方库
+
 <!-- more -->
 <!-- ![image](arouter-thinking/city.jpg) -->
 
@@ -59,14 +64,13 @@ categories: android技能
 		3(0b11) kDeny拒绝
 
 	那么在用户和开发层面表现出来的现象就是：
-	![image](android-newplatform-adaptation-md/google_apisdk_permission.jpg)
 ```
+![image](android-newplatform-adaptation-md/google_apisdk_permission.jpg)
 ## 工程中已经发现需要注意的三方库 ##
 ```
 	作为一个已经运行了三年的工程在项目里面不可避免的引入了一些对于google不太友好的sdk进来，现在发现的是tinker和gson的低版本会造成引入比较多的非法sdkapi不过可以通过升级到最新的三方版本来进行规避；
-
-	
 ```
+详细分析： http://kuaibao.qq.com/s/20180327G17Y3L00?refer=spider
 
 
 
