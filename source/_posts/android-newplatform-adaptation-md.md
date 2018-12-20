@@ -70,6 +70,37 @@ categories: android技能
 ```
 	作为一个已经运行了三年的工程在项目里面不可避免的引入了一些对于google不太友好的sdk进来，现在发现的是tinker和gson的低版本会造成引入比较多的非法sdkapi不过可以通过升级到最新的三方版本来进行规避；
 ```
+## 其他很奇怪的开发版造成的适配问题 ## 
+```
+// Android 9.0 限制了开发者调用非官方公开API方法或接口, 关闭警告弹框
+private void closeAndroidPDialog(){
+    try {
+        Class clazz = Class.forName("android.content.pm.PackageParser$Package");
+
+        Constructor constructor = clazz.getDeclaredConstructor(String.class);
+        constructor.setAccessible(true);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+    try {
+        Class clazz = Class.forName("android.app.ActivityThread");
+
+        Method method = clazz.getDeclaredMethod("currentActivityThread");
+        method.setAccessible(true);
+
+        Object object = method.invoke(null);
+
+        Field filed = clazz.getDeclaredField("mHiddenApiWarningShown");
+        filed.setAccessible(true);
+        filed.setBoolean(object, true);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+这种方式不推荐使用，只是在最终的适配也无法满足的 mix 2s 开发版 9.0 时候特定的适配问题添加下；
+```
+
 详细分析： http://kuaibao.qq.com/s/20180327G17Y3L00?refer=spider
 
 扫描工具： 链接: https://pan.baidu.com/s/1J6ZvwWt16imoWoODY7dWXA 提取码: 29yy 
