@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://begin-with-start.github.io">
-  <title>Archives: 2018/10 | Begin-With-Start</title>
+  <title>android_datasave_type | Begin-With-Start</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Begin-With-Start">
-<meta property="og:url" content="https://begin-with-start.github.io/archives/2018/10/index.html">
+  <meta name="description" content="android 中的存储">
+<meta name="keywords" content="存储">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android_datasave_type">
+<meta property="og:url" content="https://begin-with-start.github.io/2019/01/23/android-datasave-type/index.html">
 <meta property="og:site_name" content="Begin-With-Start">
+<meta property="og:description" content="android 中的存储">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-23T13:02:56.920Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Begin-With-Start">
+<meta name="twitter:title" content="android_datasave_type">
+<meta name="twitter:description" content="android 中的存储">
   
     <link rel="alternative" href="/atom.xml" title="Begin-With-Start" type="application/atom+xml">
   
@@ -154,124 +159,358 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-android-datasave-type" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/29/android-newplatform-adaptation-md/" class="archive-article-date">
-  	<time datetime="2018-10-29T12:43:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-29</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/29/android-newplatform-adaptation-md/">android9.0适配的前世今生</a>
+    <h1 class="article-title" itemprop="name">
+      android_datasave_type
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/01/23/android-datasave-type/" class="archive-article-date">
+  	<time datetime="2019-01-23T11:45:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>android 中的存储</li>
+</ul>
+<a id="more"></a>
+<!-- ![image](arouter-thinking/city.jpg) -->
+<h2 id="android-中的存储"><a href="#android-中的存储" class="headerlink" title="android 中的存储"></a>android 中的存储</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th style="text-align:center">速度</th>
+<th style="text-align:right">安全性</th>
+<th style="text-align:right">多线程支持</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文件</td>
+<td style="text-align:center">慢</td>
+<td style="text-align:right">(私有文件外)否</td>
+<td style="text-align:right">读写现成不安全</td>
+</tr>
+<tr>
+<td>数据库</td>
+<td style="text-align:center">快</td>
+<td style="text-align:right">安全</td>
+<td style="text-align:right">由sqlite database保证线程安全</td>
+</tr>
+<tr>
+<td>ContentProvider</td>
+<td style="text-align:center">视底层数据存储而定</td>
+<td style="text-align:right">安全</td>
+<td style="text-align:right">过程线程安全</td>
+</tr>
+<tr>
+<td>shareprefrence</td>
+<td style="text-align:center">慢(转存到xml中为止)</td>
+<td style="text-align:right">private安全</td>
+<td style="text-align:right">不安全</td>
+</tr>
+<tr>
+<td>mmkv</td>
+<td style="text-align:center">快</td>
+<td style="text-align:right">可控</td>
+<td style="text-align:right">安全</td>
+<td>线程安全</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">各种存储方式根据特性，可以在需要的时候进行选择；没有一种存储方式适用于所有的情况；只能根据业务和功能的需求，选择合适的存储方式；</span><br></pre></td></tr></table></figure>
+<h2 id="文件存储方式"><a href="#文件存储方式" class="headerlink" title="文件存储方式"></a>文件存储方式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">文件的存储，指在安卓系统中，以文件方式放在内部存储或者外部存储的方式；文件存储可以存放比较大的数据，图片，视频，同时对于大量的android运行日志，dump日志，apk，临时碎片推荐使用文件的方式，根据所存储文件的安全性要求和文件存储位置要求来选择合适的存储位置</span><br><span class="line">文件存储位置分为两种：内部存储，外部存储两种；</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>（内部存储）路径</th>
+<th style="text-align:left">存储内容</th>
+<th style="text-align:left">api</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data/data/包名/shared_prefs</td>
+<td style="text-align:left">存储sp文件</td>
+<td style="text-align:left">..</td>
+</tr>
+<tr>
+<td>data/data/包名/databases</td>
+<td style="text-align:left">数据库文件</td>
+<td style="text-align:left">..</td>
+</tr>
+<tr>
+<td>data/data/包名/files</td>
+<td style="text-align:left">文件存储</td>
+<td style="text-align:left">context.getFilesDir()</td>
+</tr>
+<tr>
+<td>data/data/包名/cache</td>
+<td style="text-align:left">缓存</td>
+<td style="text-align:left">context.getCacheDir()</td>
+</tr>
+<tr>
+<td>（外部存储 mnt/storage ）路径</td>
+<td style="text-align:left">存储内容</td>
+<td style="text-align:left">api</td>
+</tr>
+<tr>
+<td>–</td>
+<td style="text-align:left">:–</td>
+<td style="text-align:left">:–</td>
+</tr>
+<tr>
+<td>九大公用存储+sd卡目录</td>
+<td style="text-align:left">存储sp文件</td>
+<td style="text-align:left">..</td>
+</tr>
+<tr>
+<td>私有目录 storage/sdcard/android/data/包名/file</td>
+<td style="text-align:left">文件</td>
+<td style="text-align:left">context.getExternalFilesDir(Environment.DIRECTORY_MUSIC)</td>
+</tr>
+<tr>
+<td>私有目录 storage/sdcard/android/data/包名/file</td>
+<td style="text-align:left">缓存</td>
+<td style="text-align:left">context.getExternalFilesDir()</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align:left">路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Environment.getExternalStoragePublicDirectory(DIRECTORY_ALARMS)</td>
+<td style="text-align:left">/storage/sdcard0/Alarms</td>
+</tr>
+<tr>
+<td>Environment.getExternalStoragePublicDirectory(DIRECTORY_DCIM)</td>
+<td style="text-align:left">/storage/sdcard0/DCIM</td>
+</tr>
+<tr>
+<td>Environment.getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS)</td>
+<td style="text-align:left">/storage/sdcard0/Download</td>
+</tr>
+<tr>
+<td>Environment.getExternalStoragePublicDirectory(DIRECTORY_MOVIES)</td>
+<td style="text-align:left">/storage/sdcard0/Movies</td>
+</tr>
+<tr>
+<td>Environment.getExternalStoragePublicDirectory(DIRECTORY_MUSIC)</td>
+<td style="text-align:left">/storage/sdcard0/Music</td>
+</tr>
+<tr>
+<td>Environment.getExternalStoragePublicDirectory(DIRECTORY_NOTIFICATIONS)</td>
+<td style="text-align:left">/storage/sdcard0/Notifications</td>
+</tr>
+<tr>
+<td>Environment.getExternalStoragePublicDirectory(DIRECTORY_PICTURES)</td>
+<td style="text-align:left">/storage/sdcard0/Pictures</td>
+</tr>
+<tr>
+<td>Environment.getExternalStoragePublicDirectory(DIRECTORY_PODCASTS)</td>
+<td style="text-align:left">/storage/sdcard0/Podcasts</td>
+</tr>
+<tr>
+<td>Environment.getExternalStoragePublicDirectory(DIRECTORY_RINGTONES)</td>
+<td style="text-align:left">/storage/sdcard0/Ringtones</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">从上列表可以知道，在路径中带了包名的代码访问需要使用context需要使用上下文，没有带包名的，可以直接使用enviroment的方法进行访问；</span><br></pre></td></tr></table></figure>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">![image](android-newplatform-adaptation-md/google_apisdk_permission.jpg)</span><br><span class="line">## 工程中已经发现需要注意的三方库 ##</span><br></pre></td></tr></table></figure>
+<p>详细分析： <a href="http://kuaibao.qq.com/s/20180327G17Y3L00?refer=spider" target="_blank" rel="noopener">http://kuaibao.qq.com/s/20180327G17Y3L00?refer=spider</a></p>
+<p>扫描工具： 链接: <a href="https://pan.baidu.com/s/1J6ZvwWt16imoWoODY7dWXA" target="_blank" rel="noopener">https://pan.baidu.com/s/1J6ZvwWt16imoWoODY7dWXA</a> 提取码: 29yy </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">适配</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">存储</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/android技能//" class="article-tag-list-link color5">android技能</a>
+        			<a href="/categories/android技能-存储//" class="article-tag-list-link color3">android技能,存储</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://begin-with-start.github.io/2019/01/23/android-datasave-type/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/11/gson-project-reconfigratijon/" class="archive-article-date">
-  	<time datetime="2018-10-11T12:50:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-11</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/01/21/android-vysor-chrome-plugin/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vysor共享手机屏幕高清破解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/11/gson-project-reconfigratijon/">gson与fastjson选取与部分原理解答</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">gson重构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/android技能//" class="article-tag-list-link color5">android技能</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="android-datasave-type" data-title="android_datasave_type" data-url="https://begin-with-start.github.io/2019/01/23/android-datasave-type/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -294,8 +533,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
