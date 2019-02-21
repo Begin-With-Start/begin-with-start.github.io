@@ -215,29 +215,6 @@
   </entry>
   
   <entry>
-    <title>自动化测试简介</title>
-    <link href="https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/"/>
-    <id>https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/</id>
-    <published>2018-09-17T06:24:26.000Z</published>
-    <updated>2018-09-29T07:27:06.097Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;软件开发生命周期各个阶段的自动化测试技术&lt;/li&gt;&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="测试技能" scheme="https://begin-with-start.github.io/categories/%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
-    
-    
-      <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
-    
-      <category term="自动化测试技能" scheme="https://begin-with-start.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
-    
-  </entry>
-  
-  <entry>
     <title>测试用例的设计</title>
     <link href="https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/"/>
     <id>https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/</id>
@@ -257,6 +234,29 @@
       <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
     
       <category term="test用例" scheme="https://begin-with-start.github.io/tags/test%E7%94%A8%E4%BE%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自动化测试简介</title>
+    <link href="https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/"/>
+    <id>https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/</id>
+    <published>2018-09-17T06:24:26.000Z</published>
+    <updated>2018-09-29T07:27:06.097Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;软件开发生命周期各个阶段的自动化测试技术&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="测试技能" scheme="https://begin-with-start.github.io/categories/%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
+    
+    
+      <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="自动化测试技能" scheme="https://begin-with-start.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
     
   </entry>
   
