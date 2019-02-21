@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[安卓存储方式完全讲解]]></title>
     <url>%2F2019%2F01%2F23%2Fandroid-datasave-type%2F</url>
-    <content type="text"><![CDATA[文件存储方式 android 中的存储 名称 速度 安全性 多线程支持 文件 慢 (私有文件外)否 读写现成不安全 数据库 快 安全 由sqlite database保证线程安全 ContentProvider 视底层数据存储而定 安全 过程线程安全 shareprefrence 慢(转存到xml中为止) private安全 不安全 mmkv 快 可控 安全 1各种存储方式根据特性，可以在需要的时候进行选择；没有一种存储方式适用于所有的情况；只能根据业务和功能的需求，选择合适的存储方式； 文件存储方式12文件的存储，指在安卓系统中，以文件方式放在内部存储或者外部存储的方式；文件存储可以存放比较大的数据，图片，视频，同时对于大量的android运行日志，dump日志，apk，临时碎片推荐使用文件的方式，根据所存储文件的安全性要求和文件存储位置要求来选择合适的存储位置文件存储位置分为两种：内部存储，外部存储两种； （内部存储）路径 存储内容 api data/data/包名/shared_prefs 存储sp文件 .. data/data/包名/databases 数据库文件 .. data/data/包名/files 文件存储 context.getFilesDir() data/data/包名/cache 缓存 context.getCacheDir() （外部存储 mnt/storage ）路径 存储内容 api 九大公用存储+sd卡目录 存储sp文件 .. 私有目录 storage/sdcard/android/data/包名/file 文件 context.getExternalFilesDir(Environment.DIRECTORY_MUSIC) 私有目录 storage/sdcard/android/data/包名/file 缓存 context.getExternalFilesDir() 方法 路径 /storage/sdcard0/Alarms Environment.getExternalStoragePublicDirectory(DIRECTORY_ALARMS) /storage/sdcard0/DCIM Environment.getExternalStoragePublicDirectory(DIRECTORY_DCIM) /storage/sdcard0/Download Environment.getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS) /storage/sdcard0/Movies Environment.getExternalStoragePublicDirectory(DIRECTORY_MOVIES) /storage/sdcard0/Music Environment.getExternalStoragePublicDirectory(DIRECTORY_MUSIC) /storage/sdcard0/Notifications Environment.getExternalStoragePublicDirectory(DIRECTORY_NOTIFICATIONS) /storage/sdcard0/Pictures Environment.getExternalStoragePublicDirectory(DIRECTORY_PICTURES) /storage/sdcard0/Podcasts Environment.getExternalStoragePublicDirectory(DIRECTORY_PODCASTS) /storage/sdcard0/Ringtones Environment.getExternalStoragePublicDirectory(DIRECTORY_RINGTONES) 1在路径中带了包名的代码访问需要使用context需要使用上下文，没有带包名的，可以直接使用enviroment的方法进行访问； 数据库123```![image](android-newplatform-adaptation-md/google_apisdk_permission.jpg)## 工程中已经发现需要注意的三方库 ## 详细分析： http://kuaibao.qq.com/s/20180327G17Y3L00?refer=spider 扫描工具： 链接: https://pan.baidu.com/s/1J6ZvwWt16imoWoODY7dWXA 提取码: 29yy]]></content>
+    <content type="text"><![CDATA[文件存储方式 android 中的存储 名称 速度 安全性 多线程支持 文件 慢 (私有文件外)否 读写现成不安全 数据库 快 安全 由sqlite database保证线程安全 ContentProvider 视底层数据存储而定 安全 过程线程安全 shareprefrence 慢(转存到xml中为止) private安全 不安全 mmkv 快 可控 安全 123各种存储方式根据特性，1.可以在需要的时候进行选择；2.没有一种存储方式适用于所有的情况；3.只能根据业务和功能的需求，选择合适的存储方式； 文件存储方式12文件的存储，指在安卓系统中，以文件方式放在内部存储或者外部存储的方式；文件存储可以存放比较大的数据，图片，视频，同时对于大量的android运行日志，dump日志，apk，临时碎片推荐使用文件的方式，根据所存储文件的安全性要求和文件存储位置要求来选择合适的存储位置文件存储位置分为两种：内部存储，外部存储两种； （内部存储）路径 存储内容 api data/data/包名/shared_prefs 存储sp文件 .. data/data/包名/databases 数据库文件 .. data/data/包名/files 文件存储 context.getFilesDir() data/data/包名/cache 缓存 context.getCacheDir() （外部存储 mnt/storage ）路径 存储内容 api 九大公用存储+sd卡目录 存储sp文件 .. 私有目录 storage/sdcard/android/data/包名/file 文件 context.getExternalFilesDir(Environment.DIRECTORY_MUSIC) 私有目录 storage/sdcard/android/data/包名/file 缓存 context.getExternalFilesDir() 方法 路径 /storage/sdcard0/Alarms Environment.getExternalStoragePublicDirectory(DIRECTORY_ALARMS) /storage/sdcard0/DCIM Environment.getExternalStoragePublicDirectory(DIRECTORY_DCIM) /storage/sdcard0/Download Environment.getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS) /storage/sdcard0/Movies Environment.getExternalStoragePublicDirectory(DIRECTORY_MOVIES) /storage/sdcard0/Music Environment.getExternalStoragePublicDirectory(DIRECTORY_MUSIC) /storage/sdcard0/Notifications Environment.getExternalStoragePublicDirectory(DIRECTORY_NOTIFICATIONS) /storage/sdcard0/Pictures Environment.getExternalStoragePublicDirectory(DIRECTORY_PICTURES) /storage/sdcard0/Podcasts Environment.getExternalStoragePublicDirectory(DIRECTORY_PODCASTS) /storage/sdcard0/Ringtones Environment.getExternalStoragePublicDirectory(DIRECTORY_RINGTONES) 1在路径中带了包名的代码访问需要使用context需要使用上下文，没有带包名的，可以直接使用enviroment的方法进行访问； 数据库123```![image](android-newplatform-adaptation-md/google_apisdk_permission.jpg)## 工程中已经发现需要注意的三方库 ## 详细分析： http://kuaibao.qq.com/s/20180327G17Y3L00?refer=spider 扫描工具： 链接: https://pan.baidu.com/s/1J6ZvwWt16imoWoODY7dWXA 提取码: 29yy]]></content>
       <categories>
         <category>android技能,存储</category>
       </categories>
@@ -49,7 +49,7 @@
   <entry>
     <title><![CDATA[gson与fastjson选取与部分原理解答]]></title>
     <url>%2F2018%2F10%2F11%2Fgson-project-reconfigratijon%2F</url>
-    <content type="text"><![CDATA[项目中使用了多个解析库的时候，总会遇到一些取舍，那么我们可以从原理和解析速度上面来进行取舍，同时提高基础库的了解，便于今后对库进行改动和提升操作，下面就一起来讨论一下json的序列化和反序列化库的一些区别，探讨一些库的原理； gson fastjson jackson1234567891011121314151617gson fastjson jackson 三者都可以用来进行对象的序列化与反序列化操作，三者的速度对别，摘录下别人的结果，真实的结果估计也差不多，控制一下单一变量原则，对于各个序列方式擅长的方面，其实在开发中遇到的概率暂时不考虑；序列化时间对比：类库 样本数量 执行次数 最长时间(毫秒) 最短时间(毫秒) 平均时间(毫秒)FastJSON 100000 10 2291.22 1416.70 1454.93Jackson 100000 10 1980.92 841.91 880.82Gson 100000 10 2383.02 1469.08 1520.38反序列化对比：类库 样本数量 执行次数 最长时间(毫秒) 最短时间(毫秒) 平均时间(毫秒)FastJSON 100000 10 7942.31 340.55 6526.41Jackson 100000 10 7957.22 6623.85 6815.41Gson 100000 10 8235.15 7006.06 7364.75从序列化和反序列化的表现来看，三种方案速度相差不是很大，所以在项目中已经使用了fastjson作为业务解析，gson用在了底层解析的时候，应该直接选取其中一种解析方式即可，不需要凭空在引进集中方案来增加包体积; gson与fastjson12两种序列化方案是不应该放到一起的，毕竟对于速度相差不多，在不考虑易用性的时候，其实何种解析方案都可；鉴于gson被放到了网络底层来进行了数据的解析，那么我们最终选择了gson来进行序列化，而且渐渐是需要移除掉fastjson的依赖的；下面简单对比一下fastjson和gson在原理上的差异； gson解析原理： ![image](gson-project-reconfigratijon/gson_show_main_flow.jpg) 1gson主要是通过遍历json和对象中的字段，遍历json进行类型判断，调取响应的TypeAdapter对象，再去bean中找到相对应的字段name生成一个boundfield，后续通过typeadapter进行数值的存入操作；直到解析结束，形成一个javabean，那么我们很容易就找到了gson会发生错误的最根本原因，在循环阶段就已经判断出来的字段类型，获取到bean中对应的typeadapter之后，尝试进行类型的转换时候，类型转换失败，自然会报出gson的一个自定义异常JsonSyntaxException，这个异常主要是针对于在类型强转过程中，统一catch之后，包装到自定义异常类中抛给调用方； 12fastjson解析原理：基于反射，在解析过程中，经过预测算法优化，加上各种缓存来提升速度； json解析取舍1两种解析在根本上，速度不会相差太大，那么只需要保留一种解析即可，没有必要维护多个库，gson已经被使用到了网络库的底层中，那么最方便的方式就是去掉fastjson的解析库；只保留gson的解析方式；]]></content>
+    <content type="text"><![CDATA[项目中使用了多个解析库的时候，总会遇到一些取舍，那么我们可以从原理和解析速度上面来进行取舍，同时提高基础库的了解，便于今后对库进行改动和提升操作，下面就一起来讨论一下json的序列化和反序列化库的一些区别，探讨一些库的原理； gson fastjson jackson1234567891011121314151617gson fastjson jackson 三者都可以用来进行对象的序列化与反序列化操作，三者的速度对别，摘录下别人的结果，真实的结果估计也差不多，控制一下单一变量原则，对于各个序列方式擅长的方面，其实在开发中遇到的概率暂时不考虑；序列化时间对比：类库 样本数量 执行次数 最长时间(毫秒) 最短时间(毫秒) 平均时间(毫秒)FastJSON 100000 10 2291.22 1416.70 1454.93Jackson 100000 10 1980.92 841.91 880.82Gson 100000 10 2383.02 1469.08 1520.38反序列化对比：类库 样本数量 执行次数 最长时间(毫秒) 最短时间(毫秒) 平均时间(毫秒)FastJSON 100000 10 7942.31 340.55 6526.41Jackson 100000 10 7957.22 6623.85 6815.41Gson 100000 10 8235.15 7006.06 7364.75从序列化和反序列化的表现来看，三种方案速度相差不是很大，所以在项目中已经使用了fastjson作为业务解析，gson用在了底层解析的时候，应该直接选取其中一种解析方式即可，不需要凭空在引进集中方案来增加包体积; gson与fastjson12两种序列化方案是不应该放到一起的，毕竟对于速度相差不多，在不考虑易用性的时候，其实何种解析方案都可；鉴于gson被放到了网络底层来进行了数据的解析，那么我们最终选择了gson来进行序列化，而且渐渐是需要移除掉fastjson的依赖的；下面简单对比一下fastjson和gson在原理上的差异； gson解析原理： 1gson主要是通过遍历json和对象中的字段，遍历json进行类型判断，调取响应的TypeAdapter对象，再去bean中找到相对应的字段name生成一个boundfield，后续通过typeadapter进行数值的存入操作；直到解析结束，形成一个javabean，那么我们很容易就找到了gson会发生错误的最根本原因，在循环阶段就已经判断出来的字段类型，获取到bean中对应的typeadapter之后，尝试进行类型的转换时候，类型转换失败，自然会报出gson的一个自定义异常JsonSyntaxException，这个异常主要是针对于在类型强转过程中，统一catch之后，包装到自定义异常类中抛给调用方； 12fastjson解析原理：基于反射，在解析过程中，经过预测算法优化，加上各种缓存来提升速度； json解析取舍1两种解析在根本上，速度不会相差太大，那么只需要保留一种解析即可，没有必要维护多个库，gson已经被使用到了网络库的底层中，那么最方便的方式就是去掉fastjson的解析库；只保留gson的解析方式；]]></content>
       <categories>
         <category>android技能</category>
       </categories>
@@ -95,18 +95,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[测试用例的设计]]></title>
-    <url>%2F2018%2F09%2F17%2Ftest-case-design-xiaozhu%2F</url>
-    <content type="text"><![CDATA[测试用例的设计 测试用例的设计 黑盒测试 等价类 边界值 功能测试（页面刷新、用户习惯性使用Tab、Enter等、权限）显示功能性需求 安全性测试 加密（存储、网络传输） 网络传输是否加密 sql注入字符串 同一用户同一终端，多浏览器，登录互斥性 同一用户多终端的浏览器，先后登录互斥性 ‘XSS跨站脚本攻击’，系统行为是否被篡改 多次登录失败，是否阻止暴力破解 兼容性测试 不同浏览器，页面和功能正确 相同浏览器不同版本，页面和功能正确 不同移动设备下浏览器，页面和功能正确 不同分辨率终端，页面和功能正确 性能测试 单用户响应时间小于3s 请求数量是否过多 高并发下响应时间小于5s 高并发下服务器监控指标是否符合预期 高集合点并发场景下，是否存在资源死锁和不合理的资源等待 长时间大量用户，登录登出，服务器端是否存在内存泄漏 网络测试 弱网测试或切换网络或网络延迟如何设计“好的”测试用例 “好的”测试用例必备特征 整体完备性：完全覆盖测试需求 等价类划分的准确性：保证其中一个通过，其他输入也一定测试通过 等价类集合的完备性：所有可能的边界值和边界条件都已经正确识别 三种最常用的测试用例设计方法 等价类划分 有效等价类和无效等价类 边界值分析 正好等于、刚刚大于或刚刚小于 错误推测 基于对被测软件系统设计的理解、过往经验以及个人直觉，推测软件可能的缺陷，从而有针对性的设计测试用例。该方法强调对被测软件的需求理解和对设计实现的细节把握，还有个人的能力。 打造缺陷知识库用例设计的其他经验 深入理解被测软件的架构才能设计出有的放矢的测试用例集，去发现系统边界以及系统集成上的潜在缺陷 必须深入理解被测软件的设计与实现细节，深入理解软件内部的处理逻辑 需要引入需求覆盖率和代码覆盖率来衡量测试执行的完备性，并以此为依据来找出遗漏的测试点 需求合理性测试 测试后的漏测率和问题的严重程度上评估]]></content>
-      <categories>
-        <category>测试技能</category>
-      </categories>
-      <tags>
-        <tag>理论知识</tag>
-        <tag>test用例</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[自动化测试简介]]></title>
     <url>%2F2018%2F09%2F17%2Ftest-case-auto-testcase-summary%2F</url>
     <content type="text"><![CDATA[软件开发生命周期各个阶段的自动化测试技术 软件开发生命周期各个阶段的自动化测试技术1、单元测试的自动化技术 用例框架代码生成的自动化 部分测试输入数据的自动化生成 自动生成边界值 自动桩代码的生成 桩代码（stub code）是用来替代真正代买的临时代码 单元测试开发者只需要关注桩代码内的具体逻辑实现，以及桩代码的返回值 最好还能实现‘抽桩’或拔桩 被测代码的自动化静态分析 常用工具：Sonar、Coverity 测试覆盖率的自动统计与分析2、代码级集成测试的自动化技术 代码级集成测试与单元测试的最大区别：代码级集成测试调用的其他函数都为真实的，不允许使用桩代码代替；单元测试可以；Web Service 测试的自动化技术 Web Service 测试主要指 SOUP API 和 REST API这两类API测试，最典型的是采用SoupUI和Postman等类似的工具，但这种工具一般都是界面手动发起Request并验证Response，难以CI/CD集成，所以出现了API自动化测试框架 代码级API测试用例，一般包括三个步骤： 准备API测试数据 准备调用参数，并调用 验证返回结果 目前JAVA最流行的API测试框架是REST Assured Web Service 还包括： 测试脚手架代码的自动化生成 部分测试输入数据的自动生成 生成遵循边界值原则 Response验证的自动化 关注：返回状态码（state code）、Scheme结构（数据结构）以及具体的字段值 核心思想：自动识别出有差异的字段值，比较过程可以通过规则配置去掉类似：时间戳、会话ID（Session ID）等动态值 基于SoupUI或Postman的自动化脚本生成 开发自动化代码转换生成工具，工具的输入为SoupUI或Postman的测试用例元数据（即JSON元文件），输出为符合API测试框架规范的基于代码实现的测试用例GUI 测试的自动化技术 GUI 自动化测试的两大方向：传统Web浏览器和移动端原生应用（Native App）的GUI自动化 Web浏览器：主流开源方案：Selenium，商业方案：Micro Focus的UFT（前身是HP的QTP） 移动端：主流Appium，IOS集成了XCUITest，Android集成了UIAutomator和Espresso 评论：已有案例：Postman+服务器部署Newman+jenkins 小众全英文（不支持英文）：Katalon Studio jmeter做接口测试 我们现有的API:Python + Selenium + unittest GUI：Python + Appium总结：]]></content>
@@ -116,6 +104,18 @@
       <tags>
         <tag>理论知识</tag>
         <tag>自动化测试技能</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[测试用例的设计]]></title>
+    <url>%2F2018%2F09%2F17%2Ftest-case-design-xiaozhu%2F</url>
+    <content type="text"><![CDATA[测试用例的设计 测试用例的设计 黑盒测试 等价类 边界值 功能测试（页面刷新、用户习惯性使用Tab、Enter等、权限）显示功能性需求 安全性测试 加密（存储、网络传输） 网络传输是否加密 sql注入字符串 同一用户同一终端，多浏览器，登录互斥性 同一用户多终端的浏览器，先后登录互斥性 ‘XSS跨站脚本攻击’，系统行为是否被篡改 多次登录失败，是否阻止暴力破解 兼容性测试 不同浏览器，页面和功能正确 相同浏览器不同版本，页面和功能正确 不同移动设备下浏览器，页面和功能正确 不同分辨率终端，页面和功能正确 性能测试 单用户响应时间小于3s 请求数量是否过多 高并发下响应时间小于5s 高并发下服务器监控指标是否符合预期 高集合点并发场景下，是否存在资源死锁和不合理的资源等待 长时间大量用户，登录登出，服务器端是否存在内存泄漏 网络测试 弱网测试或切换网络或网络延迟如何设计“好的”测试用例 “好的”测试用例必备特征 整体完备性：完全覆盖测试需求 等价类划分的准确性：保证其中一个通过，其他输入也一定测试通过 等价类集合的完备性：所有可能的边界值和边界条件都已经正确识别 三种最常用的测试用例设计方法 等价类划分 有效等价类和无效等价类 边界值分析 正好等于、刚刚大于或刚刚小于 错误推测 基于对被测软件系统设计的理解、过往经验以及个人直觉，推测软件可能的缺陷，从而有针对性的设计测试用例。该方法强调对被测软件的需求理解和对设计实现的细节把握，还有个人的能力。 打造缺陷知识库用例设计的其他经验 深入理解被测软件的架构才能设计出有的放矢的测试用例集，去发现系统边界以及系统集成上的潜在缺陷 必须深入理解被测软件的设计与实现细节，深入理解软件内部的处理逻辑 需要引入需求覆盖率和代码覆盖率来衡量测试执行的完备性，并以此为依据来找出遗漏的测试点 需求合理性测试 测试后的漏测率和问题的严重程度上评估]]></content>
+      <categories>
+        <category>测试技能</category>
+      </categories>
+      <tags>
+        <tag>理论知识</tag>
+        <tag>test用例</tag>
       </tags>
   </entry>
   <entry>
