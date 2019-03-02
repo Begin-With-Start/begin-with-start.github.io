@@ -17,7 +17,7 @@
 <meta property="og:description" content="这个技术解决了什么问题 适合在哪种场景使用 这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点 上代码例子">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://begin-with-start.github.io/2019/02/27/lottie-analysis/lottie.png">
-<meta property="og:updated_time" content="2019-02-27T02:48:01.561Z">
+<meta property="og:updated_time" content="2019-03-02T07:12:57.031Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lottie解析，原理剖析，优缺点">
 <meta name="twitter:description" content="这个技术解决了什么问题 适合在哪种场景使用 这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点 上代码例子">
@@ -185,15 +185,30 @@
 <li>这个技术解决了什么问题</li>
 <li>适合在哪种场景使用</li>
 <li>这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点</li>
-<li>上代码例子<a id="more"></a>
+<li><p>上代码例子</p>
+<a id="more"></a>
 <!-- ![image]() -->
-<h2 id="这个技术解决了什么问题"><a href="#这个技术解决了什么问题" class="headerlink" title="这个技术解决了什么问题"></a>这个技术解决了什么问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">控件或者是元素在移动端的实现一直都是比较麻烦，而且收效不高的地方。（如果是手势或者是联动之内的动画不在讨论范围内），设计给出的一些效果，每次的沟通也会产生信息的衰减，那么爱彼迎在这基础上，给出了一套可以让设计师直接能给出一手的效果文件，经过客户端的转换成一个他想要的动画；</span><br><span class="line">lottie能够解决以下的一些问题：</span><br><span class="line">	1.android ， ios ， rn 对于某一个动画效果实现两次；</span><br><span class="line">	2.设计师表述的效果，跟实际沟通之间的问题，或者给出的动画实例实现有误差；</span><br><span class="line">	3.复杂的动画，实现耗时长；</span><br></pre></td></tr></table></figure>
-</li>
+<h2 id="这个技术解决了什么问题"><a href="#这个技术解决了什么问题" class="headerlink" title="这个技术解决了什么问题"></a>这个技术解决了什么问题</h2><p>  控件或者是元素在移动端的实现一直都是比较麻烦，而且收效不高的地方。（如果是手势或者是联动之内的动画不在讨论范围内），设计给出的一些效果，每次的沟通也会产生信息的衰减，那么爱彼迎在这基础上，给出了一套可以让设计师直接能给出一手的效果文件，经过客户端的转换成一个他想要的动画；<br>  lottie能够解决以下的一些问题：</p>
+<pre><code>1.android ， ios ， rn 对于某一个动画效果实现两次；
+2.设计师表述的效果，跟实际沟通之间的问题，或者给出的动画实例实现有误差；
+3.复杂的动画，实现耗时长；
+</code></pre></li>
 </ul>
 <p>适用：<br><img src="/2019/02/27/lottie-analysis/lottie.png" alt="image"></p>
-<h2 id="适合在哪种场景使用"><a href="#适合在哪种场景使用" class="headerlink" title="适合在哪种场景使用"></a>适合在哪种场景使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">适用场景：</span><br><span class="line">	1.稍复杂的动画，糅合了各种animation和animator的动画 </span><br><span class="line">	2.其他懒得实现的场景。。。。</span><br></pre></td></tr></table></figure>
-<h2 id="这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、-有什么优点和缺点"><a href="#这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、-有什么优点和缺点" class="headerlink" title="这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点"></a>这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">lottie从根本上还是一个对于图片元素的动画执行路径和执行时间的一个json文件描述转换成animation动画。那么从实现的机制上来说本身就有自己的局限性的，很多涉及到手势操作和animator的操作都无法好的进行适配；本质上是一系列的animationset的集合，需要透明度的实现还需要图片来进行支持，需要开发者自己指定mask图片的本地assert路径；</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">	1.lottie类似animation，所以lottie动画本身的scale都是动画变动，真是占用的区域还是文件描述的宽高(需要有缩放之内动画的要么端自己实现，要么就直接按照缩放之前之后的宽高，另行设置点击事件；)</span><br><span class="line">	2.对于涉及到mask ， mattes的动画，实现需要有些注意点；</span><br><span class="line">	3.对于recyclerview支持不是很好，对于新能会有影响；（尤其是涉及到mask，mattes相应的动画）</span><br><span class="line">优点：</span><br><span class="line">	1.轻量，整个包只有700多个方法</span><br><span class="line">	2.两端实现成本会低一些；</span><br></pre></td></tr></table></figure>
-<p>原理解析：<br>Lottie使用json文件来作为动画数据源，json文件是通过Bodymovin插件导出的，查看sample中给出的json文件，其实就是把图片中的元素进行来拆分，并且描述每个元素的动画执行路径和执行时间。Lottie的功能就是读取这些数据，然后绘制到屏幕上。</p>
+<h2 id="适合在哪种场景使用"><a href="#适合在哪种场景使用" class="headerlink" title="适合在哪种场景使用"></a>适合在哪种场景使用</h2><pre><code>适用场景：
+    1.稍复杂的动画，糅合了各种animation和animator的动画 
+    2.其他懒得实现的场景。。。。 
+</code></pre><h2 id="这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、-有什么优点和缺点"><a href="#这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、-有什么优点和缺点" class="headerlink" title="这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点"></a>这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点</h2><pre><code>lottie从根本上还是一个对于图片元素的动画执行路径和执行时间的一个json文件描述转换成animation动画。那么从实现的机制上来说本身就有自己的局限性的，很多涉及到手势操作和animator的操作都无法好的进行适配；本质上是一系列的animationset的集合，需要透明度的实现还需要图片来进行支持，需要开发者自己指定mask图片的本地assert路径；
+
+缺点：
+    1.lottie类似animation，所以lottie动画本身的scale都是动画变动，真是占用的区域还是文件描述的宽高(需要有缩放之内动画的要么端自己实现，要么就直接按照缩放之前之后的宽高，另行设置点击事件；)
+    2.对于涉及到mask ， mattes的动画，实现需要有些注意点；
+    3.对于recyclerview支持不是很好，对于新能会有影响；（尤其是涉及到mask，mattes相应的动画）
+优点：
+    1.轻量，整个包只有700多个方法
+    2.两端实现成本会低一些；
+    3.动画效果实现度高，设计师设计即所得；
+</code></pre><p>原理解析：<br>Lottie使用json文件来作为动画数据源，json文件是通过Bodymovin插件导出的，查看sample中给出的json文件，其实就是把图片中的元素进行来拆分，并且描述每个元素的动画执行路径和执行时间。Lottie的功能就是读取这些数据，然后绘制到屏幕上。</p>
 <p>首先要解析json，建立数据到对象的映射，然后根据数据对象创建合适的Drawable绘制到view上，动画的实现可以通过操作读取到的元素完成。</p>
 <p>具体过程如下所示</p>
 <p>json文件——&gt;Component——&gt;Drawable——&gt;View</p>
@@ -473,15 +488,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">存储</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工程</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">values实战</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">存储</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -513,11 +528,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">定制</a>
+                <a href="javascript:void(0)" class="js-tag color3">观点</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">观点</a>
+                <a href="javascript:void(0)" class="js-tag color3">定制</a>
               </li>
              
               <li class="article-tag-list-item">

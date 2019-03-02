@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://begin-with-start.github.io/"/>
-  <updated>2019-02-27T02:48:01.561Z</updated>
+  <updated>2019-03-02T07:12:57.031Z</updated>
   <id>https://begin-with-start.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://begin-with-start.github.io/2019/02/27/lottie-analysis/"/>
     <id>https://begin-with-start.github.io/2019/02/27/lottie-analysis/</id>
     <published>2019-02-27T01:58:22.000Z</published>
-    <updated>2019-02-27T02:48:01.561Z</updated>
+    <updated>2019-03-02T07:12:57.031Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
 &lt;li&gt;这个技术解决了什么问题&lt;/li&gt;
 &lt;li&gt;适合在哪种场景使用&lt;/li&gt;
 &lt;li&gt;这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点&lt;/li&gt;
-&lt;li&gt;上代码例子&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;上代码例子&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -241,29 +241,6 @@
   </entry>
   
   <entry>
-    <title>测试用例的设计</title>
-    <link href="https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/"/>
-    <id>https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/</id>
-    <published>2018-09-17T06:24:26.000Z</published>
-    <updated>2018-09-29T07:27:13.615Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;测试用例的设计&lt;/li&gt;&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="测试技能" scheme="https://begin-with-start.github.io/categories/%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
-    
-    
-      <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
-    
-      <category term="test用例" scheme="https://begin-with-start.github.io/tags/test%E7%94%A8%E4%BE%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>自动化测试简介</title>
     <link href="https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/"/>
     <id>https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/</id>
@@ -283,6 +260,29 @@
       <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
     
       <category term="自动化测试技能" scheme="https://begin-with-start.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试用例的设计</title>
+    <link href="https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/"/>
+    <id>https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/</id>
+    <published>2018-09-17T06:24:26.000Z</published>
+    <updated>2018-09-29T07:27:13.615Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;测试用例的设计&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="测试技能" scheme="https://begin-with-start.github.io/categories/%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
+    
+    
+      <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="test用例" scheme="https://begin-with-start.github.io/tags/test%E7%94%A8%E4%BE%8B/"/>
     
   </entry>
   
