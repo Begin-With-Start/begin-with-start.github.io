@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://begin-with-start.github.io/2018/10/29/android-newplatform-adaptation-md/</loc>
+    
+    <lastmod>2019-03-15T03:17:08.560Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://begin-with-start.github.io/2019/02/27/lottie-analysis/</loc>
     
     <lastmod>2019-03-02T07:12:57.031Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://begin-with-start.github.io/2019/01/21/android-vysor-chrome-plugin/</loc>
     
     <lastmod>2019-01-21T08:07:33.741Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://begin-with-start.github.io/2018/10/29/android-newplatform-adaptation-md/</loc>
-    
-    <lastmod>2018-12-20T09:16:23.717Z</lastmod>
     
   </url>
   
@@ -163,14 +163,14 @@
   </url>
   
   <url>
-    <loc>https://begin-with-start.github.io/about/index.html</loc>
+    <loc>https://begin-with-start.github.io/categories/index.html</loc>
     
     <lastmod>2018-09-13T02:27:51.416Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://begin-with-start.github.io/categories/index.html</loc>
+    <loc>https://begin-with-start.github.io/about/index.html</loc>
     
     <lastmod>2018-09-13T02:27:51.416Z</lastmod>
     
