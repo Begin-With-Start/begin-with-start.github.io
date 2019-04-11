@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://begin-with-start.github.io">
-  <title>Archives: 2019/1 | Begin-With-Start</title>
+  <title>泛型的使用注意事项与字节码解读 | Begin-With-Start</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Begin-With-Start">
-<meta property="og:url" content="https://begin-with-start.github.io/archives/2019/01/index.html">
+  <meta name="description" content="泛型的使用与对应的字节码 泛型的弊端">
+<meta name="keywords" content="工程,泛型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="泛型的使用注意事项与字节码解读">
+<meta property="og:url" content="https://begin-with-start.github.io/2019/04/11/generic-learn/index.html">
 <meta property="og:site_name" content="Begin-With-Start">
+<meta property="og:description" content="泛型的使用与对应的字节码 泛型的弊端">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://begin-with-start.github.io/2019/04/11/generic-learn/2017-09-15-md/night.jpg">
+<meta property="og:updated_time" content="2019-04-11T07:44:36.713Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Begin-With-Start">
+<meta name="twitter:title" content="泛型的使用注意事项与字节码解读">
+<meta name="twitter:description" content="泛型的使用与对应的字节码 泛型的弊端">
+<meta name="twitter:image" content="https://begin-with-start.github.io/2019/04/11/generic-learn/2017-09-15-md/night.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Begin-With-Start" type="application/atom+xml">
   
@@ -154,124 +161,295 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-generic-learn" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/23/android-datasave-type/" class="archive-article-date">
-  	<time datetime="2019-01-23T11:45:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/23/android-datasave-type/">安卓存储方式完全讲解</a>
+    <h1 class="article-title" itemprop="name">
+      泛型的使用注意事项与字节码解读
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/04/11/generic-learn/" class="archive-article-date">
+  	<time datetime="2019-04-11T07:34:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>泛型的使用与对应的字节码</li>
+<li>泛型的弊端<a id="more"></a>
+<img src="/2019/04/11/generic-learn/2017-09-15-md/night.jpg" alt="image"></li>
+</ul>
+<h2 id="泛型的使用与对应的字节码"><a href="#泛型的使用与对应的字节码" class="headerlink" title="泛型的使用与对应的字节码"></a>泛型的使用与对应的字节码</h2><pre><code>Generics  允许开发抽象算法和数据结构，并提供实体类型以供后续操作 ， 即“参数化类型”，编译阶段就直接检查泛型类型的兼容性,泛型信息不会进入到运行期；类型擦除； （接口、类、和方法）
+
+定义一个泛型的接口：
+
+    public interface GInterface &lt;T,R&gt;{
+        T perform(R r); //提供了个开放的接口定义，允许从使用端，调用端来指定方法的入参和返回参数；
+    }
+
+    在字节码中表现：
+
+    annotation system Ldalvik/annotation/Signature;
+        value = {
+            &quot;&lt;T:&quot;,
+            &quot;Ljava/lang/Object;&quot;,
+            &quot;R:&quot;,
+            &quot;Ljava/lang/Object;&quot;,
+            &quot;&gt;&quot;,
+            &quot;Ljava/lang/Object;&quot;
+        }
+    .end annotation
+
+    T，R最终都会再编译器被类型擦除为同一个object类； 所以说：编译阶段的一个使用方式，不会进入运行期，在此期间会被类型擦除掉；
+
+
+定义一个类的泛型：
+    public class GInterfaceImp3&lt;T,R&gt; implements GInterface  &lt;T,R&gt;{
+    // 泛型实现接口的时候，只指定其中的泛型类；
+
+    //    @Override
+    //    public &lt;T,R&gt;T perform(R r) {
+    //        R r1  = r;
+    //        String name = r1.getClass().getName();
+    //
+    //        return null;
+    //    }
+
+        @Override
+        public T perform(R r) {
+            List&lt;String&gt; stringArrayList = new ArrayList&lt;String&gt;();
+            List&lt;Integer&gt; integerArrayList = new ArrayList&lt;Integer&gt;();
+
+            return null;
+        }
+    }
+
+    字节码中的表现：
+        # virtual methods
+        .method public perform(Ljava/lang/Object;)Ljava/lang/Object;
+            .registers 5
+            .annotation system Ldalvik/annotation/Signature;
+                value = {
+                    &quot;(TR;)TT;&quot;
+                }
+            .end annotation
+
+        从接口中实现过来的方法，也被类型擦除掉了； 从这个方向来说，泛型其实可以使用object父类来进行替换的，然后每次都是向上转型么？
+
+
+定义一个方法的泛型：
+    //    方法中定义自己的泛型；
+        public&lt;U,R&gt; R action(U u){
+            R result = null;
+            return result;
+        }
+
+    字节码中的表现：
+
+    # virtual methods
+    .method public action(Ljava/lang/Object;)Ljava/lang/Object;
+        .registers 3
+        .annotation system Ldalvik/annotation/Signature;
+            value = {
+                &quot;&lt;U:&quot;,
+                &quot;Ljava/lang/Object;&quot;,
+                &quot;R:&quot;,
+                &quot;Ljava/lang/Object;&quot;,
+                &quot;&gt;(TU;)TR;&quot;
+            }
+        .end annotation
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">           /**</span><br><span class="line">         * ?  通配符的使用 只能用来填充通配符泛型变量，表示通配任何类型；</span><br><span class="line">         * 注意：利用&lt;? extends Number&gt;定义的变量，只可取其中的值，不可修改</span><br><span class="line">         */</span><br><span class="line">        GInterface&lt;?,?&gt; gInterfaceimp1 = new GInterfaceImp3&lt;String , String&gt;();</span><br><span class="line">//        gInterfaceimp1.perform(&quot;&quot;);</span><br><span class="line">//        gInterfaceimp1.perform();</span><br><span class="line">        Log.e(&quot;&quot; + TAG , &quot;&quot;);</span><br><span class="line">//</span><br><span class="line">        /**</span><br><span class="line">         * 如果你想从一个数据类型里获取数据，使用 ? extends 通配符（能取不能存）</span><br><span class="line">         * 通配符的使用</span><br><span class="line">         * 注意：利用&lt;? extends Number&gt;定义的变量，只可取其中的值，不可修改</span><br><span class="line">         */</span><br><span class="line">        List&lt;? extends  Integer&gt; extendsGeneric;</span><br><span class="line">        extendsGeneric = new LinkedList&lt;Integer&gt;();</span><br><span class="line">//        extendsGeneric.add(1); //报错</span><br><span class="line">        /**</span><br><span class="line">         * 如果你想把对象写入一个数据结构里，使用 ? super 通配符（能存不能取）</span><br><span class="line">         */</span><br><span class="line">        List&lt;? super String&gt; superGeneric = new LinkedList&lt;String&gt;();</span><br><span class="line">        superGeneric.add(&quot;&quot;);</span><br><span class="line">        String s = (String) superGeneric.get(0);</span><br><span class="line">        /**</span><br><span class="line">         * 如果你既想存，又想取，那就别用通配符。</span><br><span class="line">         */</span><br></pre></td></tr></table></figure>
+<h2 id="泛型的弊端："><a href="#泛型的弊端：" class="headerlink" title="泛型的弊端："></a>泛型的弊端：</h2><pre><code>1.类型擦除 -- 造成在重载方法的时候，因为此爆出：Erasure of method sort(Collection&lt;String&gt;) is the same as another method  方法重载失败；
+     同时，不能以任何有意义的方式来使用该类型；
+2.不能使用基本数据类型，只能使用对应的包装类；
+3.通配符使用限制；
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">存储</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/android技能-存储//" class="article-tag-list-link color3">android技能,存储</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/21/android-vysor-chrome-plugin/" class="archive-article-date">
-  	<time datetime="2019-01-21T07:52:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/21/android-vysor-chrome-plugin/">vysor共享手机屏幕高清破解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">android</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工程</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技能</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">泛型</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/android技能//" class="article-tag-list-link color5">android技能</a>
+        			<a href="/categories/通用技能//" class="article-tag-list-link color5">通用技能</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://begin-with-start.github.io/2019/04/11/generic-learn/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/02/27/lottie-analysis/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">lottie解析，原理剖析，优缺点</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="generic-learn" data-title="泛型的使用注意事项与字节码解读" data-url="https://begin-with-start.github.io/2019/04/11/generic-learn/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -294,8 +472,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
