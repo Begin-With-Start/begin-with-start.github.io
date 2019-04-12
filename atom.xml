@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://begin-with-start.github.io/"/>
-  <updated>2019-04-11T07:44:36.713Z</updated>
+  <updated>2019-04-12T07:54:09.547Z</updated>
   <id>https://begin-with-start.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>activity其中时，打印的totaltime是怎么来的包含哪些时间</title>
+    <link href="https://begin-with-start.github.io/2019/04/12/activity-starttime-research/"/>
+    <id>https://begin-with-start.github.io/2019/04/12/activity-starttime-research/</id>
+    <published>2019-04-12T07:51:36.000Z</published>
+    <updated>2019-04-12T07:54:09.547Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;源码跟进&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="android技能,源码" scheme="https://begin-with-start.github.io/categories/android%E6%8A%80%E8%83%BD-%E6%BA%90%E7%A0%81/"/>
+    
+    
+      <category term="源码" scheme="https://begin-with-start.github.io/tags/%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>泛型的使用注意事项与字节码解读</title>

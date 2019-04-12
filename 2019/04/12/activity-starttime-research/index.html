@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://begin-with-start.github.io">
-  <title>Archives: 2017/12 | Begin-With-Start</title>
+  <title>activity其中时，打印的totaltime是怎么来的包含哪些时间 | Begin-With-Start</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Begin-With-Start">
-<meta property="og:url" content="https://begin-with-start.github.io/archives/2017/12/index.html">
+  <meta name="description" content="源码跟进">
+<meta name="keywords" content="源码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="activity其中时，打印的totaltime是怎么来的包含哪些时间">
+<meta property="og:url" content="https://begin-with-start.github.io/2019/04/12/activity-starttime-research/index.html">
 <meta property="og:site_name" content="Begin-With-Start">
+<meta property="og:description" content="源码跟进">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-12T07:54:09.547Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Begin-With-Start">
+<meta name="twitter:title" content="activity其中时，打印的totaltime是怎么来的包含哪些时间">
+<meta name="twitter:description" content="源码跟进">
   
     <link rel="alternative" href="/atom.xml" title="Begin-With-Start" type="application/atom+xml">
   
@@ -154,75 +159,210 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-activity-starttime-research" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/10/inputbox-forbiddeninput/" class="archive-article-date">
-  	<time datetime="2017-12-10T04:09:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/10/inputbox-forbiddeninput/">工程定制输入框是否可输入保留光标定制</a>
+    <h1 class="article-title" itemprop="name">
+      activity其中时，打印的totaltime是怎么来的包含哪些时间
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/04/12/activity-starttime-research/" class="archive-article-date">
+  	<time datetime="2019-04-12T07:51:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>源码跟进</li>
+</ul>
+<a id="more"></a>
+<!-- ![image](arouter-thinking/city.jpg) -->
+<h2 id="系统打印的totaltime是怎么来的"><a href="#系统打印的totaltime是怎么来的" class="headerlink" title="系统打印的totaltime是怎么来的"></a>系统打印的totaltime是怎么来的</h2><p>通过activitymanager的displayed 时间来确定页面加载时间相关婆媳：<br>Displayed com.<strong><em>/com.</em></strong>.activity.CoachDetailActivity: +293ms<br>—从系统activitymanager接收到intent到显示目标页面的时间；( is basically the time spent between the Activity is about to be launched and the content view of the Activity is drawn (includes drawing time))针对的是页面绘制和布局层级的一些时间统计；<br>只会得到一个从intent到inflate - drawing之后的时间消耗，并不能得到用户对于app的感知时间；<br>参考： <a href="https://stackoverflow.com/questions/32844566/what-does-i-activitymanager-displayed-activity-850ms-comprised-of" target="_blank" rel="noopener">https://stackoverflow.com/questions/32844566/what-does-i-activitymanager-displayed-activity-850ms-comprised-of</a><br>从28系统版本的源代码来看：<br>com/android/server/am/ActivityStackSupervisor.java:1142<br>打印的系统加载时间是来自于：<br>void sendWaitingVisibleReportLocked(ActivityRecord r) {<br>    boolean changed = false;<br>    for (int i = mWaitingForActivityVisible.size() - 1; i &gt;= 0; –i) {<br>        final WaitInfo w = mWaitingForActivityVisible.get(i);<br>        if (w.matches(r.realActivity)) {<br>            final WaitResult result = w.getResult();<br>            changed = true;<br>            result.timeout = false;<br>            result.who = w.getComponent();<br>            result.totalTime = SystemClock.uptimeMillis() - w.getStartTime();<br>            mWaitingForActivityVisible.remove(w);<br>        }<br>    }<br>    if (changed) {<br>        mService.notifyAll();<br>    }<br>}<br>在其中记录页面开始加载时间的一个mWaitingForActivityVisible是一个list，维护在：<br>com/android/server/am/ActivityStackSupervisor.java:352<br>list中放的实体是：WaitInfo<br>com/android/server/am/ActivityStackSupervisor.java:4906<br>关键的一个starttime — mStartTimeMs来自于构造函数：<br>WaitInfo(ComponentName targetComponent, WaitResult result, long startTimeMs) {<br>    this.mTargetComponent = targetComponent;<br>    this.mResult = result;<br>    this.mStartTimeMs = startTimeMs;<br>}<br>最终跟踪过去发现系统源码只有一个地方在用这个构造函数，在<br>void waitActivityVisible(ComponentName name, WaitResult result, long startTimeMs) {<br>    final WaitInfo waitInfo = new WaitInfo(name, result, startTimeMs);<br>    mWaitingForActivityVisible.add(waitInfo);<br>}<br>看到这里就已经比较熟悉了，一个actvityvisible；调用这个visible的地方：<br>com/android/server/am/ActivityStarter.java:1205<br>case START_TASK_TO_FRONT:<br>在其中的startActivityMayWait方法中，而调用该方法的入口只来自了（在这里可以跟着看下，源代码中有个判断，if (mRequest.mayWait) {    return startActivityMayWait(…);} else { return startActivity(…..);} 这个判断中mayWait 初始化的值是false，最后看了下系统中的startActivityAsUser 其中setMayWait(userId) 竟然把maywait又给设置为true了，这操作。。所以当前看基本都到了startActivityMayWai中了）<br>com/android/server/am/ActivityStarter.java:487 int execute()<br>跟踪到比较熟悉的startActivityAsUser  ，再往上一层，最终看到的代码是：<br>@Override<br>public final int startActivity(IApplicationThread caller, String callingPackage,<br>        Intent intent, String resolvedType, IBinder resultTo, String resultWho, int requestCode,<br>        int startFlags, ProfilerInfo profilerInfo, Bundle bOptions) {<br>    return startActivityAsUser(caller, callingPackage, intent, resolvedType, resultTo,<br>            resultWho, requestCode, startFlags, profilerInfo, bOptions,<br>            UserHandle.getCallingUserId());<br>}</p>
+<p>@Override<br>public final int startActivityAsUser(IApplicationThread caller, String callingPackage,<br>        Intent intent, String resolvedType, IBinder resultTo, String resultWho, int requestCode,<br>        int startFlags, ProfilerInfo profilerInfo, Bundle bOptions, int userId) {<br>    return startActivityAsUser(caller, callingPackage, intent, resolvedType, resultTo,<br>            resultWho, requestCode, startFlags, profilerInfo, bOptions, userId,<br>            true /<em>validateIncomingUser</em>/);<br>}</p>
+<p>恭喜，最终我们得到这个totaltime的时间是来自于：<br>从startinent的START_TASK_TO_FRONT 任务开始记录开始时间，com/android/server/am/ActivityRecord.java:2023 onWindowsVisible 结束计时并且打印出来,也就是这段时间包括了从startactivity到用户能看见布局的时间；</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">定制</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">源码</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/android技能//" class="article-tag-list-link color5">android技能</a>
+        			<a href="/categories/android技能-源码//" class="article-tag-list-link color3">android技能,源码</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://begin-with-start.github.io/2019/04/12/activity-starttime-research/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/04/11/generic-learn/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">泛型的使用注意事项与字节码解读</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="activity-starttime-research" data-title="activity其中时，打印的totaltime是怎么来的包含哪些时间" data-url="https://begin-with-start.github.io/2019/04/12/activity-starttime-research/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -245,8 +385,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
