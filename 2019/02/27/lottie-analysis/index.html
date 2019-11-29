@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://begin-with-start.github.io">
   <title>lottie解析，原理剖析，优缺点 | Begin-With-Start</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -17,7 +17,7 @@
 <meta property="og:description" content="这个技术解决了什么问题 适合在哪种场景使用 这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点 上代码例子">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://begin-with-start.github.io/2019/02/27/lottie-analysis/lottie.png">
-<meta property="og:updated_time" content="2019-03-02T07:12:57.031Z">
+<meta property="og:updated_time" content="2019-11-29T07:41:54.342Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lottie解析，原理剖析，优缺点">
 <meta name="twitter:description" content="这个技术解决了什么问题 适合在哪种场景使用 这个技术跟我已经掌握的哪个知识或技能类似，有什么差别、有什么特点、 有什么优点和缺点 上代码例子">
@@ -40,7 +40,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -204,6 +204,7 @@
     1.lottie类似animation，所以lottie动画本身的scale都是动画变动，真是占用的区域还是文件描述的宽高(需要有缩放之内动画的要么端自己实现，要么就直接按照缩放之前之后的宽高，另行设置点击事件；)
     2.对于涉及到mask ， mattes的动画，实现需要有些注意点；
     3.对于recyclerview支持不是很好，对于新能会有影响；（尤其是涉及到mask，mattes相应的动画）
+    4.死动画，无法根据业务的数据变化来进行动态的变化；
 优点：
     1.轻量，整个包只有700多个方法
     2.两端实现成本会低一些；
@@ -497,15 +498,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">源码</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工程</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">values实战</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">源码</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -521,11 +522,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">泛型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">arouter</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">泛型</a>
+                <a href="javascript:void(0)" class="js-tag color2">gson重构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -537,15 +542,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">gson重构</a>
+                <a href="javascript:void(0)" class="js-tag color3">观点</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">定制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">观点</a>
               </li>
              
               <li class="article-tag-list-item">

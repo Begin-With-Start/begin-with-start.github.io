@@ -67,7 +67,7 @@
     <link href="https://begin-with-start.github.io/2019/02/27/lottie-analysis/"/>
     <id>https://begin-with-start.github.io/2019/02/27/lottie-analysis/</id>
     <published>2019-02-27T01:58:22.000Z</published>
-    <updated>2019-03-02T07:12:57.031Z</updated>
+    <updated>2019-11-29T07:41:54.342Z</updated>
     
     <summary type="html">
     
@@ -207,33 +207,6 @@
   </entry>
   
   <entry>
-    <title>健身行业认识</title>
-    <link href="https://begin-with-start.github.io/2018/09/29/trade-healthy-knowledge/"/>
-    <id>https://begin-with-start.github.io/2018/09/29/trade-healthy-knowledge/</id>
-    <published>2018-09-29T07:45:03.000Z</published>
-    <updated>2018-10-08T04:09:10.177Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;健身行业&lt;/li&gt;
-&lt;li&gt;公司正在做的事情&lt;/li&gt;
-&lt;li&gt;可能存在的问题&lt;/li&gt;
-&lt;li&gt;可能的解决办法&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="行业认识" scheme="https://begin-with-start.github.io/categories/%E8%A1%8C%E4%B8%9A%E8%AE%A4%E8%AF%86/"/>
-    
-    
-      <category term="行业" scheme="https://begin-with-start.github.io/tags/%E8%A1%8C%E4%B8%9A/"/>
-    
-      <category term="健身" scheme="https://begin-with-start.github.io/tags/%E5%81%A5%E8%BA%AB/"/>
-    
-  </entry>
-  
-  <entry>
     <title>nexus私有库使用部署，与配置相关</title>
     <link href="https://begin-with-start.github.io/2018/09/29/nexus%E7%A7%81%E6%9C%89%E5%BA%93%E5%B8%A6%E5%9B%BE%E7%89%88%E6%9C%AC/"/>
     <id>https://begin-with-start.github.io/2018/09/29/nexus私有库带图版本/</id>
@@ -257,6 +230,33 @@
       <category term="工程" scheme="https://begin-with-start.github.io/tags/%E5%B7%A5%E7%A8%8B/"/>
     
       <category term="ci相关" scheme="https://begin-with-start.github.io/tags/ci%E7%9B%B8%E5%85%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>健身行业认识</title>
+    <link href="https://begin-with-start.github.io/2018/09/29/trade-healthy-knowledge/"/>
+    <id>https://begin-with-start.github.io/2018/09/29/trade-healthy-knowledge/</id>
+    <published>2018-09-29T07:45:03.000Z</published>
+    <updated>2018-10-08T04:09:10.177Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;健身行业&lt;/li&gt;
+&lt;li&gt;公司正在做的事情&lt;/li&gt;
+&lt;li&gt;可能存在的问题&lt;/li&gt;
+&lt;li&gt;可能的解决办法&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="行业认识" scheme="https://begin-with-start.github.io/categories/%E8%A1%8C%E4%B8%9A%E8%AE%A4%E8%AF%86/"/>
+    
+    
+      <category term="行业" scheme="https://begin-with-start.github.io/tags/%E8%A1%8C%E4%B8%9A/"/>
+    
+      <category term="健身" scheme="https://begin-with-start.github.io/tags/%E5%81%A5%E8%BA%AB/"/>
     
   </entry>
   
@@ -287,29 +287,6 @@
   </entry>
   
   <entry>
-    <title>测试用例的设计</title>
-    <link href="https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/"/>
-    <id>https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/</id>
-    <published>2018-09-17T06:24:26.000Z</published>
-    <updated>2018-09-29T07:27:13.615Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;测试用例的设计&lt;/li&gt;&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="测试技能" scheme="https://begin-with-start.github.io/categories/%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
-    
-    
-      <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
-    
-      <category term="test用例" scheme="https://begin-with-start.github.io/tags/test%E7%94%A8%E4%BE%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>自动化测试简介</title>
     <link href="https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/"/>
     <id>https://begin-with-start.github.io/2018/09/17/test-case-auto-testcase-summary/</id>
@@ -329,6 +306,29 @@
       <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
     
       <category term="自动化测试技能" scheme="https://begin-with-start.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试用例的设计</title>
+    <link href="https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/"/>
+    <id>https://begin-with-start.github.io/2018/09/17/test-case-design-xiaozhu/</id>
+    <published>2018-09-17T06:24:26.000Z</published>
+    <updated>2018-09-29T07:27:13.615Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;测试用例的设计&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="测试技能" scheme="https://begin-with-start.github.io/categories/%E6%B5%8B%E8%AF%95%E6%8A%80%E8%83%BD/"/>
+    
+    
+      <category term="理论知识" scheme="https://begin-with-start.github.io/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="test用例" scheme="https://begin-with-start.github.io/tags/test%E7%94%A8%E4%BE%8B/"/>
     
   </entry>
   
