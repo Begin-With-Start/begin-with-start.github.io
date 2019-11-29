@@ -9,7 +9,7 @@ categories: android技能
 ![image](gson-project-reconfigratijon/fastspeed.jpg)
 
 ## gson fastjson jackson ## 
-
+### 天下武功，无坚不摧，唯快不破 ###
 
 gson fastjson jackson 三者都可以用来进行对象的序列化与反序列化操作，三者的速度对别，摘录下别人的结果，真实的结果估计也差不多，控制一下单一变量原则，对于各个序列方式擅长的方面，其实在开发中遇到的概率暂时不考虑；
 
