@@ -1,0 +1,45 @@
+{
+    "data": {
+      "url": "http://img01.config-vip.taobaocdn.net/imgextra/i1/2066596281/T2ZoNbXiVcXXXXXXXX_!!2066596281.jpg"
+    },
+    "page": "Page_Shop1",
+    "title": "image点击事件",
+    "view": {
+      "styleBinding": {
+        "layout": "linearLayout",
+        "scroll": 1
+      },
+      "subViews": [
+        {
+          "dataBinding": {
+            "url": "$url"
+          },
+          "events": [
+            {
+              "actions": [
+                {
+                  "param": {
+                    "$url": "http://img02.config-vip.taobaocdn.net/imgextra/i2/2066596281/TB2jpxcXXXXXXcfaVXXXXXXXXXX_!!2066596281.jpeg"
+                  },
+                  "type": "changeData"
+                },
+                {
+                  "param": {
+                    "viewId": "imageViewId"
+                  },
+                  "type": "refreshView"
+                }
+              ],
+              "type": "click"
+            }
+          ],
+          "styleBinding": {
+            "height": 296
+          },
+          "type": "image",
+          "viewId": "imageViewId"
+        }
+      ],
+      "type": "container"
+    }
+}

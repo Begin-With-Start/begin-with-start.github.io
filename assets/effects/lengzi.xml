@@ -1,0 +1,6 @@
+<?xml version ='1.0' encoding ='UTF-8'?>
+<effect id='lengzi' ver='0.1'>
+    <pipeline>
+        <filter id="lengzi"/>
+    </pipeline>
+</effect>

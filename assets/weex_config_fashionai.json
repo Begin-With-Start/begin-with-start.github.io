@@ -1,0 +1,25 @@
+{
+    "modules": [
+        {
+            "name": "faiModule",
+            "className": "com.taobao.fashionai.pop.weex.FaiModule",
+            "methods": [
+                "printLog",
+                "preloadImage",
+                "invoke"
+            ]
+
+        }
+    ], 
+    "components": [
+        {
+            "name": "faiview",
+            "className": "com.taobao.fashionai.pop.weex.PopImageComponent",
+            "appendTree": false,
+            "methods": [
+                "reloadData",
+                "imgRelease"
+            ]
+        }
+    ]
+}

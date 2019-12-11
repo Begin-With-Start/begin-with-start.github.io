@@ -1,0 +1,10 @@
+<?xml version ='1.0' encoding ='UTF-8'?>
+<effect_groups version="0.1" >
+
+    <group id='color' icon='' resprefix='' title='色彩'>
+        <effect id='redShift' icon='recall.png' resprefix='effect_recall' title='红色'/>
+        <effect id='greenShift' icon='negative.png' resprefix='effect_negative' title='绿色'/>
+        <effect id='blueShift' icon='life_sketch.png' resprefix='effect_sketch' title='蓝色'/>
+    </group>
+
+</effect_groups>

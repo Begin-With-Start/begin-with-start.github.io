@@ -1,0 +1,54 @@
+{
+  "page": "UT_MOCK_DATA",
+  "title": "UT_MOCK_DATA",
+  "view": {
+    "styleBinding": {
+      "height": -1,
+      "width": -1,
+      "layout": "linearLayout",
+      "orientation": "vertical"
+    },
+    "dataBinding": {
+      "apiName": "$apiName",
+      "apiVersion": "$apiVersion",
+      "apiAlias": "$apiAlias",
+      "needLogin": "true",
+      "param": {
+        "userId": "testUserId",
+        "count": 100,
+        "needLocationInfo": true
+      }
+    },
+    "subViews": [
+      {
+        "type": "textField",
+        "viewId": "myTextField",
+        "styleBinding": {
+          "width": -1,
+          "height": -1,
+          "textColor": "#000000",
+          "fontSize": 20
+        },
+        "dataBinding": {
+          "value": "334342",
+          "placeholderValue": "placeholder",
+          "formatType": "abbr",
+          "dataSource": "$list"
+          
+        }
+      }
+    ],
+    "type": "container",
+    "viewId": "container"
+  },
+  "data": {
+    "apiName": "apinametest",
+    "apiVersion": "apiversiontest",
+    "apiAlias": "apialiastest"
+  },
+  "utParam": {
+    "sns_id": "$snsId",
+    "store_id": "$storeId"
+  },
+  "verify": "pageModified:1390546900000;templateModified:1392792428000"
+}

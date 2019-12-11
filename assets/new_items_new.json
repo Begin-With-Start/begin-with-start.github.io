@@ -1,0 +1,667 @@
+{
+    "pageView": {
+        "page": "Page_WeApp",
+        "title": "天猫店铺上新",
+        "view": {
+            "subViews": [
+                {
+                    "cell": {
+                        "subViews": [
+                            {
+                                "subViews": [
+                                    {
+                                        "type": "label",
+                                        "styleBinding": {
+                                            "textColor": "#999999",
+                                            "height": "40",
+                                            "backgroundColor": "#00FFFFFF",
+                                            "marginLeft": "20",
+                                            "width": "-1",
+                                            "fontSize": "24",
+                                            "gravity": "4"
+                                        },
+                                        "dataBinding": {
+                                            "value": "${mtop.shop.newarrival.list.get}.list.[?].publishDate"
+                                        }
+                                    }
+                                ],
+                                "type": "container",
+                                "styleBinding": {
+                                    "layout": "linearLayout",
+                                    "width": "-1"
+                                },
+                                "conditions": [
+                                    {
+                                        "left": "${mtop.shop.newarrival.list.get}.list.[?].isShownPublishDate",
+                                        "right": "true",
+                                        "type": "==",
+                                        "styleBinding": {
+                                            "height": "40",
+                                            "marginTop": "16"
+                                        }
+                                    },
+                                    {
+                                        "left": "${mtop.shop.newarrival.list.get}.list.[?].isShownPublishDate",
+                                        "right": "false",
+                                        "type": "==",
+                                        "styleBinding": {
+                                            "height": "0",
+                                            "marginTop": "0"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "subViews": [
+                                    {
+                                        "subViews": [
+                                            {
+                                                "subViews": [
+                                                    {
+                                                        "subViews": [
+                                                            {
+                                                                "type": "image",
+                                                                "styleBinding": {
+                                                                    "height": "-1",
+                                                                    "width": "-1"
+                                                                },
+                                                                "dataBinding": {
+                                                                    "url": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.itemPic"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "type": "container",
+                                                        "styleBinding": {
+                                                            "height": "296",
+                                                            "layout": "absoluteLayout",
+                                                            "width": "-1"
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "label",
+                                                        "styleBinding": {
+                                                            "textColor": "#FFFFFF",
+                                                            "height": "40",
+                                                            "backgroundColor": "#70000000",
+                                                            "marginTop": "256",
+                                                            "width": "-1",
+                                                            "fontSize": 22,
+                                                            "gravity": "5"
+                                                        },
+                                                        "dataBinding": {
+                                                            "value": "0"
+                                                        },
+                                                        "conditions": [
+                                                            {
+                                                                "left": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.isOnShelves",
+                                                                "right": "true",
+                                                                "type": "==",
+                                                                "styleBinding": {
+                                                                    "height": "0",
+                                                                    "invisible": "true"
+                                                                }
+                                                            },
+                                                            {
+                                                                "left": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.time",
+                                                                "right": "null",
+                                                                "type": "==",
+                                                                "styleBinding": {
+                                                                    "height": "0",
+                                                                    "invisible": "true"
+                                                                }
+                                                            },
+                                                            {
+                                                                "left": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.isOnShelves",
+                                                                "right": "false",
+                                                                "type": "==",
+                                                                "styleBinding": {
+                                                                    "height": "40",
+                                                                    "invisible": "false"
+                                                                },
+                                                                "dataBinding": {
+                                                                    "formatType": "near",
+                                                                    "value": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.time",
+                                                                    "suffix": "后即将上架"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "viewId": "newGoodListItemFirstCellIconContainer",
+                                                "type": "container",
+                                                "styleBinding": {
+                                                    "height": "296",
+                                                    "layout": "absoluteLayout",
+                                                    "width": "-1"
+                                                }
+                                            },
+                                            {
+                                                "type": "dashedLine",
+                                                "styleBinding": {
+                                                    "dashColor": "#DDDDDD",
+                                                    "height": "1",
+                                                    "dashGap": 0,
+                                                    "width": "-1"
+                                                }
+                                            },
+                                            {
+                                                "subViews": [
+                                                    {
+                                                        "subViews": [
+                                                            {
+                                                                "type": "label",
+                                                                "styleBinding": {
+                                                                    "fontWeight": "500",
+                                                                    "textColor": "#C10000",
+                                                                    "height": "-1",
+                                                                    "backgroundColor": "#FFFFFF",
+                                                                    "width": "-2",
+                                                                    "fontSize": 28,
+                                                                    "gravity": 5
+                                                                },
+                                                                "conditions": [
+                                                                    {
+                                                                        "left": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.promotionPrice",
+                                                                        "right": "null",
+                                                                        "type": "==",
+                                                                        "dataBinding": {
+                                                                            "prefix": "￥",
+                                                                            "value": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.price"
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "left": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.promotionPrice",
+                                                                        "right": "null",
+                                                                        "type": "!=",
+                                                                        "dataBinding": {
+                                                                            "prefix": "￥",
+                                                                            "value": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.promotionPrice"
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "label",
+                                                                "styleBinding": {
+                                                                    "lineType": "2",
+                                                                    "fontWeight": "500",
+                                                                    "textColor": "#999999",
+                                                                    "height": "-1",
+                                                                    "lineColor": "#999999",
+                                                                    "backgroundColor": "#FFFFFF",
+                                                                    "marginLeft": "12",
+                                                                    "marginTop": "8",
+                                                                    "width": "-2",
+                                                                    "fontSize": 20,
+                                                                    "gravity": 5
+                                                                },
+                                                                "dataBinding": {
+                                                                    "prefix": "￥",
+                                                                    "value": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.price"
+                                                                },
+                                                                "conditions": [
+                                                                    {
+                                                                        "left": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.promotionPrice",
+                                                                        "right": "null",
+                                                                        "type": "==",
+                                                                        "styleBinding": {
+                                                                            "invisible": true
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "left": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.promotionPrice",
+                                                                        "right": "null",
+                                                                        "type": "!=",
+                                                                        "styleBinding": {
+                                                                            "invisible": false
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "type": "container",
+                                                        "styleBinding": {
+                                                            "orientation": "horizontal",
+                                                            "height": "56",
+                                                            "backgroundColor": "#FFFFFF",
+                                                            "align": "5",
+                                                            "layout": "linearLayout",
+                                                            "width": "-2"
+                                                        }
+                                                    }
+                                                ],
+                                                "viewId": "newGoodListItemFirstCellDesContainer",
+                                                "type": "container",
+                                                "styleBinding": {
+                                                    "height": "56",
+                                                    "backgroundColor": "#FFFFFF",
+                                                    "layout": "absoluteLayout",
+                                                    "width": "296"
+                                                }
+                                            }
+                                        ],
+                                        "viewId": "newGoodListItemFirstCell",
+                                        "type": "container",
+                                        "styleBinding": {
+                                            "marginBottom": "2",
+                                            "borderColor": "#DDDDDD",
+                                            "height": "353",
+                                            "weight": "1",
+                                            "backgroundColor": "#FFFFFF",
+                                            "marginLeft": "16",
+                                            "marginTop": "16",
+                                            "borderWidth": "1",
+                                            "align": 2,
+                                            "layout": "linearLayout",
+                                            "marginRight": "8",
+                                            "width": "296"
+                                        },
+                                        "events": [
+                                            {
+                                                "type": "click",
+                                                "actions": [
+                                                    {
+                                                        "type": "userTrack",
+                                                        "param": {
+                                                            "utParams": {
+                                                                "weitao_user_id": "$userId",
+                                                                "item_id": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.itemId",
+                                                                "seller_id": "$userId"
+                                                            },
+                                                            "utType": "Button",
+                                                            "utName": "Items"
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "openURL",
+                                                        "param": {
+                                                            "title": "",
+                                                            "param": {
+                                                                "id": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.itemId"
+                                                            },
+                                                            "url": "http://h5.m.taobao.com/awp/core/detail.htm"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "subViews": [
+                                            {
+                                                "subViews": [
+                                                    {
+                                                        "subViews": [
+                                                            {
+                                                                "type": "image",
+                                                                "styleBinding": {
+                                                                    "height": "-1",
+                                                                    "width": "-1"
+                                                                },
+                                                                "dataBinding": {
+                                                                    "url": "${mtop.shop.newarrival.list.get}.list.[?].secondItem.itemPic"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "type": "container",
+                                                        "styleBinding": {
+                                                            "height": "296",
+                                                            "layout": "absoluteLayout",
+                                                            "width": "-1"
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "label",
+                                                        "styleBinding": {
+                                                            "textColor": "#FFFFFF",
+                                                            "height": "40",
+                                                            "backgroundColor": "#70000000",
+                                                            "marginTop": "256",
+                                                            "width": "-1",
+                                                            "fontSize": 22,
+                                                            "gravity": "5"
+                                                        },
+                                                        "dataBinding": {
+                                                            "value": "0"
+                                                        },
+                                                        "conditions": [
+                                                            {
+                                                                "left": "${mtop.shop.newarrival.list.get}.list.[?].secondItem.isOnShelves",
+                                                                "right": "true",
+                                                                "type": "==",
+                                                                "styleBinding": {
+                                                                    "height": "0",
+                                                                    "invisible": "true"
+                                                                }
+                                                            },
+                                                            {
+                                                                "left": "${mtop.shop.newarrival.list.get}.list.[?].secondItem.time",
+                                                                "right": "null",
+                                                                "type": "==",
+                                                                "styleBinding": {
+                                                                    "height": "0",
+                                                                    "invisible": "true"
+                                                                }
+                                                            },
+                                                            {
+                                                                "left": "${mtop.shop.newarrival.list.get}.list.[?].secondItem.isOnShelves",
+                                                                "right": "false",
+                                                                "type": "==",
+                                                                "styleBinding": {
+                                                                    "height": "40",
+                                                                    "invisible": "false"
+                                                                },
+                                                                "dataBinding": {
+                                                                    "formatType": "near",
+                                                                    "value": "${mtop.shop.newarrival.list.get}.list.[?].secondItem.time",
+                                                                    "suffix": "后即将上架"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "viewId": "newGoodListItemSecondCellIconContainer",
+                                                "type": "container",
+                                                "styleBinding": {
+                                                    "height": "296",
+                                                    "layout": "absoluteLayout",
+                                                    "width": "-1"
+                                                }
+                                            },
+                                            {
+                                                "type": "dashedLine",
+                                                "styleBinding": {
+                                                    "dashColor": "#DDDDDD",
+                                                    "height": "1",
+                                                    "dashGap": 0,
+                                                    "width": "-1"
+                                                }
+                                            },
+                                            {
+                                                "subViews": [
+                                                    {
+                                                        "subViews": [
+                                                            {
+                                                                "type": "label",
+                                                                "styleBinding": {
+                                                                    "fontWeight": "500",
+                                                                    "textColor": "#C10000",
+                                                                    "height": "-1",
+                                                                    "backgroundColor": "#FFFFFF",
+                                                                    "width": "-2",
+                                                                    "fontSize": 28,
+                                                                    "gravity": 5
+                                                                },
+                                                                "conditions": [
+                                                                    {
+                                                                        "left": "${mtop.shop.newarrival.list.get}.list.[?].secondItem.promotionPrice",
+                                                                        "right": "null",
+                                                                        "type": "==",
+                                                                        "dataBinding": {
+                                                                            "prefix": "￥",
+                                                                            "value": "${mtop.shop.newarrival.list.get}.list.[?].secondItem.price"
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "left": "${mtop.shop.newarrival.list.get}.list.[?].secondItem.promotionPrice",
+                                                                        "right": "null",
+                                                                        "type": "!=",
+                                                                        "dataBinding": {
+                                                                            "prefix": "￥",
+                                                                            "value": "${mtop.shop.newarrival.list.get}.list.[?].secondItem.promotionPrice"
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "label",
+                                                                "styleBinding": {
+                                                                    "lineType": "2",
+                                                                    "fontWeight": "500",
+                                                                    "textColor": "#999999",
+                                                                    "height": "-1",
+                                                                    "lineColor": "#999999",
+                                                                    "backgroundColor": "#FFFFFF",
+                                                                    "marginLeft": "12",
+                                                                    "marginTop": "8",
+                                                                    "width": "-2",
+                                                                    "fontSize": 20,
+                                                                    "gravity": 5
+                                                                },
+                                                                "dataBinding": {
+                                                                    "prefix": "￥",
+                                                                    "value": "${mtop.shop.newarrival.list.get}.list.[?].secondItem.price"
+                                                                },
+                                                                "conditions": [
+                                                                    {
+                                                                        "left": "${mtop.shop.newarrival.list.get}.list.[?].secondItem.promotionPrice",
+                                                                        "right": "null",
+                                                                        "type": "==",
+                                                                        "styleBinding": {
+                                                                            "invisible": true
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "left": "${mtop.shop.newarrival.list.get}.list.[?].secondItem.promotionPrice",
+                                                                        "right": "null",
+                                                                        "type": "!=",
+                                                                        "styleBinding": {
+                                                                            "invisible": false
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "type": "container",
+                                                        "styleBinding": {
+                                                            "orientation": "horizontal",
+                                                            "height": "56",
+                                                            "backgroundColor": "#FFFFFF",
+                                                            "align": "5",
+                                                            "layout": "linearLayout",
+                                                            "width": "-2"
+                                                        }
+                                                    }
+                                                ],
+                                                "viewId": "newGoodListItemSecondCellDesContainer",
+                                                "type": "container",
+                                                "styleBinding": {
+                                                    "height": "56",
+                                                    "backgroundColor": "#FFFFFF",
+                                                    "layout": "absoluteLayout",
+                                                    "width": "296"
+                                                }
+                                            }
+                                        ],
+                                        "viewId": "newGoodListItemSecondCell",
+                                        "type": "container",
+                                        "styleBinding": {
+                                            "weight": "1",
+                                            "borderColor": "#DDDDDD",
+                                            "marginTop": "16",
+                                            "marginLeft": "8",
+                                            "backgroundColor": "#FFFFFF",
+                                            "width": "296",
+                                            "marginRight": "16",
+                                            "align": 2,
+                                            "invisibleSpace": true,
+                                            "marginBottom": "0",
+                                            "height": "353",
+                                            "borderWidth": "1",
+                                            "layout": "linearLayout"
+                                        },
+                                        "events": [
+                                            {
+                                                "type": "click",
+                                                "actions": [
+                                                    {
+                                                        "type": "userTrack",
+                                                        "param": {
+                                                            "utParams": {
+                                                                "weitao_user_id": "$userId",
+                                                                "item_id": "${mtop.shop.newarrival.list.get}.list.[?].secondItem.itemId",
+                                                                "seller_id": "$userId"
+                                                            },
+                                                            "utType": "Button",
+                                                            "utName": "Items"
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "openURL",
+                                                        "param": {
+                                                            "title": "",
+                                                            "param": {
+                                                                "id": "${mtop.shop.newarrival.list.get}.list.[?].secondItem.itemId"
+                                                            },
+                                                            "url": "http://h5.m.taobao.com/awp/core/detail.htm"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "conditions": [
+                                            {
+                                                "left": "${mtop.shop.newarrival.list.get}.list.[?].hasSecondItem",
+                                                "right": "true",
+                                                "type": "==",
+                                                "styleBinding": {
+                                                    "invisible": "false"
+                                                }
+                                            },
+                                            {
+                                                "left": "${mtop.shop.newarrival.list.get}.list.[?].hasSecondItem",
+                                                "right": "false",
+                                                "type": "==",
+                                                "styleBinding": {
+                                                    "invisible": "true"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "type": "container",
+                                "styleBinding": {
+                                    "orientation": "horizontal",
+                                    "height": "369",
+                                    "layout": "linearLayout",
+                                    "width": "-1"
+                                }
+                            }
+                        ],
+                        "viewId": "newGoodListCell",
+                        "type": "container",
+                        "styleBinding": {
+                            "orientation": "vertical",
+                            "backgroundColor": "#EEEEEE",
+                            "layout": "linearLayout",
+                            "width": "-1"
+                        },
+                        "conditions": [
+                            {
+                                "left": "${mtop.shop.newarrival.list.get}.list.[?].firstItem.isOnShelves",
+                                "right": "false",
+                                "type": "==",
+                                "styleBinding": {
+                                    "height": "0",
+                                    "invisible": "true"
+                                }
+                            },
+                            {
+                                "left": "${mtop.shop.newarrival.list.get}.list.[?].isShownPublishDate",
+                                "right": "true",
+                                "type": "==",
+                                "styleBinding": {
+                                    "height": "427"
+                                }
+                            },
+                            {
+                                "left": "${mtop.shop.newarrival.list.get}.list.[?].isShownPublishDate",
+                                "right": "false",
+                                "type": "==",
+                                "styleBinding": {
+                                    "height": "369"
+                                }
+                            }
+                        ]
+                    },
+                    "needDownRefresh": true,
+                    "needNextPage": true,
+                    "emptyMsg": "掌柜有点懒，最近没有上新。",
+                    "viewId": "newGoodList",
+                    "type": "list",
+                    "styleBinding": {
+                        "marginBottom": 6,
+                        "height": -1,
+                        "paddingTop": 0,
+                        "backgroundColor": "#EEEEEE",
+                        "marginLeft": 0,
+                        "marginTop": 6,
+                        "marginRight": 0,
+                        "width": -1,
+                        "gridColumn": 1,
+                        "paddingBottom": 0,
+                        "paddingLeft": 0,
+                        "paddingRight": 0
+                    },
+                    "dataBinding": {
+                        "apiVersion": "1.0",
+                        "apiName": "mtop.shop.newarrival.list.get",
+                        "param": {
+                            "userId": "$userId"
+                        }
+                    },
+                    "events": [
+                        {
+                            "type": "onScroll",
+                            "actions": [
+                                {
+                                    "type": "actionOnScroll"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "onScrollStop",
+                            "actions": [
+                                {
+                                    "type": "actionOnScrollStop"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "type": "container",
+            "styleBinding": {
+                "backgroundColor": "#EEEEEE",
+                "layout": "absoluteLayout"
+            }
+        },
+        "data": {
+            "wp_tplv": 3,
+            "loginUserId": 0,
+            "_we_session": {},
+            "wp_tpl": 233,
+            "wp_pk": "shop/mall_new_item_list__",
+            "_we_request": {
+                "page": "shop/mall_new_item_list"
+            },
+            "_we_system": {
+                "platform": "android",
+                "wp_tplv": 3,
+                "wp_tpl": 233,
+                "renderVersion": 6,
+                "wp_pk": "shop/mall_new_item_list__"
+            }
+        },
+        "utParam": {
+            "wp_tplv": "$_we_system.wp_tplv",
+            "wp_tpl": "$_we_system.wp_tpl",
+            "wp_pk": "$_we_system.wp_pk",
+            "spm": "$_we_request.spm"
+        },
+        "verify": "VMT:1422511176000;DMT:1422511176000;MMT:0;"
+    },
+    "clientConfigUpdateInfo": {
+        "pageCacheConfig": "14"
+    }
+}

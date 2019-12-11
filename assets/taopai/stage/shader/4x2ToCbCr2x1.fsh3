@@ -1,0 +1,41 @@
+#version 300 es
+#extension GL_EXT_YUV_target : enable
+
+#ifndef CONFIG_YUV_TARGET
+# if defined(GL_EXT_YUV_target)
+#  define CONFIG_YUV_TARGET 1
+# else  // defined(GL_EXT_YUV_target)
+#  define CONFIG_YUV_TARGET 0
+# endif // defined(GL_EXT_YUV_target)
+#endif // CONFIG_YUV_TARGET
+
+precision mediump float;
+
+uniform sampler2D sImage;
+
+in vec2 vTexCoords[2];
+
+out vec4 gl_FragColor;
+
+vec2 RGBToCbCr(vec3 color)
+{
+#if CONFIG_YUV_TARGET
+
+  return rgb_2_yuv(color, itu_601_full_range).yz;
+
+#else  // CONFIG_YUV_TARGET
+
+  float u = dot(vec3(-0.169, -0.331,  0.500), color) + 0.5;
+  float v = dot(vec3( 0.500, -0.419, -0.081), color) + 0.5;
+  return vec2(u, v);
+
+#endif // CONFIG_YUV_TARGET
+}
+
+void main()
+{
+  vec2 uv0 = RGBToCbCr(texture(sImage, vTexCoords[0]).rgb);
+  vec2 uv1 = RGBToCbCr(texture(sImage, vTexCoords[1]).rgb);
+
+  gl_FragColor = vec4(uv0, uv1);
+}

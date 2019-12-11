@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DFrameLayout xmlns:attr="http://schemas.android.com/apk/res-auto"
+    attr:dBackgroundColor="#333333"
+    attr:dHeight="200"
+    attr:dWidth="143"
+    attr:dClipTopLeftRadius="4np"
+    attr:dClipTopRightRadius="4np"
+    attr:dClipBottomLeftRadius="4np"
+    attr:dClipBottomRightRadius="4np"
+    attr:onTap="@tmsOpenUrl{@data{jumpUrl}}">
+    <TImageView
+        attr:dHeight="143"
+        attr:dWidth="143"
+        attr:tImageUrl="@data{bgImgUrl}" />
+    <TImageView
+        attr:dHeight="200"
+        attr:dWidth="143"
+        attr:tImageUrl="@data{labelImgUrl}" />
+    <DLinearLayout
+        attr:dGravity="centerBottom"
+        attr:dHeight="65"
+        attr:dMarginLeft="2"
+        attr:dMarginRight="2"
+        attr:dOrientation="vertical"
+        attr:dWidth="143">
+        <DFrameLayout
+            attr:dGravity="center"
+            attr:dHeight="match_content"
+            attr:dWidth="match_content"
+            attr:dMarginBottom="5"
+        >
+            <DView
+                attr:dBackgroundColor="#FF0000"
+                attr:dHeight="6"
+                attr:dMarginLeft="2"
+                attr:dMarginRight="2"
+                attr:dGravity="centerBottom"
+                attr:dWidth="60" />
+            <DTextView
+                attr:dText="@data{brandLabel}"
+                attr:dTextColor="@data{brandLabelColor}"
+                attr:dWidth="match_content"
+                attr:dHeight="match_content"
+                attr:dGravity="center"
+                attr:dTextSize="12np" />
+        </DFrameLayout>
+        <DTextView
+            attr:dGravity="center"
+            attr:dHeight="match_content"
+            attr:dText="@data{brandName}"
+            attr:dTextColor="@data{brandNameColor}"
+            attr:dMarginBottom="3"
+            attr:dTextSize="15np"
+            attr:dWidth="match_content" />
+        <DTextView
+            attr:dGravity="center"
+            attr:dHeight="match_content"
+            attr:dText="@data{brandInfo}"
+            attr:dTextColor="@data{brandInfoColor}"
+            attr:dWidth="match_content"
+            attr:dTextSize="11np" />
+    </DLinearLayout>
+</DFrameLayout>

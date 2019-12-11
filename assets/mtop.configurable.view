@@ -1,0 +1,672 @@
+{
+    "api": "mtop.geb.view.getPageView",
+    "v": "2.0",
+    "ret": [
+        "SUCCESS::调用成功"
+    ],
+    "data": {
+        "page": "Page_AllsparkAccount",
+        "title": "帐号主页",
+        "view": {
+            "styleBinding": {
+                "height": -1,
+                "layout": "linearLayout",
+                "orientation": "vertical",
+                "scroll": 1
+            },
+            "subViews": [
+                {
+                    "styleBinding": {
+                        "backgroundColor": "#FFFFFF",
+                        "height": 328,
+                        "layout": "absoluteLayout",
+                        "marginBottom": 18,
+                        "paddingBottom": 16,
+                        "paddingLeft": 16,
+                        "paddingRight": 16,
+                        "paddingTop": 16,
+                        "width": -1
+                    },
+                    "subViews": [
+                        {
+                            "dataBinding": {
+                                "url": "$single_image_url"
+                            },
+                            "events": [
+                                {
+                                    "actions": [
+                                        {
+                                            "param": {
+                                                "title": "$single_content_title",
+                                                "url": "$single_content_url"
+                                            },
+                                            "type": "openURL"
+                                        }
+                                    ],
+                                    "type": "click"
+                                }
+                            ],
+                            "styleBinding": {
+                                "align": 5,
+                                "width": -1
+                            },
+                            "type": "image"
+                        },
+                        {
+                            "styleBinding": {
+                                "align": 8,
+                                "backgroundColor": "#8f000000",
+                                "gravity": 4,
+                                "height": 74,
+                                "layout": "absoluteLayout",
+                                "width": -1
+                            },
+                            "subViews": [
+                                {
+                                    "dataBinding": {
+                                        "value": "$single_content_title"
+                                    },
+                                    "styleBinding": {
+                                        "fontSize": 30,
+                                        "fontStyle": 1,
+                                        "gravity": 4,
+                                        "height": 74,
+                                        "lines": 1,
+                                        "marginLeft": 20,
+                                        "textColor": "#88ffffff",
+                                        "width": -1
+                                    },
+                                    "type": "label"
+                                }
+                            ],
+                            "type": "container"
+                        }
+                    ],
+                    "type": "container"
+                },
+                {
+                    "styleBinding": {
+                        "align": 5,
+                        "backgroundColor": "#FFFFFF",
+                        "height": 360,
+                        "layout": "absoluteLayout",
+                        "marginBottom": 18,
+                        "width": -1
+                    },
+                    "subViews": [
+                        {
+                            "dataBinding": {
+                                "bannerArray": "$banner_array"
+                            },
+                            "styleBinding": {
+                                "height": 360,
+                                "marginBottom": 18,
+                                "width": -1
+                            },
+                            "type": "banner"
+                        }
+                    ],
+                    "type": "container"
+                },
+                {
+                    "styleBinding": {
+                        "backgroundColor": "#FFFFFF",
+                        "height": 328,
+                        "layout": "linearLayout",
+                        "marginBottom": 18,
+                        "orientation": "horizontal",
+                        "paddingBottom": 16,
+                        "paddingLeft": 16,
+                        "paddingRight": 16,
+                        "paddingTop": 16,
+                        "width": -1
+                    },
+                    "subViews": [
+                        {
+                            "dataBinding": {
+                                "url": "$double_image1_url"
+                            },
+                            "events": [
+                                {
+                                    "actions": [
+                                        {
+                                            "param": {
+                                                "url": "$double_image1_content_url"
+                                            },
+                                            "type": "openURL"
+                                        }
+                                    ],
+                                    "type": "click"
+                                }
+                            ],
+                            "styleBinding": {
+                                "align": 4,
+                                "height": 296,
+                                "marginRight": 8,
+                                "weight": 1
+                            },
+                            "type": "image"
+                        },
+                        {
+                            "dataBinding": {
+                                "url": "$double_image2_url"
+                            },
+                            "events": [
+                                {
+                                    "actions": [
+                                        {
+                                            "param": {
+                                                "url": "$double_image2_content_url"
+                                            },
+                                            "type": "openURL"
+                                        }
+                                    ],
+                                    "type": "click"
+                                }
+                            ],
+                            "styleBinding": {
+                                "align": 6,
+                                "height": 296,
+                                "marginLeft": 8,
+                                "weight": 1
+                            },
+                            "type": "image"
+                        }
+                    ],
+                    "type": "container"
+                },
+                {
+                    "styleBinding": {
+                        "backgroundColor": "#FFFFFF",
+                        "height": 228,
+                        "layout": "linearLayout",
+                        "marginBottom": 18,
+                        "orientation": "horizontal",
+                        "paddingBottom": 16,
+                        "paddingLeft": 16,
+                        "paddingRight": 16,
+                        "paddingTop": 16,
+                        "width": -1
+                    },
+                    "subViews": [
+                        {
+                            "dataBinding": {
+                                "url": "$triple_image1_url"
+                            },
+                            "events": [
+                                {
+                                    "actions": [
+                                        {
+                                            "param": {
+                                                "url": "$triple_image1_content_url"
+                                            },
+                                            "type": "openURL"
+                                        }
+                                    ],
+                                    "type": "click"
+                                }
+                            ],
+                            "styleBinding": {
+                                "align": 4,
+                                "height": 196,
+                                "marginRight": 6,
+                                "weight": 1
+                            },
+                            "type": "image"
+                        },
+                        {
+                            "dataBinding": {
+                                "url": "$triple_image2_url"
+                            },
+                            "events": [
+                                {
+                                    "actions": [
+                                        {
+                                            "param": {
+                                                "url": "$triple_image2_content_url"
+                                            },
+                                            "type": "openURL"
+                                        }
+                                    ],
+                                    "type": "click"
+                                }
+                            ],
+                            "styleBinding": {
+                                "align": 5,
+                                "height": 196,
+                                "marginLeft": 3,
+                                "marginRight": 3,
+                                "weight": 1
+                            },
+                            "type": "image"
+                        },
+                        {
+                            "dataBinding": {
+                                "url": "$triple_image3_url"
+                            },
+                            "events": [
+                                {
+                                    "actions": [
+                                        {
+                                            "param": {
+                                                "url": "$triple_image3_content_url"
+                                            },
+                                            "type": "openURL"
+                                        }
+                                    ],
+                                    "type": "click"
+                                }
+                            ],
+                            "styleBinding": {
+                                "align": 6,
+                                "height": 196,
+                                "marginLeft": 6,
+                                "weight": 1
+                            },
+                            "type": "image"
+                        }
+                    ],
+                    "type": "container"
+                },
+                {
+                    "events": [
+                        {
+                            "actions": [
+                                {
+                                    "param": {
+                                        "phoneNumber": "$phone_number"
+                                    },
+                                    "type": "phoneCall"
+                                }
+                            ],
+                            "type": "click"
+                        }
+                    ],
+                    "styleBinding": {
+                        "backgroundColor": "#FFFFFF",
+                        "height": 84,
+                        "layout": "absoluteLayout",
+                        "marginBottom": 18,
+                        "width": -1
+                    },
+                    "subViews": [
+                        {
+                            "dataBinding": {
+                                "url": "http://gtms02.alicdn.com/tps/i2/T16A4YFAVXXXamt9jd-34-34.png"
+                            },
+                            "styleBinding": {
+                                "align": 4,
+                                "height": 34,
+                                "marginLeft": 26,
+                                "width": 34
+                            },
+                            "type": "image"
+                        },
+                        {
+                            "dataBinding": {
+                                "value": "$phone_number"
+                            },
+                            "styleBinding": {
+                                "align": 4,
+                                "fontSize": 28,
+                                "fontStyle": 1,
+                                "gravity": 4,
+                                "height": 84,
+                                "lines": 1,
+                                "marginLeft": 76,
+                                "textColor": "#5f646e",
+                                "width": -1
+                            },
+                            "type": "label"
+                        }
+                    ],
+                    "type": "container"
+                },
+                {
+                    "events": [
+                        {
+                            "actions": [
+                                {
+                                    "param": {
+                                        "title": "$open_url_title",
+                                        "url": "$open_url"
+                                    },
+                                    "type": "openURL"
+                                }
+                            ],
+                            "type": "click"
+                        }
+                    ],
+                    "styleBinding": {
+                        "backgroundColor": "#FFFFFF",
+                        "height": 84,
+                        "layout": "absoluteLayout",
+                        "marginBottom": 18,
+                        "width": -1
+                    },
+                    "subViews": [
+                        {
+                            "dataBinding": {
+                                "value": "$open_url_title"
+                            },
+                            "styleBinding": {
+                                "align": 4,
+                                "fontSize": 28,
+                                "fontStyle": 1,
+                                "gravity": 4,
+                                "height": 84,
+                                "marginLeft": 22,
+                                "textColor": "#5f646e",
+                                "width": -1
+                            },
+                            "type": "label"
+                        },
+                        {
+                            "dataBinding": {
+                                "url": "http://gtms02.alicdn.com/tps/i2/T11ftRFpXaXXa8IXfX-14-26.png"
+                            },
+                            "styleBinding": {
+                                "align": 6,
+                                "height": 26,
+                                "marginRight": 40,
+                                "width": 14
+                            },
+                            "type": "image"
+                        }
+                    ],
+                    "type": "container"
+                },
+                {
+                    "dataBinding": {
+                        "apiName": "mtop.geb.support.itemList.get",
+                        "needLogin": false,
+                        "param": {
+                            "ids": "$ids"
+                        }
+                    },
+                    "styleBinding": {
+                        "backgroundColor": "#FFFFFF",
+                        "height": 500,
+                        "layout": "linearLayout",
+                        "marginBottom": 18,
+                        "orientation": "vertical",
+                        "width": -1
+                    },
+                    "subViews": [
+                        {
+                            "conditions": [
+                                {
+                                    "left": "$list_title",
+                                    "right": "null",
+                                    "styleBinding": {
+                                        "height": 0,
+                                        "relayoutPage": "true"
+                                    },
+                                    "type": "=="
+                                }
+                            ],
+                            "dataBinding": {
+                                "value": "$list_title"
+                            },
+                            "styleBinding": {
+                                "gravity": 4,
+                                "height": 62,
+                                "lines": 1,
+                                "marginLeft": 16,
+                                "textColor": "#5f646e",
+                                "width": -1
+                            },
+                            "type": "label"
+                        },
+                        {
+                            "styleBinding": {
+                                "height": 438,
+                                "layout": "absoluteLayout",
+                                "width": -1
+                            },
+                            "subViews": [
+                                {
+                                    "dataBinding": {
+                                        "url": "http://gtms02.alicdn.com/tps/i2/T1eP9hFCXbXXaXSmLH-608-438.png"
+                                    },
+                                    "styleBinding": {
+                                        "gravity": 5,
+                                        "height": -1,
+                                        "marginLeft": 16,
+                                        "marginRight": 16,
+                                        "width": -1
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "styleBinding": {
+                                        "height": -1,
+                                        "layout": "linearLayout",
+                                        "marginLeft": 16,
+                                        "marginRight": 16,
+                                        "orientation": "horizontal",
+                                        "width": -1
+                                    },
+                                    "subViews": [
+                                        {
+                                            "events": [
+                                                {
+                                                    "actions": [
+                                                        {
+                                                            "param": {
+                                                                "title": "${mtop.geb.support.itemList.get}.result.[0].title",
+                                                                "url": "${mtop.geb.support.itemList.get}.result.[0].h5Url"
+                                                            },
+                                                            "type": "openURL"
+                                                        }
+                                                    ],
+                                                    "type": "click"
+                                                }
+                                            ],
+                                            "styleBinding": {
+                                                "height": -1,
+                                                "layout": "linearLayout",
+                                                "marginBottom": 20,
+                                                "marginLeft": 16,
+                                                "marginRight": 16,
+                                                "marginTop": 16,
+                                                "orientation": "vertical",
+                                                "weight": 1
+                                            },
+                                            "subViews": [
+                                                {
+                                                    "dataBinding": {
+                                                        "url": "${mtop.geb.support.itemList.get}.result.[0].imgUrl"
+                                                    },
+                                                    "styleBinding": {
+                                                        "backgroundColor": "#ffffff",
+                                                        "height": 272,
+                                                        "width": -1
+                                                    },
+                                                    "type": "image"
+                                                },
+                                                {
+                                                    "dataBinding": {
+                                                        "value": "${mtop.geb.support.itemList.get}.result.[0].title"
+                                                    },
+                                                    "styleBinding": {
+                                                        "backgroundColor": "#ffffff",
+                                                        "fontSize": 28,
+                                                        "fontStyle": 1,
+                                                        "height": 70,
+                                                        "lines": 2,
+                                                        "marginTop": 11,
+                                                        "textColor": "#666666",
+                                                        "width": 272
+                                                    },
+                                                    "type": "label"
+                                                },
+                                                {
+                                                    "styleBinding": {
+                                                        "height": 41,
+                                                        "layout": "linearLayout",
+                                                        "marginTop": 15,
+                                                        "orientation": "horizontal",
+                                                        "width": -1
+                                                    },
+                                                    "subViews": [
+                                                        {
+                                                            "dataBinding": {
+                                                                "prefix": "￥",
+                                                                "value": "${mtop.geb.support.itemList.get}.result.[0].price"
+                                                            },
+                                                            "styleBinding": {
+                                                                "align": 7,
+                                                                "backgroundColor": "#ffffff",
+                                                                "fontSize": 34,
+                                                                "fontStyle": 1,
+                                                                "height": 41,
+                                                                "lines": 1,
+                                                                "textColor": "#ff5000",
+                                                                "width": 272
+                                                            },
+                                                            "type": "label"
+                                                        }
+                                                    ],
+                                                    "type": "container"
+                                                }
+                                            ],
+                                            "type": "container"
+                                        },
+                                        {
+                                            "events": [
+                                                {
+                                                    "actions": [
+                                                        {
+                                                            "param": {
+                                                                "title": "${mtop.geb.support.itemList.get}.result.[1].title",
+                                                                "url": "${mtop.geb.support.itemList.get}.result.[1].h5Url"
+                                                            },
+                                                            "type": "openURL"
+                                                        }
+                                                    ],
+                                                    "type": "click"
+                                                }
+                                            ],
+                                            "styleBinding": {
+                                                "height": -1,
+                                                "layout": "linearLayout",
+                                                "marginBottom": 20,
+                                                "marginLeft": 16,
+                                                "marginRight": 16,
+                                                "marginTop": 16,
+                                                "orientation": "vertical",
+                                                "weight": 1
+                                            },
+                                            "subViews": [
+                                                {
+                                                    "dataBinding": {
+                                                        "url": "${mtop.geb.support.itemList.get}.result.[1].imgUrl"
+                                                    },
+                                                    "styleBinding": {
+                                                        "backgroundColor": "#ffffff",
+                                                        "height": 272,
+                                                        "width": -1
+                                                    },
+                                                    "type": "image"
+                                                },
+                                                {
+                                                    "dataBinding": {
+                                                        "value": "${mtop.geb.support.itemList.get}.result.[1].title"
+                                                    },
+                                                    "styleBinding": {
+                                                        "backgroundColor": "#ffffff",
+                                                        "fontSize": 28,
+                                                        "fontStyle": 1,
+                                                        "height": 70,
+                                                        "lines": 2,
+                                                        "marginTop": 11,
+                                                        "textColor": "#666666",
+                                                        "width": 272
+                                                    },
+                                                    "type": "label"
+                                                },
+                                                {
+                                                    "styleBinding": {
+                                                        "height": 41,
+                                                        "layout": "linearLayout",
+                                                        "marginTop": 15,
+                                                        "orientation": "horizontal",
+                                                        "width": -1
+                                                    },
+                                                    "subViews": [
+                                                        {
+                                                            "dataBinding": {
+                                                                "prefix": "￥",
+                                                                "value": "${mtop.geb.support.itemList.get}.result.[1].price"
+                                                            },
+                                                            "styleBinding": {
+                                                                "align": 7,
+                                                                "backgroundColor": "#ffffff",
+                                                                "fontSize": 34,
+                                                                "fontStyle": 1,
+                                                                "height": 41,
+                                                                "lines": 1,
+                                                                "textColor": "#ff5000",
+                                                                "width": 272
+                                                            },
+                                                            "type": "label"
+                                                        }
+                                                    ],
+                                                    "type": "container"
+                                                }
+                                            ],
+                                            "type": "container"
+                                        }
+                                    ],
+                                    "type": "container"
+                                }
+                            ],
+                            "type": "container"
+                        }
+                    ],
+                    "type": "container"
+                }
+            ],
+            "type": "container"
+        },
+        "data": {
+            "banner_array": [
+                {
+                    "image": "http://img03.taobaocdn.com/imgextra/i3/1083554392/T2zadXXqFXXXXXXXXX_!!1083554392.jpg",
+                    "title": "111",
+                    "url": "m.taobao.com"
+                },
+                {
+                    "image": "http://img03.taobaocdn.com/imgextra/i3/1083554392/T2zadXXqFXXXXXXXXX_!!1083554392.jpg",
+                    "title": "111",
+                    "url": "m.taobao.com"
+                }
+            ],
+            "double_image1_content_url": "http://h5.m.taobao.com/we/index.htm",
+            "double_image1_url": "http://a.tbcdn.cn/mw/webapp/allspark/01x2.jpg",
+            "double_image2_content_url": "http://shop.m.taobao.com/shop/shopIndex.htm?user_id=63247110",
+            "double_image2_url": "http://a.tbcdn.cn/mw/webapp/allspark/02x2.jpg",
+            "ids": "2000100210656,2000100210656",
+            "list_title": "精选商品",
+            "open_url": "http://shop.m.taobao.com/shop/shopIndex.htm?user_id=63247110",
+            "open_url_title": "哦嗨哟!",
+            "phone_number": "18658817116",
+            "single_content_title": "单图文案呵呵呵呵",
+            "single_content_url": "http://m.taobao.com",
+            "single_image_url": "http://img03.taobaocdn.com/imgextra/i3/1083554392/T2zadXXqFXXXXXXXXX_!!1083554392.jpg",
+            "triple_image1_content_url": "http://h5.m.taobao.com/we/index.htm",
+            "triple_image1_url": "http://a.tbcdn.cn/mw/webapp/allspark/01x2.jpg",
+            "triple_image2_content_url": "http://h5.m.taobao.com/we/index.htm",
+            "triple_image2_url": "http://a.tbcdn.cn/mw/webapp/allspark/02x2.jpg",
+            "triple_image3_content_url": "http://shop.m.taobao.com/shop/shopIndex.htm?user_id=63247110",
+            "triple_image3_url": "http://a.tbcdn.cn/mw/webapp/allspark/03x2.jpg"
+        },
+        "utParam": {
+            "sns_id": "$snsId",
+            "store_id": "$storeId"
+        },
+        "verify": "pageModified:1390546900000;templateModified:1392792428000"
+    }
+}
+

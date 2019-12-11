@@ -1,0 +1,84 @@
+<template>
+<div class="container">
+<div class="cell">
+<text class="title" onclick="buttonClicked">{{tipText}}</text>
+</div>
+<div class="cell">
+<text class="title">{{streamText}}</text>
+</div>
+</div>
+</template>
+
+<style>
+.cell { margin-top: 10; margin-left: 10; flex-direction: row; }
+.thumb { width: 200; height: 200; }
+.title { text-align: center; flex: 1; color: grey; font-size: 50; }
+</style>
+
+<script>
+    module.exports = {
+        data: {
+            tip1: '请点击开始说话',
+            tip2: '正在说话中, 点击结束说话',
+            tip3: '识别中...',
+            tip4: '识别失败, 点击重新识别',
+            state: 1,
+            streamText: '',
+            tipText: '请点击开始说话',
+        },
+        methods: {
+            buttonClicked: function() {
+                var recognizer = require('@weex-module/recognizer');
+                var self = this;
+                if(this.state == 1){
+                    recognizer.getVoicePermission(function(result){
+                        result = JSON.parse(result);
+                        nativeLog('recognizer.getVoicePermission: ' + result);
+                        if(result.granted){
+                            function updateStreamText(){
+                                recognizer.onStreamText(function(dict){
+                                    dict = JSON.parse(dict);
+                                    nativeLog('recognizer.onStreamText: ' + dict);
+                                    nativeLog('onStreamText()' + );
+                                    nativeLog(dict.text);
+                                    self.streamText = dict.text;
+                                    updateStreamText();
+                                });
+                            }
+                            updateStreamText();
+                            recognizer.startRecognize({}, function(ret){
+                                ret = JSON.parse(ret);
+                                nativeLog('recognizer.startRecognize: ' + ret);
+
+                                if(ret){
+                                    self.state = 2;
+                                    self.tipText = self.tip2;
+                                }
+                            });
+                        }
+                    });
+                }
+                else if(this.state == 2){
+                    this.state = 3;
+                    self.tipText = self.tip3;
+                    recognizer.stopRecognize(function(result){
+                        result = JSON.parse(result);
+                        nativeLog('recognizer.stopRecognize: ' + result);
+                        if(result.error){
+                            self.state = 4;
+                            self.tipText = self.tip4;
+                        }
+                        else{
+                            self.$openURL(result.result.url);
+                        }
+                    });
+                }
+                else if(this.state == 4){
+                    recognizer.cancelRecognize(function(){});
+                    this.state = 1;
+                    self.tipText = self.tip1;
+                }
+            }
+        }
+    }
+</script>

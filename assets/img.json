@@ -1,0 +1,353 @@
+		[{
+				"type" : "1",
+				"id" : "SupMkt_crzayCard",
+				"items" : 
+				[
+					{
+						"imgUrl" : "http://img.alicdn.com/tps/i1/TB11tEjKVXXXXcSXFXX0_ne2pXX-750-200.jpg",
+						"pageParam" : "scm=1003.2.201511235.OTHER_1451084121541_603261",
+						"style" : 
+						{
+							"margin" : "[0,0,1,0]"
+						},
+						"action" : "http://www.tmall.com/wow/chaoshi/act/diyibo-hb?acm=201511235.1003.2.603261&aldid=H4UUXraw&scm=1003.2.201511235.OTHER_1451084121541_603261&pos=1",
+						"_pos_" : "1",
+						"type" : "1"
+					}
+				]
+			},
+			{
+				"type" : "1",
+				"id" : "SupMkt_saleCard",
+				"items" : 
+				[
+					{
+						"imgUrl" : "https://img.alicdn.com/tps/TB10G2cKFXXXXXUXpXXXXXXXXXX-750-60.jpg_q50.jpg",
+						"pageParam" : "scm=1003.2.2015121525.OTHER_1448986775194_601591",
+						"_pos_" : "1",
+						"type" : "1"
+					}
+				]
+			},
+			{
+				"type" : "2",
+				"id" : "SupMkt_saleTopRow",
+				"style" : 
+				{
+					"bgColor" : "#dd2727",
+					"margin" : 
+					[
+						"0",
+						"0",
+						"0",
+						"0"
+					]
+				},
+				"items" : 
+				[
+					{
+						"imgUrl" : "//img.alicdn.com/tps/i2/TB1OdEbKVXXXXc0XpXXdHGBNpXX-366-200.jpg",
+						"pageParam" : "scm=1003.2.201511240.OTHER_1448519205960_602857",
+						"style" : 
+						{
+							"margin" : "[0,0,0,3]"
+						},
+						"link" : "https://www.tmall.com/wow/chaoshi/act/bggdph-hd?acm=201511240.1003.2.602857&aldid=H4UUXraw&scm=1003.2.201511240.OTHER_1448519205960_602857&pos=1",
+						"_pos_" : "1",
+						"type" : "1"
+					},
+					{
+						"imgUrl" : "//img.alicdn.com/tps/i3/TB1qO_VKVXXXXcoXVXXdHGBNpXX-366-200.jpg",
+						"pageParam" : "scm=1003.2.201511241.OTHER_1450757067836_602891",
+						"style" : 
+						{
+							"margin" : "[0,3,0,3]"
+						},
+						"action" : "http://www.tmall.com/wow/chaoshi/act/mengniupp-hd?acm=201511241.1003.2.602891&aldid=H4UUXraw&scm=1003.2.201511241.OTHER_1450757067836_602891&pos=1",
+						"_pos_" : "1",
+						"type" : "1"
+					}
+				]
+			},
+			{
+				"type" : "3",
+				"id" : "SupMkt_saleSecondRow",
+				"style" : 
+				{
+					"bgColor" : "#dd2727",
+					"aspectRatio" : 3.69,
+					"margin" : 
+					[
+						"0",
+						"0",
+						"0",
+						"0"
+					]
+				},
+				"items" : 
+				[
+					{
+						"imgUrl" : "//img.alicdn.com/imgextra/i1/530269326/TB2cs90ipXXXXX3XXXXXXXXXXXX_!!530269326.jpg",
+						"pageParam" : "scm=1003.2.201511242.OTHER_1451345890889_602898",
+						"style" : 
+						{
+							"margin" : "[3,0,3,3]"
+						},
+						"link" : "http://www.tmall.com/wow/chaoshi/act/mxlm-hd?acm=201511242.1003.2.602898&aldid=H4UUXraw&scm=1003.2.201511242.OTHER_1451345890889_602898&pos=1",
+						"_pos_" : "1",
+						"type" : "1"
+					},
+					{
+						"imgUrl" : "//img.alicdn.com/tps/i4/TB1afRSKVXXXXaCapXXEqF1FXXX-242-200.jpg",
+						"pageParam" : "scm=1003.2.201511243.OTHER_1451515054820_602919",
+						"style" : 
+						{
+							"margin" : "[3,0,3,3]"
+						},
+						"link" : "http://www.tmall.com/wow/chaoshi/act/tiaoweizhuanchanghd?acm=201511243.1003.2.602919&aldid=H4UUXraw&spm=a312d.7832047.0.0.lN091e&scm=1003.2.201511243.OTHER_1451515054820_602919&pos=1",
+						"_pos_" : "1",
+						"type" : "1"
+					},
+					{
+						"imgUrl" : "//gw.alicdn.com/tps/TB1rzK.KVXXXXXSXVXXXXXXXXXX-242-200.jpg",
+						"pageParam" : "scm=1003.2.201511244.OTHER_1449888346786_596603",
+						"style" : 
+						{
+							"margin" : "[3,3,3,3]"
+						},
+						"link" : "http://www.tmall.com/wow/chaoshi/act/shengxian-dsbhd?acm=201511244.1003.2.596603&aldid=H4UUXraw&scm=1003.2.201511244.OTHER_1449888346786_596603&pos=1",
+						"_pos_" : "1",
+						"type" : "1"
+					}
+				]
+			},
+			{
+				"type" : "4",
+				"id" : "SupMkt_saleExpo",
+				"style" : 
+				{
+					"bgColor" : "#dd2727",
+					"aspectRatio" : 3.6,
+					"margin" : 
+					[
+						"0",
+						"0",
+						"0",
+						"0"
+					]
+				},
+				"items" : 
+				[
+					{
+						"pageParam" : "scm=1003.1.2015052711.13_410106_603502",
+						"style" : 
+						{
+							"margin" : "[0,0,3,3]"
+						},
+						"link" : "http://www.tmall.com/wow/chaoshi/act/qqmsp-hd?abbucket=&acm=2015052711.1003.1.603502&aldid=H4UUXraw&abtest=&scm=1003.1.2015052711.13_410106_603502&pos=1",
+						"imgUrl" : "//img.alicdn.com/imgextra/i3/1129326215/TB20eqvhFXXXXXgXXXXXXXXXXXX_!!1129326215.jpg",
+						"_pos_" : "1",
+						"type" : "1"
+					},
+					{
+						"pageParam" : "scm=1003.1.2015052711.13_2401_603502",
+						"style" : 
+						{
+							"margin" : "[0,0,3,3]"
+						},
+						"link" : "http://www.tmall.com/wow/chaoshi/act/hd-zonghe?abbucket=&acm=2015052711.1003.1.603502&aldid=H4UUXraw&abtest=&scm=1003.1.2015052711.13_2401_603502&pos=2",
+						"imgUrl" : "//img.alicdn.com/imgextra/i2/418259564/TB2gm83hFXXXXcTXXXXXXXXXXXX_!!418259564.jpg",
+						"_pos_" : "2",
+						"type" : "1"
+					},
+					{
+						"pageParam" : "scm=1003.1.2015052711.13_1301_603502",
+						"style" : 
+						{
+							"margin" : "[0,0,3,3]"
+						},
+						"link" : "http://www.tmall.com/wow/chaoshi/act/jiushuiyinliaohd?abbucket=&acm=2015052711.1003.1.603502&aldid=H4UUXraw&abtest=&scm=1003.1.2015052711.13_1301_603502&pos=3",
+						"imgUrl" : "//img.alicdn.com/tps/i2/TB1jYa.KFXXXXXZXVXXgnMHYXXX-180-200.jpg",
+						"_pos_" : "3",
+						"type" : "1"
+					},
+					{
+						"pageParam" : "scm=1003.1.2015052711.13_3103_603502",
+						"style" : 
+						{
+							"margin" : "[0,3,3,3]"
+						},
+						"link" : "http://www.tmall.com/wow/chaoshi/act/myznkzc-hd?abbucket=&acm=2015052711.1003.1.603502&aldid=H4UUXraw&abtest=&scm=1003.1.2015052711.13_3103_603502&pos=4",
+						"imgUrl" : "//img.alicdn.com/imgextra/i1/818931597/TB2epN1hFXXXXcHXXXXXXXXXXXX_!!818931597.jpg",
+						"_pos_" : "4",
+						"type" : "1"
+					},
+					{
+						"pageParam" : "scm=1003.1.2015052711.13_53649_603502",
+						"style" : 
+						{
+							"margin" : "[0,0,3,3]"
+						},
+						"link" : "http://www.tmall.com/wh/tmall/chaoshi/act/qfpljc-hd?abbucket=&acm=2015052711.1003.1.603502&aldid=H4UUXraw&abtest=&scm=1003.1.2015052711.13_53649_603502&pos=5",
+						"imgUrl" : "//img.alicdn.com/imgextra/i1/725677994/TB2G_v8hFXXXXXCXXXXXXXXXXXX_!!725677994.jpg",
+						"_pos_" : "5",
+						"type" : "1"
+					},
+					{
+						"pageParam" : "scm=1003.1.2015052711.13_11714362_603502",
+						"style" : 
+						{
+							"margin" : "[0,0,3,3]"
+						},
+						"link" : "http://www.tmall.com/wow/chaoshi/act/baicaowei-hd?abbucket=&acm=2015052711.1003.1.603502&aldid=H4UUXraw&abtest=&scm=1003.1.2015052711.13_11714362_603502&pos=6",
+						"imgUrl" : "//img.alicdn.com/imgextra/i2/628189716/TB2FhJNhVXXXXaEXpXXXXXXXXXX_!!628189716.jpg",
+						"_pos_" : "6",
+						"type" : "1"
+					},
+					{
+						"pageParam" : "scm=1003.1.2015052711.13_109173_603502",
+						"style" : 
+						{
+							"margin" : "[0,0,3,3]"
+						},
+						"link" : "http://www.tmall.com/wh/tmall/chaoshi/act/maodegonghd?abbucket=&acm=2015052711.1003.1.603502&aldid=H4UUXraw&abtest=&scm=1003.1.2015052711.13_109173_603502&pos=7",
+						"imgUrl" : "//img.alicdn.com/tps/i4/TB1kV0cKVXXXXceXXXXgnMHYXXX-180-200.jpg",
+						"_pos_" : "7",
+						"type" : "1"
+					},
+					{
+						"pageParam" : "scm=1003.1.2015052711.13_137887_603502",
+						"style" : 
+						{
+							"margin" : "[0,3,3,3]"
+						},
+						"action" : "http://www.tmall.com/wow/chaoshi/act/mengniupp-hd ?abbucket=&acm=2015052711.1003.1.603502&aldid=H4UUXraw&abtest=&scm=1003.1.2015052711.13_137887_603502&pos=8",
+						"imgUrl" : "//img.alicdn.com/imgextra/i1/1790973264/TB2fD3bhFXXXXXRXXXXXXXXXXXX_!!1790973264.jpg",
+						"_pos_" : "8",
+						"type" : "1"
+					}
+				]
+			},
+			{
+				"type" : "2",
+				"id" : "SupMkt_saleActCard",
+				"style" : 
+				{
+					"vGap" : "3",
+					"bgColor" : "#ffffff",
+					"aspectRatio" : 3.947,
+					"hGap" : "3"
+				},
+				"items" : 
+				[
+					{
+						"imgUrl" : "http://img.alicdn.com/imgextra/i2/665280110/TB2tAwwdXXXXXaBXXXXXXXXXXXX_!!665280110.jpg",
+						"pageParam" : "scm=1003.2.2015031212.OTHER_1452226487886_602820",
+						"action" : "http://www.tmall.com/wh/tmall/chaoshi/chn/act/huadong-wwwjc?acm=2015031212.1003.2.602820&aldid=H4UUXraw&scm=1003.2.2015031212.OTHER_1452226487886_602820&pos=1",
+						"_pos_" : "1",
+						"type" : "1"
+					},
+					{
+						"imgUrl" : "https://img.alicdn.com/imgextra/i4/1129326215/TB2xi0ThVXXXXbuXXXXXXXXXXXX_!!1129326215.jpg",
+						"pageParam" : "scm=1003.2.2015031213.OTHER_1451351140741_602824",
+						"action" : "http://www.tmall.com/wow/chaoshi/act/bbshd-hd?acm=2015031213.1003.2.602824&aldid=H4UUXraw&scm=1003.2.2015031213.OTHER_1451351140741_602824&pos=1",
+						"_pos_" : "1",
+						"type" : "1"
+					},
+					{
+						"imgUrl" : "http://img.alicdn.com/tps/i4/TB1wTN2IpXXXXbgXpXXbE2vPXXX-372-190.jpg",
+						"pageParam" : "scm=1003.2.2015031214.OTHER_1448269246455_602833",
+						"link" : "http://www.tmall.com/wh/tmall/chaoshi/chn/act/huadong-bbhdc?acm=2015031214.1003.2.602833&aldid=H4UUXraw&scm=1003.2.2015031214.OTHER_1448269246455_602833&pos=1",
+						"_pos_" : "1",
+						"type" : "1"
+					},
+					{
+						"imgUrl" : "https://gw.alicdn.com/tps/TB1V1.vKVXXXXXyXpXXXXXXXXXX-372-190.jpg",
+						"pageParam" : "scm=1003.2.2015031215.OTHER_1449206701095_603125",
+						"action" : "http://www.tmall.com/wow/chaoshi/act/shengxian-dsbhd?acm=2015031215.1003.2.603125&aldid=H4UUXraw&scm=1003.2.2015031215.OTHER_1449206701095_603125&pos=1",
+						"_pos_" : "1",
+						"type" : "1"
+					}
+				]
+			},
+     {
+			"type": "5",
+			"id": "LifeHome_oneToTwo",
+			"style": {
+				"margin": [
+					"0",
+					"0",
+					"0",
+					"0"
+				],
+				"cols": [
+					43.733,
+					56.267
+				],
+				"aspectRatio": 1.875
+			},
+			"items": [{
+				"imgUrl": "http://img.alicdn.com/tps/i4/TB1cxHmKpXXXXXRXVXXYSZQ4FXX-328-400.jpg",
+				"pageParam": "scm=1003.2.201509287.OTHER_1447051074216_539959",
+				"style": {
+					"margin": [
+						"0",
+						"1",
+						"0",
+						"0"
+					]
+				},
+				"ctrClickName": "shenghuojia-banner-c",
+				"action": "http://www.tmall.com/wow/portal/act/shenghuojia-shop?acm=201509287.1003.2.539959&aldid=FJRV0wpX&tagId=2001&scm=1003.2.201509287.OTHER_1447051074216_539959&pos=1",
+				"spm": "banner",
+				"_pos_": "1",
+				"type": "1"
+			}, {
+				"imgUrl": "http://img.alicdn.com/tps/i2/TB1XirzKpXXXXacXpXXYCR.YFXX-422-200.jpg",
+				"pageParam": "scm=1003.2.201509287.OTHER_1446367264414_539959",
+				"style": {
+					"margin": [
+						"0",
+						"0",
+						0.5,
+						"0"
+					]
+				},
+				"ctrClickName": "shenghuojia-banner-c",
+				"action": "http://www.tmall.com/wow/portal/act/shenghuojia-shop?acm=201509287.1003.2.539959&aldid=FJRV0wpX&tagId=2003&scm=1003.2.201509287.OTHER_1446367264414_539959&pos=2",
+				"spm": "banner",
+				"_pos_": "2",
+				"type": "1"
+			}, {
+				"imgUrl": "http://img.alicdn.com/tps/i1/TB1DwDoKpXXXXcIXFXXYCR.YFXX-422-200.jpg",
+				"pageParam": "scm=1003.2.201509287.OTHER_1445480570387_539959",
+				"style": {
+					"margin": [
+						0.5,
+						"0",
+						"0",
+						"0"
+					]
+				},
+				"ctrClickName": "shenghuojia-banner-c",
+				"action": "http://www.tmall.com/wow/portal/act/shenghuojia-shop?acm=201509287.1003.2.539959&aldid=FJRV0wpX&tagId=2004&scm=1003.2.201509287.OTHER_1445480570387_539959&pos=3",
+				"spm": "banner",
+				"_pos_": "3",
+				"type": "1"
+			}]
+		}, {
+			"type": "2",
+			"id": "LifeHome_twoCards",
+			"style": {
+				"margin": [
+					"0",
+					"0",
+					"0",
+					"0"
+				],
+				"aspectRatio": "1"
+			},
+			"items": [
+
+			]
+		}]

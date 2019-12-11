@@ -1,0 +1,61 @@
+{
+  "data": {},
+  "view": {
+    "cell": {
+      "dataBinding": {
+        "value": "${feeds}.list.[?].summary"
+      },
+      "styleBinding": {
+        "align": 4,
+        "gravity": 5,
+        "height": "77",
+        "textColor ": "#FFFFFF",
+        "width": "-1"
+      },
+      "type": "label"
+    },
+    "dataBinding": {
+      "apiAlias": "feeds",
+      "apiName": "mtop.cybertron.feed.feeds",
+      "apiVersion": "1.0",
+      "needLogin": false,
+      "param": {
+        "userId": 3640360014
+      }
+    },
+    "footerView": {
+      "dataBinding": {
+        "url": "http://www.departmentofeagles.com/images/FooterLightAndTreesL2A.jpg"
+      },
+      "styleBinding": {
+        "gravity": 9,
+        "height": "177",
+        "width": "-1"
+      },
+      "type": "image"
+    },
+    "headerView": {
+      "dataBinding": {
+        "value": "关注店铺nick"
+      },
+      "styleBinding": {
+        "align": 4,
+        "gravity": 5,
+        "height": "37",
+        "textColor ": "#FFFFFF",
+        "width": "-1"
+      },
+      "type": "label"
+    },
+    "needDownRefresh": true,
+    "needNextPage": true,
+    "styleBinding": {
+      "backgroundColor": "#fdb933",
+      "height": "-1",
+      "margin": 17,
+      "width": "-1"
+    },
+    "type": "list",
+    "viewId": "list"
+  }
+}

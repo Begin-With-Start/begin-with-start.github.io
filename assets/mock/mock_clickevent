@@ -1,0 +1,127 @@
+{
+  "page": "UT_MOCK_DATA",
+  "title": "UT_MOCK_DATA",
+  "view": {
+    "type": "container",
+    "styleBinding": {
+      "width": -1,
+      "height": -1,
+      "layout": "linearLayout",
+      "orientation": "vertical"
+    },
+    "subViews": [
+      {
+        "styleBinding": {
+          "height": 100,
+          "width": 100
+        },
+        "dataBinding": {
+          "value": "$value"
+        },
+        "events": [
+          {
+            "type": "click",
+            "actions": [
+              {
+                "type": "changeData",
+                "param": {
+                  "$value": "click"
+                }
+              },
+              {
+                "type": "refreshView",
+                "param": {
+                  "viewId": "myTextArea"
+                }
+              }
+            ]
+          },
+          {
+            "type": "onload",
+            "actions": [
+              {
+                "type": "changeData",
+                "param": {
+                  "$load": "onload"
+                }
+              }
+            ]
+          },
+          {
+            "type": "focus",
+            "actions": [
+              {
+                "type": "changeData",
+                "param": {
+                  "$focus": "focus"
+                }
+              }
+            ]
+          },
+          {
+            "type": "blur",
+            "actions": [
+              {
+                "type": "changeData",
+                "param": {
+                  "$blur": "blur"
+                }
+              }
+            ]
+          },
+          {
+            "type": "change",
+            "actions": [
+              {
+                "type": "changeData",
+                "param": {
+                  "$change": "change"
+                }
+              }
+            ]
+          },
+          {
+            "type": "input",
+            "actions": [
+              {
+                "type": "changeData",
+                "param": {
+                  "$input": "input"
+                }
+              }
+            ]
+          }
+        ],
+        "type": "textArea",
+        "viewId": "myTextArea"
+      },
+      {
+        "type": "button",
+        "viewId": "myButton",
+        "styleBinding": {
+          "height": 50,
+          "width": -1,
+          "backgroundColor": "#cccccc"
+        },
+        "dataBinding": {
+          "value": "hello"
+        }
+      }
+    ]
+  },
+  "data": {
+    "load": "not onload",
+    "value": "not click",
+    "change": "not change",
+    "focus": "not focus",
+    "blur": "not blur",
+    "input": "not input",
+    "apiVersion": "apiversiontest",
+    "apiAlias": "apialiastest"
+  },
+  "utParam": {
+    "sns_id": "$snsId",
+    "store_id": "$storeId"
+  },
+  "verify": "pageModified:1390546900000;templateModified:1392792428000"
+}

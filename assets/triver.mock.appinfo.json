@@ -1,0 +1,48 @@
+{
+  "container": {
+    "launchParams": {
+      "enableTabBar": "YES",
+      "enableKeepAlive": "YES",
+      "enableJSC": "YES",
+      "minSDKVersion": "0.0.0",
+      "nboffline": "sync"
+    },
+    "auto_install": 2,
+    "status": "ONLINE"
+  },
+  "extend_info": {
+    "usePresetPopmenu": "YES"
+  },
+  "appInfo": {
+    "appId": "<id>",
+    "logo":"https://gw.alicdn.com/bao/uploaded/TB1wrITdRUSMeJjSszcXXbnwVXa-144-144.png",
+    "developVersion": "9.9.99",
+    "deployVersion": "9.9.99",
+    "packageUrl": "https://gw.alicdn.com/bao/uploaded/TB1l473QlLoK1RjSZFuXXXn0XXa.amr",
+    "size": "799443",
+    "vhost": "https://<id>.local.demo.ariver.com",
+    "preset": null,
+    "name": "小程序Demo",
+    "desc": "本地调试Demo",
+    "nbl_id": "AP_<id>"
+  },
+  "permission": {
+    "validDomain": [".*"],
+    "JSAPI_SP_Config": {
+      "startApp": {
+        "appId": [".*"]
+      },
+      "httpRequest": {
+        "allowedDomain": [".*"]
+      }
+    },
+    "Webview_Config": {
+      "allowedDomain": [".*"]
+    },
+    "JSAPI_List": [".*"],
+    "EVENT_List": [".*"],
+    "Enable_Proxy": "YES",
+    "Valid_SubResMimeList": [".*"],
+    "UserPermission": []
+  }
+}

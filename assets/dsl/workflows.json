@@ -1,0 +1,81 @@
+{
+  "workflows": [
+    {
+      "path": [
+        "start_record",
+        "record_preview",
+        "preview_merge",
+        "merge_end"
+      ],
+      "sceneName": "socialpublish"
+    },
+    {
+      "path": [
+        "start_record",
+        "record_preview",
+        "preview_merge",
+        "merge_end"
+      ],
+      "sceneName": "unipublish_qianniupublish"
+    },
+    {
+      "path": [
+        "start_record",
+        "record_preview",
+        "preview_merge",
+        "merge_end"
+      ],
+      "sceneName": "tbonionpublish"
+    },
+    {
+      "path": [
+        "start_record",
+        "record_preview",
+        "preview_merge",
+        "merge_end"
+      ],
+      "sceneName": "iHomepublish"
+    },
+    {
+      "path": [
+        "start_record",
+        "record_preview",
+        "preview_merge",
+        "merge_end"
+      ],
+      "sceneName": "tbonionpublish"
+    },
+    {
+      "path": [
+        "start_record",
+        "record_previewold",
+        "previewold_merge",
+        "merge_end"
+      ],
+      "sceneName": "ratepublish"
+    },
+    {
+      "path": [
+        "start_record",
+        "record_preview",
+        "select_preview",
+        "preview_edit",
+        "edit_merge",
+        "merge_publish",
+        "publish_end"
+      ],
+      "sceneName": "testMulti"
+    },
+    {
+      "path": [
+        "start_record",
+        "record_preview",
+        "preview_edit",
+        "edit_merge",
+        "merge_publish",
+        "publish_end"
+      ],
+      "sceneName": "scene3"
+    }
+  ]
+}

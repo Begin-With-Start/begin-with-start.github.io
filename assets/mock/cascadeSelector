@@ -1,0 +1,115 @@
+{
+  "data": {
+    "cascade_list": [
+      {
+        "title": "list_1",
+        "cascade_list": [
+          {
+            "title": "list_1_1",
+            "cascade_list": [
+              {
+                "title": "list_1_1_1"
+              },
+              {
+                "title": "list_1_1_2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "list_2",
+        "cascade_list": [
+          {
+            "title": "list_2_1"
+          },
+          {
+            "title": "list_2_2"
+          }
+        ]
+      },
+      {
+        "title": "list_3",
+        "cascade_list": [
+          {
+            "title": "list_3_1"
+          },
+          {
+            "title": "list_3_2"
+          },
+          {
+            "title": "list_3_2"
+          }
+        ]
+      },
+      {
+        "title": "list_4"
+      },
+      {
+        "title": "list_5"
+      }
+    ]
+  },
+  "view": {
+    "type": "button",
+    "viewId": "btn",
+    "dataBinding": {
+      "value": "$_form.name"
+    },
+    "styleBinding": {
+      "height": 200,
+      "width": -2,
+      "fontSize": 20,
+      "fontStyle": 1,
+      "marginTop": 8,
+      "textColor": "#FFFFFF",
+      "backgroundColor": "#A1B2C3"
+    },
+    "events": [
+      {
+        "actions": [
+          {
+            "param": {
+              "view": {
+                "type": "list",
+                "needDownRefresh": true,
+                "needNextPage": true,
+                "styleBinding": {
+                  "width": -1,
+                  "height": -1,
+                  "backgroundColor": "#FFFFFF",
+                  "paddingLeft": 10,
+                  "paddingRight": 10,
+                  "paddingTop": 0,
+                  "paddingBottom": 0,
+                  "marginLeft": 6,
+                  "marginRight": 6,
+                  "marginTop": 6,
+                  "marginBottom": 6
+                },
+                "cell": {
+                  "type": "label",
+                  "styleBinding": {
+                    "width": "-1",
+                    "height": "360",
+                    "backgroundColor": "#A1B2C3",
+                    "textColor": "123456",
+                    "marginTop": 10
+                  },
+                  "dataBinding": {
+                    "value": "$cascade_list.[?].title"
+                  }
+                }
+              },
+              "dataSource": "$cascade_list",
+              "targetViewId": "btn",
+              "viewId": "name"
+            },
+            "type": "cascadeSelector"
+          }
+        ],
+        "type": "click"
+      }
+    ]
+  }
+}

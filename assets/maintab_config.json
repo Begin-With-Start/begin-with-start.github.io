@@ -1,0 +1,101 @@
+{
+  "baseLayout": [
+    {
+      "module": "tab.0",
+      "tag": "home"
+    },
+    {
+      "module": "tab.1",
+      "tag": "brandingHome"
+    },
+    {
+      "module": "tab.2",
+      "tag": "vipPlusHome"
+    },
+    {
+      "module": "tab.3",
+      "tag": "cart"
+    },
+    {
+      "module": "tab.4",
+      "tag": "myTmallNew"
+    }
+  ],
+  "tabBarConfig": {
+    "bgColor": "#ffffff",
+    "bgImage": "",
+    "iconNormalColor": "#5F646E",
+    "iconSelectedColor": "#FF0036",
+    "textNormalColor": "#999999",
+    "textSelectedColor": "#FF0036",
+    "itemsByTag": [
+      {
+        "tag": "home",
+        "iconfontNormal": "e602",
+        "iconfontSelected": "e602",
+        "imageNormal": "",
+        "imageSelected": "",
+        "imageSize": "",
+        "coverImageNormal": "",
+        "coverImageSelected": "",
+        "coverImageSize": "",
+        "title": "精选",
+        "intent": "tmall://page.tm/mainTabHomePage",
+        "jumpUrl": "",
+        "forceLogin": false
+      },
+      {
+        "tag": "brandingHome",
+        "iconfontNormal": "e601",
+        "iconfontSelected": "e601",
+        "title": "品牌",
+        "intent": "tmall://page.tm/brandingHome?isMainTab=true",
+        "jumpUrl": "",
+        "forceLogin": false
+      },
+      {
+        "tag": "vipPlusHome",
+        "iconfontNormal": "e625",
+        "iconfontSelected": "e625",
+        "imageSize": "",
+        "coverImageNormal": "",
+        "coverImageSelected": "",
+        "coverImageSize": "",
+        "title": "会员",
+        "intent": "tmall://page.tm/TMVipPlus",
+        "jumpUrl": "",
+        "forceLogin": false
+      },
+      {
+        "tag": "cart",
+        "iconfontNormal": "e604",
+        "iconfontSelected": "e604",
+        "imageNormal": "",
+        "imageSelected": "",
+        "imageSize": "",
+        "coverImageNormal": "",
+        "coverImageSelected": "",
+        "coverImageSize": "",
+        "title": "购物车",
+        "intent": "tmall://page.tm/cart",
+        "jumpUrl": "",
+        "forceLogin": true
+      },
+      {
+        "tag": "myTmallNew",
+        "iconfontNormal": "e600",
+        "iconfontSelected": "e600",
+        "imageNormal": "",
+        "imageSelected": "",
+        "imageSize": "",
+        "coverImageNormal": "",
+        "coverImageSelected": "",
+        "coverImageSize": "",
+        "title": "我",
+        "intent": "tmall://page.tm/mytmallFragment?isMainTab=true",
+        "jumpUrl": "",
+        "forceLogin": false
+      }
+    ]
+  }
+}

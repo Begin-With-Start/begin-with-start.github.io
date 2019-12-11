@@ -1,0 +1,118 @@
+{
+    "today": [
+        {
+            "displayName": "新开团",
+            "color":"0x83c231",
+            "icon": "http://img03.taobaocdn.com/tps/i3/TB1wSDRFVXXXXcAXpXXkpw8JVXX-96-96.png",
+            "ficon": "http://img04.taobaocdn.com/tps/i4/TB1QJDUFVXXXXb5XXXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "热卖",
+            "color":"0xfe6600",
+            "icon": "http://img01.taobaocdn.com/tps/i1/TB1e0TJFVXXXXXEaXXXkpw8JVXX-96-96.png",
+            "ficon": "http://img01.taobaocdn.com/tps/i1/TB1JjjNFVXXXXbNXFXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "推荐",
+            "color":"0xf72828",
+            "icon": "http://img04.taobaocdn.com/tps/i4/TB1_NDUFVXXXXbWXXXXkpw8JVXX-96-96.png",
+            "ficon": "http://img02.taobaocdn.com/tps/i2/TB1SDjOFVXXXXaxXFXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "食品",
+            "color":"0xeeb12d",
+            "icon": "http://gtms02.alicdn.com/tps/i2/TB108bgFVXXXXc2XXXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms01.alicdn.com/tps/i1/TB1qjjcFVXXXXXgXVXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "女装",
+            "color":"ff2664",
+            "icon": "http://gtms02.alicdn.com/tps/i2/TB1BhneFVXXXXXiXFXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms01.alicdn.com/tps/i1/TB1SindFVXXXXcwXFXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "男装",
+            "color":"0x2595e6",
+            "icon": "http://gtms03.alicdn.com/tps/i3/TB1xrbfFVXXXXbVXpXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms01.alicdn.com/tps/i1/TB13TLgFVXXXXcYXXXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "母婴",
+            "color":"0x31c2af",
+            "icon": "http://gtms03.alicdn.com/tps/i3/TB1aVThFVXXXXXWXXXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms04.alicdn.com/tps/i4/TB1k5vbFVXXXXbdXVXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "美妆",
+            "color":"0xeb1f6c",
+            "icon": "http://gtms03.alicdn.com/tps/i3/TB1EPrdFVXXXXXkXFXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms02.alicdn.com/tps/i2/TB1Q6JfFVXXXXcqaXXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "饰品",
+            "color":"0x1ba8b9",
+            "icon": "http://gtms03.alicdn.com/tps/i3/TB1RXWXFVXXXXbSaXXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms04.alicdn.com/tps/i4/TB1CVDfFVXXXXblXpXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "内衣",
+            "color":"0xc74cdd",
+            "icon": "http://gtms01.alicdn.com/tps/i1/TB1i5vgFVXXXXXAXpXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms04.alicdn.com/tps/i4/TB1TvPdFVXXXXblXFXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "鞋包",
+            "color":"ff9536",
+            "icon": "http://gtms04.alicdn.com/tps/i4/TB1hHvfFVXXXXbFXpXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms03.alicdn.com/tps/i3/TB1M6O_FVXXXXXCaXXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "运动",
+            "color":"0x13b90b",
+            "icon": "http://gtms04.alicdn.com/tps/i4/TB1nVjfFVXXXXaPXpXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms04.alicdn.com/tps/i4/TB1_7bfFVXXXXX5XpXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "数码",
+            "color":"0x2595e6",
+            "icon": "http://gtms03.alicdn.com/tps/i3/TB1mF6fFVXXXXakXpXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms03.alicdn.com/tps/i3/TB1mXPeFVXXXXbOXFXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "家电",
+            "color":"0x3a8cf1",
+            "icon": "http://gtms02.alicdn.com/tps/i2/TB1Yei.FVXXXXX8aXXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms02.alicdn.com/tps/i2/TB1_5HdFVXXXXb7XFXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "建材",
+            "color":"0xfe7e00",
+            "icon": "http://gtms02.alicdn.com/tps/i2/TB1UXLdFVXXXXXyXVXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms02.alicdn.com/tps/i2/TB1TFDbFVXXXXXuXVXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "家具",
+            "color":"0xef723b",
+            "icon": "http://gtms03.alicdn.com/tps/i3/TB1rm2eFVXXXXcpXpXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms01.alicdn.com/tps/i1/TB1XVa.FVXXXXXjaXXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "家装",
+            "color":"0xc29568",
+            "icon": "http://gtms02.alicdn.com/tps/i2/TB1Kt6fFVXXXXa.XpXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms04.alicdn.com/tps/i4/TB1izjeFVXXXXXoXFXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "百货",
+            "color":"0x25bbe6",
+            "icon": "http://gtms01.alicdn.com/tps/i1/TB1yXfgFVXXXXXGXpXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms04.alicdn.com/tps/i4/TB1DRYeFVXXXXcPXpXXkpw8JVXX-96-96.png"
+        },
+        {
+            "displayName": "车品",
+            "color":"0x3ba6dd",
+            "icon": "http://gtms01.alicdn.com/tps/i1/TB1WxrdFVXXXXbIXFXXkpw8JVXX-96-96.png",
+            "ficon": "http://gtms02.alicdn.com/tps/i2/TB1HWDbFVXXXXaIXVXXkpw8JVXX-96-96.png"
+        }
+    ]
+}

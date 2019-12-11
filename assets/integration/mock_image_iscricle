@@ -1,0 +1,16 @@
+{
+    "page": "geb/userDefine",
+    "title": "image须方图才有圆角",
+    "verify": "dataModified:1396441721000;pageModified:1396441721000",
+    "view": {
+      "dataBinding": {
+        "url": "http://img02.config-vip.taobaocdn.net/imgextra/i2/2066596281/TB280tXXXXXXXXNXXXXXXXXXXXX_!!2066596281.png"
+      },
+      "styleBinding": {
+        "height": 320,
+        "isCircle": true,
+        "width": 320
+      },
+      "type": "image"
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "data": {
+    "on": "false",
+    "off": "false"
+  },
+  "view": {
+    "type": "switch",
+    "viewId": "switch",
+    "styleBinding": {
+      "align": 2,
+      "height": "60",
+      "width": "100"
+    },
+    "dataBinding": {
+      "value": "true"
+    },
+    "actionOff": [
+      {
+        "param": {
+          "$off": "true"
+        },
+        "type": "changeData"
+      }
+    ],
+    "actionOn": [
+      {
+        "param": {
+          "$on": "true"
+        },
+        "type": "changeData"
+      }
+    ]
+  }
+}

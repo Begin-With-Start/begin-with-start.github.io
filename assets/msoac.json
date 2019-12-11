@@ -1,0 +1,1 @@
+[{"bizName":"msoa.taobao.cart.sdk","serviceDependency":[{"serviceId":"msoa.taobao.cart.sdk.add","version":"2.0"},{"serviceId":"msoa.taobao.cart.sdk.query","version":"2.0"},{"serviceId":"msoa.taobao.detail.showsku","version":"2.0"}]},{"bizName":"video_weex","serviceDependency":[{"serviceId":"msoa.taobao.cart.sdk.add","version":"2.0"}]}]

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "time",
+    "displayName": "时间触发器",
+    "summary": "特定的时间触发，比如每天的10点",
+    "clzName": "com.tmall.awareness_sdk.plugin.trigger.TimeTrigger",
+    "category": "时间",
+    "author": "fangbo"
+  },
+  {
+    "name": "data",
+    "displayName": "数据触发器",
+    "summary": "数据变化的时候触发，比如业务线修改了是否打开过范儿的数据",
+    "clzName": "com.tmall.awareness_sdk.plugin.trigger.DataTrigger",
+    "category": "数据",
+    "author": "fangbo"
+  },
+  {
+    "name": "timer",
+    "displayName": "定时轮询的触发器",
+    "summary": "按特定轮询间隔触发，比如每10分钟判断是否有命中的地理围栏",
+    "clzName": "com.tmall.awareness_sdk.plugin.trigger.TimerTrigger",
+    "category": "时间",
+    "author": "fangbo"
+  },
+  {
+    "name": "sms",
+    "displayName": "短信接收",
+    "summary": "收到特定号码或内容的短信触发",
+    "clzName": "com.tmall.awareness_sdk.plugin.trigger.SMSReceiverTrigger",
+    "category": "通信",
+    "author": "fangbo"
+  },
+  {
+    "name": "charge",
+    "displayName": "插入电源线或者拔出电源线",
+    "summary": "插入电源线或者拔出电源线的时候触发",
+    "clzName": "com.tmall.awareness_sdk.plugin.trigger.ChargeTrigger",
+    "category": "系统状态",
+    "author": "fangbo"
+  }
+]

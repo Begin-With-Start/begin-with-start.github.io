@@ -1,0 +1,6 @@
+<?xml version ='1.0' encoding ='UTF-8'?>
+<effect id='brannan' ver='0.1'>
+    <pipeline>
+        <filter id="brannan"/>
+    </pipeline>
+</effect>

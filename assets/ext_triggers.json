@@ -1,0 +1,10 @@
+[
+  {
+    "name": "sensey",
+    "displayName": "传感器感知库",
+    "summary": "使用Sensey开源库做传感器监听",
+    "clzName": "com.tmall.awareness_ext.trigger.SenseyTrigger",
+    "category": "sensor",
+    "author": "fangbo"
+  }
+]

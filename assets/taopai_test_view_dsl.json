@@ -1,0 +1,111 @@
+{
+  "bizScene": "weitao",
+  "data": {
+    "parent":{
+      "background-color":"#23ff0000"
+    },
+    "components": [
+      {
+        "id": "id1",
+        "type": "text",
+        "style": {
+          "x": "224",
+          "y": "224",
+          "width": 196,
+          "vAlign": "left",
+          "hAlign": "left",
+          "height": 136,
+          "fontSize": "18",
+          "text": "这个是文本"
+        },
+        "click":"id1_click",
+        "response": [
+          {
+            "id": "id1_click",
+            "style": {
+              "text": "这个是文本2"
+            },
+            "action": "camera"
+          },
+          {
+            "id": "response2",
+            "style": {
+              "text": "这个是文本2"
+            },
+            "action": "camera"
+          }
+        ]
+      },
+      {
+        "id": "flash",
+        "type": "image",
+        "style": {
+          "x": "192",
+          "y": "24",
+          "width": 192,
+          "height": 54,
+          "src": "https://gw.alicdn.com/tfs/TB10LwwimzqK1RjSZPcXXbTepXa-192-54.png",
+          "selecter": [
+            {
+              "state_enabled": "true",
+              "state_selected": "true",
+              "localSrc": "taopai_social_ratio_3_4.png"
+            },
+            {
+              "state_enabled": "false",
+              "localSrc": "taopai_social_ratio_9_16.png"
+            },
+            {
+              "state_enabled": "true",
+              "localSrc": "taopai_social_ratio_1_1.png"
+            }
+          ]
+        }
+      },
+      {
+        "id": "id3",
+        "type": "image",
+        "style": {
+          "x": "192",
+          "y": "524",
+          "width": 192,
+          "height": 54,
+          "localSrc": "taopai_social_ratio_9_16.png"
+        }
+      },
+      {
+        "id": "id4",
+        "type": "image",
+        "style": {
+          "x": "192",
+          "y": "724",
+          "width": 192,
+          "height": 54,
+          "localSrc": "taopai_social_ratio_1_1.png"
+        }
+      },
+      {
+        "id": "id5",
+        "type": "text",
+        "style": {
+          "x": "124",
+          "y": "424",
+          "width": 196,
+          "vAlign": "left",
+          "hAlign": "left",
+          "height": 136,
+          "fontSize": "18",
+          "text": "这个是文本222"
+        },
+        "response": [
+          {
+            "id": "id1_click",
+            "style": {
+              "text": "这个是文本333"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "bizType" : "markerVideo",
+    "dispatchContent" : {
+        "markerUrl" : "https://ossgw.alicdn.com/biu/1493099388627-bcpJDdEllhmAoskR.jpg",
+        "videoUrl" : "https://dtmall-tel.alicdn.com/minsk/online/fileware/201704/5331b851-7440-4c78-a196-6bace51d885d",
+        "alpha" : false
+    }
+}

@@ -1,0 +1,3573 @@
+{
+	"api" : "mtop.geb.view.getPageView",
+	"v" : "3.0",
+	"ret" : 
+	[
+		"SUCCESS::调用成功"
+	],
+	"data" : 
+	{
+		"pageView" : 
+		{
+			"page" : "Page_Shop",
+			"title" : "$shopTitle",
+			"view" : 
+			{
+				"subViews" : 
+				[
+					{
+						"subViews" : 
+						[
+							{
+								"subViews" : 
+								[
+									{
+										"type" : "image",
+										"styleBinding" : 
+										{
+											"height" : 0
+										},
+										"dataBinding" : 
+										{
+											"imageQuality" : 3,
+											"url" : "$shopsign_image_url"
+										},
+										"events" : 
+										[
+											{
+												"type" : "click",
+												"actions" : 
+												[
+													{
+														"type" : "openURL",
+														"param" : 
+														{
+															"url" : "$shopsign_action_url"
+														}
+													}
+												]
+											}
+										],
+										"conditions" : 
+										[
+											{
+												"left" : "$shopsign_image_url",
+												"right" : "null",
+												"type" : "!=",
+												"styleBinding" : 
+												{
+													"height" : 200
+												}
+											}
+										]
+									},
+									{
+										"type" : "image",
+										"styleBinding" : 
+										{
+											"height" : 0
+										},
+										"dataBinding" : 
+										{
+											"url" : "http://gtms01.alicdn.com/tps/i1/TB13jvrFXXXXXa4cVXX8Wot0FXX-640-200.png"
+										},
+										"conditions" : 
+										[
+											{
+												"left" : "$shopsign_image_url",
+												"right" : "null",
+												"type" : "!=",
+												"styleBinding" : 
+												{
+													"height" : 200
+												}
+											}
+										]
+									},
+									{
+										"type" : "label",
+										"styleBinding" : 
+										{
+											"height" : 24
+										},
+										"dataBinding" : 
+										{
+											"value" : ""
+										},
+										"conditions" : 
+										[
+											{
+												"left" : "$shopsign_image_url",
+												"right" : "null",
+												"type" : "!=",
+												"styleBinding" : 
+												{
+													"marginTop" : 112
+												}
+											},
+											{
+												"left" : "$shopsign_image_url",
+												"right" : "null",
+												"type" : "==",
+												"styleBinding" : 
+												{
+													"backgroundColor" : "#FFFFFF"
+												}
+											}
+										]
+									},
+									{
+										"subViews" : 
+										[
+											{
+												"type" : "label",
+												"styleBinding" : 
+												{
+													"fontWeight" : 500,
+													"textColor" : "#3d4245",
+													"height" : 36,
+													"marginLeft" : 136,
+													"width" : 352,
+													"lines" : 1,
+													"fontSize" : 32
+												},
+												"dataBinding" : 
+												{
+													"value" : "$shopInfo.shopName"
+												},
+												"conditions" : 
+												[
+													{
+														"left" : "$shopsign_image_url",
+														"right" : "null",
+														"type" : "!=",
+														"styleBinding" : 
+														{
+															"textColor" : "#FFFFFF",
+															"lineShadowColor" : "#28000000",
+															"lineShadowOffsetX" : 0,
+															"lineShadowOffsetY" : 2
+														}
+													}
+												]
+											},
+											{
+												"type" : "button",
+												"styleBinding" : 
+												{
+													"height" : 48,
+													"width" : 120,
+													"marginRight" : 16,
+													"align" : 3,
+													"gravity" : 5
+												},
+												"events" : 
+												[
+													{
+														"type" : "click",
+														"actions" : 
+														[
+															{
+																"type" : "userTrack",
+																"condition" : 
+																{
+																	"left" : "$shopInfo.isFollowed",
+																	"right" : "false",
+																	"type" : "=="
+																},
+																"param" : 
+																{
+																	"utParams" : 
+																	{
+																		"seller_id" : "$userId"
+																	},
+																	"utType" : "Button",
+																	"utName" : "AttentionAccept"
+																}
+															},
+															{
+																"type" : "sendRequest",
+																"condition" : 
+																{
+																	"left" : "$shopInfo.isFollowed",
+																	"right" : "false",
+																	"type" : "=="
+																},
+																"callback" : 
+																[
+																	{
+																		"type" : "changeData",
+																		"param" : 
+																		{
+																			"$shopInfo.isRecieveMsg" : "true",
+																			"$shopInfo.isFollowed" : "true",
+																			"$shopInfo.fansNum" : "+1"
+																		}
+																	},
+																	{
+																		"type" : "refreshView",
+																		"param" : 
+																		{
+																			"viewId" : "0.1.1"
+																		}
+																	},
+																	{
+																		"type" : "toast",
+																		"param" : 
+																		{
+																			"text" : "收藏成功，并接收店铺动态"
+																		}
+																	}
+																],
+																"param" : 
+																{
+																	"apiVersion" : "1.0",
+																	"apiName" : "mtop.cybertron.follow.add",
+																	"param" : 
+																	{
+																		"pubAccountId" : "$userId"
+																	},
+																	"needLogin" : true
+																}
+															},
+															{
+																"type" : "openPopWindow",
+																"condition" : 
+																{
+																	"left" : "$shopInfo.isFollowed",
+																	"right" : "true",
+																	"type" : "=="
+																},
+																"param" : 
+																{
+																	"view" : 
+																	{
+																		"subViews" : 
+																		[
+																			{
+																				"dataBinding" : 
+																				{
+																					"value" : "取消收藏"
+																				},
+																				"events" : 
+																				[
+																					{
+																						"type" : "click",
+																						"actions" : 
+																						[
+																							{
+																								"param" : 
+																								{
+																									"utParams" : 
+																									{
+																										"seller_id" : "$userId"
+																									},
+																									"utType" : "Button",
+																									"utName" : "CancelAttention"
+																								},
+																								"type" : "userTrack"
+																							},
+																							{
+																								"param" : 
+																								{
+																									"apiVersion" : "1.0",
+																									"apiName" : "mtop.cybertron.follow.remove",
+																									"param" : 
+																									{
+																										"pubAccountId" : "$userId"
+																									},
+																									"needLogin" : true
+																								},
+																								"callback" : 
+																								[
+																									{
+																										"param" : 
+																										{
+																											"$shopInfo.isRecieveMsg" : "false",
+																											"$shopInfo.isFollowed" : "false",
+																											"$shopInfo.fansNum" : "-1"
+																										},
+																										"type" : "changeData"
+																									},
+																									{
+																										"param" : 
+																										{
+																											"viewId" : "0.1.1"
+																										},
+																										"type" : "refreshView"
+																									},
+																									{
+																										"param" : 
+																										{
+																											"text" : "取消收藏成功"
+																										},
+																										"type" : "toast"
+																									}
+																								],
+																								"type" : "sendRequest"
+																							},
+																							{
+																								"param" : 
+																								{
+																									"viewId" : "popupWindow"
+																								},
+																								"type" : "dismissPopWindow"
+																							}
+																						]
+																					}
+																				],
+																				"type" : "label",
+																				"styleBinding" : 
+																				{
+																					"textColor" : "#3d4245",
+																					"height" : 88,
+																					"backgroundColor" : "#ffffff",
+																					"align" : 2,
+																					"fontSize" : 36,
+																					"gravity" : 5
+																				}
+																			},
+																			{
+																				"conditions" : 
+																				[
+																					{
+																						"left" : "$shopInfo.isRecieveMsg",
+																						"type" : "==",
+																						"right" : "true",
+																						"styleBinding" : 
+																						{
+																							"invisible" : "false"
+																						}
+																					}
+																				],
+																				"dataBinding" : 
+																				{
+																					"value" : "收藏，但不接收店铺动态"
+																				},
+																				"events" : 
+																				[
+																					{
+																						"type" : "click",
+																						"actions" : 
+																						[
+																							{
+																								"param" : 
+																								{
+																									"utParams" : 
+																									{
+																										"seller_id" : "$userId"
+																									},
+																									"utType" : "Button",
+																									"utName" : "AttentionNOAccept"
+																								},
+																								"type" : "userTrack"
+																							},
+																							{
+																								"param" : 
+																								{
+																									"apiVersion" : "1.0",
+																									"apiName" : "mtop.cybertron.follow.setDynamic",
+																									"param" : 
+																									{
+																										"status" : "false",
+																										"pubAccountId" : "$userId"
+																									},
+																									"needLogin" : true
+																								},
+																								"callback" : 
+																								[
+																									{
+																										"param" : 
+																										{
+																											"$shopInfo.isRecieveMsg" : "false"
+																										},
+																										"type" : "changeData"
+																									},
+																									{
+																										"param" : 
+																										{
+																											"viewId" : "0.1.1"
+																										},
+																										"type" : "refreshView"
+																									},
+																									{
+																										"param" : 
+																										{
+																											"text" : "屏蔽动态成功"
+																										},
+																										"type" : "toast"
+																									}
+																								],
+																								"type" : "sendRequest"
+																							},
+																							{
+																								"param" : 
+																								{
+																									"viewId" : "popupWindow"
+																								},
+																								"type" : "dismissPopWindow"
+																							}
+																						]
+																					}
+																				],
+																				"type" : "label",
+																				"styleBinding" : 
+																				{
+																					"textColor" : "#3d4245",
+																					"height" : 88,
+																					"marginTop" : 1,
+																					"backgroundColor" : "#ffffff",
+																					"invisible" : "true",
+																					"fontSize" : 36,
+																					"gravity" : 5
+																				}
+																			},
+																			{
+																				"conditions" : 
+																				[
+																					{
+																						"left" : "$shopInfo.isRecieveMsg",
+																						"type" : "==",
+																						"right" : "false",
+																						"styleBinding" : 
+																						{
+																							"invisible" : "false"
+																						}
+																					}
+																				],
+																				"dataBinding" : 
+																				{
+																					"value" : "收藏，并接收店铺动态"
+																				},
+																				"events" : 
+																				[
+																					{
+																						"type" : "click",
+																						"actions" : 
+																						[
+																							{
+																								"param" : 
+																								{
+																									"utParams" : 
+																									{
+																										"seller_id" : "$userId"
+																									},
+																									"utType" : "Button",
+																									"utName" : "AttentionAccept"
+																								},
+																								"type" : "userTrack"
+																							},
+																							{
+																								"param" : 
+																								{
+																									"apiVersion" : "1.0",
+																									"apiName" : "mtop.cybertron.follow.setDynamic",
+																									"param" : 
+																									{
+																										"status" : "true",
+																										"pubAccountId" : "$userId"
+																									},
+																									"needLogin" : true
+																								},
+																								"callback" : 
+																								[
+																									{
+																										"param" : 
+																										{
+																											"$shopInfo.isRecieveMsg" : "true"
+																										},
+																										"type" : "changeData"
+																									},
+																									{
+																										"param" : 
+																										{
+																											"viewId" : "0.1.1"
+																										},
+																										"type" : "refreshView"
+																									},
+																									{
+																										"param" : 
+																										{
+																											"text" : "接收动态成功"
+																										},
+																										"type" : "toast"
+																									}
+																								],
+																								"type" : "sendRequest"
+																							},
+																							{
+																								"param" : 
+																								{
+																									"viewId" : "popupWindow"
+																								},
+																								"type" : "dismissPopWindow"
+																							}
+																						]
+																					}
+																				],
+																				"type" : "label",
+																				"styleBinding" : 
+																				{
+																					"textColor" : "#3d4245",
+																					"height" : 88,
+																					"marginTop" : 1,
+																					"backgroundColor" : "#ffffff",
+																					"invisible" : "true",
+																					"width" : -1,
+																					"fontSize" : 36,
+																					"gravity" : 5
+																				}
+																			},
+																			{
+																				"subViews" : 
+																				[
+																					{
+																						"dataBinding" : 
+																						{
+																							"value" : "取消"
+																						},
+																						"events" : 
+																						[
+																							{
+																								"type" : "click",
+																								"actions" : 
+																								[
+																									{
+																										"param" : 
+																										{
+																											"viewId" : "popupWindow"
+																										},
+																										"type" : "dismissPopWindow"
+																									}
+																								]
+																							}
+																						],
+																						"type" : "label",
+																						"styleBinding" : 
+																						{
+																							"textColor" : "#FF5000",
+																							"fontSize" : 36,
+																							"gravity" : 5
+																						}
+																					}
+																				],
+																				"type" : "container",
+																				"styleBinding" : 
+																				{
+																					"marginBottom" : 16,
+																					"height" : 88,
+																					"borderColor" : "#DDDDDD",
+																					"marginTop" : 16,
+																					"marginLeft" : 16,
+																					"backgroundColor" : "#ffffff",
+																					"borderWidth" : 1,
+																					"width" : 608,
+																					"marginRight" : 16,
+																					"layout" : "linearLayout"
+																				}
+																			}
+																		],
+																		"type" : "container",
+																		"styleBinding" : 
+																		{
+																			"height" : -2,
+																			"backgroundColor" : "#DDDDDD",
+																			"width" : -1,
+																			"layout" : "linearLayout",
+																			"align" : 8
+																		},
+																		"viewId" : "popupWindow"
+																	}
+																}
+															}
+														]
+													}
+												],
+												"conditions" : 
+												[
+													{
+														"leftCondition" : 
+														{
+															"left" : "$loginUserId",
+															"right" : "null",
+															"type" : "!="
+														},
+														"rightCondition" : 
+														{
+															"left" : "$userId",
+															"right" : "$loginUserId",
+															"type" : "=="
+														},
+														"type" : "&&",
+														"styleBinding" : 
+														{
+															"invisible" : "true"
+														}
+													},
+													{
+														"left" : "$shopInfo.isFollowed",
+														"right" : "true",
+														"type" : "==",
+														"styleBinding" : 
+														{
+															"textColor" : "#5f646e",
+															"backgroundImage" : "http://gtms03.alicdn.com/tps/i3/T1VAzdFFNdXXa_.pc8-120-48.png",
+															"fontSize" : 22
+														},
+														"dataBinding" : 
+														{
+															"value" : "   已收藏"
+														}
+													},
+													{
+														"left" : "$shopInfo.isFollowed",
+														"right" : "false",
+														"type" : "==",
+														"styleBinding" : 
+														{
+															"textColor" : "#ffffff",
+															"backgroundImage" : "http://gtms01.alicdn.com/tps/i1/T1DD6nFH0XXXa_.pc8-120-48.png",
+															"fontSize" : 26
+														},
+														"dataBinding" : 
+														{
+															"value" : "收藏"
+														}
+													}
+												]
+											},
+											{
+												"subViews" : 
+												[
+													{
+														"subViews" : 
+														[
+															{
+																"type" : "label",
+																"styleBinding" : 
+																{
+																	"textColor" : "#3d4245",
+																	"height" : 44,
+																	"fontSize" : 36,
+																	"gravity" : 5
+																},
+																"dataBinding" : 
+																{
+																	"value" : "$shopInfo.itemCount"
+																}
+															},
+															{
+																"type" : "label",
+																"styleBinding" : 
+																{
+																	"textColor" : "#3d4245",
+																	"height" : 24,
+																	"fontSize" : 20,
+																	"gravity" : 5
+																},
+																"dataBinding" : 
+																{
+																	"value" : "全部宝贝"
+																}
+															}
+														],
+														"type" : "container",
+														"styleBinding" : 
+														{
+															"orientation" : "vertical",
+															"weight" : 1,
+															"height" : 68,
+															"width" : 0,
+															"layout" : "linearLayout"
+														},
+														"events" : 
+														[
+															{
+																"type" : "click",
+																"actions" : 
+																[
+																	{
+																		"type" : "userTrack",
+																		"param" : 
+																		{
+																			"utParams" : 
+																			{
+																				"seller_id" : "$userId"
+																			},
+																			"utType" : "Button",
+																			"utName" : "ViewAllItemsTop"
+																		}
+																	},
+																	{
+																		"type" : "openURL",
+																		"param" : 
+																		{
+																			"url" : "$shopInfo.allProductURL"
+																		}
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type" : "image",
+														"styleBinding" : 
+														{
+															"height" : 60,
+															"marginTop" : 8,
+															"width" : 2
+														},
+														"dataBinding" : 
+														{
+															"url" : "http://gtms04.alicdn.com/tps/i4/T1eZfnFU8bXXcA6p_X-2-60.png"
+														}
+													},
+													{
+														"subViews" : 
+														[
+															{
+																"type" : "label",
+																"styleBinding" : 
+																{
+																	"textColor" : "#3d4245",
+																	"height" : 44,
+																	"fontSize" : 36,
+																	"gravity" : 5
+																},
+																"dataBinding" : 
+																{
+																	"value" : "$shopInfo.newItem"
+																}
+															},
+															{
+																"type" : "label",
+																"styleBinding" : 
+																{
+																	"textColor" : "#3d4245",
+																	"height" : 24,
+																	"fontSize" : 20,
+																	"gravity" : 5
+																},
+																"dataBinding" : 
+																{
+																	"value" : "上新"
+																}
+															}
+														],
+														"type" : "container",
+														"styleBinding" : 
+														{
+															"orientation" : "vertical",
+															"weight" : 1,
+															"height" : 68,
+															"width" : 0,
+															"layout" : "linearLayout"
+														},
+														"events" : 
+														[
+															{
+																"type" : "click",
+																"actions" : 
+																[
+																	{
+																		"type" : "userTrack",
+																		"param" : 
+																		{
+																			"utParams" : 
+																			{
+																				"seller_id" : "$userId"
+																			},
+																			"utType" : "Button",
+																			"utName" : "ViewNewItems"
+																		}
+																	},
+																	{
+																		"type" : "openURL",
+																		"param" : 
+																		{
+																			"url" : "$shopInfo.newProductURL"
+																		}
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type" : "image",
+														"styleBinding" : 
+														{
+															"height" : 60,
+															"marginTop" : 8,
+															"width" : 2
+														},
+														"dataBinding" : 
+														{
+															"url" : "http://gtms04.alicdn.com/tps/i4/T1eZfnFU8bXXcA6p_X-2-60.png"
+														}
+													},
+													{
+														"subViews" : 
+														[
+															{
+																"type" : "label",
+																"styleBinding" : 
+																{
+																	"textColor" : "#3d4245",
+																	"height" : 44,
+																	"fontSize" : 36,
+																	"gravity" : 5
+																},
+																"dataBinding" : 
+																{
+																	"value" : "$shopInfo.promotionNum"
+																}
+															},
+															{
+																"type" : "label",
+																"styleBinding" : 
+																{
+																	"textColor" : "#3d4245",
+																	"height" : 24,
+																	"fontSize" : 20,
+																	"gravity" : 5
+																},
+																"dataBinding" : 
+																{
+																	"value" : "优惠"
+																}
+															}
+														],
+														"type" : "container",
+														"styleBinding" : 
+														{
+															"orientation" : "vertical",
+															"weight" : 1,
+															"height" : 68,
+															"width" : 0,
+															"layout" : "linearLayout"
+														},
+														"events" : 
+														[
+															{
+																"type" : "click",
+																"actions" : 
+																[
+																	{
+																		"type" : "userTrack",
+																		"param" : 
+																		{
+																			"utParams" : 
+																			{
+																				"seller_id" : "$userId"
+																			},
+																			"utType" : "Button",
+																			"utName" : "ViewSaleItems"
+																		}
+																	},
+																	{
+																		"type" : "openURL",
+																		"param" : 
+																		{
+																			"url" : "$shopInfo.promotionProductURL"
+																		}
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type" : "image",
+														"styleBinding" : 
+														{
+															"height" : 60,
+															"marginTop" : 8,
+															"width" : 2
+														},
+														"dataBinding" : 
+														{
+															"url" : "http://gtms04.alicdn.com/tps/i4/T1eZfnFU8bXXcA6p_X-2-60.png"
+														}
+													},
+													{
+														"subViews" : 
+														[
+															{
+																"type" : "label",
+																"styleBinding" : 
+																{
+																	"textColor" : "#3d4245",
+																	"height" : 44,
+																	"fontSize" : 36,
+																	"gravity" : 5
+																},
+																"dataBinding" : 
+																{
+																	"value" : "$shopInfo.feedCount"
+																}
+															},
+															{
+																"type" : "label",
+																"styleBinding" : 
+																{
+																	"textColor" : "#3d4245",
+																	"height" : 24,
+																	"fontSize" : 20,
+																	"gravity" : 5
+																},
+																"dataBinding" : 
+																{
+																	"value" : "微淘广播"
+																}
+															}
+														],
+														"type" : "container",
+														"styleBinding" : 
+														{
+															"orientation" : "vertical",
+															"weight" : 1,
+															"height" : 68,
+															"width" : 0,
+															"layout" : "linearLayout"
+														},
+														"events" : 
+														[
+															{
+																"type" : "click",
+																"actions" : 
+																[
+																	{
+																		"type" : "userTrack",
+																		"param" : 
+																		{
+																			"utParams" : 
+																			{
+																				"seller_id" : "$userId"
+																			},
+																			"utType" : "Button",
+																			"utName" : "Dynamics"
+																		}
+																	},
+																	{
+																		"type" : "openURL",
+																		"param" : 
+																		{
+																			"url" : "$shopInfo.feedURL"
+																		}
+																	}
+																]
+															}
+														]
+													}
+												],
+												"type" : "container",
+												"styleBinding" : 
+												{
+													"orientation" : "horizontal",
+													"paddingTop" : 52,
+													"height" : 136,
+													"marginTop" : 64,
+													"backgroundColor" : "#FFFFFF",
+													"layout" : "linearLayout"
+												}
+											},
+											{
+												"subViews" : 
+												[
+													{
+														"type" : "image",
+														"styleBinding" : 
+														{
+															"height" : 88,
+															"width" : 88,
+															"align" : 5
+														},
+														"dataBinding" : 
+														{
+															"url" : "$shopInfo.shopLogo"
+														}
+													}
+												],
+												"type" : "container",
+												"styleBinding" : 
+												{
+													"height" : 96,
+													"borderColor" : "#30000000",
+													"marginLeft" : 16,
+													"backgroundColor" : "#FFFFFF",
+													"borderWidth" : 1,
+													"width" : 96,
+													"layout" : "absoluteLayout",
+													"align" : 1
+												},
+												"events" : 
+												[
+													{
+														"type" : "click",
+														"actions" : 
+														[
+															{
+																"type" : "openURL",
+																"param" : 
+																{
+																	"param" : 
+																	{
+																		"page" : "shop/about",
+																		"shopId" : "$shopId",
+																		"userId" : "$userId"
+																	},
+																	"url" : "http://h5.m.taobao.com/weapp/view_page.htm"
+																}
+															}
+														]
+													}
+												]
+											},
+											{
+												"type" : "label",
+												"styleBinding" : 
+												{
+													"textColor" : "#9a9a9a",
+													"height" : 24,
+													"marginTop" : 36,
+													"marginLeft" : 136,
+													"width" : 300,
+													"align" : 1,
+													"lines" : 1,
+													"fontSize" : 20
+												},
+												"dataBinding" : 
+												{
+													"formatType" : "abbr",
+													"value" : "$shopInfo.fansNum",
+													"suffix" : "粉丝"
+												},
+												"conditions" : 
+												[
+													{
+														"left" : "$shopsign_image_url",
+														"right" : "null",
+														"type" : "!=",
+														"styleBinding" : 
+														{
+															"textColor" : "#FFFFFF",
+															"lineShadowColor" : "#28000000",
+															"lineShadowOffsetX" : 0,
+															"lineShadowOffsetY" : 2
+														}
+													}
+												]
+											},
+											{
+												"subViews" : 
+												[
+													{
+														"type" : "image",
+														"styleBinding" : 
+														{
+															"height" : 24,
+															"width" : 176
+														},
+														"dataBinding" : 
+														{
+															"webp" : false,
+															"url" : "$shopInfo.rankLevelPic"
+														},
+														"conditions" : 
+														[
+															{
+																"left" : "$shopInfo.rankNum",
+																"right" : "null",
+																"type" : "==",
+																"styleBinding" : 
+																{
+																	"width" : 176
+																}
+															},
+															{
+																"left" : "$shopInfo.rankNum",
+																"right" : "999",
+																"type" : "==",
+																"styleBinding" : 
+																{
+																	"width" : 176
+																}
+															},
+															{
+																"left" : "$shopInfo.rankNum",
+																"right" : "666",
+																"type" : "==",
+																"styleBinding" : 
+																{
+																	"width" : 88
+																}
+															},
+															{
+																"left" : "$shopInfo.rankNum",
+																"right" : "1",
+																"type" : "==",
+																"styleBinding" : 
+																{
+																	"width" : 24
+																}
+															},
+															{
+																"left" : "$shopInfo.rankNum",
+																"right" : "2",
+																"type" : "==",
+																"styleBinding" : 
+																{
+																	"width" : 53
+																}
+															},
+															{
+																"left" : "$shopInfo.rankNum",
+																"right" : "3",
+																"type" : "==",
+																"styleBinding" : 
+																{
+																	"width" : 79
+																}
+															},
+															{
+																"left" : "$shopInfo.rankNum",
+																"right" : "4",
+																"type" : "==",
+																"styleBinding" : 
+																{
+																	"width" : 107
+																}
+															},
+															{
+																"left" : "$shopInfo.rankNum",
+																"right" : "5",
+																"type" : "==",
+																"styleBinding" : 
+																{
+																	"width" : 132
+																}
+															}
+														]
+													},
+													{
+														"type" : "image",
+														"styleBinding" : 
+														{
+															"height" : 0,
+															"invisible" : "true",
+															"width" : 0
+														},
+														"dataBinding" : 
+														{
+															"webp" : false,
+															"url" : "http://gtms04.alicdn.com/tps/i4/TB1Ei4IFVXXXXb0XFXXCBGNFFXX-24-24.png"
+														},
+														"conditions" : 
+														[
+															{
+																"left" : "$isGoldenSeller",
+																"right" : "true",
+																"type" : "==",
+																"styleBinding" : 
+																{
+																	"height" : 24,
+																	"marginLeft" : 16,
+																	"invisible" : "false",
+																	"width" : 24
+																}
+															}
+														]
+													}
+												],
+												"type" : "container",
+												"styleBinding" : 
+												{
+													"orientation" : "horizontal",
+													"height" : 24,
+													"marginTop" : 70,
+													"marginLeft" : 136,
+													"layout" : "linearLayout",
+													"align" : 1
+												}
+											}
+										],
+										"type" : "container",
+										"styleBinding" : 
+										{
+											"height" : 200,
+											"layout" : "absoluteLayout"
+										},
+										"conditions" : 
+										[
+											{
+												"left" : "$shopsign_image_url",
+												"right" : "null",
+												"type" : "!=",
+												"styleBinding" : 
+												{
+													"marginTop" : 136
+												}
+											},
+											{
+												"left" : "$shopsign_image_url",
+												"right" : "null",
+												"type" : "==",
+												"styleBinding" : 
+												{
+													"marginTop" : 24,
+													"backgroundColor" : "#FFFFFF"
+												}
+											}
+										]
+									}
+								],
+								"viewId" : "0.1.1",
+								"type" : "container",
+								"styleBinding" : 
+								{
+									"marginBottom" : 24,
+									"paddingTop" : 1,
+									"height" : 224,
+									"backgroundColor" : "#dddddd",
+									"layout" : "absoluteLayout",
+									"paddingBottom" : 1
+								},
+								"dataBinding" : 
+								{
+									"showErrorView" : false,
+									"apiName11" : "mtop.taobao.geb.shopinfo.queryemptyshopinfo",
+									"onSuccess" : 
+									[
+										{
+											"param" : 
+											{
+												"e" : "$e",
+												"isMall" : "$shopInfo.isTmall",
+												"shopId" : "$shopInfo.shopId",
+												"userId" : "$userId",
+												"cna" : "$cna",
+												"referer" : "$referer",
+												"type" : "$type",
+												"unid" : "$unid"
+											},
+											"condition" : 
+											{
+												"left" : "$e",
+												"type" : "!=",
+												"right" : "null"
+											},
+											"type" : "p4p"
+										}
+									],
+									"needLogin" : false
+								},
+								"conditions" : 
+								[
+									{
+										"left" : "$shopsign_image_url",
+										"right" : "null",
+										"type" : "!=",
+										"styleBinding" : 
+										{
+											"height" : 338,
+											"relayoutPage" : true
+										}
+									}
+								]
+							},
+							{
+								"type" : "image",
+								"styleBinding" : 
+								{
+									"height" : 0,
+									"borderColor" : "#dddddd",
+									"marginLeft" : 16,
+									"invisible" : "true",
+									"borderWidth" : 1,
+									"marginRight" : 16
+								},
+								"dataBinding" : 
+								{
+									"url" : "$imgURL"
+								},
+								"events" : 
+								[
+									{
+										"type" : "click",
+										"actions" : 
+										[
+											{
+												"type" : "openURL",
+												"param" : 
+												{
+													"url" : "$openURL"
+												}
+											}
+										]
+									}
+								],
+								"conditions" : 
+								[
+									{
+										"left" : "$openBanner",
+										"right" : "true",
+										"type" : "==",
+										"styleBinding" : 
+										{
+											"marginBottom" : 24,
+											"height" : 200,
+											"invisible" : "false",
+											"relayoutPage" : "true"
+										}
+									}
+								]
+							},
+							{
+								"subViews" : 
+								[
+									{
+										"subViews" : 
+										[
+											{
+												"type" : "label",
+												"styleBinding" : 
+												{
+													"textColor" : "#3d4245",
+													"height" : 80,
+													"width" : 420,
+													"fontSize" : 36,
+													"gravity" : 4
+												},
+												"dataBinding" : 
+												{
+													"value" : "排行榜"
+												}
+											},
+											{
+												"headerView" : 
+												{
+													"type" : "simpleTabViewHeader",
+													"styleBinding" : 
+													{
+														"selectedFontSize" : 28,
+														"textColor" : "#666666",
+														"selectedBackgroundImage" : "http://gtms04.alicdn.com/tps/i4/T1meWtFTtbXXXahTYn-196-80.png",
+														"height" : 80,
+														"tabCellHeight" : 80,
+														"backgroundImage" : "http://gtms02.alicdn.com/tps/i2/T1LMq7FUNbXXXahTYn-196-80.png",
+														"fontSize" : 28,
+														"selectedTextColor" : "#ff5000",
+														"isShowTab" : "true"
+													},
+													"dataBinding" : 
+													{
+														"array" : 
+														[
+															{
+																"title" : "钻石买家最爱",
+																"userTrack" : 
+																{
+																	"utParams" : 
+																	{
+																		"seller_id" : "$userId"
+																	},
+																	"utType" : "Button",
+																	"utName" : "TopMostLoved"
+																}
+															},
+															{
+																"title" : "收藏排行",
+																"userTrack" : 
+																{
+																	"utParams" : 
+																	{
+																		"seller_id" : "$userId"
+																	},
+																	"utType" : "Button",
+																	"utName" : "TopFavorite"
+																}
+															},
+															{
+																"title" : "销量排行",
+																"userTrack" : 
+																{
+																	"utParams" : 
+																	{
+																		"seller_id" : "$userId"
+																	},
+																	"utType" : "Button",
+																	"utName" : "TopSale"
+																}
+															}
+														]
+													}
+												},
+												"subViews" : 
+												[
+													{
+														"subViews" : 
+														[
+															{
+																"type" : "label",
+																"styleBinding" : 
+																{
+																	"height" : -2,
+																	"lines" : 1,
+																	"fontSize" : 1
+																},
+																"dataBinding" : 
+																{
+																	"value" : " "
+																}
+															},
+															{
+																"subViews" : 
+																[
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 368,
+																			"width" : 400
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "${itemListMap}.favoredByDiamonds.[0].imgUrl"
+																		}
+																	},
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 45,
+																			"marginLeft" : 8,
+																			"width" : 40
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "http://gtms01.alicdn.com/tps/i1/T17spQFQJaXXchqmYe-40-45.png"
+																		}
+																	},
+																	{
+																		"subViews" : 
+																		[
+																			{
+																				"type" : "label",
+																				"styleBinding" : 
+																				{
+																					"textColor" : "#ffffff",
+																					"width" : 180,
+																					"fontSize" : 24,
+																					"gravity" : 4
+																				},
+																				"dataBinding" : 
+																				{
+																					"prefix" : "已售 ",
+																					"value" : "${itemListMap}.favoredByDiamonds.[0].totalSold"
+																				}
+																			},
+																			{
+																				"type" : "label",
+																				"styleBinding" : 
+																				{
+																					"fontWeight" : 500,
+																					"textColor" : "#ffffff",
+																					"width" : 180,
+																					"fontSize" : 24,
+																					"gravity" : 6
+																				},
+																				"dataBinding" : 
+																				{
+																					"prefix" : "￥",
+																					"value" : "${itemListMap}.favoredByDiamonds.[0].price"
+																				}
+																			}
+																		],
+																		"type" : "container",
+																		"styleBinding" : 
+																		{
+																			"orientation" : "horizontal",
+																			"height" : 48,
+																			"marginTop" : 320,
+																			"backgroundColor" : "#66000000",
+																			"layout" : "linearLayout",
+																			"paddingLeft" : 16,
+																			"paddingRight" : 16
+																		}
+																	}
+																],
+																"type" : "container",
+																"styleBinding" : 
+																{
+																	"height" : 368,
+																	"width" : 400,
+																	"layout" : "absoluteLayout"
+																},
+																"events" : 
+																[
+																	{
+																		"type" : "click",
+																		"actions" : 
+																		[
+																			{
+																				"type" : "userTrack",
+																				"param" : 
+																				{
+																					"utParams" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"itemId" : "${itemListMap}.favoredByDiamonds.[0].id",
+																						"wp_p" : "7"
+																					},
+																					"utType" : "Button",
+																					"utName" : "Item"
+																				}
+																			},
+																			{
+																				"type" : "openURL",
+																				"param" : 
+																				{
+																					"param" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"id" : "${itemListMap}.favoredByDiamonds.[0].id",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"from" : "inshop",
+																						"wp_p" : "7"
+																					},
+																					"url" : "http://h5.m.taobao.com/awp/core/detail.htm"
+																				}
+																			}
+																		]
+																	}
+																]
+															},
+															{
+																"subViews" : 
+																[
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 176,
+																			"width" : 176
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "${itemListMap}.favoredByDiamonds.[1].imgUrl"
+																		}
+																	},
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 45,
+																			"marginLeft" : 8,
+																			"width" : 40
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "http://gtms02.alicdn.com/tps/i2/T1CeFKFGtcXXchqmYe-40-45.png"
+																		}
+																	},
+																	{
+																		"type" : "label",
+																		"styleBinding" : 
+																		{
+																			"textColor" : "#ffffff",
+																			"height" : 48,
+																			"marginTop" : 128,
+																			"backgroundColor" : "#66000000",
+																			"fontSize" : 24,
+																			"paddingLeft" : 16,
+																			"gravity" : 4
+																		},
+																		"dataBinding" : 
+																		{
+																			"prefix" : "  已售 ",
+																			"value" : "${itemListMap}.favoredByDiamonds.[1].totalSold"
+																		}
+																	}
+																],
+																"type" : "container",
+																"styleBinding" : 
+																{
+																	"height" : 176,
+																	"marginLeft" : 416,
+																	"width" : 176,
+																	"layout" : "absoluteLayout"
+																},
+																"events" : 
+																[
+																	{
+																		"type" : "click",
+																		"actions" : 
+																		[
+																			{
+																				"type" : "userTrack",
+																				"param" : 
+																				{
+																					"utParams" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"itemId" : "${itemListMap}.favoredByDiamonds.[1].id",
+																						"wp_p" : "8"
+																					},
+																					"utType" : "Button",
+																					"utName" : "Item"
+																				}
+																			},
+																			{
+																				"type" : "openURL",
+																				"param" : 
+																				{
+																					"param" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"id" : "${itemListMap}.favoredByDiamonds.[1].id",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"from" : "inshop",
+																						"wp_p" : "8"
+																					},
+																					"url" : "http://h5.m.taobao.com/awp/core/detail.htm"
+																				}
+																			}
+																		]
+																	}
+																]
+															},
+															{
+																"subViews" : 
+																[
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 176,
+																			"width" : 176
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "${itemListMap}.favoredByDiamonds.[2].imgUrl"
+																		}
+																	},
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 45,
+																			"marginLeft" : 8,
+																			"width" : 40
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "http://gtms03.alicdn.com/tps/i3/T1wsdTFU8XXXchqmYe-40-45.png"
+																		}
+																	},
+																	{
+																		"type" : "label",
+																		"styleBinding" : 
+																		{
+																			"textColor" : "#ffffff",
+																			"height" : 48,
+																			"marginTop" : 128,
+																			"backgroundColor" : "#66000000",
+																			"fontSize" : 24,
+																			"paddingLeft" : 16,
+																			"gravity" : 4
+																		},
+																		"dataBinding" : 
+																		{
+																			"prefix" : "  已售 ",
+																			"value" : "${itemListMap}.favoredByDiamonds.[2].totalSold"
+																		}
+																	}
+																],
+																"type" : "container",
+																"styleBinding" : 
+																{
+																	"height" : 176,
+																	"marginTop" : 192,
+																	"marginLeft" : 416,
+																	"width" : 176,
+																	"layout" : "absoluteLayout"
+																},
+																"events" : 
+																[
+																	{
+																		"type" : "click",
+																		"actions" : 
+																		[
+																			{
+																				"type" : "userTrack",
+																				"param" : 
+																				{
+																					"utParams" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"itemId" : "${itemListMap}.favoredByDiamonds.[2].id",
+																						"wp_p" : "9"
+																					},
+																					"utType" : "Button",
+																					"utName" : "Item"
+																				}
+																			},
+																			{
+																				"type" : "openURL",
+																				"param" : 
+																				{
+																					"param" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"id" : "${itemListMap}.favoredByDiamonds.[2].id",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"from" : "inshop",
+																						"wp_p" : "9"
+																					},
+																					"url" : "http://h5.m.taobao.com/awp/core/detail.htm"
+																				}
+																			}
+																		]
+																	}
+																]
+															}
+														],
+														"type" : "container",
+														"styleBinding" : 
+														{
+															"paddingTop" : 24,
+															"height" : 392,
+															"width" : 592,
+															"layout" : "absoluteLayout"
+														}
+													},
+													{
+														"subViews" : 
+														[
+															{
+																"subViews" : 
+																[
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 368,
+																			"width" : 400
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "${itemListMap}.totalCollect.[0].imgUrl"
+																		}
+																	},
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 45,
+																			"marginLeft" : 8,
+																			"width" : 40
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "http://gtms01.alicdn.com/tps/i1/T17spQFQJaXXchqmYe-40-45.png"
+																		}
+																	},
+																	{
+																		"subViews" : 
+																		[
+																			{
+																				"type" : "label",
+																				"styleBinding" : 
+																				{
+																					"textColor" : "#ffffff",
+																					"width" : 180,
+																					"fontSize" : 24,
+																					"gravity" : 4
+																				},
+																				"dataBinding" : 
+																				{
+																					"prefix" : "已收藏 ",
+																					"value" : "${itemListMap}.totalCollect.[0].collectCount"
+																				}
+																			},
+																			{
+																				"type" : "label",
+																				"styleBinding" : 
+																				{
+																					"fontWeight" : 500,
+																					"textColor" : "#ffffff",
+																					"width" : 180,
+																					"fontSize" : 24,
+																					"gravity" : 6
+																				},
+																				"dataBinding" : 
+																				{
+																					"prefix" : "￥",
+																					"value" : "${itemListMap}.totalCollect.[0].price"
+																				}
+																			}
+																		],
+																		"type" : "container",
+																		"styleBinding" : 
+																		{
+																			"orientation" : "horizontal",
+																			"height" : 48,
+																			"marginTop" : 320,
+																			"backgroundColor" : "#66000000",
+																			"layout" : "linearLayout",
+																			"paddingLeft" : 16,
+																			"paddingRight" : 16
+																		}
+																	}
+																],
+																"type" : "container",
+																"styleBinding" : 
+																{
+																	"height" : 368,
+																	"width" : 400,
+																	"layout" : "absoluteLayout"
+																},
+																"events" : 
+																[
+																	{
+																		"type" : "click",
+																		"actions" : 
+																		[
+																			{
+																				"type" : "userTrack",
+																				"param" : 
+																				{
+																					"utParams" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"itemId" : "${itemListMap}.totalCollect.[0].id",
+																						"wp_p" : "4"
+																					},
+																					"utType" : "Button",
+																					"utName" : "Item"
+																				}
+																			},
+																			{
+																				"type" : "openURL",
+																				"param" : 
+																				{
+																					"param" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"id" : "${itemListMap}.totalCollect.[0].id",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"from" : "inshop",
+																						"wp_p" : "4"
+																					},
+																					"url" : "http://h5.m.taobao.com/awp/core/detail.htm"
+																				}
+																			}
+																		]
+																	}
+																]
+															},
+															{
+																"subViews" : 
+																[
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 176,
+																			"width" : 176
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "${itemListMap}.totalCollect.[1].imgUrl"
+																		}
+																	},
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 45,
+																			"marginLeft" : 8,
+																			"width" : 40
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "http://gtms02.alicdn.com/tps/i2/T1CeFKFGtcXXchqmYe-40-45.png"
+																		}
+																	},
+																	{
+																		"type" : "label",
+																		"styleBinding" : 
+																		{
+																			"textColor" : "#ffffff",
+																			"height" : 48,
+																			"marginTop" : 128,
+																			"backgroundColor" : "#66000000",
+																			"fontSize" : 24,
+																			"paddingLeft" : 16,
+																			"gravity" : 4
+																		},
+																		"dataBinding" : 
+																		{
+																			"prefix" : "  已收藏 ",
+																			"value" : "${itemListMap}.totalCollect.[1].collectCount"
+																		}
+																	}
+																],
+																"type" : "container",
+																"styleBinding" : 
+																{
+																	"height" : 176,
+																	"marginLeft" : 416,
+																	"width" : 176,
+																	"layout" : "absoluteLayout"
+																},
+																"events" : 
+																[
+																	{
+																		"type" : "click",
+																		"actions" : 
+																		[
+																			{
+																				"type" : "userTrack",
+																				"param" : 
+																				{
+																					"utParams" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"itemId" : "${itemListMap}.totalCollect.[1].id",
+																						"wp_p" : "5"
+																					},
+																					"utType" : "Button",
+																					"utName" : "Item"
+																				}
+																			},
+																			{
+																				"type" : "openURL",
+																				"param" : 
+																				{
+																					"param" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"id" : "${itemListMap}.totalCollect.[1].id",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"from" : "inshop",
+																						"wp_p" : "5"
+																					},
+																					"url" : "http://h5.m.taobao.com/awp/core/detail.htm"
+																				}
+																			}
+																		]
+																	}
+																]
+															},
+															{
+																"subViews" : 
+																[
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 176,
+																			"width" : 176
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "${itemListMap}.totalCollect.[2].imgUrl"
+																		}
+																	},
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 45,
+																			"marginLeft" : 8,
+																			"width" : 40
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "http://gtms03.alicdn.com/tps/i3/T1wsdTFU8XXXchqmYe-40-45.png"
+																		}
+																	},
+																	{
+																		"type" : "label",
+																		"styleBinding" : 
+																		{
+																			"textColor" : "#ffffff",
+																			"height" : 48,
+																			"marginTop" : 128,
+																			"backgroundColor" : "#66000000",
+																			"fontSize" : 24,
+																			"paddingLeft" : 16,
+																			"gravity" : 4
+																		},
+																		"dataBinding" : 
+																		{
+																			"prefix" : "  已收藏 ",
+																			"value" : "${itemListMap}.totalCollect.[2].collectCount"
+																		}
+																	}
+																],
+																"type" : "container",
+																"styleBinding" : 
+																{
+																	"height" : 176,
+																	"marginTop" : 192,
+																	"marginLeft" : 416,
+																	"width" : 176,
+																	"layout" : "absoluteLayout"
+																},
+																"events" : 
+																[
+																	{
+																		"type" : "click",
+																		"actions" : 
+																		[
+																			{
+																				"type" : "userTrack",
+																				"param" : 
+																				{
+																					"utParams" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"itemId" : "${itemListMap}.totalCollect.[2].id",
+																						"wp_p" : "6"
+																					},
+																					"utType" : "Button",
+																					"utName" : "Item"
+																				}
+																			},
+																			{
+																				"type" : "openURL",
+																				"param" : 
+																				{
+																					"param" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"id" : "${itemListMap}.totalCollect.[2].id",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"from" : "inshop",
+																						"wp_p" : "6"
+																					},
+																					"url" : "http://h5.m.taobao.com/awp/core/detail.htm"
+																				}
+																			}
+																		]
+																	}
+																]
+															}
+														],
+														"type" : "container",
+														"styleBinding" : 
+														{
+															"paddingTop" : 24,
+															"height" : 392,
+															"width" : 592,
+															"layout" : "absoluteLayout"
+														}
+													},
+													{
+														"subViews" : 
+														[
+															{
+																"subViews" : 
+																[
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 368,
+																			"width" : 400
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "${itemListMap}.totalSold.[0].imgUrl"
+																		}
+																	},
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 45,
+																			"marginLeft" : 8,
+																			"width" : 40
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "http://gtms01.alicdn.com/tps/i1/T17spQFQJaXXchqmYe-40-45.png"
+																		}
+																	},
+																	{
+																		"subViews" : 
+																		[
+																			{
+																				"type" : "label",
+																				"styleBinding" : 
+																				{
+																					"textColor" : "#ffffff",
+																					"width" : 180,
+																					"fontSize" : 24,
+																					"gravity" : 4
+																				},
+																				"dataBinding" : 
+																				{
+																					"prefix" : "已售 ",
+																					"value" : "${itemListMap}.totalSold.[0].totalSold"
+																				}
+																			},
+																			{
+																				"type" : "label",
+																				"styleBinding" : 
+																				{
+																					"fontWeight" : 500,
+																					"textColor" : "#ffffff",
+																					"width" : 180,
+																					"fontSize" : 24,
+																					"gravity" : 6
+																				},
+																				"dataBinding" : 
+																				{
+																					"prefix" : "￥",
+																					"value" : "${itemListMap}.totalSold.[0].price"
+																				}
+																			}
+																		],
+																		"type" : "container",
+																		"styleBinding" : 
+																		{
+																			"orientation" : "horizontal",
+																			"height" : 48,
+																			"marginTop" : 320,
+																			"backgroundColor" : "#66000000",
+																			"layout" : "linearLayout",
+																			"paddingLeft" : 16,
+																			"paddingRight" : 16
+																		}
+																	}
+																],
+																"type" : "container",
+																"styleBinding" : 
+																{
+																	"height" : 368,
+																	"width" : 400,
+																	"layout" : "absoluteLayout"
+																},
+																"events" : 
+																[
+																	{
+																		"type" : "click",
+																		"actions" : 
+																		[
+																			{
+																				"type" : "userTrack",
+																				"param" : 
+																				{
+																					"utParams" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"itemId" : "${itemListMap}.totalSold.[0].id",
+																						"wp_p" : "1"
+																					},
+																					"utType" : "Button",
+																					"utName" : "Item"
+																				}
+																			},
+																			{
+																				"type" : "openURL",
+																				"param" : 
+																				{
+																					"param" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"id" : "${itemListMap}.totalSold.[0].id",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"from" : "inshop",
+																						"wp_p" : "1"
+																					},
+																					"url" : "http://h5.m.taobao.com/awp/core/detail.htm"
+																				}
+																			}
+																		]
+																	}
+																]
+															},
+															{
+																"subViews" : 
+																[
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 176,
+																			"width" : 176
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "${itemListMap}.totalSold.[1].imgUrl"
+																		}
+																	},
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 45,
+																			"marginLeft" : 8,
+																			"width" : 40
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "http://gtms02.alicdn.com/tps/i2/T1CeFKFGtcXXchqmYe-40-45.png"
+																		}
+																	},
+																	{
+																		"type" : "label",
+																		"styleBinding" : 
+																		{
+																			"textColor" : "#ffffff",
+																			"height" : 48,
+																			"marginTop" : 128,
+																			"backgroundColor" : "#66000000",
+																			"fontSize" : 24,
+																			"paddingLeft" : 16,
+																			"gravity" : 4
+																		},
+																		"dataBinding" : 
+																		{
+																			"prefix" : "  已售 ",
+																			"value" : "${itemListMap}.totalSold.[1].totalSold"
+																		}
+																	}
+																],
+																"type" : "container",
+																"styleBinding" : 
+																{
+																	"height" : 176,
+																	"marginLeft" : 416,
+																	"width" : 176,
+																	"layout" : "absoluteLayout"
+																},
+																"events" : 
+																[
+																	{
+																		"type" : "click",
+																		"actions" : 
+																		[
+																			{
+																				"type" : "userTrack",
+																				"param" : 
+																				{
+																					"utParams" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"itemId" : "${itemListMap}.totalSold.[1].id",
+																						"wp_p" : "2"
+																					},
+																					"utType" : "Button",
+																					"utName" : "Item"
+																				}
+																			},
+																			{
+																				"type" : "openURL",
+																				"param" : 
+																				{
+																					"param" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"id" : "${itemListMap}.totalSold.[1].id",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"from" : "inshop",
+																						"wp_p" : "2"
+																					},
+																					"url" : "http://h5.m.taobao.com/awp/core/detail.htm"
+																				}
+																			}
+																		]
+																	}
+																]
+															},
+															{
+																"subViews" : 
+																[
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 176,
+																			"width" : 176
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "${itemListMap}.totalSold.[2].imgUrl"
+																		}
+																	},
+																	{
+																		"type" : "image",
+																		"styleBinding" : 
+																		{
+																			"height" : 45,
+																			"marginLeft" : 8,
+																			"width" : 40
+																		},
+																		"dataBinding" : 
+																		{
+																			"url" : "http://gtms03.alicdn.com/tps/i3/T1wsdTFU8XXXchqmYe-40-45.png"
+																		}
+																	},
+																	{
+																		"type" : "label",
+																		"styleBinding" : 
+																		{
+																			"textColor" : "#ffffff",
+																			"height" : 48,
+																			"marginTop" : 128,
+																			"backgroundColor" : "#66000000",
+																			"fontSize" : 24,
+																			"paddingLeft" : 16,
+																			"gravity" : 4
+																		},
+																		"dataBinding" : 
+																		{
+																			"prefix" : "  已售 ",
+																			"value" : "${itemListMap}.totalSold.[2].totalSold"
+																		}
+																	}
+																],
+																"type" : "container",
+																"styleBinding" : 
+																{
+																	"height" : 176,
+																	"marginTop" : 192,
+																	"marginLeft" : 416,
+																	"width" : 176,
+																	"layout" : "absoluteLayout"
+																},
+																"events" : 
+																[
+																	{
+																		"type" : "click",
+																		"actions" : 
+																		[
+																			{
+																				"type" : "userTrack",
+																				"param" : 
+																				{
+																					"utParams" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"itemId" : "${itemListMap}.totalSold.[2].id",
+																						"wp_p" : "3"
+																					},
+																					"utType" : "Button",
+																					"utName" : "Item"
+																				}
+																			},
+																			{
+																				"type" : "openURL",
+																				"param" : 
+																				{
+																					"param" : 
+																					{
+																						"wp_m" : "item_rank_list_-2",
+																						"id" : "${itemListMap}.totalSold.[2].id",
+																						"wp_pk" : "$wp_pk",
+																						"wp_app" : "weapp",
+																						"from" : "inshop",
+																						"wp_p" : "3"
+																					},
+																					"url" : "http://h5.m.taobao.com/awp/core/detail.htm"
+																				}
+																			}
+																		]
+																	}
+																]
+															}
+														],
+														"type" : "container",
+														"styleBinding" : 
+														{
+															"paddingTop" : 24,
+															"height" : 392,
+															"width" : 592,
+															"layout" : "absoluteLayout"
+														}
+													}
+												],
+												"type" : "simpleTabView",
+												"styleBinding" : 
+												{
+													"marginBottom" : 24,
+													"height" : 472
+												}
+											}
+										],
+										"type" : "container",
+										"styleBinding" : 
+										{
+											"bmHeight" : 80,
+											"height" : 0,
+											"borderColor" : "#dddddd",
+											"backgroundColor" : "#ffffff",
+											"borderWidth" : 1,
+											"layout" : "linearLayout",
+											"paddingLeft" : 24,
+											"paddingRight" : 24
+										},
+										"dataBinding" : 
+										{
+											"apiVersion" : "1.0",
+											"showErrorView" : false,
+											"apiName" : "mtop.taobao.geb.rankinglist.rankingListInfo",
+											"apiAlias" : "itemListMap",
+											"param" : 
+											{
+												"sellerId" : "$userId"
+											},
+											"needLogin" : false
+										},
+										"conditions" : 
+										[
+											{
+												"left" : "${itemListMap}.totalSold._size_",
+												"right" : "3",
+												"type" : ">=",
+												"styleBinding" : 
+												{
+													"marginBottom" : 24,
+													"height" : 576,
+													"relayoutPage" : true
+												}
+											}
+										]
+									},
+									{
+										"subViews" : 
+										[
+											{
+												"subViews" : 
+												[
+													{
+														"type" : "label",
+														"styleBinding" : 
+														{
+															"textColor" : "#3d4245",
+															"height" : 36,
+															"marginLeft" : 8,
+															"width" : -2,
+															"align" : 4,
+															"lines" : 1,
+															"fontSize" : 32
+														},
+														"dataBinding" : 
+														{
+															"value" : "热销宝贝"
+														}
+													}
+												],
+												"type" : "container",
+												"styleBinding" : 
+												{
+													"height" : 80,
+													"width" : -1,
+													"layout" : "absoluteLayout"
+												}
+											},
+											{
+												"cell" : 
+												{
+													"subViews" : 
+													[
+														{
+															"type" : "image",
+															"styleBinding" : 
+															{
+																"marginBottom" : 8,
+																"height" : 272
+															},
+															"dataBinding" : 
+															{
+																"url" : "${mtop.taobao.geb.enhenced.itemList.get}.list.[?].imgUrl"
+															}
+														},
+														{
+															"type" : "label",
+															"styleBinding" : 
+															{
+																"marginBottom" : 16,
+																"textColor" : "#666666",
+																"height" : 68,
+																"lines" : 2,
+																"fontSize" : 28
+															},
+															"dataBinding" : 
+															{
+																"value" : "${mtop.taobao.geb.enhenced.itemList.get}.list.[?].title"
+															}
+														},
+														{
+															"type" : "label",
+															"styleBinding" : 
+															{
+																"marginBottom" : 40,
+																"textColor" : "#ff5500",
+																"height" : 34,
+																"lines" : 1,
+																"fontSize" : 32
+															},
+															"dataBinding" : 
+															{
+																"prefix" : "￥",
+																"value" : "${mtop.taobao.geb.enhenced.itemList.get}.list.[?].price"
+															}
+														}
+													],
+													"type" : "container",
+													"styleBinding" : 
+													{
+														"height" : 438,
+														"layout" : "linearLayout",
+														"paddingLeft" : 16,
+														"paddingRight" : 16
+													},
+													"events" : 
+													[
+														{
+															"type" : "click",
+															"actions" : 
+															[
+																{
+																	"type" : "userTrack",
+																	"param" : 
+																	{
+																		"utParams" : 
+																		{
+																			"wp_m" : "seller_items_-1",
+																			"wp_pk" : "$wp_pk",
+																			"wp_app" : "weapp",
+																			"itemId" : "${mtop.taobao.geb.enhenced.itemList.get}.list.[?].nid"
+																		},
+																		"utType" : "Button",
+																		"utName" : "Item"
+																	}
+																},
+																{
+																	"type" : "openURL",
+																	"param" : 
+																	{
+																		"param" : 
+																		{
+																			"wp_m" : "seller_items_-1",
+																			"wp_pk" : "$wp_pk",
+																			"wp_app" : "weapp",
+																			"from" : "inshop"
+																		},
+																		"url" : "${mtop.taobao.geb.enhenced.itemList.get}.list.[?].h5Url"
+																	}
+																}
+															]
+														}
+													]
+												},
+												"needDownRefresh" : false,
+												"needNextPage" : false,
+												"unScroll" : true,
+												"type" : "grid",
+												"styleBinding" : 
+												{
+													"height" : -2,
+													"backgroundColor" : "#FFFFFF",
+													"gridColumn" : 2
+												},
+												"dataBinding" : 
+												{
+													"showErrorView" : false,
+													"apiName" : "mtop.taobao.geb.enhenced.itemList.get",
+													"param" : 
+													{
+														"sort" : "hotsell",
+														"pageId" : "$pageId",
+														"ownerId" : "$userId",
+														"pageSize" : "6",
+														"isAuto" : "true"
+													},
+													"needLogin" : false
+												}
+											}
+										],
+										"type" : "container",
+										"styleBinding" : 
+										{
+											"marginBottom" : 24,
+											"height" : -2,
+											"borderColor" : "#dddddd",
+											"backgroundColor" : "#FFFFFF",
+											"borderWidth" : 1,
+											"layout" : "linearLayout",
+											"invisibleSpace" : "true",
+											"paddingLeft" : 16,
+											"paddingRight" : 16
+										}
+									},
+									{
+										"subViews" : 
+										[
+											{
+												"subViews" : 
+												[
+													{
+														"type" : "label",
+														"styleBinding" : 
+														{
+															"textColor" : "#3d4245",
+															"height" : 36,
+															"marginLeft" : 8,
+															"width" : -2,
+															"align" : 4,
+															"lines" : 1,
+															"invisibleSpace" : "true",
+															"fontSize" : 32
+														},
+														"dataBinding" : 
+														{
+															"value" : "猜你喜欢"
+														}
+													}
+												],
+												"type" : "container",
+												"styleBinding" : 
+												{
+													"height" : 80,
+													"width" : -1,
+													"layout" : "absoluteLayout"
+												}
+											},
+											{
+												"cell" : 
+												{
+													"subViews" : 
+													[
+														{
+															"type" : "image",
+															"styleBinding" : 
+															{
+																"marginBottom" : 8,
+																"height" : 272
+															},
+															"dataBinding" : 
+															{
+																"url" : "${recommendlist}.list.[?].imgUrl"
+															}
+														},
+														{
+															"type" : "label",
+															"styleBinding" : 
+															{
+																"marginBottom" : 16,
+																"textColor" : "#666666",
+																"height" : 68,
+																"lines" : 2,
+																"fontSize" : 28
+															},
+															"dataBinding" : 
+															{
+																"value" : "${recommendlist}.list.[?].title"
+															}
+														},
+														{
+															"type" : "label",
+															"styleBinding" : 
+															{
+																"marginBottom" : 40,
+																"textColor" : "#ff5500",
+																"height" : 34,
+																"lines" : 1,
+																"fontSize" : 32
+															},
+															"dataBinding" : 
+															{
+																"prefix" : "￥",
+																"value" : "${recommendlist}.list.[?].price"
+															}
+														}
+													],
+													"type" : "container",
+													"styleBinding" : 
+													{
+														"height" : 438,
+														"layout" : "linearLayout",
+														"paddingLeft" : 16,
+														"paddingRight" : 16
+													},
+													"events" : 
+													[
+														{
+															"type" : "click",
+															"actions" : 
+															[
+																{
+																	"type" : "userTrack",
+																	"param" : 
+																	{
+																		"utParams" : 
+																		{
+																			"wp_m" : "seller_recommend_items_-1",
+																			"wp_pk" : "$wp_pk",
+																			"wp_app" : "weapp",
+																			"itemId" : "${recommendlist}.list.[?].nid",
+																			"scm" : "2003.8.1.0"
+																		},
+																		"utType" : "Button",
+																		"utName" : "Item"
+																	}
+																},
+																{
+																	"type" : "openURL",
+																	"param" : 
+																	{
+																		"param" : 
+																		{
+																			"wp_m" : "seller_recommend_items_-1",
+																			"wp_pk" : "$wp_pk",
+																			"wp_app" : "weapp",
+																			"from" : "inshop",
+																			"scm" : "2003.8.1.0"
+																		},
+																		"url" : "${recommendlist}.list.[?].h5Url"
+																	}
+																}
+															]
+														}
+													]
+												},
+												"needDownRefresh" : false,
+												"needNextPage" : false,
+												"unScroll" : true,
+												"type" : "grid",
+												"styleBinding" : 
+												{
+													"height" : -2,
+													"backgroundColor" : "#FFFFFF",
+													"gridColumn" : 2
+												},
+												"dataBinding" : 
+												{
+													"showErrorView" : false,
+													"apiName" : "mtop.gebsupport.recommend.getRecommendList",
+													"apiAlias" : "recommendlist",
+													"param" : 
+													{
+														"app" : "in_store",
+														"s" : "0",
+														"userid" : "$userId",
+														"n" : "4",
+														"action" : "recommend"
+													},
+													"needLogin" : false
+												}
+											}
+										],
+										"type" : "container",
+										"styleBinding" : 
+										{
+											"bmHeight" : 80,
+											"marginBottom" : 24,
+											"height" : 0,
+											"borderColor" : "#dddddd",
+											"backgroundColor" : "#FFFFFF",
+											"invisible" : "true",
+											"borderWidth" : 1,
+											"layout" : "linearLayout",
+											"invisibleSpace" : "false",
+											"paddingLeft" : 16,
+											"paddingRight" : 16
+										},
+										"dataBinding" : 
+										{
+											"showErrorView" : false,
+											"apiName" : "mtop.gebsupport.recommend.getRecommendCount",
+											"apiAlias" : "recommendCount",
+											"param" : 
+											{
+												"app" : "in_store",
+												"s" : "0",
+												"userid" : "$userId",
+												"n" : "4",
+												"action" : "recommend"
+											},
+											"needLogin" : false
+										},
+										"conditions" : 
+										[
+											{
+												"left" : "${recommendCount}.result",
+												"right" : "0",
+												"type" : ">",
+												"styleBinding" : 
+												{
+													"height" : -2,
+													"invisible" : "false"
+												}
+											}
+										]
+									},
+									{
+										"subViews" : 
+										[
+											{
+												"subViews" : 
+												[
+													{
+														"type" : "label",
+														"styleBinding" : 
+														{
+															"textColor" : "#3d4245",
+															"height" : 36,
+															"marginLeft" : 8,
+															"width" : -2,
+															"align" : 4,
+															"lines" : 1,
+															"invisibleSpace" : "true",
+															"fontSize" : 32
+														},
+														"dataBinding" : 
+														{
+															"value" : "${seasonalRecommendCount1}.catName"
+														}
+													}
+												],
+												"type" : "container",
+												"styleBinding" : 
+												{
+													"height" : 80,
+													"width" : -1,
+													"layout" : "absoluteLayout"
+												}
+											},
+											{
+												"cell" : 
+												{
+													"subViews" : 
+													[
+														{
+															"type" : "image",
+															"styleBinding" : 
+															{
+																"marginBottom" : 8,
+																"height" : 272
+															},
+															"dataBinding" : 
+															{
+																"url" : "${seasonalRecommend1}.list.[?].imgUrl"
+															}
+														},
+														{
+															"type" : "label",
+															"styleBinding" : 
+															{
+																"marginBottom" : 16,
+																"textColor" : "#666666",
+																"height" : 68,
+																"lines" : 2,
+																"fontSize" : 28
+															},
+															"dataBinding" : 
+															{
+																"value" : "${seasonalRecommend1}.list.[?].title"
+															}
+														},
+														{
+															"type" : "label",
+															"styleBinding" : 
+															{
+																"marginBottom" : 40,
+																"textColor" : "#ff5500",
+																"height" : 34,
+																"lines" : 1,
+																"fontSize" : 32
+															},
+															"dataBinding" : 
+															{
+																"prefix" : "￥",
+																"value" : "${seasonalRecommend1}.list.[?].price"
+															}
+														}
+													],
+													"type" : "container",
+													"styleBinding" : 
+													{
+														"height" : 438,
+														"layout" : "linearLayout",
+														"paddingLeft" : 16,
+														"paddingRight" : 16
+													},
+													"events" : 
+													[
+														{
+															"type" : "click",
+															"actions" : 
+															[
+																{
+																	"type" : "userTrack",
+																	"param" : 
+																	{
+																		"utParams" : 
+																		{
+																			"wp_m" : "seller_seasonal_recommend_items_-1",
+																			"wp_pk" : "$wp_pk",
+																			"wp_app" : "weapp",
+																			"itemId" : "${seasonalRecommend1}.list.[?].nid",
+																			"scm" : "2003.802.1.0"
+																		},
+																		"utType" : "Button",
+																		"utName" : "Item"
+																	}
+																},
+																{
+																	"type" : "openURL",
+																	"param" : 
+																	{
+																		"param" : 
+																		{
+																			"wp_m" : "seller_seasonal_recommend_items_-1",
+																			"wp_pk" : "$wp_pk",
+																			"wp_app" : "weapp",
+																			"from" : "inshop",
+																			"scm" : "2003.802.1.0"
+																		},
+																		"url" : "${seasonalRecommend1}.list.[?].h5Url"
+																	}
+																}
+															]
+														}
+													]
+												},
+												"needDownRefresh" : false,
+												"needNextPage" : false,
+												"unScroll" : true,
+												"type" : "grid",
+												"styleBinding" : 
+												{
+													"height" : -2,
+													"backgroundColor" : "#FFFFFF",
+													"gridColumn" : 2
+												},
+												"dataBinding" : 
+												{
+													"showErrorView" : false,
+													"apiName" : "mtop.gebsupport.recommend.getSeasonalRecommendedItems",
+													"apiAlias" : "seasonalRecommend1",
+													"param" : 
+													{
+														"cardinal" : "1",
+														"userid" : "$userId"
+													},
+													"needLogin" : false
+												}
+											}
+										],
+										"type" : "container",
+										"styleBinding" : 
+										{
+											"bmHeight" : 80,
+											"marginBottom" : 24,
+											"height" : 0,
+											"borderColor" : "#dddddd",
+											"backgroundColor" : "#FFFFFF",
+											"invisible" : "true",
+											"borderWidth" : 1,
+											"layout" : "linearLayout",
+											"invisibleSpace" : "false",
+											"paddingLeft" : 16,
+											"paddingRight" : 16
+										},
+										"dataBinding" : 
+										{
+											"showErrorView" : false,
+											"apiName" : "mtop.gebsupport.recommend.countSeasonalRecommendedItems",
+											"apiAlias" : "seasonalRecommendCount1",
+											"param" : 
+											{
+												"cardinal" : "1",
+												"userid" : "$userId"
+											},
+											"needLogin" : false
+										},
+										"conditions" : 
+										[
+											{
+												"left" : "${seasonalRecommendCount1}.size",
+												"right" : "0",
+												"type" : ">",
+												"styleBinding" : 
+												{
+													"height" : -2,
+													"invisible" : "false"
+												}
+											},
+											{
+												"left" : "${seasonalRecommendCount1}.size",
+												"right" : "0",
+												"type" : "==",
+												"styleBinding" : 
+												{
+													"bmImg" : "http://gtms02.alicdn.com/tps/i2/TB1VGOiFVXXXXcraXXXGJ_gSVXX-304-170.png"
+												}
+											}
+										]
+									},
+									{
+										"subViews" : 
+										[
+											{
+												"subViews" : 
+												[
+													{
+														"type" : "label",
+														"styleBinding" : 
+														{
+															"textColor" : "#3d4245",
+															"height" : 36,
+															"marginLeft" : 8,
+															"width" : -2,
+															"align" : 4,
+															"lines" : 1,
+															"invisibleSpace" : "true",
+															"fontSize" : 32
+														},
+														"dataBinding" : 
+														{
+															"value" : "${seasonalRecommendCount2}.catName"
+														}
+													}
+												],
+												"type" : "container",
+												"styleBinding" : 
+												{
+													"height" : 80,
+													"width" : -1,
+													"layout" : "absoluteLayout"
+												}
+											},
+											{
+												"cell" : 
+												{
+													"subViews" : 
+													[
+														{
+															"type" : "image",
+															"styleBinding" : 
+															{
+																"marginBottom" : 8,
+																"height" : 272
+															},
+															"dataBinding" : 
+															{
+																"url" : "${seasonalRecommend2}.list.[?].imgUrl"
+															}
+														},
+														{
+															"type" : "label",
+															"styleBinding" : 
+															{
+																"marginBottom" : 16,
+																"textColor" : "#666666",
+																"height" : 68,
+																"lines" : 2,
+																"fontSize" : 28
+															},
+															"dataBinding" : 
+															{
+																"value" : "${seasonalRecommend2}.list.[?].title"
+															}
+														},
+														{
+															"type" : "label",
+															"styleBinding" : 
+															{
+																"marginBottom" : 40,
+																"textColor" : "#ff5500",
+																"height" : 34,
+																"lines" : 1,
+																"fontSize" : 32
+															},
+															"dataBinding" : 
+															{
+																"prefix" : "￥",
+																"value" : "${seasonalRecommend2}.list.[?].price"
+															}
+														}
+													],
+													"type" : "container",
+													"styleBinding" : 
+													{
+														"height" : 438,
+														"layout" : "linearLayout",
+														"paddingLeft" : 16,
+														"paddingRight" : 16
+													},
+													"events" : 
+													[
+														{
+															"type" : "click",
+															"actions" : 
+															[
+																{
+																	"type" : "userTrack",
+																	"param" : 
+																	{
+																		"utParams" : 
+																		{
+																			"wp_m" : "seller_seasonal_recommend_items_-1",
+																			"wp_pk" : "$wp_pk",
+																			"wp_app" : "weapp",
+																			"itemId" : "${seasonalRecommend2}.list.[?].nid",
+																			"scm" : "2003.802.1.0"
+																		},
+																		"utType" : "Button",
+																		"utName" : "Item"
+																	}
+																},
+																{
+																	"type" : "openURL",
+																	"param" : 
+																	{
+																		"param" : 
+																		{
+																			"wp_m" : "seller_seasonal_recommend_items_-1",
+																			"wp_pk" : "$wp_pk",
+																			"wp_app" : "weapp",
+																			"from" : "inshop",
+																			"scm" : "2003.802.1.0"
+																		},
+																		"url" : "${seasonalRecommend2}.list.[?].h5Url"
+																	}
+																}
+															]
+														}
+													]
+												},
+												"needDownRefresh" : false,
+												"needNextPage" : false,
+												"unScroll" : true,
+												"type" : "grid",
+												"styleBinding" : 
+												{
+													"height" : -2,
+													"backgroundColor" : "#FFFFFF",
+													"gridColumn" : 2
+												},
+												"dataBinding" : 
+												{
+													"showErrorView" : false,
+													"apiName" : "mtop.gebsupport.recommend.getSeasonalRecommendedItems",
+													"apiAlias" : "seasonalRecommend2",
+													"param" : 
+													{
+														"cardinal" : "2",
+														"userid" : "$userId"
+													},
+													"needLogin" : false
+												}
+											}
+										],
+										"type" : "container",
+										"styleBinding" : 
+										{
+											"bmHeight" : 80,
+											"marginBottom" : 24,
+											"height" : 0,
+											"borderColor" : "#dddddd",
+											"backgroundColor" : "#FFFFFF",
+											"invisible" : "true",
+											"borderWidth" : 1,
+											"layout" : "linearLayout",
+											"invisibleSpace" : "false",
+											"paddingLeft" : 16,
+											"paddingRight" : 16
+										},
+										"dataBinding" : 
+										{
+											"showErrorView" : false,
+											"apiName" : "mtop.gebsupport.recommend.countSeasonalRecommendedItems",
+											"apiAlias" : "seasonalRecommendCount2",
+											"param" : 
+											{
+												"cardinal" : "2",
+												"userid" : "$userId"
+											},
+											"needLogin" : false
+										},
+										"conditions" : 
+										[
+											{
+												"left" : "${seasonalRecommendCount2}.size",
+												"right" : "0",
+												"type" : ">",
+												"styleBinding" : 
+												{
+													"height" : -2,
+													"invisible" : "false"
+												}
+											},
+											{
+												"left" : "${seasonalRecommendCount2}.size",
+												"right" : "0",
+												"type" : "==",
+												"styleBinding" : 
+												{
+													"bmImg" : "http://gtms02.alicdn.com/tps/i2/TB1VGOiFVXXXXcraXXXGJ_gSVXX-304-170.png"
+												}
+											}
+										]
+									}
+								],
+								"viewId" : "shop_decorate_area",
+								"type" : "container",
+								"styleBinding" : 
+								{
+									"minHeight" : 400,
+									"height" : -2,
+									"width" : -1,
+									"layout" : "linearLayout"
+								}
+							},
+							{
+								"type" : "label",
+								"styleBinding" : 
+								{
+									"marginBottom" : 24,
+									"textColor" : "#3d3f45",
+									"height" : 84,
+									"borderColor" : "#dddddd",
+									"backgroundColor" : "#ffffff",
+									"borderWidth" : 1,
+									"align" : 5,
+									"fontStyle" : 1,
+									"fontSize" : 28,
+									"gravity" : 5
+								},
+								"dataBinding" : 
+								{
+									"value" : "查看所有宝贝"
+								},
+								"events" : 
+								[
+									{
+										"type" : "click",
+										"actions" : 
+										[
+											{
+												"type" : "userTrack",
+												"param" : 
+												{
+													"utParams" : 
+													{
+														"seller_id" : "$userId"
+													},
+													"utType" : "Button",
+													"utName" : "ViewAllItemsBottom"
+												}
+											},
+											{
+												"type" : "openURL",
+												"param" : 
+												{
+													"title" : "查看所有宝贝",
+													"param" : 
+													{
+														"shop_id" : "$shopInfo.shopId",
+														"user_id" : "$userId"
+													},
+													"url" : "http://shop.m.taobao.com/goods/index.htm"
+												}
+											}
+										]
+									}
+								]
+							}
+						],
+						"type" : "container",
+						"styleBinding" : 
+						{
+							"height" : -1,
+							"scroll" : 1,
+							"width" : -1,
+							"layout" : "linearLayout",
+							"scrollBar" : 1
+						},
+						"conditions" : 
+						[
+							{
+								"left" : "${mtop.sns.menu.getMenuV2}.list._size_",
+								"right" : "0",
+								"type" : ">",
+								"styleBinding" : 
+								{
+									"marginBottom" : 88
+								}
+							}
+						]
+					},
+					{
+						"type" : "customMenu",
+						"styleBinding" : 
+						{
+							"height" : 88,
+							"width" : -1,
+							"align" : 8
+						},
+						"dataBinding" : 
+						{
+							"menuData" : "${mtop.sns.menu.getMenuV2}",
+							"userId" : "$userId",
+							"menuType" : 1
+						}
+					}
+				],
+				"type" : "container",
+				"styleBinding" : 
+				{
+					"height" : -1,
+					"backgroundColor" : "#eeeeee",
+					"width" : -1,
+					"layout" : "absoluteLayout"
+				},
+				"dataBinding" : 
+				{
+					"showErrorView" : false,
+					"apiName" : "mtop.sns.menu.getMenuV2",
+					"param" : 
+					{
+						"userId" : "$userId"
+					},
+					"needLogin" : false
+				}
+			},
+			"menus" : 
+			[
+				{
+					"name" : "搜索",
+					"iconUrl" : "http://gtms01.alicdn.com/tps/i1/TB1zATPFVXXXXcnXFXXWA_BHXXX-48-48.png",
+					"showPosition" : "0",
+					"minRenderVersion" : 4,
+					"actions" : 
+					[
+						{
+							"type" : "userTrack",
+							"param" : 
+							{
+								"utParams" : 
+								{
+									"seller_id" : "$userId"
+								},
+								"utType" : "Button",
+								"utName" : "Search"
+							}
+						},
+						{
+							"type" : "openURL",
+							"param" : 
+							{
+								"param" : 
+								{
+									"gotoSearch" : true,
+									"shopId" : "$shopId",
+									"user_id" : "$userId"
+								},
+								"url" : "http://shop.m.taobao.com/goods/index.htm"
+							}
+						}
+					]
+				},
+				{
+					"name" : "店铺简介",
+					"iconUrl" : "http://gtms03.alicdn.com/tps/i3/TB1PEk6FFXXXXXQXFXXZCKuHFXX-56-56.png",
+					"showPosition" : "1",
+					"actions" : 
+					[
+						{
+							"type" : "userTrack",
+							"param" : 
+							{
+								"utParams" : 
+								{
+									"seller_id" : "$userId"
+								},
+								"utType" : "Button",
+								"utName" : "More_Info"
+							}
+						},
+						{
+							"type" : "openURL",
+							"param" : 
+							{
+								"param" : 
+								{
+									"page" : "shop/about",
+									"shopId" : "$shopId",
+									"userId" : "$userId"
+								},
+								"url" : "http://h5.m.taobao.com/weapp/view_page.htm"
+							}
+						}
+					]
+				},
+				{
+					"name" : "分享",
+					"iconUrl" : "http://gtms04.alicdn.com/tps/i4/TB1c177FFXXXXbxXFXXZCKuHFXX-56-56.png",
+					"showPosition" : "1",
+					"actions" : 
+					[
+						{
+							"type" : "userTrack",
+							"param" : 
+							{
+								"utParams" : 
+								{
+									"seller_id" : "$userId"
+								},
+								"utType" : "Button",
+								"utName" : "More_Share"
+							}
+						},
+						{
+							"type" : "share",
+							"param" : 
+							{
+								"imageUrl" : "$shopInfo.shopLogo",
+								"description" : "$shopInfo.shopName",
+								"shareUrl" : "http://shop.m.taobao.com/shop/shop_index.htm",
+								"shareUrlParams" : 
+								{
+									"user_id" : "$userId"
+								}
+							}
+						}
+					]
+				},
+				{
+					"name" : "联系卖家",
+					"iconUrl" : "http://gtms03.alicdn.com/tps/i3/TB1QsZ8FFXXXXaWXpXXZCKuHFXX-56-56.png",
+					"showPosition" : "1",
+					"actions" : 
+					[
+						{
+							"type" : "userTrack",
+							"param" : 
+							{
+								"utParams" : 
+								{
+									"seller_id" : "$userId"
+								},
+								"utType" : "Button",
+								"utName" : "More_Aliww"
+							}
+						},
+						{
+							"type" : "openURL",
+							"param" : 
+							{
+								"url" : "$shopInfo.wangwangLink"
+							}
+						}
+					]
+				}
+			],
+			"data" : 
+			{
+				"isO2O" : "false",
+				"openBanner" : "false",
+				"shop_id" : "34552957",
+				"wp_tpl" : 20,
+				"wp_pk" : "shop/index_34217277_",
+				"shopTitle" : "淘宝店铺",
+				"_we_request" : 
+				{
+					"shop_id" : "34552957",
+					"page" : "shop/index",
+					"shopId" : "34552957",
+					"userId" : "34217277"
+				},
+				"_we_system" : 
+				{
+					"wp_tplv" : 4,
+					"wp_tpl" : 20,
+					"wp_pk" : "shop/index_34217277_",
+					"userId" : 34217277
+				},
+				"wp_tplv" : 4,
+				"_we_session" : 
+				{
+
+				},
+				"page" : "shop/index",
+				"shopId" : "34552957",
+				"shopInfo" : 
+				{
+					"isRecieveMsg" : false,
+					"wangwangLink" : "http://im.m.taobao.com/ww/ad_ww_dialog.htm?to_user=c2N3anho&shop_id=34552957",
+					"feedCount" : 0,
+					"rankLevelPic" : "http://gtms02.alicdn.com/tps/i2/TB1fMgKFpXXXXXKbXXXHpVt.VXX-132-24.png",
+					"fansNum" : 5639,
+					"feedURL" : "http://h5.m.taobao.com/weapp/view_page.htm?page=weitao/feed_list&userId=34217277",
+					"isTmall" : false,
+					"newProductURL" : "http://h5.m.taobao.com/weapp/view_page.htm?page=shop/new_item_list&userId=34217277",
+					"allProductURL" : "http://shop.m.taobao.com/goods/index.htm?shop_id=34552957&user_id=34217277",
+					"rankNum" : "5",
+					"newItem" : 7,
+					"shopId" : "34552957",
+					"shopName" : "单衣优品",
+					"promotionNum" : 0,
+					"promotionProductURL" : "http://h5.m.taobao.com/weapp/view_page.htm?page=shop/prom_item_list&userId=34217277",
+					"isFollowed" : false,
+					"itemCount" : 118,
+					"shopLogo" : "http://gw1.alicdn.com/bao/uploaded//77/87/T1BDWpXBVcXXaCwpjX.png"
+				},
+				"userId" : 34217277,
+				"isGoldenSeller" : true
+			},
+			"utParam" : 
+			{
+				"object_type" : "shop_id",
+				"wp_tplv" : "$_we_system.wp_tplv",
+				"wp_tpl" : "$_we_system.wp_tpl",
+				"shop_id" : "$shopInfo.shopId",
+				"wp_pk" : "$_we_system.wp_pk",
+				"object_id" : "$shopInfo.shopId",
+				"action" : "shoppv",
+				"needEffectTrack" : "true",
+				"spm" : "$_we_request.spm",
+				"seller_id" : "$userId"
+			},
+			"verify" : "VMT:1409799679000;DMT:1410255323000;"
+		},
+		"clientConfigUpdateInfo" : 
+		{
+			"moduleLib" : "1408691435000",
+			"pageCacheConfig" : "10"
+		}
+	}
+}

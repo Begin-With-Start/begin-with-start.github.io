@@ -1,0 +1,34 @@
+[
+  {
+    "name": "push",
+    "displayName": "桌面通知",
+    "summary": "弹出一个桌面通知",
+    "clzName": "com.tmall.awareness_sdk.plugin.executor.NotificationExecutor",
+    "category": "数据收集",
+    "author": "fangbo"
+  },
+  {
+    "name": "toast",
+    "displayName": "Toast提示",
+    "summary": "弹出一个Toast通知",
+    "clzName": "com.tmall.awareness_sdk.plugin.executor.ToastExecutor",
+    "category": "提示",
+    "author": "fangbo"
+  },
+  {
+    "name": "dataFetch",
+    "displayName": "上报采集器数据",
+    "summary": "根据配置的采集器数据，进行上报",
+    "clzName": "com.tmall.awareness_sdk.plugin.executor.FetchExecutor",
+    "category": "data",
+    "author": "fangbo"
+  },
+  {
+    "name": "bgMonitor",
+    "displayName": "后台监听",
+    "summary": "进行后台Beacon监听",
+    "clzName": "com.tmall.awareness_sdk.plugin.executor.BackgroundMonitorExecutor",
+    "category": "lbs",
+    "author": "fangbo"
+  }
+]

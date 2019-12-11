@@ -1,0 +1,15 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/no_network"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/scancode_network_msg_dialog_bg">
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="278dp"
+        android:layout_height="52dp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:textSize="13dp" />
+</LinearLayout>

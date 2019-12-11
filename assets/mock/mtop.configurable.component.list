@@ -1,0 +1,139 @@
+{
+  "title": "帐号主页",
+  "data": {
+    "image": {
+      "bgImageUrl": "http://gw2.alicdn.com/tfscom/tuitui/T1DBU8FchcXXXXXXXX",
+      "headerImageUrl": "http://gw3.alicdn.com/tfscom/tuitui/T1.RR_XvlaXXXXXXXX"
+    },
+    "text": {
+      "nick": "韩都衣舍旗舰店",
+      "followButton": "点我关注"
+    },
+    "snsId": "2065399587",
+    "storeId": 10205349,
+    "blueIcon": "http://gtms01.alicdn.com/tps/i1/T148pIFwBlXXXCWhje-36-36.png",
+    "test1": [
+      {
+        "test2": {
+          "test3": "catch you !"
+        }
+      }
+    ]
+  },
+  "view": {
+    "viewId": "list",
+    "type": "list",
+    "needDownRefresh": true,
+    "needNextPage": true,
+    "styleBinding": {
+      "width": -1,
+      "height": -1,
+      "backgroundColor": "#FFFFFF",
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 0,
+      "paddingBottom": 0,
+      "marginLeft": 6,
+      "marginRight": 6,
+      "marginTop": 6,
+      "marginBottom": 6
+    },
+    "dataBinding": {
+      "apiName": "mtop.sns.feed.listBefore",
+      "needLogin": false,
+      "param": {
+        "snsId": "$snsId",
+        "pageSize": 1,
+        "pageSizeName": "pageSize",
+        "curPageName": "curPage",
+        "timestampName": "timestamp"
+      }
+    },
+    "cell": {
+      "viewId": "list_cell",
+      "type": "container",
+      "styleBinding": {
+        "layout": "linearLayout",
+        "width": "-1",
+        "height": "-2",
+        "marginTop": 0,
+        "align": 2
+      },
+      "subViews": [
+        {
+          "type": "image",
+          "viewId": "list_cell_image",
+          "styleBinding": {
+            "width": "-1",
+            "height": "320",
+            "align": 4,
+            "gravity": 5
+          },
+          "conditions": [
+            {
+              "left": "${mtop.sns.feed.listBefore}.list.[?].coverTile.path",
+              "type": "==",
+              "right": "null",
+              "styleBinding": {
+                "invisible": true
+              }
+            },
+            {
+              "left": "${mtop.sns.feed.listBefore}.list.[?].coverTile.path",
+              "type": "!=",
+              "right": "null",
+              "styleBinding": {
+                "invisible": false
+              }
+            }
+          ],
+          "dataBinding": {
+            "url": "${mtop.sns.feed.listBefore}.list.[?].coverTile.path"
+          }
+        },
+        {
+          "type": "label",
+          "styleBinding": {
+            "width": "-1",
+            "height": "100",
+            "marginBottom": 24,
+            "align": 8,
+            "gravity": 5,
+            "textColor": "#000000",
+            "fontSize": 24,
+            "fontWeight": 500,
+            "lines": "-1"
+          },
+          "conditions": [
+            {
+              "left": "${mtop.sns.feed.listBefore}.list.[?].summary",
+              "type": "!=",
+              "right": "null",
+              "dataBinding": {
+                "prefix": "condition生效了"
+              }
+            }
+          ],
+          "dataBinding": {
+            "value": "${mtop.sns.feed.listBefore}.list.[?].summary",
+            "formatType": "abbr",
+            "prefix": "test",
+            "suffix": "summary"
+          }
+        }
+      ]
+    }
+  },
+  "menus": [
+    {
+      "name": "名片",
+      "iconUrl": "http://gw3.alicdn.com/tfscom/tuitui/T1.RR_XvlaXXXXXXXX",
+      "action": {
+        "type": "toast",
+        "param": {
+          "value": "toast"
+        }
+      }
+    }
+  ]
+}

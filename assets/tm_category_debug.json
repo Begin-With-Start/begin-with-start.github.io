@@ -1,0 +1,483 @@
+{
+  "mainBlock": {
+    "models": [
+      {
+        "id": "-1",
+        "cache": "false",
+        "name": "购物攻略",
+        "list": [
+          {
+            "name": "最 in 的十款上班族连衣裙",
+            "url": "//s.m.tmall.com/search.htm?q=%e8%bf%9e%e8%a1%a3%e8%a3%99&searchMode=funny"
+          },
+          {
+            "name": "连衣裙买什么好？?oooooooooooooooooooooooooooodwudhudhwd",
+            "url": "//s.m.tmall.com/search.htm?q=%e8%bf%90%e5%8a%a8%e6%9c%8d&searchMode=funny"
+          },
+          {
+            "name": "分类导航测试测试。。",
+            "url": "//s.m.tmall.com/search.htm?q=%e6%89%8b%e6%9c%ba&searchMode=funny"
+          },
+          {
+            "name": "中秋月饼买什么好?",
+            "url": "//s.m.tmall.com/search.htm?q=%e4%b8%ad%e7%a7%8b%e6%9c%88%e9%a5%bc&searchMode=funny"
+          },
+          {
+            "name": "点啊 你倒是点啊！",
+            "url": "//s.m.tmall.com/search.htm?q=nick&searchMode=funny"
+          }
+        ],
+        "type": "navi"
+      },
+      {
+        "id": "0",
+        "cache": "false",
+        "name": "为您推荐",
+        "list": [
+          {
+            "id": "669",
+            "name": "手机配件",
+            "pic": "//img.alicdn.com/tps/TB1RfxYIpXXXXXRXFXXXXXXXXXX.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54300025"
+          },
+          {
+            "id": "681",
+            "name": "笔记本",
+            "pic": "//img.alicdn.com/tps/i2/TB117UMGVXXXXcTXXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54300811"
+          },
+          {
+            "id": "686",
+            "name": "DIY电脑",
+            "pic": "//img.alicdn.com/tps/i3/TB1xE7MGVXXXXX_XXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54296378"
+          },
+          {
+            "id": "6333",
+            "name": "床",
+            "pic": "//img.alicdn.com/tps/TB1HeIuLXXXXXadXFXXXXXXXXXX-800-800.png",
+            "url": "//s.m.tmall.com/search.htm?cat=54936004"
+          },
+          {
+            "id": "1335",
+            "name": "情趣用品",
+            "pic": "//img.alicdn.com/tps/i4/TB1OhZzGVXXXXX3apXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54298035"
+          },
+          {
+            "id": "693",
+            "name": "办公设备",
+            "pic": "//img.alicdn.com/tps/TB1IBXWIpXXXXaaXFXXXXXXXXXX.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54298543"
+          }
+        ],
+        "type": "cat"
+      },
+      {
+        "id": "184",
+        "cache": "false",
+        "name": "数码",
+        "list": [
+          {
+            "id": "671",
+            "name": "移动电源",
+            "pic": "//img.alicdn.com/tps/i3/TB1GPsJGVXXXXb1XpXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54300100"
+          },
+          {
+            "id": "691",
+            "name": "键盘",
+            "pic": "//img.alicdn.com/tps/i1/TB1K1gKGVXXXXbbXpXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54300118"
+          },
+          {
+            "id": "684",
+            "name": "平板电脑",
+            "pic": "//img.alicdn.com/tps/i1/TB1qW.LGVXXXXXNXpXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54296205"
+          },
+          {
+            "id": "675",
+            "name": "智能穿戴",
+            "pic": "//img.alicdn.com/tps/i3/TB1pMwHGVXXXXbsXFXXTNA.ZFXX-100-100.jpeg",
+            "url": "//s.m.tmall.com/search.htm?cat=54300102"
+          },
+          {
+            "id": "673",
+            "name": "音箱音响",
+            "pic": "//img.alicdn.com/tps/i2/TB19v3xHVXXXXaRXpXXE799_VXX-800-800.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54288560"
+          },
+          {
+            "id": "680",
+            "name": "笔记本配件",
+            "pic": "//img.alicdn.com/tps/TB13oSXIpXXXXXDXXXXXXXXXXXX.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54300036"
+          }
+        ],
+        "type": "cat"
+      },
+      {
+        "id": "190",
+        "cache": "false",
+        "name": "家装",
+        "list": [
+          {
+            "id": "6337",
+            "name": "柜类",
+            "pic": "//img.alicdn.com/tps/TB1EKUpLXXXXXcvXFXXXXXXXXXX-800-800.png",
+            "url": "//s.m.tmall.com/search.htm?cat=54906004"
+          },
+          {
+            "id": "6330",
+            "name": "真皮沙发",
+            "pic": "//img.alicdn.com/tps/TB19_UoLXXXXXcPXFXXXXXXXXXX-800-800.png",
+            "url": "//s.m.tmall.com/search.htm?cat=54958008"
+          },
+          {
+            "id": "6335",
+            "name": "床垫",
+            "pic": "//img.alicdn.com/tps/TB19q3dLXXXXXb1aXXXXXXXXXXX-800-800.png",
+            "url": "//s.m.tmall.com/search.htm?cat=54302966"
+          },
+          {
+            "id": "6334",
+            "name": "实木床",
+            "pic": "//img.alicdn.com/tps/TB1yaZALXXXXXXSXpXXXXXXXXXX-800-800.png",
+            "url": "//s.m.tmall.com/search.htm?cat=54956014"
+          },
+          {
+            "id": "6276",
+            "name": "阅读台灯",
+            "pic": "//img.alicdn.com/tps/TB1yacDLXXXXXXsXpXXXXXXXXXX-800-800.png",
+            "url": "//s.m.tmall.com/search.htm?cat=54960005"
+          },
+          {
+            "id": "6309",
+            "name": "集成吊顶",
+            "pic": "//img.alicdn.com/tps/TB1eq.vLXXXXXcBXpXXXXXXXXXX-800-800.png",
+            "url": "//s.m.tmall.com/search.htm?cat=54898002"
+          }
+        ],
+        "type": "cat"
+      },
+      {
+        "id": "185",
+        "cache": "false",
+        "name": "家电",
+        "list": [
+          {
+            "id": "765",
+            "name": "剃须刀",
+            "pic": "//img.alicdn.com/tps/i3/TB1H9QDGVXXXXbmaXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54288858"
+          },
+          {
+            "id": "741",
+            "name": "净水器",
+            "pic": "//img.alicdn.com/tps/i4/TB1LdZOGVXXXXcOXXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54312956"
+          },
+          {
+            "id": "742",
+            "name": "电饭煲",
+            "pic": "//img.alicdn.com/tps/i2/TB18cUQGVXXXXanXXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54312953"
+          },
+          {
+            "id": "755",
+            "name": "吸尘器",
+            "pic": "//img.alicdn.com/tps/i4/TB1zx7IGVXXXXcrXFXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54298149"
+          },
+          {
+            "id": "747",
+            "name": "料理机",
+            "pic": "//img.alicdn.com/tps/i3/TB1LW3QGVXXXXX8XXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54312967"
+          },
+          {
+            "id": "748",
+            "name": "电压力锅",
+            "pic": "//img.alicdn.com/tps/i1/TB1lLgGGVXXXXb8XVXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54312954"
+          }
+        ],
+        "type": "cat"
+      },
+      {
+        "id": "197",
+        "cache": "false",
+        "name": "通信",
+        "list": [
+          {
+            "id": "1266",
+            "name": "联通",
+            "pic": "//img.alicdn.com/tps/i1/TB1HeoLGVXXXXcAXpXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54294372"
+          },
+          {
+            "id": "1267",
+            "name": "电信",
+            "pic": "//img.alicdn.com/tps/i2/TB1NHkEGVXXXXcGaXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54294373"
+          },
+          {
+            "id": "1265",
+            "name": "移动号码",
+            "pic": "//img.alicdn.com/tps/i2/TB1LU7JGVXXXXaZXFXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54294371"
+          },
+          {
+            "id": "1241",
+            "name": "移动话费",
+            "pic": "//img.alicdn.com/tps/i1/TB1igkFGVXXXXXwaXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54296114"
+          },
+          {
+            "id": "1256",
+            "name": "4G手机",
+            "pic": "//img.alicdn.com/tps/i1/TB1BbUFGVXXXXaSaXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54294374&q=4G%E6%89%8B%E6%9C%BA"
+          },
+          {
+            "id": "1250",
+            "name": "移动流量",
+            "pic": "//img.alicdn.com/tps/i1/TB1cQ7LGVXXXXaQXpXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54294403&q=%E7%A7%BB%E5%8A%A8"
+          }
+        ],
+        "type": "cat"
+      },
+      {
+        "id": "189",
+        "cache": "false",
+        "name": "户外",
+        "list": [
+          {
+            "id": "930",
+            "name": "其他户外鞋",
+            "pic": "//img.alicdn.com/tps/i3/TB1pVoGGVXXXXaDXVXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54306973"
+          },
+          {
+            "id": "931",
+            "name": "户外照明",
+            "pic": "//img.alicdn.com/tps/i1/TB1HUACGVXXXXX9aXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?q=%E6%88%B7%E5%A4%96%E7%85%A7%E6%98%8E"
+          },
+          {
+            "id": "916",
+            "name": "冲锋衣裤",
+            "pic": "//img.alicdn.com/tps/i2/TB1TXICGVXXXXa7aXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?q=%E5%86%B2%E9%94%8B%E8%A1%A3%E8%A3%A4"
+          },
+          {
+            "id": "940",
+            "name": "自行车整车",
+            "pic": "//img.alicdn.com/tps/i2/TB1ZNcJGVXXXXcBXpXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?q=%E8%87%AA%E8%A1%8C%E8%BD%A6%E6%95%B4%E8%BD%A6"
+          },
+          {
+            "id": "943",
+            "name": "钓竿",
+            "pic": "//img.alicdn.com/tps/i3/TB1r7ZOGVXXXXXpXXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?q=%E9%92%93%E7%AB%BF"
+          },
+          {
+            "id": "922",
+            "name": "登山鞋",
+            "pic": "//img.alicdn.com/tps/i2/TB1WW3EGVXXXXcWXVXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?q=%E7%99%BB%E5%B1%B1%E9%9E%8B"
+          }
+        ],
+        "type": "cat"
+      },
+      {
+        "id": "183",
+        "cache": "false",
+        "name": "母婴",
+        "list": [
+          {
+            "id": "611",
+            "name": "孕妈装/裤",
+            "pic": "//img.alicdn.com/tps/i1/TB1xzwHGVXXXXcMXFXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54288782"
+          },
+          {
+            "id": "5439",
+            "name": "皮鞋",
+            "pic": "//img.alicdn.com/tps/i1/TB1ZZQMGVXXXXa9XXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54994011"
+          },
+          {
+            "id": "5433",
+            "name": "毛衣/针织衫",
+            "pic": "//img.alicdn.com/tps/i4/TB1Ed3EGVXXXXcFXVXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54308246"
+          },
+          {
+            "id": "624",
+            "name": "婴儿床/摇篮",
+            "pic": "//img.alicdn.com/tps/i3/TB1eSULGVXXXXXmXpXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54312777"
+          },
+          {
+            "id": "613",
+            "name": "防辐射",
+            "pic": "//img.alicdn.com/tps/i3/TB1slgEGVXXXXXBaXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=54288762"
+          },
+          {
+            "id": "5443",
+            "name": "凉鞋",
+            "pic": "//img.alicdn.com/tps/i3/TB1dukCHpXXXXXQaXXXMxXJVFXX-100-100.jpg",
+            "url": "//s.m.tmall.com/search.htm?cat=55026016"
+          }
+        ],
+        "type": "cat"
+      }
+    ]
+  },
+  "sideBlock": {
+    "cache": "false",
+    "list": [
+      {
+        "id": "176",
+        "color": "FFFFFF",
+        "name": "为您推荐"
+      },
+      {
+        "id": "1495",
+        "color": "FFFFFF",
+        "name": "国际大牌"
+      },
+      {
+        "id": "5188",
+        "color": "FFFFFF",
+        "name": "天猫国际"
+      },
+      {
+        "id": "178",
+        "color": "FFFFFF",
+        "name": "女装"
+      },
+      {
+        "id": "179",
+        "color": "FFFFFF",
+        "name": "女鞋"
+      },
+      {
+        "id": "180",
+        "color": "FFFFFF",
+        "name": "男装"
+      },
+      {
+        "id": "181",
+        "color": "FFFFFF",
+        "name": "男鞋"
+      },
+      {
+        "id": "182",
+        "color": "FFFFFF",
+        "name": "内衣"
+      },
+      {
+        "id": "183",
+        "color": "FFFFFF",
+        "name": "母婴"
+      },
+      {
+        "id": "184",
+        "color": "FFFFFF",
+        "name": "数码"
+      },
+      {
+        "id": "185",
+        "color": "FFFFFF",
+        "name": "家电"
+      },
+      {
+        "id": "186",
+        "color": "FFFFFF",
+        "name": "美妆"
+      },
+      {
+        "id": "187",
+        "color": "FFFFFF",
+        "name": "箱包"
+      },
+      {
+        "id": "188",
+        "color": "FFFFFF",
+        "name": "运动"
+      },
+      {
+        "id": "189",
+        "color": "FFFFFF",
+        "name": "户外"
+      },
+      {
+        "id": "190",
+        "color": "FFFFFF",
+        "name": "家装"
+      },
+      {
+        "id": "191",
+        "color": "FFFFFF",
+        "name": "家纺"
+      },
+      {
+        "id": "192",
+        "color": "FFFFFF",
+        "name": "居家"
+      },
+      {
+        "id": "1824",
+        "color": "FFFFFF",
+        "name": "饰品"
+      },
+      {
+        "id": "1698",
+        "color": "FFFFFF",
+        "name": "食品"
+      },
+      {
+        "id": "7478",
+        "color": "FFFFFF",
+        "name": "生鲜"
+      },
+      {
+        "id": "194",
+        "color": "FFFFFF",
+        "name": "汽车"
+      },
+      {
+        "id": "195",
+        "color": "FFFFFF",
+        "name": "医药"
+      },
+      {
+        "id": "1517",
+        "color": "FFFFFF",
+        "name": "图书"
+      },
+      {
+        "id": "197",
+        "color": "FFFFFF",
+        "name": "通信"
+      },
+      {
+        "id": "6344",
+        "color": "FFFFFF",
+        "name": "洗护"
+      },
+      {
+        "id": "7925",
+        "color": "FFFFFF",
+        "name": "乐器"
+      }
+    ]
+  },
+  "ver": "1"
+}

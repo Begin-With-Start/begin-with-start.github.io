@@ -1,0 +1,85 @@
+{
+  "api": "com.tmall.wireless.industrychannel.queryhome",
+  "v": "1.0",
+  "ret": [
+    "SUCCESS::调用成功"
+  ],
+  "data": {
+    "cards": [
+      {
+        "type": "1",
+        "id": "Fun_bannerCard",
+        "style": {
+          "margin": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "items": [
+          {
+            "style": {
+              "height": "90",
+              "ratio": "4.2"
+            },
+            "data": [
+              {
+                "imgUrl": "http://gtms02.alicdn.com/tps/i2/TB1euExHVXXXXXzXVXXgoUDMFXX-1680-400.jpg",
+                "pageParam": "",
+                "action": "http://h5.m.taobao.com/app/fun/pages/topic/index.html?from=web&labelId=411394",
+                "_pos_": "1"
+              },
+              {
+                "imgUrl": "http://gtms01.alicdn.com/tps/i1/TB1jTmoGpXXXXbsaXXXGm.u0FXX-640-180.png",
+                "pageParam": "",
+                "action": "http://h5.m.taobao.com/app/fun/pages/talent/index.html",
+                "_pos_": "2"
+              }
+            ],
+            "type": "2"
+          }
+        ],
+        "ctrClickParams": []
+      },
+      {
+        "type": "4",
+        "id": "Fan_topNavCard",
+        "style": {
+          "margin": ["0", "0", "0", "0"],
+          "bgColor": "#FFFFFF"
+        },
+        "items": [{
+          "imgUrl": "https://img.alicdn.com/tps/i4/TB1vLdyJFXXXXarXFXX.vHKHpXX-54-54.png",
+          "pageParam": "scm=1003.2.201605052.OTHER_1463822642029_806436",
+          "title": "达人",
+          "action": "http://h5.m.taobao.com/app/fun/pages/talent/index.html?acm=201605052.1003.2.806436&aldid=MAyiYvsZ&scm=1003.2.201605052.OTHER_1463822642029_806436&pos=1",
+          "_pos_": "1",
+          "type": "16"
+        }, {
+          "imgUrl": "https://img.alicdn.com/tps/i1/TB19FhuJFXXXXX3XVXX.vHKHpXX-54-54.png",
+          "pageParam": "scm=1003.2.201605052.OTHER_1460355583932_806436",
+          "title": "范兜",
+          "action": "http://h5.m.taobao.com/app/fun/pages/album/index.html?acm=201605052.1003.2.806436&aldid=MAyiYvsZ&scm=1003.2.201605052.OTHER_1460355583932_806436&pos=2",
+          "_pos_": "2",
+          "type": "16"
+        }, {
+          "imgUrl": "https://img.alicdn.com/tps/i2/TB1NbtMJFXXXXcpXXXX.vHKHpXX-54-54.png",
+          "pageParam": "scm=1003.2.201605052.OTHER_1460444265911_806436",
+          "title": "有范",
+          "action": "http://www.tmall.com/wow/mit/act/havefun?acm=201605052.1003.2.806436&aldid=MAyiYvsZ&scm=1003.2.201605052.OTHER_1460444265911_806436&pos=3",
+          "_pos_": "3",
+          "type": "16"
+        }, {
+          "imgUrl": "https://img.alicdn.com/tps/i2/TB18i4xJFXXXXaYXFXXuv2kGFXX-42-42.png",
+          "pageParam": "scm=1003.2.201605052.OTHER_1463019574313_806436",
+          "title": "话题",
+          "action": "tmall://page.tm/funTopicList",
+          "_pos_": "4",
+          "type": "16"
+        }],
+        "ctrClickParams": []
+      }
+    ]
+  }
+}

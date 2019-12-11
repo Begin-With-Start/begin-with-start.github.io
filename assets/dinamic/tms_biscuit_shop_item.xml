@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DFrameLayout xmlns:attr="http://schemas.android.com/apk/res-auto"
+    attr:dWidth="375ap"
+    attr:dHeight="match_content"
+    attr:dMarginBottom="10"
+    attr:dBackgroundColor="#ffffff"
+    attr:onTap="@tmsOpenUrl{@data{shopUrl},@data{shopTracker}}">
+    <!--店铺背景图片-->
+    <TImageView
+        attr:dWidth="match_parent"
+        attr:dHeight="130"
+        attr:dMarginTop="-3"
+        attr:tImageUrl="@data{shopBgPic}"
+        attr:dVisibility="@triple{@igreater{@len{@data{shopBgPic}}, '0'},'visible','gone'}"/>
+
+    <!--店铺背景MASK-->
+    <DView
+        attr:dWidth="match_parent"
+        attr:dHeight="130"
+        attr:dMarginTop="-3"
+        attr:dBackgroundColor="#80000000"
+        attr:dVisibility="@triple{@igreater{@len{@data{shopBgPic}}, '0'},'visible','gone'}"/>
+
+    <!--店铺item具体布局-->
+    <DLinearLayout
+        attr:dWidth="match_parent"
+        attr:dHeight="match_content"
+        attr:dMarginTop="15"
+        attr:dMarginLeft="15"
+        attr:dMarginRight="15"
+        attr:dMarginBottom="5"
+        attr:dOrientation="vertical">
+
+        <!--店铺item头部布局-->
+        <DFrameLayout
+            attr:dWidth="match_parent"
+            attr:dHeight="45"
+            attr:dMarginBottom="10">
+
+            <!--店铺品牌logo-->
+            <DFrameLayout
+                attr:dWidth="match_content"
+                attr:dHeight="match_content">
+
+                <TImageView
+                    attr:dWidth="45"
+                    attr:dHeight="45"
+                    attr:tImageUrl="@data{shopPic}"
+                    attr:dCornerRadius="2"/>
+
+                <DView
+                    attr:dWidth="45"
+                    attr:dHeight="45"
+                    attr:dBackgroundColor="#07000000"
+                    attr:dCornerRadius="2"/>
+
+            </DFrameLayout>
+
+            <!--店铺标题模块-->
+            <DLinearLayout
+                attr:dWidth="match_content"
+                attr:dHeight="match_content"
+                attr:dMarginLeft="55"
+                attr:dOrientation="vertical"
+                attr:dGravity="leftCenter">
+
+                <DTextView
+                    attr:dWidth="match_content"
+                    attr:dHeight="match_content"
+                    attr:dMarginRight="60"
+                    attr:dTextSize="17"
+                    attr:dTextStyle="bold"
+                    attr:dMaxLines="1"
+                    attr:dLineBreakMode="end"
+                    attr:dTextColor="@triple{@igreater{@len{@data{shopBgPic}}, '0'},'#FFFFFF','#212121'}"
+                    attr:dText="@data{shopTitle}"/>
+
+                <DTextView
+                    attr:dWidth="match_content"
+                    attr:dHeight="match_content"
+                    attr:dTextSize="13"
+                    attr:dTextColor="@triple{@igreater{@len{@data{shopBgPic}}, '0'},'#b2ffffff','#b2333333'}"
+                    attr:dText="@data{totalFans}"/>
+
+            </DLinearLayout>
+
+
+            <!--进店按钮-->
+            <DTextView
+                attr:dWidth="60"
+                attr:dHeight="25"
+                attr:dGravity="rightCenter"
+                attr:dTextColor="#FF333333"
+                attr:dTextSize="13"
+                attr:dText="进店"
+                attr:dBackgroundColor="#F3F3F3"
+                attr:dTextAlignment="center"
+                attr:dCornerRadius="12.5"/>
+
+        </DFrameLayout>
+
+        <!--小二背书或者店铺slogan信息-->
+        <DLinearLayout
+            attr:dWidth="match_content"
+            attr:dHeight="22"
+            attr:dOrientation="horizontal"
+            attr:dMarginTop="-5"
+            attr:dMarginBottom="5"
+            attr:dBackgroundColor="#8b755d"
+            attr:dCornerRadius="2"
+            attr:dVisibility="@triple{@igreater{@len{@data{intro}}, '0'},'visible','gone'}">
+
+            <TImageView
+                attr:dWidth="22"
+                attr:dHeight="22"
+                attr:dMarginLeft="1"
+                attr:dMarginRight="1"
+                attr:dGravity="center"
+                attr:tImageUrl="@data{intro.icon}" />
+
+            <DTextView
+                attr:dWidth="match_content"
+                attr:dHeight="match_parent"
+                attr:dGravity="center"
+                attr:dTextAlignment="center"
+                attr:dMarginRight="10"
+                attr:dTextColor="#FFF9DFC6"
+                attr:dTextSize="12"
+                attr:dText="@data{intro.text}"/>
+
+            <DTextView
+                attr:dWidth="match_content"
+                attr:dMarginRight="10"
+                attr:dHeight="22"
+                attr:dTextSize="12"
+                attr:dTextColor="#FFFFFF"
+                attr:dText="了解品牌 >"
+                attr:dVisibility="@triple{@igreater{@len{@data{intro.introUrl}}, '0'},'visible','gone'}"
+                attr:onTap="@tmsBrandIntro{@data{userId},@data{intro.introTracker}}"/>
+        </DLinearLayout>
+
+        <!--促销信息-->
+        <TMSOreoIconListView
+            attr:dWidth="match_parent"
+            attr:dHeight="12"
+            attr:dIconList="@data{titlePreIconList}"
+            attr:dIconGap="5"
+            attr:dDivider="YES"
+            attr:dVisibility="@triple{@igreater{@len{@data{titlePreIconList}}, '0'},'visible','gone'}"/>
+
+        <!--商品信息透出-->
+        <DFrameLayout
+            attr:dWidth="match_parent"
+            attr:dHeight="match_content"
+            attr:dMarginTop="5">
+
+            <DFrameLayout
+                attr:dWidth="105"
+                attr:dHeight="105"
+                attr:dGravity="leftCenter"
+                attr:dVisibility="@triple{@igreater{@len{@data{items}}, '0'},'visible','gone'}"
+                attr:onTap="@tmsOpenUrl{@data{itemUrl1},@data{itemTracker1}}">
+
+                <TImageView
+                    attr:dWidth="match_parent"
+                    attr:dHeight="match_parent"
+                    attr:tImageUrl="@data{items[0].picPath}"
+                    attr:dCornerRadius="2"/>
+
+                <DFrameLayout
+                    attr:dWidth="match_content"
+                    attr:dHeight="match_content"
+                    attr:dBackgroundColor="#B2ffffff"
+                    attr:dGravity="leftBottom"
+                    attr:dMarginBottom="5"
+                    attr:dClipTopRightRadius="2"
+                    attr:dClipBottomRightRadius="2">
+                    <DTextView
+                        attr:dWidth="match_content"
+                        attr:dHeight="match_content"
+                        attr:dTextColor="#000000"
+                        attr:dTextSize="12"
+                        attr:dMarginRight="2"
+                        attr:dMarginLeft="2"
+                        attr:dMarginBottom="1"
+                        attr:dMarginTop="1"
+                        attr:dText="@concat{'¥', @data{items[0].price}}"/>
+                </DFrameLayout>
+
+                <DView
+                    attr:dWidth="match_parent"
+                    attr:dHeight="match_parent"
+                    attr:dBackgroundColor="#07000000"
+                    attr:dCornerRadius="2"/>
+            </DFrameLayout>
+
+            <DFrameLayout
+                attr:dWidth="105"
+                attr:dHeight="105"
+                attr:dGravity="center"
+                attr:dVisibility="@triple{@igreater{@len{@data{items}}, '1'},'visible','gone'}"
+                attr:onTap="@tmsOpenUrl{@data{itemUrl2},@data{itemTracker2}}">
+
+                <TImageView
+                    attr:dWidth="match_parent"
+                    attr:dHeight="match_parent"
+                    attr:tImageUrl="@data{items[1].picPath}"
+                    attr:dCornerRadius="2"/>
+
+                <DFrameLayout
+                    attr:dWidth="match_content"
+                    attr:dHeight="match_content"
+                    attr:dBackgroundColor="#B2ffffff"
+                    attr:dGravity="leftBottom"
+                    attr:dMarginBottom="5"
+                    attr:dClipTopRightRadius="2"
+                    attr:dClipBottomRightRadius="2">
+                    <DTextView
+                        attr:dWidth="match_content"
+                        attr:dHeight="match_content"
+                        attr:dTextColor="#000000"
+                        attr:dTextSize="12"
+                        attr:dMarginRight="2"
+                        attr:dMarginLeft="2"
+                        attr:dMarginBottom="1"
+                        attr:dMarginTop="1"
+                        attr:dText="@concat{'¥', @data{items[1].price}}"/>
+                </DFrameLayout>
+
+                <DView
+                    attr:dWidth="match_parent"
+                    attr:dHeight="match_parent"
+                    attr:dBackgroundColor="#07000000"
+                    attr:dCornerRadius="2"/>
+            </DFrameLayout>
+
+            <DFrameLayout
+                attr:dWidth="105"
+                attr:dHeight="105"
+                attr:dGravity="rightCenter"
+                attr:dVisibility="@triple{@igreater{@len{@data{items}}, '2'},'visible','gone'}"
+                attr:onTap="@tmsOpenUrl{@data{itemUrl3},@data{itemTracker3}}">
+
+                <TImageView
+                    attr:dWidth="match_parent"
+                    attr:dHeight="match_parent"
+                    attr:tImageUrl="@data{items[2].picPath}"
+                    attr:dCornerRadius="2"/>
+
+                <DFrameLayout
+                    attr:dWidth="match_content"
+                    attr:dHeight="match_content"
+                    attr:dBackgroundColor="#B2ffffff"
+                    attr:dGravity="leftBottom"
+                    attr:dMarginBottom="5"
+                    attr:dClipTopRightRadius="2"
+                    attr:dClipBottomRightRadius="2">
+                    <DTextView
+                        attr:dWidth="match_content"
+                        attr:dHeight="match_content"
+                        attr:dTextColor="#000000"
+                        attr:dTextSize="12"
+                        attr:dMarginRight="2"
+                        attr:dMarginLeft="2"
+                        attr:dMarginBottom="1"
+                        attr:dMarginTop="1"
+                        attr:dText="@concat{'¥', @data{items[2].price}}"/>
+                </DFrameLayout>
+
+                <DView
+                    attr:dWidth="match_parent"
+                    attr:dHeight="match_parent"
+                    attr:dBackgroundColor="#07000000"
+                    attr:dCornerRadius="2"/>
+            </DFrameLayout>
+
+        </DFrameLayout>
+
+        <!--进店操作-->
+        <DFrameLayout
+            attr:dWidth="match_parent"
+            attr:dHeight="match_content"
+            attr:dMarginBottom="10"
+            attr:dMarginTop="14">
+
+            <!--相似店铺-->
+            <DTextView
+                attr:dWidth="match_content"
+                attr:dHeight="match_content"
+                attr:dGravity="leftCenter"
+                attr:dTextSize="13"
+                attr:dTextColor="#ff757575"
+                attr:dText="相似店铺"
+                attr:dMarginLeft="10"
+                attr:dVisibility="@triple{@igreater{@len{@data{similarShop}}, '0'},'visible','gone'}"
+                attr:onTap="@tmsOpenUrl{@data{similarShop},@data{searchInShopTracker}}"/>
+
+            <DTextView
+                attr:dWidth="match_content"
+                attr:dHeight="match_content"
+                attr:dGravity="rightCenter"
+                attr:dTextSize="13"
+                attr:dTextColor="#ff757575"
+                attr:dText="@data{bottomTitle}"
+                attr:dMarginRight="10"
+                attr:onTap="@tmsOpenUrl{@data{searchInShopUrl},@data{searchInShopTracker}}"/>
+        </DFrameLayout>
+
+    </DLinearLayout>
+
+</DFrameLayout>

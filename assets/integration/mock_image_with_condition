@@ -1,0 +1,63 @@
+ {
+    "data": {
+      "userTbId": 2066793680
+    },
+    "page": "Page_Shop",
+    "title": "image condition",
+    "view": {
+      "dataBinding": {
+        "apiAlias": "getShopActivity",
+        "apiName": "weplugin.activityReadService.getShopActivity",
+        "apiVersion": "1.0",
+        "needLogin": false,
+        "param": {
+          "userTbId": "$userTbId"
+        },
+        "showErrorView": false
+      },
+      "styleBinding": {
+        "backgroundColor": "#fffeee",
+        "height": 500,
+        "layout": "linearLayout"
+      },
+      "subViews": [
+        {
+          "conditions": [
+            {
+              "left": "${getShopActivity}.result._size_",
+              "right": "0",
+              "styleBinding": {
+                "height": 272,
+                "invisible": false,
+                "marginTop": 100
+              },
+              "type": ">"
+            },
+            {
+              "left": "${getShopActivity}.result._size_",
+              "right": "0",
+              "styleBinding": {
+                "bmImg": "http://gtms02.alicdn.com/tps/i2/TB1VGOiFVXXXXcraXXXGJ_gSVXX-304-170.png"
+              },
+              "type": "<="
+            }
+          ],
+          "dataBinding": {
+            "url": "http://img02.config-vip.taobaocdn.net/imgextra/i2/2066596281/TB2jpxcXXXXXXcfaVXXXXXXXXXX_!!2066596281.jpeg"
+          },
+          "styleBinding": {
+            "backgroundColor": "#FF0000",
+            "borderColor": "#dddddd",
+            "borderWidth": 1,
+            "height": 0,
+            "invisible": true,
+            "marginTop": 0,
+            "width": -1
+          },
+          "type": "image",
+          "viewId":"imageViewId"
+        }
+      ],
+      "type": "container"
+    }
+}

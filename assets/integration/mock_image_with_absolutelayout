@@ -1,0 +1,53 @@
+{
+    "page": "Page_Shop1",
+    "title": "image_stylebinding",
+    "view": {
+      "styleBinding": {
+        "height": -1,
+        "layout": "linearLayout",
+        "scroll": 1
+      },
+      "subViews": [
+        {
+          "dataBinding": {
+            "value": "align=1"
+          },
+          "styleBinding": {
+            "align": 5,
+            "backgroundColor": "#ffffff",
+            "borderColor": "#dddddd",
+            "borderWidth": 1,
+            "fontSize": 28,
+            "fontStyle": 1,
+            "gravity": 5,
+            "height": 84,
+            "textColor": "#3d3f45"
+          },
+          "type": "label"
+        },
+        {
+          "styleBinding": {
+            "height": 300,
+            "layout": "absoluteLayout"
+          },
+          "subViews": [
+            {
+              "dataBinding": {
+                "url": "http://gtms04.alicdn.com/tps/i4/TB1eP6wFFXXXXXaaFXXXK5zTVXX-520-280.png"
+              },
+              "styleBinding": {
+                "align": 1,
+                "backgroundColor": "#ffffff",
+                "height": 200,
+                "width": 320
+              },
+              "type": "image",
+              "viewId":"imageWithAbsoluteLayout"
+            }
+          ],
+          "type": "container"
+        }
+      ],
+      "type": "container"
+    }
+}

@@ -1,0 +1,79 @@
+<?xml version ='1.0' encoding ='UTF-8'?>
+<!-- a filter from taobao album -->
+<!-- params:input_image -->
+<filter ver='0.1' name='brannan' programCount='1'>
+    <program id='0'>
+        <shader type='ps' input_image='input_image'>
+            <uniform_var type='sampler2D' name='luma_map' value='brannan_luma_map.png'/>
+            <uniform_var type='sampler2D' name='screen_map' value='brannan_screen_map.png'/>
+            <uniform_var type='sampler2D' name='map' value='brannan_map.png'/>
+            <uniform_var type='sampler2D' name='blowout_map' value='brannan_blowout_map.png'/>
+            <uniform_var type='sampler2D' name='contrast_map' value='brannan_contrast_map.png'/>
+            <uniform_var type='sampler2D' name='input_image'/> 
+            <code>
+                varying highp vec2 textureCoordinate;
+                uniform sampler2D input_image;
+
+                uniform sampler2D luma_map;
+                uniform sampler2D screen_map;
+                uniform sampler2D map;
+                uniform sampler2D blowout_map;
+                uniform sampler2D contrast_map;
+
+                void main()
+                {
+                mediump mat3 saturateMatrix = mat3(
+                1.105150, -0.044850, -0.046000,
+                -0.088050, 1.061950, -0.089200,
+                -0.017100, -0.017100,1.132900);
+
+                mediump vec3 luma = vec3(.3, .59, .11);
+
+                mediump vec3 texel = (texture2D(input_image, textureCoordinate)).rgb;
+
+                mediump vec2 lookup = vec2(texel.r, 0.5);
+                texel.r = texture2D(map, lookup).r;
+                lookup.x = texel.g;
+                texel.g = texture2D(map, lookup).g;
+                lookup.x = texel.b;
+                texel.b = texture2D(map, lookup).b;
+
+                texel = saturateMatrix * texel;
+
+                mediump vec2 tc = (2.0 * textureCoordinate) - 1.0;
+                mediump float d = dot(tc, tc);
+                mediump vec3 sampled;
+                lookup.y = 0.5;
+                lookup.x = texel.r;
+                sampled.r = texture2D(blowout_map, lookup).r;
+                lookup.x = texel.g;
+                sampled.g = texture2D(blowout_map, lookup).g;
+                lookup.x = texel.b;
+                sampled.b = texture2D(blowout_map, lookup).b;
+
+                mediump float value = smoothstep(0.0, 1.0, d);
+                texel = mix(sampled, texel, value);
+
+                lookup.x = texel.r;
+                texel.r = texture2D(contrast_map, lookup).r;
+                lookup.x = texel.g;
+                texel.g = texture2D(contrast_map, lookup).g;
+                lookup.x = texel.b;
+                texel.b = texture2D(contrast_map, lookup).b;
+
+                lookup.x = dot(texel, luma);
+                texel = mix(texture2D(luma_map, lookup).rgb, texel, .5);
+
+                lookup.x = texel.r;
+                texel.r = texture2D(screen_map, lookup).r;
+                lookup.x = texel.g;
+                texel.g = texture2D(screen_map, lookup).g;
+                lookup.x = texel.b;
+                texel.b = texture2D(screen_map, lookup).b;
+
+                gl_FragColor = vec4(texel, 1.0);
+                }
+            </code>
+        </shader>
+    </program>
+</filter>

@@ -1,0 +1,86 @@
+{
+  "data": {},
+  "view": {
+    "type": "simpleTabView",
+    "viewId": "simpleTabView",
+    "styleBinding": {
+      "height": 472,
+      "width": -1,
+      "marginBottom": 24
+    },
+    "headerView": {
+      "dataBinding": {
+        "array": [
+          {
+            "title": "1",
+            "userTrack":{
+              "utName": "1",
+              "utType": "1",
+              "utParams":{
+                "param": "1"
+              }
+            }
+          },
+          {
+            "title": "2",
+            "userTrack":{
+              "utName": "2",
+              "utType": "2",
+              "utParams":{
+                "param": "2"
+              }
+            }
+          },
+          {
+            "title": "3",
+            "userTrack":{
+              "utName": "3",
+              "utType": "3",
+              "utParams":{
+                "param": "3"
+              }
+            }
+          }
+        ]
+      },
+      "styleBinding": {
+        "width": -1,
+        "height": 80,
+        "fontSize": 66,
+        "isShowTab": "true",
+        "selectedTextColor": "#ff5000"
+      },
+      "type": "simpleTabViewHeader"
+    },
+    "subViews": [
+      {
+        "dataBinding": {
+          "url": "https://www.google.com.hk/images/srpr/logo11w.png",
+          "webp": false
+        },
+        "styleBinding": {
+          "height": 200
+        },
+        "type": "image"
+      },
+      {
+        "dataBinding": {
+          "value": "second tab"
+        },
+        "styleBinding": {
+          "height": 200
+        },
+        "type": "label"
+      },
+      {
+        "dataBinding": {
+          "value": "threrd tab"
+        },
+        "styleBinding": {
+          "height": 200
+        },
+        "type": "label"
+      }
+    ]
+  }
+}

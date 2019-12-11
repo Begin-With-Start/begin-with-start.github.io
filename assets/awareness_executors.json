@@ -1,0 +1,34 @@
+[
+  {
+    "name": "popLayer",
+    "displayName": "弹层",
+    "summary": "弹出一个弹层",
+    "clzName": "com.tmall.wireless.awareness.plugins.execute.LayerExecutor",
+    "category": "展示",
+    "author": "fangbo"
+  },
+  {
+    "name": "floatView",
+    "displayName": "Teleport2.0弹层",
+    "summary": "通过Teleport2.0弹出一个层",
+    "clzName": "com.tmall.wireless.awareness.plugins.execute.TeleportExecutor",
+    "category": "Teleport弹层",
+    "author": "fangbo"
+  },
+  {
+    "name": "signIn",
+    "displayName": "签到执行器",
+    "summary": "配合围栏提供一个签到上报的功能",
+    "clzName": "com.tmall.wireless.awareness.plugins.execute.SignInExecutor",
+    "category": "data",
+    "author": "fangbo"
+  },
+  {
+    "name": "alert",
+    "displayName": "弹框执行器",
+    "summary": "在当前页面弹出一个Dialog",
+    "clzName": "com.tmall.wireless.awareness.plugins.execute.AlertExecutor",
+    "category": "data",
+    "author": "fangbo"
+  }
+]

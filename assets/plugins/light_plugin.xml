@@ -1,0 +1,10 @@
+<?xml version ='1.0' encoding ='UTF-8'?>
+<effect_groups version="0.1" >
+
+    <group id='light' icon='' resprefix='' title='光效'>
+        <effect id='brightness' icon='recall.png' resprefix='effect_recall' title='brightness'/>
+        <effect id='contrast' icon='negative.png' resprefix='effect_negative' title='contrast'/>
+        <effect id='saturation' icon='life_sketch.png' resprefix='effect_sketch' title='saturation'/>
+    </group>
+
+</effect_groups>

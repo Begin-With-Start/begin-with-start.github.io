@@ -1,0 +1,61 @@
+<?xml version ='1.0' encoding ='UTF-8'?>
+<!-- a filter from taobao album -->
+<!-- params:input_image -->
+<filter ver='0.1' name='jiaqiang' programCount='1'>
+    <program id='0'>
+        <shader type='ps' input_image='inputImageTexture'>
+            <uniform_var type='sampler2D' name='inputImageTexture'/>
+            <uniform_var type='sampler2D' name='inputImageTexture2' value='mapPSD_jiaqiang.png'/>
+            <uniform_var type='sampler2D' name='inputImageTexture3' value='light2.png'/>
+            <uniform_var type='sampler2D' name='inputImageTexture4' value='background.png'/>
+            <uniform_var type='sampler2D' name='inputImageTexture5' value='dark3.png'/>
+            <code>
+                uniform sampler2D inputImageTexture;
+                uniform sampler2D inputImageTexture2;
+                uniform sampler2D inputImageTexture3;
+                uniform sampler2D inputImageTexture4;
+                uniform sampler2D inputImageTexture5;
+                varying highp vec2 textureCoordinate;
+
+                void main(void)
+                {
+                mediump vec4 image = texture2D(inputImageTexture, textureCoordinate);
+                mediump vec3 texel = texture2D(inputImageTexture3, textureCoordinate).rgb;
+                mediump vec4 bg = texture2D(inputImageTexture4,textureCoordinate);
+                mediump vec3 texel1;
+                mediump vec3 texel2;
+                mediump vec4 texel3;
+
+                texel1.r = texture2D(inputImageTexture5, vec2(texel.r, image.r)).r;
+                texel1.g = texture2D(inputImageTexture5, vec2(texel.g, image.g)).g;
+                texel1.b = texture2D(inputImageTexture5, vec2(texel.b, image.b)).b;
+
+                texel2.r= texture2D(inputImageTexture2,vec2(texel1.r,1.0)).r;
+                texel2.g= texture2D(inputImageTexture2,vec2(texel1.g,1.0)).g;
+                texel2.b= texture2D(inputImageTexture2,vec2(texel1.b,1.0)).b;
+
+                if (texel2.r &lt; 0.5)
+                { texel3.r = 2.0*texel2.r*(1.0-bg.r);}
+                else
+                { texel3.r = 1.0 - 2.0* (1.0-texel2.r)* bg.r; }
+
+                if (texel2.g &lt; 0.5)
+                { texel3.g = 2.0*texel2.g*(1.0-bg.g);}
+                else
+                { texel3.g = 1.0 -2.0* (1.0-texel2.g)*bg.g;}
+
+                if (texel2.b &lt; 0.5)
+                { texel3.b = 2.0*texel2.b*(1.0-bg.b);}
+                else
+                { texel3.b = 1.0 - 2.0* (1.0-texel2.b)*bg.b;}
+
+                texel3.a = 1.0;
+
+                gl_FragColor = texel3;
+
+
+                }
+            </code>
+        </shader>
+    </program>
+</filter>

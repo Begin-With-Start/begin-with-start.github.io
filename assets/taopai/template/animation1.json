@@ -1,0 +1,22 @@
+{
+  "name": "animation1",
+  "desc": "字幕1",
+  "duration": 2.5,
+  "author": "Jovial",
+  "content": "[{\"type\":\"container\",\"x\":0.5,\"y\":0.5,\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[],\"elements\":[{\"type\":\"line\",\"x\":-308,\"y\":-44,\"toX\":308,\"toY\":-44,\"lineWidth\":3,\"fill\":\"${frameColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"toX\",\"type\":\"quart_easeinout\",\"time\":[0,0.16,0.84,1],\"value\":[-308,308,308,-308]}]},{\"type\":\"line\",\"x\":308,\"y\":-46,\"toX\":308,\"toY\":46,\"lineWidth\":3,\"fill\":\"${frameColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"toY\",\"type\":\"quart_easeinout\",\"time\":[0,0.16,0.2,0.8,0.84,1],\"value\":[-46,-46,46,46,-46,-46]}]},{\"type\":\"line\",\"x\":308,\"y\":44,\"toX\":-308,\"toY\":44,\"lineWidth\":3,\"fill\":\"${frameColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"toX\",\"type\":\"quart_easeinout\",\"time\":[0,0.2,0.32,0.68,0.8,1],\"value\":[308,308,-308,-308,308,308]}]},{\"type\":\"line\",\"x\":-308,\"y\":46,\"toX\":-308,\"toY\":-46,\"lineWidth\":3,\"fill\":\"${frameColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"toY\",\"type\":\"quart_easeinout\",\"time\":[0,0.32,0.4,0.6,0.68,1],\"value\":[46,46,-46,-46,46,46]}]},{\"type\":\"rect\",\"visible\":true,\"x\":0,\"y\":0,\"width\":615,\"height\":84,\"fill\":\"#000000\",\"rotation\":0,\"alpha\":0,\"scale\":1,\"animation\":[{\"key\":\"alpha\",\"type\":\"linear\",\"time\":[0,0.4,0.6,1],\"value\":[0,0.33,0.33,0]}]},{\"type\":\"container\",\"x\":0,\"y\":0,\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[],\"mask\":{\"type\":\"rect\",\"x\":0,\"y\":0,\"width\":632,\"height\":50,\"fill\":\"#ffffff\",\"rotation\":0,\"alpha\":1,\"scale\":1},\"elements\":[{\"type\":\"text\",\"x\":0,\"y\":-50,\"value\":\"${text}\",\"fontFamily\":\"Georgia, 黑体\",\"fontStyle\":\"normal\",\"fontWeight\":\"normal\",\"fontSize\":44,\"fill\":\"${textColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"y\",\"type\":\"linear\",\"time\":[0,0.12,0.36,0.72,0.96,1],\"value\":[-50,-50,0,0,-50,-50]}]}]}]}]",
+  "paramsName": {
+    "text":"标题",
+    "textColor": "标题颜色",
+    "frameColor": "边框颜色"
+  },
+  "paramsTypes": {
+    "text": "String",
+    "textColor": "Color",
+    "frameColor": "Color"
+  },
+  "defaultParams": {
+    "text": "这里是标题文案长度最高限制",
+    "textColor": "#FFFFFF",
+    "frameColor": "#FF0000"
+  }
+}

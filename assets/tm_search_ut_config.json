@@ -1,0 +1,878 @@
+{
+  "BrandClick":      {
+    "combo": "sr-sift-BrandClick",
+    "click_type": "shop",
+    "ctrl_name": "TMSearch-BrandClick",
+    "spos": ""
+  },
+  "LocationAddress":      {
+    "combo": "sr-sift-LocationAddress",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-LocationAddress",
+    "spos": ""
+  },
+  "LocationLogin":      {
+    "combo": "sr-sift-LocationLogin",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-LocationLogin",
+    "spos": ""
+  },
+  "TextButton":      {
+    "combo": "sr-sift-TextButton",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-TextButton",
+    "spos": ""
+  },
+  "PersonalSetting":      {
+    "combo": "sr-sift-PersonalSetting",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-PersonalSetting",
+    "spos": ""
+  },
+  "PriceModule":      {
+    "combo": "sr-sift-PriceModule",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-PriceModule",
+    "spos": "PriceModule"
+  },
+  "Subscribe":      {
+    "combo": "sr-srp-Subscribe",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-Subscribe",
+    "spos": ""
+  },
+  "SubscribeSuggest":      {
+    "combo": "si-tag-SubscribeSuggest",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SubscribeSuggest",
+    "spos": ""
+  },
+  "UserSearchItem":      {
+    "combo": "si-tag-UserSearchItem",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-UserSearchItem",
+    "spos": "UserSearchItem"
+  },
+  "SearchHintMineQuery":      {
+    "combo": "si-tag-SearchHintMineQuery",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SearchHintMineQuery",
+    "spos": "SearchHintMineQuery"
+  },
+  "DefaultSearchItem":      {
+    "combo": "si-tag-DefaultSearchItem",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-DefaultSearchItem",
+    "spos": "DefaultSearchItem"
+  },
+  "SearchHintHotQuery":      {
+    "combo": "si-tag-SearchHintHotQuery",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SearchHintHotQuery",
+    "spos": "SearchHintHotQuery"
+  },
+  "SearchHintMineClear":      {
+    "combo": "si-tag-SearchHintMineClear",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SearchHintMineClear",
+    "spos": "SearchHintMineClear"
+  },
+  "SearchHintRelationQuery":      {
+    "combo": "si-tag-SearchHintRelationQuery",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SearchHintRelationQuery",
+    "spos": "SearchHintRelationQuery"
+  },
+  "SearchHintRelationSpuQuery":      {
+    "combo": "si-spu-SearchHintRelationSpuQuery",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SearchHintRelationSpuQuery",
+    "spos": ""
+  },
+  "HotContractPhone":      {
+    "combo": "si-spu-HotContractPhone",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-HotContractPhone",
+    "spos": "HotContractPhone"
+  },
+  "ContractPhoneQuery":      {
+    "combo": "si-spu-ContractPhoneQuery",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-ContractPhoneQuery",
+    "spos": "ContractPhoneQuery"
+  },
+  "ItemClick":      {
+    "combo": "sr-srp-ItemClick",
+    "click_type": "auction",
+    "ctrl_name": "TMSearch-ItemClick",
+    "spos": "ItemClick"
+  },
+  "SearchKeyWordTagsView":      {
+    "combo": "sr-sift-SearchKeyWordTagsView",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SearchKeyWordTagsView",
+    "spos": "SearchKeyWordTagsView"
+  },
+  "SortBySales":      {
+    "combo": "sr-sift-SortBySales",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SortBySales",
+    "spos": "SortBySales"
+  },
+  "NavHot":      {
+    "combo": "sr-srp-NavHot",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-NavHot",
+    "spos": "NavHot"
+  },
+  "SortByPrice":      {
+    "combo": "sr-sift-SortByPrice",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-SortByPrice",
+    "spos": "SortByPrice"
+  },
+  "DeleteSearchKeywordTag":      {
+    "combo": "sr-sift-DeleteSearchKeywordTag",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-DeleteSearchKeywordTag",
+    "spos": "DeleteSearchKeywordTag"
+  },
+  "MiniSite":      {
+    "combo": "sr-sift-MiniSite",
+    "click_type": "shop",
+    "ctrl_name": "TMSearch-MiniSite",
+    "spos": "MiniSite"
+  },
+  "ItemFilter":      {
+    "combo": "sr-sift-ItemFilter",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-ItemFilter",
+    "spos": "ItemFilter"
+  },
+  "Activity":      {
+    "combo": "sr-srp-Activity",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-Activity",
+    "spos": "Activity"
+  },
+  "SortByPopularity":      {
+    "combo": "sr-sift-SortByPopularity",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-SortByPopularity",
+    "spos": ""
+  },
+  "ShopClick":      {
+    "combo": "sr-srp-ShopClick",
+    "click_type": "shop",
+    "ctrl_name": "TMSearch-ShopClick",
+    "spos": "ShopClick"
+  },
+  "SortByShop":      {
+    "combo": "sr-sift-SortByShop",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-SortByShop",
+    "spos": "SortByShop"
+  },
+  "ListStyleSelector":      {
+    "combo": "sr-sift-ListStyleSelector",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-ListStyleSelector",
+    "spos": "ListStyleSelector"
+  },
+  "SiftConfirm":      {
+    "combo": "sr-nav-SiftConfirm",
+    "click_type": "nav",
+    "ctrl_name": "TMSearch-SiftConfirm",
+    "spos": "SiftConfirm"
+  },
+  "SiftInputMinPrice":      {
+    "combo": "sr-nav-SiftInputMinPrice",
+    "click_type": "nav",
+    "ctrl_name": "TMSearch-SiftInputMinPrice",
+    "spos": "SiftInputMinPrice"
+  },
+  "SiftInputMaxPrice":      {
+    "combo": "sr-nav-SiftInputMaxPrice",
+    "click_type": "nav",
+    "ctrl_name": "TMSearch-SiftInputMaxPrice",
+    "spos": "SiftInputMaxPrice"
+  },
+  "SiftConfirmDone":      {
+    "combo": "sr-nav-SiftConfirmDone",
+    "click_type": "nav",
+    "ctrl_name": "TMSearch-SiftConfirmDone",
+    "spos": "SiftConfirmDone"
+  },
+  "SiftConfirmReset":      {
+    "combo": "sr-nav-SiftConfirmReset",
+    "click_type": "nav",
+    "ctrl_name": "TMSearch-SiftConfirmReset",
+    "spos": "SiftConfirmReset"
+  },
+  "LossPoint":      {
+    "combo": "sr-srp-LossPoint",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-LossPoint",
+    "spos": "LossPoint"
+  },
+  "SliderFilter":      {
+    "combo": "sr-sift-SliderFilter",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-SliderFilter",
+    "spos": ""
+  },
+  "SortBy":      {
+    "combo": "sr-sift-SortBy",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-SortBy",
+    "spos": ""
+  },
+  "SearchHintRelationCspuAccessoryQuery":      {
+    "combo": "si-spu-SearchHintRelationCspuAccessoryQuery",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SearchHintRelationCspuAccessoryQuery",
+    "spos": ""
+  },
+  "ShopItemClick":      {
+    "combo": "sr-srp-ShopItemClick",
+    "click_type": "auction",
+    "ctrl_name": "TMSearch-ShopItemClick",
+    "spos": ""
+  },
+  "BannerWheel":      {
+    "combo": "sr-srp-BannerWheel",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-BannerWheel",
+    "spos": ""
+  },
+  "ClickToFootprintPage":      {
+    "combo": "sr-srp-ClickToFootprintPage",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-ClickToFootprintPage",
+    "spos": ""
+  },
+  "ScrollToTop":      {
+    "combo": "sr-srp-ScrollToTop",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-ScrollToTop",
+    "spos": ""
+  },
+  "SearchCrash":      {
+    "combo": "sr-nav-SearchCrash",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SearchCrash",
+    "spos": ""
+  },
+  "VoiceClick":      {
+    "combo": "si-tag-VoiceClick",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-VoiceClick",
+    "spos": ""
+  },
+  "SearchHintMagicRelationQuery":      {
+    "combo": "si-tag-SearchHintMagicRelationQuery",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SearchHintMagicRelationQuery",
+    "spos": ""
+  },
+  "RightSearchHintRelationQuery":      {
+    "combo": "si-tag-RightSearchHintRelationQuery",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-RightSearchHintRelationQuery",
+    "spos": ""
+  },
+  "ShopInfoClick":      {
+    "combo": "sr-srp-ShopInfoClick",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-ShopInfoClick",
+    "spos": ""
+  },
+  "PriceRangeLeftSilder":      {
+    "combo": "sr-sift-PriceRangeLeftSilder",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-PriceRangeLeftSilder",
+    "spos": ""
+  },
+  "PriceRangeRightSilder":      {
+    "combo": "sr-sift-PriceRangeRightSilder",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-PriceRangeRightSilder",
+    "spos": ""
+  },
+  "SiftConfirm_Userloc_UnFold":      {
+    "combo": "sr-nav-SiftConfirm_Userloc_UnFold",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-SiftConfirm_Userloc_UnFold",
+    "spos": "sr-nav-SiftConfirm_Userloc_UnFold"
+  },
+  "NoSearchResultRecommend":      {
+    "combo": "sr-srp-NoSearchResultRecommend",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-NoSearchResultRecommend",
+    "spos": "nosearchresult"
+  },
+  "VoiceSearch":      {
+    "combo": "si-tag-VoiceSearch",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-VoiceSearch",
+    "spos": "VoiceSearch"
+  },
+  "ChaoshiAddCart":      {
+    "combo": "sr-srp-ChaoshiAddCart",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-ChaoshiAddCart",
+    "spos": ""
+  },
+  "ChaoshiClickCart":      {
+    "combo": "sr-sift-ChaoshiClickCart",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-ChaoshiClickCart",
+    "spos": ""
+  },
+  "NoSearchResultBrand":      {
+    "combo": "sr-srp-NoSearchResultBrand",
+    "click_type": "brand",
+    "ctrl_name": "TMSearch-NoSearchResultBrand",
+    "spos": "noSearchResultBrand"
+  },
+  "NoSearchResultItem":      {
+    "combo": "sr-srp-NoSearchResultItem",
+    "click_type": "auction",
+    "ctrl_name": "TMSearch-NoSearchResultItem",
+    "spos": "noSearchResultItem"
+  },
+  "NoSearchResultSpellcheck":      {
+    "combo": "sr-srp-NoSearchResultSpellcheck",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-NoSearchResultSpellcheck",
+    "spos": "noSearchResultSpellcheck"
+  },
+  "PriceRangeSilder":      {
+    "combo": "sr-nav-PriceRangeSilder",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-PriceRangeSilder",
+    "spos": "priceRangeSilder"
+  },
+  "Suggesthotspot":      {
+    "combo": "si-tag-Suggesthotspot",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-Suggesthotspot",
+    "spos": "suggest_hot"
+  },
+  "SrpFindSimilar":      {
+    "combo": "sr-srp-SrpFindSimilar",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SrpFindSimilar",
+    "spos": "SrpFindSimilar"
+  },
+  "FSrpFindSimilar":      {
+    "combo": "sr-srp-FSrpFindSimilar",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-FSrpFindSimilar",
+    "spos": "FSrpFindSimilar"
+  },
+  "SimilarItemClick":      {
+    "combo": "sr-nav-SimilarItemClick",
+    "click_type": "auction",
+    "ctrl_name": "TMSearch-SimilarItemClick",
+    "spos": ""
+  },
+  "FsSortByPopularity":      {
+    "combo": "sr-sift-FsSortByPopularity",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-FsSortByPopularity",
+    "spos": ""
+  },
+  "FsSortBySale":      {
+    "combo": "sr-sift-FsSortBySale",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-FsSortBySale",
+    "spos": ""
+  },
+  "FsModeClick":      {
+    "combo": "sr-sift-FsModeClick",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-FsModeClick",
+    "spos": ""
+  },
+  "FsItemClick":      {
+    "combo": "sr-srp-FsItemClick",
+    "click_type": "auction",
+    "ctrl_name": "TMSearch-FsItemClick",
+    "spos": ""
+  },
+  "ChaoshiCategory":      {
+    "combo": "sr-nav-ChaoshiCategory",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-ChaoshiCategory",
+    "spos": ""
+  },
+  "SuggestHistoryMagic":      {
+    "combo": "si-tag-SuggestHistoryMagic",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SuggestHistoryMagic",
+    "spos": "suggest_mhs"
+  },
+  "SearchFullLinkLongPress":      {
+    "combo": "sr-sp-SearchFullLinkLongPress",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SearchFullLinkLongPress",
+    "spos": "FullLinkSearch"
+  },
+  "SearchFullLinkPositive":      {
+    "combo": "sr-sp-SearchFullLinkPositive",
+    "click_type": "nav",
+    "ctrl_name": "TMSearch-SearchFullLinkPositive",
+    "spos": "FullLinkPositiveSearch"
+  },
+  "SearchFullLinkNegative":      {
+    "combo": "sr-sp-SearchFullLinkNegative",
+    "click_type": "nav",
+    "ctrl_name": "TMSearch-SearchFullLinkNegative",
+    "spos": "FullLinkNegativeSearch"
+  },
+  "DeleteFullLinkTag":      {
+    "combo": "sr-sift-DeleteFullLinkTag",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-DeleteFullLinkTag",
+    "spos": "DeleteFullLinkTag"
+  },
+  "scenenav":      {
+    "combo": "sr-srp-scenenav",
+    "click_type": "nav",
+    "ctrl_name": "TMSearch-scenenav",
+    "spos": "scenenav"
+  },
+  "SearchInputPhotoSearchItem":      {
+    "combo": "si-nav-SearchInputPhotoSearchItem",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SearchInputPhotoSearchItem",
+    "spos": ""
+  },
+  "SearchResultPhotoSearchItem":      {
+    "combo": "sr-nav-SearchResultPhotoSearchItem",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SearchResultPhotoSearchItem",
+    "spos": ""
+  },
+  "PhotoSearchItemGuide":      {
+    "combo": "si-nav-PhotoSearchItemGuide",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-PhotoSearchItemGuide",
+    "spos": ""
+  },
+  "SearchFullLinkLongPressAndValid":      {
+    "combo": "sr-srp-SearchFullLinkLongPressAndValid",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SearchFullLinkLongPressAndValid",
+    "spos": "FullLinkSearchValid"
+  },
+  "suggestBanner":      {
+    "combo": "si-nav-suggestBanner",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-suggestBanner",
+    "spos": "suggestBanner"
+  },
+  "EditSearchKeywordTag":      {
+    "combo": "sr-sift-EditSearchKeywordTag",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-EditSearchKeywordTag",
+    "spos": ""
+  },
+  "SuggestShopGuide":      {
+    "combo": "si-nav-SuggestShopGuide",
+    "click_type": "shop",
+    "ctrl_name": "TMSearch-SuggestShopGuide",
+    "spos": ""
+  },
+  "SuggestStarShop":      {
+    "combo": "si-nav-SuggestStarShop",
+    "click_type": "shop",
+    "ctrl_name": "TMSearch-SuggestStarShop",
+    "spos": "suggest_starShop"
+  },
+  "SuperCollocation":      {
+    "combo": "sr-tag-SuperCollocation",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SuperCollocation",
+    "spos": ""
+  },
+  "SpuSortByPopularity":      {
+    "combo": "sr-sift-SpuSortByPopularity",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-SpuSortByPopularity",
+    "spos": ""
+  },
+  "SpuSortBySale":      {
+    "combo": "sr-sift-SpuSortBySale",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-SpuSortBySale",
+    "spos": ""
+  },
+  "SpuSortByPrice":      {
+    "combo": "sr-sift-SpuSortByPrice",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-SpuSortByPrice",
+    "spos": ""
+  },
+  "U2termExposure":      {
+    "combo": "si-tag-U2termExposure",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-U2termExposure",
+    "spos": ""
+  },
+  "MoreSeller":      {
+    "combo": "sr-sp-MoreSeller",
+    "click_type": "more",
+    "ctrl_name": "TMSearch-MoreSeller",
+    "spos": ""
+  },
+  "ConvergeItemShowMore":      {
+    "combo": "sr-srp-ConvergeItemShowMore",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-ConvergeItemShowMore",
+    "spos": ""
+  },
+  "transToSku":      {
+    "combo": "sr-srp-transToSku",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-transToSku",
+    "spos": ""
+  },
+  "SuggestHongbao":      {
+    "combo": "si-tag-SuggestHongbao",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SuggestHongbao",
+    "spos": ""
+  },
+  "HKShop":      {
+    "combo": "si-nav-HKShop",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-HKShop",
+    "spos": "suggest_hkshop"
+  },
+  "GlobalPhotoItem":      {
+    "combo": "sr-nav-GlobalPhotoItem",
+    "click_type": "nav",
+    "ctrl_name": "TMSearch-GlobalPhotoItem",
+    "spos": ""
+  },
+  "NewMiniSite":      {
+    "combo": "sr-sift-NewMiniSite",
+    "click_type": "shop",
+    "ctrl_name": "TMSearch-NewMiniSite",
+    "spos": ""
+  },
+  "NewMiniSiteBanner":      {
+    "combo": "sr-sift-NewMiniSiteBanner",
+    "click_type": "shop",
+    "ctrl_name": "TMSearch-NewMiniSiteBanner",
+    "spos": ""
+  },
+  "NewMiniSiteNavBar":      {
+    "combo": "sr-sift-NewMiniSiteNavBar",
+    "click_type": "shop",
+    "ctrl_name": "TMSearch-NewMiniSiteNavBar",
+    "spos": ""
+  },
+  "MiaoMiaoItemCompareClick":      {
+    "combo": "sr-srp-MiaoMiaoItemCompareClick",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-MiaoMiaoItemCompareClick",
+    "spos": ""
+  },
+  "MarketFullCut":      {
+    "combo": "sr-srp-MarketFullCut",
+    "click_type": "auction",
+    "ctrl_name": "TMSearch-MarketFullCut",
+    "spos": ""
+  },
+  "show_key_info":      {
+    "combo": "sr-srp-show_key_info",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-show_key_info",
+    "spos": ""
+  },
+  "long_click_show_key_info":      {
+    "combo": "sr-srp-long_click_show_key_info",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-long_click_show_key_info",
+    "spos": ""
+  },
+  "keyinfo_browse_picture":      {
+    "combo": "sr-xq-keyinfo_browse_picture",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-keyinfo_browse_picture",
+    "spos": ""
+  },
+  "keyinfo_click_pic_to_detail":      {
+    "combo": "sr-sp-keyinfo_click_pic_to_detail",
+    "click_type": "auction",
+    "ctrl_name": "TMSearch-keyinfo_click_pic_to_detail",
+    "spos": ""
+  },
+  "keyinfo_click_detail_to_detail_info":      {
+    "combo": "sr-srp-keyinfo_click_detail_to_detail_info",
+    "click_type": "auction",
+    "ctrl_name": "TMSearch-keyinfo_click_detail_to_detail_info",
+    "spos": ""
+  },
+  "keyinfo_click_daren_to_evaluate":      {
+    "combo": "sr-srp-keyinfo_click_daren_to_evaluate",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-keyinfo_click_daren_to_evaluate",
+    "spos": ""
+  },
+  "keyinfo_click_Structured_to_evaluate":      {
+    "combo": "sr-srp-keyinfo_click_Structured_to_evaluate",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-keyinfo_click_Structured_to_evaluate",
+    "spos": ""
+  },
+  "keyinfo_click_daren_to_h5":      {
+    "combo": "sr-srp-keyinfo_click_daren_to_h5",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-keyinfo_click_daren_to_h5",
+    "spos": ""
+  },
+  "keyinfo_add_favorite":      {
+    "combo": "sr-nav-keyinfo_add_favorite",
+    "click_type": "auction",
+    "ctrl_name": "TMSearch-keyinfo_add_favorite",
+    "spos": ""
+  },
+  "keyinfo_cancle_favorite":      {
+    "combo": "sr-srp-keyinfo_cancle_favorite",
+    "click_type": "auction",
+    "ctrl_name": "TMSearch-keyinfo_cancle_favorite",
+    "spos": ""
+  },
+  "keyinfo_click_findsimilar":      {
+    "combo": "sr-srp-keyinfo_click_findsimilar",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-keyinfo_click_findsimilar",
+    "spos": ""
+  },
+  "FunnySearchClickTab":      {
+    "combo": "sr-nav-FunnySearchClickTab",
+    "click_type": "nav",
+    "ctrl_name": "TMSearch-FunnySearchClickTab",
+    "spos": "FunnySearch"
+  },
+  "FunnySearchItemClick":      {
+    "combo": "sr-srp-FunnySearchItemClick",
+    "click_type": "auction",
+    "ctrl_name": "TMSearch-FunnySearchItemClick",
+    "spos": "FunnySearchItemClick"
+  },
+  "FunnySearchClickMore":      {
+    "combo": "sr-nav-FunnySearchClickMore",
+    "click_type": "more",
+    "ctrl_name": "TMSearch-FunnySearchClickMore",
+    "spos": "FunnySearchMoreClick"
+  },
+  "FunnySearchSlide":      {
+    "combo": "sr-srp-FunnySearchSlide",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-FunnySearchSlide",
+    "spos": "FunnySearchSlide"
+  },
+  "keyinfo_click_tryReport":      {
+    "combo": "sr-nav-keyinfo_click_tryReport",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-keyinfo_click_tryReport",
+    "spos": ""
+  },
+  "TextFieldClearAll":      {
+    "combo": "si-nav-TextFieldClearAll",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-TextFieldClearAll",
+    "spos": ""
+  },
+  "keyinfo_play_video":      {
+    "combo": "sr-srp-keyinfo_play_video",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-keyinfo_play_video",
+    "spos": ""
+  },
+  "TMCZiXunView":      {
+    "combo": "sr-nav-TMCZiXunView",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-TMCZiXunView",
+    "spos": "zixun"
+  },
+  "keyinfo_grally_pic":      {
+    "combo": "sr-srp-keyinfo_grally_pic",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-keyinfo_grally_pic",
+    "spos": ""
+  },
+  "PreFilterUnfold":      {
+    "combo": "sr-nav-PreFilterUnfold",
+    "click_type": "nav",
+    "ctrl_name": "TMSearch-PreFilterUnfold",
+    "spos": ""
+  },
+  "PreFilterOK":      {
+    "combo": "sr-nav-PreFilterOK",
+    "click_type": "nav",
+    "ctrl_name": "TMSearch-PreFilterOK",
+    "spos": ""
+  },
+  "PreFilterCancel":      {
+    "combo": "sr-nav-PreFilterCancel",
+    "click_type": "nav",
+    "ctrl_name": "TMSearch-PreFilterCancel",
+    "spos": ""
+  },
+  "PreFilterGiveup":      {
+    "ctrl_name": "TMSearch-PreFilterGiveup",
+    "combo": "sr-nav-PreFilterGiveup",
+    "click_type": "nav",
+    "spos": ""
+  },
+  "OuterNoLessResult":      {
+    "combo": "sr-srp-OuterNoLessResult",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-OuterNoLessResult",
+    "spos": ""
+  },
+  "ChangeInputQuery":      {
+    "combo": "si-nav-ChangeInputQuery",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-ChangeInputQuery",
+    "spos": ""
+  },
+  "SuggestOfflineSearchExposure":      {
+    "combo": "si-nav-SuggestOfflineSearchExposure",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SuggestOfflineSearchExposure",
+    "spos": ""
+  },
+  "OfflineClickSearchBtn":      {
+    "combo": "si-nav-OfflineClickSearchBtn",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-OfflineClickSearchBtn",
+    "spos": ""
+  },
+  "SuggestOfflineImageBar":      {
+    "combo": "si-nav-SuggestOfflineImageBar",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-SuggestOfflineImageBar",
+    "spos": ""
+  },
+  "PkAdd":      {
+    "combo": "sr-srp-PkAdd",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-PkAdd",
+    "spos": ""
+  },
+  "NavigateRightIcon":      {
+    "combo": "sr-nav-NavigateRightIcon",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-NavigateRightIcon",
+    "spos": ""
+  },
+  "ShoppingCartAdd":      {
+    "combo": "sr-srp-ShoppingCartAdd",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-ShoppingCartAdd",
+    "spos": ""
+  },
+  "ItemExposure":      {
+    "combo": "sr-srp-ItemExposure",
+    "click_type": "auction",
+    "ctrl_name": "TMSearch-ItemExposure",
+    "spos": "ItemExposure"
+  },
+  "CouponCatItem":      {
+    "combo": "sr-nav-CouponCatItem",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-CouponCatItem",
+    "spos": ""
+  },
+  "CouponCatDrop":      {
+    "combo": "sr-nav-CouponCatDrop",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-CouponCatDrop",
+    "spos": ""
+  },
+  "FilterByPriceRange":      {
+    "combo": "sr-nav-FilterByPriceRange",
+    "click_type": "sift",
+    "ctrl_name": "TMSearch-FilterByPriceRange",
+    "spos": ""
+  },
+  "HotqQingdanExposure":      {
+    "combo": "si-tag-HotqQingdanExposure",
+    "click_type": "other",
+    "ctrl_name": "TMSearch-HotqQingdanExposure",
+    "spos": ""
+  },
+  "ShopBrandIntro":      {
+  "ctrl_name": "TMSearch-ShopBrandIntro",
+  "combo": "sr-srp-ShopBrandIntro",
+  "click_type": "other",
+  "spos": ""
+  },
+  "SimilarShop":      {
+    "ctrl_name": "TMSearch-SimilarShop",
+    "combo": "sr-srp-SimilarShop",
+    "click_type": "other",
+    "spos": ""
+  },
+  "TMSChaoshiCoudanGoUrl":      {
+    "ctrl_name": "TMSearch-TMSChaoshiCoudanGoUrl",
+    "combo": "sr-nav-TMSChaoshiCoudanGoUrl",
+    "click_type": "auction",
+    "spos": ""
+  },
+  "ChaoshiCouDanExposure":      {
+    "ctrl_name": "TMSearch-ChaoshiCouDanExposure",
+    "combo": "sr-nav-ChaoshiCouDanExposure",
+    "click_type": "auction",
+    "spos": ""
+  },
+  "HasBrandBg":      {
+    "ctrl_name": "TMSearch-HasBrandBg",
+    "combo": "sr-srp-HasBrandBg",
+    "click_type": "shop",
+    "spos": ""
+  },
+  "BrandDiscovery":      {
+    "ctrl_name": "TMSearch-BrandDiscovery",
+    "combo": "BrandDiscovery",
+    "click_type": "other",
+    "spos": ""
+  },
+  "OpenItemFeeds":      {
+    "ctrl_name": "TMSearch-OpenItemFeeds",
+    "combo": "sr-nav-OpenItemFeeds",
+    "click_type": "nav",
+    "spos": ""
+  },
+  "CloseItemFeeds":      {
+    "ctrl_name": "TMSearch-CloseItemFeeds",
+    "combo": "sr-nav-CloseItemFeeds",
+    "click_type": "nav",
+    "spos": ""
+  },
+  "dapeigou":      {
+    "ctrl_name": "TMSearch-dapeigou",
+    "combo": "sr-srp-dapeigou",
+    "click_type": "other",
+    "spos": "dapeigou"
+  },
+  "HuiyuanClick":      {
+    "ctrl_name": "TMSearch-HuiyuanClick",
+    "combo": "sr-srp-Huiyuan"
+  },
+  "ItemVideoStop":      {
+    "ctrl_name": "TMSearch-ItemVideoStop",
+    "combo": "sr-srp-ItemVideoStop"
+  },
+  "ItemVideoSelfPlay":      {
+    "ctrl_name": "TMSearch-ItemVideoSelfPlay",
+    "combo": "sr-srp-ItemVideoSelfPlay"
+  }
+}

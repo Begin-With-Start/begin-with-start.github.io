@@ -1,0 +1,15 @@
+{
+    "page": "geb/userDefine",
+    "title": "image必填加viewId",
+    "verify": "dataModified:1396441721000;pageModified:1396441721000",
+    "view": {
+      "dataBinding": {
+        "url": "http://img02.config-vip.taobaocdn.net/imgextra/i2/2066596281/TB2jpxcXXXXXXcfaVXXXXXXXXXX_!!2066596281.jpeg"
+      },
+      "styleBinding": {
+        "height": 296
+      },
+      "type": "image",
+      "viewId": "imageViewId"
+    }
+}

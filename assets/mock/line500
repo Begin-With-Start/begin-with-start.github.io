@@ -1,0 +1,517 @@
+{
+    "api": "mtop.sns.configurable.view",
+    "v": "2.0",
+    "ret": [
+        "SUCCESS::调用成功"
+    ],
+    "data": {
+        "title": "帐号主页",
+        "data": {
+            "image": {
+                "bgImageUrl": "http://gw2.alicdn.com/tfscom/tuitui/T1DBU8FchcXXXXXXXX",
+                "headerImageUrl": "http://gw3.alicdn.com/tfscom/tuitui/T1.RR_XvlaXXXXXXXX"
+            },
+            "text": {
+                "nick": "韩都衣舍旗舰店",
+                "followButton": "点我关注"
+            },
+            "snsId": "7000555657",
+            "storeId": 10205349,
+            "blueIcon": "http://gtms01.alicdn.com/tps/i1/T148pIFwBlXXXCWhje-36-36.png",
+            "test1":[
+            	{
+	            	"test2":{
+	            		"test3":"catch you !"
+	            	}
+            	}
+            ]
+        },
+        "menus": [
+            {
+                "name": "名片",
+                "iconUrl": "http://gtms04.alicdn.com/tps/i4/T1YCNJFAdyXXcm2uvj-56-56.png",
+                "action": {
+                    "type": "jumpNative",
+                    "param": {
+                        "page": "namecard",
+                        "param":{
+                        	"accountInfo": "${mtop.sns.pubAccount.info}",
+                        	"snsId": "$snsId"
+                        }
+                    }
+                }
+            }
+        ],
+        "view": {
+            "type": "container",
+            "styleBinding": {
+                "layout": "absoluteLayout",
+                "width": "-1",
+                "height": "-1"
+            },
+            "dataBinding": {
+                "apiName": "mtop.sns.pubAccount.info",
+                "needLogin": false,
+                "param": {
+                    "snsId": "$snsId"
+                }
+            },
+            "subViews": [
+                {
+                    "type": "container",
+                    "styleBinding": {
+                        "layout": "linearLayout",
+                        "width": "-1",
+                        "height": "-1",
+                        "scroll": 1
+                    },
+                    "subViews": [
+                        {
+                            "viewId": "0.1.1",
+                            "type": "container",
+                            "styleBinding": {
+                                "layout": "absoluteLayout",
+                                "width": "-1",
+                                "height": "192"
+                            },
+                            "subViews": [
+                                {
+                                    "type": "image",
+                                    "styleBinding": {
+                                        "width": "-1",
+                                        "height": "-1",
+                                        "marginTop": 0,
+                                        "marginLeft": 0
+                                    },
+                                    "dataBinding": {
+                                        "url": "${mtop.sns.pubAccount.info}.backgroundImg"
+                                    }
+                                },
+                                {
+                                    "type": "image",
+                                    "styleBinding": {
+                                        "width": "-1",
+                                        "height": "-1",
+                                        "marginTop": 0,
+                                        "marginLeft": 0,
+                                        "backgroundColor": "#A0000000"
+                                    }
+                                },
+                                {
+                                    "type": "container",
+                                    "styleBinding": {
+                                    	"layout": "absoluteLayout",
+                                        "width": "108",
+                                        "height": "108",
+                                        "marginTop": 24,
+                                        "align": 2
+                                    },
+                                    "subViews": [
+                                        {
+                                            "type": "image",
+                                            "styleBinding": {
+                                                "width": "-1",
+                                                "height": "-1",
+                                                "backgroundColor": "#FFFFFF",
+                                                "isCircle": true
+                                            }
+                                        },
+                                        {
+                                            "type": "image",
+                                            "styleBinding": {
+                                                "width": "100",
+                                                "height": "100",
+                                                "align": 5,
+                                                "isCircle": true
+                                            },
+                                            "dataBinding": {
+                                                "url": "http://gtms02.alicdn.com/tps/i2/T14LNLFxxlXXaeHbsb-100-100.png"
+                                            },
+                                            "conditions":[
+                                            	{
+			                                        "type": "!=",
+			                                        "left": "${mtop.sns.pubAccount.info}.logoUrl",
+			                                        "right": "null",
+			                                        "dataBinding": {
+			                                            "url": "${mtop.sns.pubAccount.info}.logoUrl"
+			                                        }
+			                                    }
+                                            ]
+                                        },
+                                        {
+                                            "type": "image",
+                                            "styleBinding": {
+                                                "width": "30",
+                                                "height": "30",
+                                                "align": 9
+                                            },
+                                            "conditions":[
+                                            	{
+			                                        "type": "==",
+			                                        "left": "${mtop.sns.pubAccount.info}.certType",
+			                                        "right": "gw",
+			                                        "dataBinding": {
+			                                            "url": "http://gtms01.alicdn.com/tps/i1/T148pIFwBlXXXCWhje-36-36.png"
+			                                        }
+			                                    },
+			                                    {
+			                                        "type": "==",
+			                                        "left": "${mtop.sns.pubAccount.info}.certType",
+			                                        "right": "v",
+			                                        "dataBinding": {
+			                                            "url": "http://gtms01.alicdn.com/tps/i1/T1JR4IFx8fXXXCWhje-36-36.png"
+			                                        }
+			                                    }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "label",
+                                    "styleBinding": {
+                                        "width": "-1",
+                                        "height": "31",
+                                        "marginBottom": 24,
+                                        "align": 8,
+                                        "gravity": 5,
+                                        "textColor": "#FFFFFF",
+                                        "fontSize":24,
+                                        "fontWeight":500
+                                    },
+                                    "dataBinding": {
+                                        "value": "${mtop.sns.pubAccount.info}.fansCount",
+                                        "formatType": "abbr",
+                                        "prefix": "",
+                                        "suffix": " 关注者"
+                                    }
+                                },
+                                {
+                                    "type": "button",
+                                    "styleBinding": {
+                                        "width": "128",
+                                        "height": "56",
+                                        "marginTop": 24,
+                                        "marginRight": 22,
+                                        "gravity": 5,
+                                        "align": 3,
+                                        "textColor": "#FFFFFF",
+                                        "backgroundImage": "http://gtms01.alicdn.com/tps/i1/T1lRxGFDJoXXXWmaQ.-132-60.png",
+                                        "fontSize":32
+                                    },
+                                    "dataBinding": {
+                                        "value": "关注"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "type": "==",
+                                            "left": "${mtop.sns.pubAccount.info}.followed",
+                                            "right": true,
+                                            "dataBinding": {
+                                                "value": "已关注"
+                                            },
+                                            "styleBinding": {
+                                                "textColor": "#999999",
+                                                "backgroundImage": "http://gtms01.alicdn.com/tps/i1/T1rqdKFDtgXXXWmaQ.-132-60.png"
+                                            }
+                                        },
+                                        {
+                                            "type": "==",
+                                            "left": "${mtop.sns.pubAccount.info}.followed",
+                                            "right": false,
+                                            "dataBinding": {
+                                                "value": "关注"
+                                            },
+                                            "styleBinding": {
+                                                "textColor": "#FFFFFF",
+                                                "backgroundImage": "http://gtms01.alicdn.com/tps/i1/T1lRxGFDJoXXXWmaQ.-132-60.png"
+                                            }
+                                        }
+                                    ],
+                                    "events": [
+                                        {
+                                            "type": "click",
+                                            "actions": [
+                                                {
+                                                    "condition": {
+                                                        "type": "==",
+                                                        "left": "${mtop.sns.pubAccount.info}.followed",
+                                                        "right": false
+                                                    },
+                                                    "type": "sendRequest",
+                                                    "param": {
+                                                        "apiName": "mtop.sns.follow.pubAccount.add",
+                                                        "param": {
+                                                            "snsIds": "$snsId"
+                                                        },
+                                                        "needLogin": true
+                                                    },
+                                                    "callback": [
+                                                        {
+                                                            "type": "changeData",
+                                                            "param": {
+                                                                "${mtop.sns.pubAccount.info}.followed": true,
+                                                                "${mtop.sns.pubAccount.info}.fansCount": "+1",
+                                                                "$data.text.followButton": "已关注"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "refreshView",
+                                                            "param": {
+                                                                "viewId": "0.1.1"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "toast",
+                                                            "param": {
+                                                                "text": "关注成功!"
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "condition": {
+                                                        "type": "==",
+                                                        "left": "${mtop.sns.pubAccount.info}.followed",
+                                                        "right": true
+                                                    },
+                                                    "type": "sendRequest",
+                                                    "param": {
+                                                        "apiName": "mtop.sns.follow.pubAccount.remove",
+                                                        "param": {
+                                                            "snsIds": "$snsId"
+                                                        },
+                                                        "needLogin": true
+                                                    },
+                                                    "callback": [
+                                                        {
+                                                            "type": "changeData",
+                                                            "param": {
+                                                                "${mtop.sns.pubAccount.info}.followed": false,
+                                                                "${mtop.sns.pubAccount.info}.fansCount": "-1",
+                                                                "$data.text.followButton": "点我关注"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "refreshView",
+                                                            "param": {
+                                                                "viewId": "0.1.1"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "toast",
+                                                            "param": {
+                                                                "text": "取消关注成功!"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "container",
+                            "styleBinding": {
+                                "layout": "linearLayout",
+                                "width": "-1",
+                                "height": "166",
+                                "backgroundColor": "#FFFFFF"
+                            },
+                            "subViews": [
+                                {
+                                    "type": "label",
+                                    "styleBinding": {
+                                        "width": "-1",
+                                        "height": "82",
+                                        "marginLeft": 24,
+                                        "align": 4,
+                                        "gravity": 4,
+                                        "textColor": "#3D4245",
+                                        "fontSize":36
+                                    },
+                                    "dataBinding": {
+                                        "value": "${mtop.sns.pubAccount.info}.nick"
+                                    }
+                                },
+                                {
+                                    "type": "dashedLine",
+                                    "styleBinding": {
+                                        "width": "-1",
+                                        "height": "2",
+                                        "marginLeft": 24,
+                                        "marginRight": 24,
+                                        "dashGap":1,
+                                        "dashWidth":1,
+                                        "dashColor":"#999999"
+                                    }
+                                },
+                                {
+                                    "type": "label",
+                                    "styleBinding": {
+                                        "width": "-1",
+                                        "height": "82",
+                                        "marginLeft": 24,
+                                        "align": 4,
+                                        "gravity": 4,
+                                        "textColor": "#5D646E",
+                                        "fontSize":32
+                                    },
+                                    "dataBinding": {
+                                        "value": "${mtop.sns.pubAccount.info}.description",
+                                        "prefix":"“",
+                                        "suffix":"”"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "container",
+                            "styleBinding": {
+                                "layout": "linearLayout",
+                                "orientation": "horizontal",
+                                "width": "-1",
+                                "height": "168",
+                                "marginTop": 16,
+                                "marginLeft": 0,
+                                "backgroundColor": "#FFFFFF"
+                            },
+                            "dataBinding": {
+                                "apiName": "mtop.sns.feed.readAndListAfter",
+                                "needLogin": false,
+                                "param":{
+                                	"snsId":"$snsId"
+                                }
+                            },
+                            "events": [
+                                {
+                                    "type": "click",
+                                    "actions": [
+                                        {
+                                            "type": "jumpNative",
+                                            "param": {
+                                                "page": "configurable",
+                                                "param": {
+                                                    "snsId": "$snsId",
+                                                    "page":"Page_AllsparkAccountFeedList"
+                                                }
+                                            }
+                                    	}
+                                    ]
+                                }
+                            ],
+                            "subViews": [
+                                {
+                                    "type": "image",
+                                    "styleBinding": {
+                                        "width": "140",
+                                        "height": "120",
+                                        "marginTop": 24,
+                                        "marginLeft": 24
+                                    },
+                                    "dataBinding": {
+                                        "url": "${mtop.sns.feed.readAndListAfter}.list.[0].nodes.[0].picUrl"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "type": "==",
+                                            "left": "${mtop.sns.feed.readAndListAfter}.list.[0].nodes.[0].picUrl",
+                                            "right": "null",
+                                            "dataBinding": {
+                                                "url": "http://gtms01.alicdn.com/tps/i1/T1IjRJFB8aXXXQb4fe-140-120.png_40x40.jpg"
+                                            }
+                                        },
+                                        {
+                                            "type": "!=",
+                                            "left": "${mtop.sns.feed.readAndListAfter}.list.[0].nodes.[0].picUrl",
+                                            "right": "null",
+                                            "dataBinding": {
+                                                "url": "${mtop.sns.feed.readAndListAfter}.list.[0].nodes.[0].picUrl"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "container",
+                                    "styleBinding": {
+                                        "layout": "linearLayout",
+                                        "width": "350",
+                                        "height": "-1",
+                                        "marginTop": 24,
+                                        "marginLeft": 32
+                                    },
+                                    "subViews": [
+                                        {
+                                            "type": "label",
+                                            "styleBinding": {
+                                                "width": "-1",
+                                                "height": "34",
+                                                "gravity": 4,
+                                                "textColor": "#05C965",
+                                                "fontSize": 24
+                                            },
+                                            "dataBinding": {
+                                                "value": "最新动态"
+                                            }
+                                        },
+                                        {
+                                            "type": "label",
+                                            "styleBinding": {
+                                                "width": "-1",
+                                                "height": "82",
+                                                "marginTop": "18",
+                                                "lines": 2,
+                                                "textColor": "#5D646E",
+                                                "fontSize": 28
+                                            },
+                                            "dataBinding": {
+                                                "value": "${mtop.sns.feed.readAndListAfter}.list.[0].title"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "container",
+                                    "styleBinding": {
+                                        "layout": "absoluteLayout",
+                                        "width": "-1",
+                                        "height": "-1"
+                                    },
+                                    "subViews": [
+                                        {
+                                            "type": "image",
+                                            "styleBinding": {
+                                                "width": "14",
+                                                "height": "26",
+                                                "align": 3,
+                                                "marginTop": "32",
+                                                "marginRight": "32",
+                                                "backgroundColor": "#000000"
+                                            },
+                                            "dataBinding": {
+                                                "url": "http://gtms01.alicdn.com/tps/i1/T1hhBHFwXfXXa8IXfX-14-26.png"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "webView",
+                            "styleBinding": {
+                                "width": "-1",
+                                "height": "-2",
+                                "marginTop": 16,
+                                "marginLeft": 0
+                            },
+                            "dataBinding": {
+                                "url": "http://h5.m.taobao.com/channel/act/sale/taoappnoheader.php"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

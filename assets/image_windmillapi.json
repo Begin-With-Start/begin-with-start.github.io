@@ -1,0 +1,21 @@
+{
+  "registerApi": [
+    {
+      "moduleName": "image",
+      "moduleClass": "ImageBridge",
+      "moduleClassPackage": "com.taobao.android.miniimage",
+      "methods": {
+        "chooseImage": {
+        },
+        "previewImage": {
+        },
+        "saveImage": {
+        },
+        "compressImage": {
+        },
+        "getImageInfo": {
+        }
+      }
+    }
+  ]
+}

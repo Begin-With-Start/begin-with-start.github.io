@@ -1,0 +1,89 @@
+{
+	"page": "Page_AllsparkAccount",
+    "title": "帐号主页",
+    "view": {
+        "styleBinding": {
+            "height": "-1",
+            "layout": "linearLayout",
+            "orientation": "vertical"
+        },
+        "subViews": [
+          {
+            "dataBinding": {
+                "value": "test label"
+            },
+            "styleBinding": {
+                "fontSize": "30",
+                "fontStyle": "1",
+                "gravity": "4",
+                "height": "74",
+                "lines": "1",
+                "marginLeft": "20",
+                "textColor": "#88ffffff",
+                "width": "-1"
+            },
+            "events":[],
+            "type": "label",
+            "viewId":"linearLayout_label"
+          },
+          {
+            "dataBinding": {
+                "value": "test button"
+            },
+            "styleBinding": {
+                "fontSize": "30",
+                "fontStyle": "1",
+                "gravity": "4",
+                "height": "74",
+                "lines": "1",
+                "marginLeft": "20",
+                "textColor": "#88ffffff",
+                "width": "-1"
+            },
+            "events":[],
+            "type": "button",
+            "viewId":"viewId_button"
+          }
+        ],    
+        "type":"container",
+        "viewId":"container"
+    },
+    "data": {
+        "banner_array": [
+            {
+                "image": "http://img03.taobaocdn.com/imgextra/i3/1083554392/T2zadXXqFXXXXXXXXX_!!1083554392.jpg",
+                "title": "111",
+                "url": "m.taobao.com"
+            },
+            {
+                "image": "http://img03.taobaocdn.com/imgextra/i3/1083554392/T2zadXXqFXXXXXXXXX_!!1083554392.jpg",
+                "title": "111",
+                "url": "m.taobao.com"
+            }
+        ],
+        "double_image1_content_url": "http://h5.m.taobao.com/we/index.htm",
+        "double_image1_url": "http://a.tbcdn.cn/mw/webapp/allspark/01x2.jpg",
+        "double_image2_content_url": "http://shop.m.taobao.com/shop/shopIndex.htm?user_id=63247110",
+        "double_image2_url": "http://a.tbcdn.cn/mw/webapp/allspark/02x2.jpg",
+        "ids": "2000100210656,2000100210656",
+        "list_title": "精选商品",
+        "open_url": "http://shop.m.taobao.com/shop/shopIndex.htm?user_id=63247110",
+        "open_url_title": "哦嗨哟!",
+        "phone_number": "18658817116",
+        "single_content_title": "单图文案呵呵呵呵",
+        "single_content_url": "http://m.taobao.com",
+        "single_image_url": "http://img03.taobaocdn.com/imgextra/i3/1083554392/T2zadXXqFXXXXXXXXX_!!1083554392.jpg",
+        "triple_image1_content_url": "http://h5.m.taobao.com/we/index.htm",
+        "triple_image1_url": "http://a.tbcdn.cn/mw/webapp/allspark/01x2.jpg",
+        "triple_image2_content_url": "http://h5.m.taobao.com/we/index.htm",
+        "triple_image2_url": "http://a.tbcdn.cn/mw/webapp/allspark/02x2.jpg",
+        "triple_image3_content_url": "http://shop.m.taobao.com/shop/shopIndex.htm?user_id=63247110",
+        "triple_image3_url": "http://a.tbcdn.cn/mw/webapp/allspark/03x2.jpg"
+    },
+    "utParam": {
+        "sns_id": "$snsId",
+        "store_id": "$storeId"
+    },
+    "verify": "pageModified:1390546900000;templateModified:1392792428000"    
+}
+

@@ -1,0 +1,31 @@
+{
+  "name": "animation4",
+  "desc": "字幕4",
+  "duration": 3.1,
+  "author": "Jovial",
+  "content": "[{\"type\":\"container\",\"x\":0.5,\"y\":0.5,\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[],\"elements\":[{\"type\":\"line\",\"x\":-195,\"y\":-195,\"toX\":-195,\"toY\":-195,\"lineWidth\":10,\"fill\":\"${lineColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"toX\",\"type\":\"linear\",\"time\":[0,0.161,0.839,1],\"value\":[-195,195,195,-195]}]},{\"type\":\"line\",\"x\":190,\"y\":-195,\"toX\":190,\"toY\":-195,\"lineWidth\":10,\"fill\":\"${lineColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"toY\",\"type\":\"linear\",\"time\":[0,0.161,0.226,0.774,0.839],\"value\":[-195,-195,195,195,-195]}]},{\"type\":\"line\",\"x\":195,\"y\":195,\"toX\":195,\"toY\":195,\"lineWidth\":10,\"fill\":\"${lineColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"toX\",\"type\":\"linear\",\"time\":[0,0.226,0.258,0.71,0.774],\"value\":[195,195,-195,-195,195]}]},{\"type\":\"line\",\"x\":-190,\"y\":195,\"toX\":-190,\"toY\":195,\"lineWidth\":10,\"fill\":\"${lineColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"toY\",\"type\":\"linear\",\"time\":[0,0.258,0.419,0.581,0.71],\"value\":[195,195,-195,-195,195]}]},{\"type\":\"line\",\"x\":206,\"y\":-195,\"toX\":206,\"toY\":-195,\"lineWidth\":2,\"fill\":\"${lineColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"toY\",\"type\":\"linear\",\"time\":[0,0.097,0.903,1],\"value\":[-195,211,211,-195]}]},{\"type\":\"line\",\"x\":206,\"y\":211,\"toX\":206,\"toY\":211,\"lineWidth\":2,\"fill\":\"${lineColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"toX\",\"type\":\"linear\",\"time\":[0,0.097,0.226,0.774,0.903],\"value\":[206,206,-190,-190,206]}]},{\"type\":\"rect\",\"visible\":true,\"x\":0,\"y\":0,\"width\":370,\"height\":380,\"fill\":\"#000000\",\"rotation\":0,\"alpha\":0,\"scale\":1,\"animation\":[{\"key\":\"alpha\",\"type\":\"linear\",\"time\":[0,0.194,0.484,0.581,0.871],\"value\":[0,0,0.33,0.33,0]}]},{\"type\":\"rect\",\"visible\":true,\"x\":0,\"y\":0,\"width\":1,\"height\":116,\"fill\":\"${midTextBgcolor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"animation\":[{\"key\":\"width\",\"type\":\"linear\",\"time\":[0,0.194],\"value\":[1,370]}]},{\"type\":\"container\",\"x\":0,\"y\":0,\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[],\"mask\":{\"type\":\"rect\",\"x\":0,\"y\":0,\"width\":370,\"height\":316,\"fill\":\"#ffffff\",\"rotation\":0,\"alpha\":1,\"scale\":1},\"elements\":[{\"type\":\"text\",\"x\":0,\"y\":-193,\"value\":\"${text1}\",\"fontFamily\":\"Georgia, 黑体\",\"fontStyle\":\"normal\",\"fontWeight\":\"normal\",\"fontSize\":70,\"fill\":\"${textColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"y\",\"type\":\"linear\",\"time\":[0,0.194,0.419,0.581,1],\"value\":[-193,-193,-123,-123,-193]}]},{\"type\":\"text\",\"x\":-370,\"y\":0,\"value\":\"${text2}\",\"fontFamily\":\"Georgia, 黑体\",\"fontStyle\":\"normal\",\"fontWeight\":\"normal\",\"fontSize\":80,\"fill\":\"${textColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"x\",\"type\":\"linear\",\"time\":[0,0.194,0.419,0.581,1],\"value\":[-370,-370,0,0,-370]}]},{\"type\":\"text\",\"x\":0,\"y\":178,\"value\":\"${text3}\",\"fontFamily\":\"Georgia, 黑体\",\"fontStyle\":\"normal\",\"fontWeight\":\"normal\",\"fontSize\":40,\"fill\":\"${textColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"y\",\"type\":\"linear\",\"time\":[0,0.194,0.419,0.581,1],\"value\":[178,178,108,108,178]}]}]}]}]",
+  "paramsName": {
+    "text1": "第一段文字",
+    "text2": "第二段文字",
+    "text3": "第三段文字",
+    "textColor": "文字颜色",
+    "midTextBgcolor": "中部文字背景色",
+    "lineColor": "边框颜色"
+  },
+  "paramsTypes": {
+    "text1": "String",
+    "text2": "String",
+    "text3": "String",
+    "textColor": "Color",
+    "midTextBgcolor": "Color",
+    "lineColor": "Color"
+  },
+  "defaultParams": {
+    "text1": "女神范",
+    "text2": "新品上市",
+    "text3": "二零一八新款发布",
+    "textColor": "#FFFFFF",
+    "midTextBgcolor": "#FF0000",
+    "lineColor": "#FFFFFF"
+  }
+}

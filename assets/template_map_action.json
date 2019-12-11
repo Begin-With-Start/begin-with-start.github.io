@@ -1,0 +1,547 @@
+
+{
+    "addJhsRemind": {
+        "key": "add_jhs_waiting",
+        "params": {
+            "endTime": "${vertical.jhs.endTime}",
+            "itemId": "${item.itemId}",
+            "itemUrl": "http://a.m.taobao.com/i${item.itemId}.htm",
+            "startTime": "${vertical.jhs.startTime}",
+            "title": "${item.title}"
+        }
+    },
+    "pingtuannow": {
+        "key": "buy_now"
+    },
+    "openPingTuanDesc": {
+        "key": "open_url",
+        "params": {
+            "url": "${resource.entrances.pinTuanInfo.link}"
+        }
+    },
+    "openThreeD": {
+        "key": "open_url",
+        "params": {
+            "url": "${resource.entrances.threeD.link}"
+        }
+    },
+    "addToCart": {
+        "key": "add_to_cart"
+    },
+    "buyNow": {
+        "key": "buy_now"
+    },
+    "openSalePromotion": {
+        "key": "open_sale_promotion",
+        "params": {
+            "open_sale_promotion": "${price.shopProm}"
+        }
+    },
+    "openBottomProductDetail": {
+        "key": "open_product_bottom"
+    },
+    "openDouble11Coupon": {
+        "key": "open_url",
+        "params": {
+            "url": "${resource.entrances.double11Coupon.link}"
+        }
+    },
+    "openTmallCoupon": {
+        "key": "open_url",
+        "params": {
+            "url": "${resource.entrances.tmallCoupon.link}"
+        }
+    },
+    "openPageAskAll": {
+        "key": "open_url",
+        "params": {
+            "url": "${vertical.askAll.linkUrl}"
+        }
+    },
+    "openPageCart": {
+        "key": "open_url",
+        "params": {
+            "url": "http://h5.m.taobao.com/awp/base/cart.htm",
+            "urlParams": {
+                "cartfrom": "detail",
+                "itemId": "${item.itemId}"
+            }
+        }
+    },
+    "openPageCoupon": {
+        "key": "open_url",
+        "params": {
+            "url": "${item.couponUrl}",
+            "urlParams": {
+                "sellerId": "${seller.userId}"
+            }
+        }
+    },
+    "openPageFullBack": {
+        "key": "open_url",
+        "params": {
+            "url": "${resource.entrances.fullBackBonus.link}"
+        }
+    },
+    "openPageHome": {
+        "key": "open_url",
+        "params": {
+            "url": "http://m.taobao.com/index.htm"
+        }
+    },
+    "openPageMsgCenter": {
+        "key": "open_url",
+        "params": {
+            "url": "http://m.taobao.com/go/msgcentercategory",
+            "urlParams": {
+                "cartfrom": "detail",
+                "itemId": "${item.itemId}"
+            }
+        }
+    },
+    "openPagePreview": {
+        "key": "go_back"
+    },
+    "openPageRate": {
+        "key": "open_rate"
+    },
+    "openPageSMCart": {
+        "key": "open_url",
+        "params": {
+            "url": "http://cart.m.tmall.com/cart/myCart.htm",
+            "urlParams": {
+                "tpId": "${vertical.supermarket.tpId}"
+            }
+        }
+    },
+    "openPageSMHome": {
+        "key": "open_url",
+        "params": {
+            "url": "http://chaoshi.m.tmall.com"
+        }
+    },
+    "openPageSearchSM": {
+        "key": "open_url",
+        "params": {
+            "url": "http://www.tmall.com/market/chaoshi/chaoshi-search-native.php",
+            "urlParams": {
+                "tpId": "${vertical.supermarket.tpId}"
+            }
+        }
+    },
+    "openPageService": {
+        "key": "open_url",
+        "params": {
+            "url": "http://h5.m.taobao.com/alone/service.html",
+            "urlParams": {
+                "itemId": "${item.itemId}",
+                "pageName": "n_detail"
+            }
+        }
+    },
+    "openPageShop": {
+        "key": "open_url",
+        "params": {
+            "url": "${seller.shopUrl}"
+        }
+    },
+    "openPageMemberShop": {
+        "key": "open_url",
+        "params": {
+            "url": "${vertical.memberShop.memberShopEnterUrl}"
+        }
+    },
+    "openPageLadyGoShop": {
+        "key": "open_url",
+        "params": {
+            "url": "https://ladygo.m.tmall.com/m/index.htm"
+        }
+    },
+    "openPageShopAllItem": {
+        "key": "open_url",
+        "params": {
+            "url": "tmall://page.tm/shop?showType=allItems",
+            "urlParams": {
+                "shopId": "${seller.shopId}",
+                "item_id": "${item.itemId}"
+            }
+        }
+    },
+    "openPageShopCategory": {
+        "key": "open_url",
+        "params": {
+            "url": "tmall://page.tm/shopCategory",
+            "urlParams": {
+                "expandSecCat": "1",
+                "gotoSearch": "1",
+                "shopId": "${seller.shopId}",
+                "user_id": "${seller.userId}"
+            }
+        }
+    },
+    "openPageShopCategorySM": {
+        "key": "open_url",
+        "params": {
+            "url": "https://s.m.tmall.com/m/category.htm",
+            "urlParams": {
+                "sellerId": "${vertical.supermarket.tpId}",
+                "businessName": "chaoshi"
+            }
+        }
+    },
+    "openPageShopCategoryMarket": {
+        "key": "open_url",
+        "params": {
+            "url": "http://www.tmall.com/market/chaoshi/chaoshi-cat-native.php",
+            "urlParams": {
+                "sellerId": "${vertical.supermarket.tpId }"
+            }
+        }
+    },
+    "openPageShopNewItem": {
+        "key": "open_url",
+        "params": {
+            "url": "tmall://page.tm/shop?showType=newItems",
+            "urlParams": {
+                "shopId": "${seller.shopId}",
+                "item_id": "${item.itemId}"
+            }
+        }
+    },
+    "openPageShopSM": {
+        "key": "open_url",
+        "params": {
+            "url": "http://chaoshi.m.tmall.com"
+        }
+    },
+    "openPageWangwang": {
+        "key": "open_ww",
+        "params": {
+            "url": "taobao://go/wwChat",
+            "urlParams": {
+                "categoryIds": "",
+                "itemId": "${item.itemId }",
+                "nick": "${seller.sellerNick}",
+                "sellerType": "${ seller.sellerType }",
+                "sessionType": "0",
+                "shopId": "${seller.shopId}",
+                "shouldShowSellerShop": "YES",
+                "source": "DETAIL"
+            }
+        }
+    },
+    "openPageWangwangRobot": {
+        "key": "open_url",
+        "params": {
+            "url": "http://m.service.taobao.com/wap/robot.htm?sid=1c9ff25380c028c2737e734fae141cbe&sourceId=1510171913"
+        }
+    },
+    "openProduct": {
+        "key": "open_product_params"
+    },
+    "showCouponView": {
+        "key": "open_coupons",
+        "params": {
+            "itemId": "${ item.itemId}",
+            "sellerId": "${seller.userId}",
+            "shopId": "${seller.shopId}",
+            "url": "${item.couponUrl}",
+            "urlParams": {
+                "sellerId": "${seller.userId}"
+            }
+        }
+    },
+    "showInterSizingChart": {
+        "key": "open_inter_sizing_chart"
+    },
+    "showSizingChart": {
+        "key": "open_sizing_chart"
+    },
+    "showMenu": {
+        "key": "show_menu"
+    },
+    "showShare": {
+        "key": "share"
+    },
+    "showAreaChoose": {
+        "key": "open_area_chooser"
+    },
+    "openCainiaoLink": {
+        "key": "open_url",
+        "params": {
+            "url": "${delivery.extras.ReceiveTime.link}"
+        }
+    },
+    "showMiaoTongBanner": {
+        "key": "open_url",
+        "params": {
+            "url": "tmall://page.tm/aliPanoramaStores",
+            "urlParams": {
+                "sellerId": "${seller.userId}",
+                "itemId": "${item.itemId}"
+            }
+        }
+    },
+    "utOpenCainiaoLink": {
+        "key": "user_track",
+        "params": {
+            "trackName": "CaiNiao",
+            "trackNamePre": "Button-"
+        }
+    },
+    "utAddToCart": {
+        "key": "user_track",
+        "params": {
+            "trackName": "AddToCart",
+            "trackNamePre": "Button"
+        }
+    },
+    "utBuyNow": {
+        "key": "user_track",
+        "params": {
+            "trackName": "Buy",
+            "trackNamePre": "Button"
+        }
+    },
+    "utFetchCoupon": {
+        "key": "user_track",
+        "params": {
+            "trackName": "Coupons",
+            "trackNamePre": "Button",
+            "trackParams": {
+                "item_id": "${item.itemId}",
+                "shop_id": "${ seller.shopId}"
+            }
+        }
+    },
+    "utGotoCart": {
+        "key": "user_track",
+        "params": {
+            "trackName": "ShoppingCart",
+            "trackNamePre": "Button"
+        }
+    },
+    "utGotoMsgCenter": {
+        "key": "user_track",
+        "params": {
+            "trackName": "MsgCenter",
+            "trackNamePre": "Button"
+        }
+    },
+    "utOpenBottomProductDetail": {
+        "key": "user_track",
+        "params": {
+            "trackName": "DetailGraphicOpen",
+            "trackNamePre": "Button"
+        }
+    },
+    "utOpenPageAskAll": {
+        "key": "user_track",
+        "params": {
+            "trackName": "QuestionAll",
+            "trackNamePre": "Button"
+        }
+    },
+    "utOpenPageFullBack": {
+        "key": "user_track",
+        "params": {
+            "trackName": "FullBackBonus",
+            "trackNamePre": "Button"
+        }
+    },
+    "utOpenPageHome": {
+        "key": "user_track",
+        "params": {
+            "trackName": "Home",
+            "trackNamePre": "Button"
+        }
+    },
+    "utOpenPageRate": {
+        "key": "user_track",
+        "params": {
+            "trackName": "Comments",
+            "trackNamePre": "Button"
+        }
+    },
+    "utOpenPageSMCart": {
+        "key": "user_track",
+        "params": {
+            "trackName": "ShoppingCart",
+            "trackNamePre": "Button"
+        }
+    },
+    "utOpenPageSearchSM": {
+        "key": "user_track",
+        "params": {
+            "trackName": "Search",
+            "trackNamePre": "Button",
+            "trackParams": {
+                "tipId": "${vertical.supermarket.tpId}"
+            }
+        }
+    },
+    "utOpenPageShop": {
+        "key": "user_track",
+        "params": {
+            "trackName": "Shop",
+            "trackNamePre": "Button"
+        }
+    },
+    "utOpenPageShopAllItem": {
+        "key": "user_track",
+        "params": {
+            "trackName": "AllItem",
+            "trackNamePre": "Button"
+        }
+    },
+    "utOpenPageShopBar": {
+        "key": "user_track",
+        "params": {
+            "trackName": "BarShop",
+            "trackNamePre": "Button"
+        }
+    },
+    "utOpenPageShopButton": {
+        "key": "user_track",
+        "params": {
+            "trackName": "ShopPage",
+            "trackNamePre": "Button"
+        }
+    },
+    "utOpenPageShopCategory": {
+        "key": "user_track",
+        "params": {
+            "trackName": "ShopNav",
+            "trackNamePre": "Button"
+        }
+    },
+    "utOpenPageShopNewItem": {
+        "key": "user_track",
+        "params": {
+            "trackName": "NewItem",
+            "trackNamePre": "Button"
+        }
+    },
+    "utOpenPageWangwang": {
+        "key": "user_track",
+        "params": {
+            "trackName": "BarWangWang",
+            "trackNamePre": "Button"
+        }
+    },
+    "utShowCouponView": {
+        "key": "user_track",
+        "params": {
+            "trackName": "Coupons",
+            "trackNamePre": "Button"
+        }
+    },
+    "utShowShare": {
+        "key": "user_track",
+        "params": {
+            "trackName": "Share",
+            "trackNamePre": "Button"
+        }
+    },
+    "utShowAreaChooseView": {
+        "key": "user_track",
+        "params": {
+            "trackName": "ShowAreaChoose",
+            "trackNamePre": "Button"
+        }
+    },
+    "utShowMiaoTongBanner": {
+        "key": "user_track",
+        "params": {
+            "trackName": "ShowMiaoTongBanner",
+            "trackNamePre": "Button"
+        }
+    },
+    "openPurchaseLimit": {
+        "key": "open_purchase_limit",
+        "params": {
+            "open_purchase_limit": "${ item.limitInfo.content}"
+        }
+    },
+    "openJuhuasuan": {
+        "key": "open_jhs_marketing"
+    },
+    "utShowJuhuasuan": {
+        "key": "user_track",
+        "params": {
+            "trackName": "ShowJhsMarketing",
+            "trackNamePre": "Button"
+        }
+    },
+    "openTaxCouponTmall": {
+        "key": "open_url",
+        "params": {
+            "url": "${resource.entrances.taxCoupon.link}"
+        }
+    },
+    "openTaxDesc": {
+        "key": "open_tax_desc"
+    },
+    "utOpenTaxDesc": {
+        "key": "user_track",
+        "params": {
+            "trackName": "Button_OpenTaxDesc"
+        }
+    },
+    "openPricedCoupon": {
+        "key": "open_url",
+        "params": {
+            "url": "${resource.entrances.pricedCoupon.link}"
+        }
+    },
+    "utOpenPricedCoupon": {
+        "key": "user_track",
+        "params": {
+            "trackName": "OpenPricedCoupon",
+            "trackNamePre": "Button-"
+        }
+    },
+    "openVipShop": {
+        "key": "open_url",
+        "params": {
+            "url": "${vertical.memberShop.memberShopEnterUrl}"
+        }
+    },
+    "openVipFansShop": {
+        "key": "open_url",
+        "params": {
+            "url": "${vertical.memberShop.reqMeberRightUrl}"
+        }
+    },
+    "openCouponInfo": {
+        "key": "open_coupon_info"
+    },
+    "utOpenCouponInfo": {
+        "key": "user_track",
+        "params": {
+            "trackName": "Button-Coupon"
+        }
+    },
+    "openServicesDetail": {
+        "key": "open_services",
+        "params": {
+            "params": "${consumerProtection.params}",
+            "passValue": "${consumerProtection.passValue}",
+            "items": "${consumerProtection.items}"
+        }
+    },
+    "utOpenShopPromotion": {
+        "key": "user_track",
+        "params": {
+            "trackName": "ShopPromotion",
+            "trackNamePre": "Button"
+        }
+    },
+    "utOpenServicesDetail": {
+        "key": "user_track",
+        "params": {
+            "trackName": "CustomProtection",
+            "trackNamePre": "Button"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+<?xml version ='1.0' encoding ='UTF-8'?>
+<!-- a filter from taobao album -->
+<!-- params:input_image -->
+<filter ver='0.1' name='black' programCount='1'>
+    <program id='0'>
+        <shader type='ps' input_image='inputImageTexture'>
+            <uniform_var type='sampler2D' name='inputImageTexture'/>
+            <code>
+                uniform sampler2D inputImageTexture;
+                varying highp vec2 textureCoordinate;
+
+                void main(void)
+                {
+                mediump vec4 texel = texture2D(inputImageTexture, textureCoordinate);
+                mediump float grayColor=0.3*texel.r + 0.11*texel.g + 0.59* texel.b;
+                gl_FragColor = vec4(grayColor,grayColor,grayColor,texel.a);
+                }
+            </code>
+        </shader>
+    </program>
+</filter>

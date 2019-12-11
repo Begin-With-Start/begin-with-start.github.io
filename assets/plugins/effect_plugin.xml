@@ -1,0 +1,19 @@
+<?xml version ='1.0' encoding ='UTF-8'?>
+<effect_groups version='0.1'>
+
+    <group id='classic' icon='effectgroups.classic.normal.png' resprefix='effectgroup_classic' title='effectgroups_classic_title'>
+        <effect id='brannan' icon='brannan.png' resprefix='effect_brannan' title='brannan'/>
+        <effect id='black' icon='black.png' resprefix='effedt_black' title='black'/>
+        <effect id='beiou' icon='beiou_map.png' resprefix='effedt_bieou' title='beiou'/>
+        <effect id='film' icon='mapPSD_film.png' resprefix='effedt_film' title='film'/>
+        <effect id='huaijiu' icon='mapPSD_huaijiu.png' resprefix='effedt_huaijiu' title='huaijiu'/>
+        <effect id='jiaqiang' icon='mapPSD_jiaqiang.png' resprefix='effedt_jiaqiang' title='jiaqiang'/>
+        <effect id='lenglan' icon='mapPSD_lenglan.png' resprefix='effedt_lenglan' title='lenglan'/>
+        <effect id='lenglv' icon='mapPSD_lenglv.png' resprefix='effedt_lenglv' title='lenglv'/>
+        <effect id='lengzi' icon='mapPSD_lengzi.png' resprefix='effedt_lengzi' title='lengzi'/>
+        <effect id='mocha' icon='mapPSD_mocha.png' resprefix='effedt_mocha' title='mocha'/>
+        <effect id='nuanyang' icon='mapPSD_nuanyang.png' resprefix='effedt_nuanyang' title='nuanyang'/>
+        <effect id='oldschool' icon='mapPSD_oldschool.png' resprefix='effedt_oldschool' title='oldschool'/>
+        <effect id='rixi' icon='mapPSD_rixi.png' resprefix='effedt_rixi' title='rixi'/>
+    </group>
+</effect_groups>

@@ -1,0 +1,15 @@
+{
+  "registerApi": [
+    {
+      "moduleName": "video",
+      "moduleClass": "VideoBridge",
+      "moduleClassPackage": "com.taobao.android.minivideo",
+      "methods": {
+        "chooseVideo": {
+        },
+        "saveVideoToPhotosAlbum": {
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "components": [
+    {
+      "name": "livebigcard",
+      "className": "com.taobao.taolive.ui.weex.TBLiveBigcardViewComponent",
+      "methods": [
+        "startPlayVideo",
+        "stopPlayVideo",
+        "stopFavor",
+        "startFavor",
+        "setCardParams",
+        "clickEvent",
+        "showBubbleTips",
+        "closeBubbleTips"
+      ]
+    },
+    {
+      "name": "alilivebigcard",
+      "className": "com.taobao.taolive.uikit.cardsuite.weex.TBLiveBigCardWeexComponent",
+      "methods": [
+        "startPlayVideo",
+        "stopPlayVideo",
+        "stopFavor",
+        "startFavor",
+        "setCardParams",
+        "clickEvent",
+        "showGoodBubble",
+        "hideGoodBubble",
+        "setCardParams",
+        "setBubbleZip",
+        "hideFavor",
+        "hideAccountInfo",
+        "hideLiveStateInfo",
+        "hideTitle",
+        "setSubType",
+        "setSceneType",
+        "exposureEvent"
+      ]
+    },
+    {
+      "name": "alilivemiddlecard",
+      "className": "com.taobao.taolive.uikit.cardsuite.weex.TBLiveMiddleCardWeexComponent",
+      "methods": [
+        "startPlayVideo",
+        "stopPlayVideo",
+        "stopFavor",
+        "startFavor",
+        "setCardParams",
+        "clickEvent",
+        "showGoodBubble",
+        "hideGoodBubble",
+        "setCardParams",
+        "setBubbleZip",
+        "hideFavor",
+        "hideAccountInfo",
+        "hideLiveStateInfo",
+        "hideTitle",
+        "setSubType",
+        "setSceneType",
+        "exposureEvent"
+      ]
+    },
+    {
+      "name": "alilivesmallcard",
+      "className": "com.taobao.taolive.uikit.cardsuite.weex.TBLiveSmallCardWeexComponent",
+      "methods": [
+        "startPlayVideo",
+        "stopPlayVideo",
+        "stopFavor",
+        "startFavor",
+        "setCardParams",
+        "clickEvent",
+        "showGoodBubble",
+        "hideGoodBubble",
+        "setCardParams",
+        "setBubbleZip",
+        "hideFavor",
+        "hideAccountInfo",
+        "hideLiveStateInfo",
+        "hideTitle",
+        "setSubType",
+        "setSceneType",
+        "exposureEvent"
+      ]
+    }
+  ]
+}

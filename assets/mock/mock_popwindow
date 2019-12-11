@@ -1,0 +1,185 @@
+{
+    "page": "Page_AllsparkAccount",
+    "title": "popwindow测试",
+    "view": {
+      "styleBinding": {
+        "backgroundColor": "#FFFFFF",
+        "height": 200,
+        "layout": "absoluteLayout",
+        "marginBottom": 18,
+        "paddingBottom": 20,
+        "paddingLeft": 20,
+        "paddingRight": 20,
+        "paddingTop": 20,
+        "width": -1
+      },
+      "subViews": [
+        {
+          "styleBinding": {
+            "height": 80,
+            "layout": "absoluteLayout",
+            "marginLeft": 26,
+            "marginTop": 46,
+            "align": 5,
+            "width": 160
+          },
+          "subViews": [
+            {
+              "dataBinding": {
+                "value": "点此测试popwindow"
+              },
+              "styleBinding": {
+                "fontSize": 20,
+                "fontStyle": 1,
+                "height": -2,
+                "lines": 2,
+                "marginTop": 8,
+                "textColor": "#808080",
+                "width": 180
+              },
+              "type": "button",
+              "viewId":"showPop",
+              "events": [
+                {
+	              "actions": [
+	                {
+	                  "param": {
+	                    "view": {
+	                      "styleBinding": {
+	                        "backgroundColor": "#FFFFFF",
+	                        "height": -2,
+	    					"width": -1,
+	    					"align": 8,
+	    					"marginBottom": 8,
+	    					"marginLeft": 18,
+	    					"marginRight": 18,
+	                        "layout": "linearLayout"
+	                      },
+	                      "subViews": [
+	                        {
+	                          "dataBinding": {
+	                            "value": "pop测试第一条"
+	                          },
+	                          "styleBinding": {
+	                          	"backgroundColor":"#000000",
+	                            "fontSize": 30,
+	                            "fontStyle": 1,
+	                            "height": 80,
+	                            "lines": 1,
+	                            "marginTop": 8,
+	                            "textColor": "#FFFFFF",
+	                            "width": -1
+	                          },
+	                          "type": "label",
+	                          "events":[
+	                          	{
+	                          		"type":"click",
+	                          		"actions":[
+	                          			{
+			                              "param": {
+			                                "text": "actions：第一条"
+			                              },
+			                              "type": "toast"
+			                            },
+			                            {
+										  "param":{
+											"viewId": "popupWindow"
+										  },
+										  "type": "dismissPopWindow"
+										}
+	                          		]
+	                          	}
+	                          ]
+	                        },
+	                        {
+	                          "dataBinding": {
+	                            "value": "pop测试第二条"
+	                          },
+	                          "styleBinding": {
+	                          	"backgroundColor":"#000000",
+	                            "fontSize": 30,
+	                            "fontStyle": 1,
+	                            "height": 80,
+	                            "lines": 1,
+	                            "marginTop": 8,
+	                            "textColor": "#FFFFFF",
+	                            "width": -1
+	                          },
+	                          "type": "label",
+	                          "events":[
+	                          	{
+	                          		"type":"click",
+	                          		"actions":[
+	                          			{
+			                              "param": {
+			                                "text": "actions：第二条"
+			                              },
+			                              "type": "toast"
+			                            },
+			                            {
+										  "param":{
+											"viewId": "popupWindow"
+										  },
+										  "type": "dismissPopWindow"
+										}
+	                          		]
+	                          	}
+	                          ]
+	                        },
+	                        {
+	                          "dataBinding": {
+	                            "value": "pop测试第三条"
+	                          },
+	                          "styleBinding": {
+	                          	"backgroundColor":"#000000",
+	                            "fontSize": 30,
+	                            "fontStyle": 1,
+	                            "height": 80,
+	                            "lines": 1,
+	                            "marginTop": 8,
+	                            "textColor": "#FFFFFF",
+	                            "width": -1
+	                          },
+	                          "type": "label",
+	                          "events":[
+	                          	{
+	                          		"type":"click",
+	                          		"actions":[
+	                          			{
+			                              "param": {
+			                                "text": "actions：第三条"
+			                              },
+			                              "type": "toast"
+			                            },
+			                            {
+										  "param":{
+											"viewId": "popupWindow"
+										  },
+										  "type": "dismissPopWindow"
+										}
+	                          		]
+	                          	}
+	                          ]
+	                        }
+	                      ],
+	                      "type": "container",
+						  "viewId": "popupWindow"
+	                    }
+	                  },
+	                  "type": "openPopWindow"
+	                }
+	              ],
+	              "type": "click"
+	            }
+	          ]
+            }
+          ],
+          "type": "container"
+        }
+      ],
+      "type": "container"
+    },
+    "data": {
+    },
+    "verify": "pageModified:1416121089000;templateModified:1416121089000"
+}

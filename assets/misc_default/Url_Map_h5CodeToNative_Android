@@ -1,0 +1,40 @@
+{
+  "4.7.0": [
+    {
+      "h5_code": "(http|https)://nmi.juhuasuan.com/market/ju/wlbrand.*",
+      "native_url": "tmall://go/ju/luaview?package=ppt"
+    },
+    {
+      "h5_code": "(http|https)://ju.taobao.com/tg/wl_brand.*",
+      "native_url": "tmall://go/ju/luaview?package=ppt"
+    },
+    {
+      "h5_code": "(http|https)://www.taobao.com/market/ju/wlbrand.*",
+      "native_url": "tmall://go/ju/luaview?package=ppt"
+    },
+    {
+      "h5_code": "^(http|https)://www.juhuasuan.com/m/jusp/other/liangfan/mtp.*",
+      "native_url": "tmall://go/ju/luaview?package=lft"
+    },
+    {
+      "h5_code": "^(http|https)://ju.taobao.com/m/jusp/other/liangfan/mtp.*",
+      "native_url": "tmall://go/ju/luaview?package=lft"
+    },
+    {
+      "h5_code": "^(http|https)://ju.taobao.com/m/jusp/nv/haiwaiju/mtp.*",
+      "native_url": "tmall://go/ju/luaview?package=qqjx&pageUrlKey=nv/haiwaiju&pageSpm=608.7719685"
+    },
+    {
+      "h5_code": "^(http|https)://ju.taobao.com/m/jusp/jj/jujiazhuangpindao/mtp.*",
+      "native_url": "tmall://go/ju/luaview?package=jujiazhuang"
+    },
+    {
+      "h5_code": "^(http|https)://ju.taobao.com/m/jusp/nv/mingpin2016/mtp.*",
+      "native_url": "tmall://go/ju/luaview?package=jmp"
+    },
+    {
+      "h5_code": "^(http|https)://ju.taobao.com/m/jusp/other/mingpin/mtp.htm.*",
+      "native_url": "tmall://go/ju/luaview?package=jmp"
+    }
+  ]
+}

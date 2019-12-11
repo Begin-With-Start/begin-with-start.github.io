@@ -1,0 +1,114 @@
+{
+    "page": "Page_Shop1",
+    "title": "image布局朝向",
+    "view": {
+      "styleBinding": {
+        "height": 840,
+        "layout": "linearLayout"
+      },
+      "subViews": [
+        {
+          "dataBinding": {
+            "value": "horizontal"
+          },
+          "styleBinding": {
+            "align": 5,
+            "backgroundColor": "#ffffff",
+            "borderColor": "#dddddd",
+            "borderWidth": 1,
+            "fontSize": 28,
+            "fontStyle": 1,
+            "gravity": 5,
+            "height": 84,
+            "textColor": "#3d3f45"
+          },
+          "type": "label"
+        },
+        {
+          "styleBinding": {
+            "height": 200,
+            "layout": "linearLayout",
+            "orientation": "horizontal"
+          },
+          "subViews": [
+            {
+              "dataBinding": {
+                "url": "http://gtms04.alicdn.com/tps/i4/TB1eP6wFFXXXXXaaFXXXK5zTVXX-520-280.png"
+              },
+              "styleBinding": {
+                "backgroundColor": "#ffffff",
+                "height": 200,
+                "marginRight": 20,
+                "width": 310
+              },
+              "type": "image",
+              "viewId":"imageWithHorizontal1"
+            },
+            {
+              "dataBinding": {
+                "url": "http://gtms04.alicdn.com/tps/i4/TB1eP6wFFXXXXXaaFXXXK5zTVXX-520-280.png"
+              },
+              "styleBinding": {
+                "backgroundColor": "#ffffff",
+                "height": 200,
+                "width": 310
+              },
+              "type": "image",
+              "viewId":"imageWithHorizontal2"
+            }
+          ],
+          "type": "container"
+        },
+        {
+          "dataBinding": {
+            "value": "vertical"
+          },
+          "styleBinding": {
+            "align": 5,
+            "backgroundColor": "#ffffff",
+            "borderColor": "#dddddd",
+            "borderWidth": 1,
+            "fontSize": 28,
+            "fontStyle": 1,
+            "gravity": 5,
+            "height": 84,
+            "textColor": "#3d3f45"
+          },
+          "type": "label"
+        },
+        {
+          "styleBinding": {
+            "height": 420,
+            "layout": "linearLayout"
+          },
+          "subViews": [
+            {
+              "dataBinding": {
+                "url": "http://gtms04.alicdn.com/tps/i4/TB1eP6wFFXXXXXaaFXXXK5zTVXX-520-280.png"
+              },
+              "styleBinding": {
+                "backgroundColor": "#ffffff",
+                "height": 200,
+                "marginBottom": 20
+              },
+              "type": "image",
+              "viewId":"imageWithVertical1"
+            },
+            {
+              "dataBinding": {
+                "url": "http://gtms04.alicdn.com/tps/i4/TB1eP6wFFXXXXXaaFXXXK5zTVXX-520-280.png"
+              },
+              "styleBinding": {
+                "backgroundColor": "#ffffff",
+                "height": 200
+              },
+              "type": "image",
+              "viewId":"imageWithVertical2"
+            }
+          ],
+          "type": "container"
+        }
+      ],
+      "type": "container"
+    }
+}

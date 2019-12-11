@@ -1,0 +1,681 @@
+{
+  "version": "1.0",
+  "schemes": [
+    {
+      "id": 2680,
+      "trigger": {
+        "id": 505,
+        "note": "shake"
+      },
+      "executor": {
+        "id": 507,
+        "param": {
+          "content": "shake 1"
+        },
+        "note": "tts"
+      },
+      "filter": {
+        "id": 2,
+        "note": "or group",
+        "filters": [
+          {
+            "id": 509,
+            "param": {
+              "lower": 0,
+              "upper": 20
+            },
+            "note": "battery 0-20"
+          },
+          {
+            "id": 509,
+            "param": {
+              "lower": 40,
+              "upper": 60
+            },
+            "note": "battery 40-60"
+          },
+          {
+            "id": 509,
+            "param": {
+              "lower": 80,
+              "upper": 100
+            },
+            "note": "battery 80-100"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5729,
+      "trigger": {
+        "id": 503,
+        "param": {
+          "longitude": 120.0256,
+          "latitude": 30.279,
+          "radius": 500,
+          "enter": true
+        },
+        "note": "Enter GeoFence(120.0256, 30.279, 500)"
+      },
+      "executor": {
+        "id": 507,
+        "param": {
+          "content": "Enter the office area"
+        },
+        "note": "tts"
+      },
+      "filter": {
+        "id": 1,
+        "note": "and group",
+        "filters":
+        [
+          {
+            "id": 2,
+            "note": "or group",
+            "filters":
+            [
+              {
+                "id": 509,
+                "param":
+                {
+                  "lower": 60,
+                  "upper": 100
+                },
+                "note": "battery 60-100"
+              },
+              {
+                "id": 509,
+                "param":
+                {
+                  "lower": 30,
+                  "upper": 55
+                },
+                "note": "battery 30-55"
+              }
+            ]
+          },
+          {
+            "id": 508,
+            "param":
+            {
+              "from": 68847382743,
+              "to": 1852516560612
+            },
+            "note": "from 68847382743 to 1852516560612"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5162,
+      "trigger": {
+        "id": 503,
+        "param": {
+          "longitude": 120.0256,
+          "latitude": 30.279,
+          "radius": 500,
+          "enter": false
+        },
+        "note": "Leave GeoFence(120.0256, 30.279, 500)"
+      },
+      "executor": {
+        "id": 507,
+        "param": {
+          "content": "Leave the office area"
+        },
+        "note": "tts"
+      },
+      "filter": {
+        "id": 1,
+        "note": "and group",
+        "filters": [
+          {
+            "id": 509,
+            "param": {
+              "lower": 60,
+              "upper": 100
+            },
+            "note": "battery 60-100"
+          },
+          {
+            "id": 508,
+            "param": {
+              "from": 68847382743,
+              "to": 1852516560612
+            },
+            "note": "from 68847382743 to 1852516560612"
+          }
+        ]
+      }
+    },
+    {
+      "id": 9217,
+      "filter": {
+        "id": 1,
+        "note": "and group",
+        "filters": [
+          {
+            "id": 502,
+            "param": {
+              "longitude": 120.0256,
+              "latitude": 30.279,
+              "radius": 200,
+              "positive": true
+            },
+            "note": "in GeoFence(120.0256, 30.279, 200)"
+          },
+          {
+            "id": 509,
+            "param": {
+              "lower": 40,
+              "upper": 80
+            },
+            "note": "battery 40-80"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2947,
+      "trigger": {
+        "id": 505,
+        "note": "shake"
+      },
+      "executor": {
+        "id": 507,
+        "param": {
+          "content": "shake 2"
+        },
+        "note": "tts"
+      },
+      "filter": {
+        "id": 2,
+        "note": "or group",
+        "filters": [
+          {
+            "id": 509,
+            "param": {
+              "lower": 20,
+              "upper": 40
+            },
+            "note": "battery 20-40"
+          },
+          {
+            "id": 509,
+            "param": {
+              "lower": 60,
+              "upper": 80
+            },
+            "note": "battery 60-80"
+          }
+        ]
+      }
+    },
+    {
+      "id": 4593,
+      "trigger": {
+        "id": 506,
+        "param": {
+          "isConnect": false
+        },
+        "note": "charge"
+      },
+      "executor": {
+        "id": 507,
+        "param": {
+          "content": "charge disconnect 1"
+        },
+        "note": "tts"
+      },
+      "filter": {
+        "id": 1,
+        "note": "and group",
+        "filters": [
+          {
+            "id": 2,
+            "note": "or group",
+            "filters": [
+              {
+                "id": 509,
+                "param": {
+                  "lower": 10,
+                  "upper": 60
+                },
+                "note": "battery 10-60"
+              },
+              {
+                "id": 508,
+                "param": {
+                  "from": 47328343,
+                  "to": 1852516560612
+                },
+                "note": "from 47328343 to 1852516560612"
+              }
+            ]
+          },
+          {
+            "id": 508,
+            "param": {
+              "from": 47328343,
+              "to": 1852516560612
+            },
+            "note": "from 47328343 to 1852516560612"
+          }
+        ]
+      }
+    },
+    {
+      "id": 7557,
+      "trigger": {
+        "id": 506,
+        "param": {
+          "isConnect": false
+        },
+        "note": "charge"
+      },
+      "executor": {
+        "id": 507,
+        "param": {
+          "content": "charge disconnect 2"
+        },
+        "note": "tts"
+      },
+      "filter": {
+        "id": 1,
+        "note": "and group",
+        "filters": [
+          {
+            "id": 2,
+            "note": "or group",
+            "filters": [
+              {
+                "id": 509,
+                "param": {
+                  "lower": 70,
+                  "upper": 100
+                },
+                "note": "battery 70-100"
+              },
+              {
+                "id": 508,
+                "param": {
+                  "from": 47328343,
+                  "to": 1852516560612
+                },
+                "note": "from 47328343 to 1852516560612"
+              }
+            ]
+          },
+          {
+            "id": 508,
+            "param": {
+              "from": 47328343,
+              "to": 1852516560612
+            },
+            "note": "from 47328343 to 1852516560612"
+          }
+        ]
+      }
+    },
+    {
+      "id": 9314,
+      "trigger": {
+        "id": 506,
+        "param": {
+          "isConnect": true
+        },
+        "note": "charge"
+      },
+      "executor": {
+        "id": 507,
+        "param": {
+          "content": "charge connect 1"
+        },
+        "note": "tts"
+      },
+      "filter": {
+        "id": 1,
+        "note": "and group",
+        "filters": [
+          {
+            "id": 2,
+            "note": "or group",
+            "filters": [
+              {
+                "id": 509,
+                "param": {
+                  "lower": 0,
+                  "upper": 50
+                },
+                "note": "battery 0-50"
+              },
+              {
+                "id": 508,
+                "param": {
+                  "from": 47328343,
+                  "to": 1852516560612
+                },
+                "note": "time from 47328343 to 1852516560612"
+              }
+            ]
+          },
+          {
+            "id": 508,
+            "param": {
+              "from": 47328343,
+              "to": 1852516560612
+            },
+            "note": "time from 47328343 to 1852516560612"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1285,
+      "trigger": {
+        "id": 506,
+        "param": {
+          "isConnect": true
+        },
+        "note": "charge"
+      },
+      "executor": {
+        "id": 507,
+        "param": {
+          "content": "charge connect 2"
+        },
+        "note": "tts"
+      },
+      "filter": {
+        "id": 1,
+        "note": "and group",
+        "filters": [
+          {
+            "id": 2,
+            "note": "or group",
+            "filters": [
+              {
+                "id": 509,
+                "param": {
+                  "lower": 50,
+                  "upper": 100
+                },
+                "note": "battery 50-100"
+              },
+              {
+                "id": 508,
+                "param": {
+                  "from": 47328343,
+                  "to": 1852516560612
+                },
+                "note": "time from 47328343 to 1852516560612"
+              }
+            ]
+          },
+          {
+            "id": 508,
+            "param": {
+              "from": 47328343,
+              "to": 1852516560612
+            },
+            "note": "time from 47328343 to 1852516560612"
+          }
+        ]
+      }
+    },
+    {
+      "id": 4324,
+      "filter": {
+        "id": 2,
+        "note": "or group",
+        "filters": [
+          {
+            "id": 509,
+            "param": {
+              "lower": 10,
+              "upper": 30
+            },
+            "note": "battery 10-30"
+          },
+          {
+            "id": 508,
+            "param": {
+              "from": 47328343,
+              "to": 1852516560612
+            },
+            "note": "time from 47328343 to 1852516560612"
+          },
+          {
+            "id": 509,
+            "param": {
+              "lower": 60,
+              "upper": 80
+            },
+            "note": "battery 10-30"
+          }
+        ]
+      }
+    },
+    {
+      "id": 6565,
+      "filter": {
+        "id": 1,
+        "note": "and group",
+        "filters": [
+          {
+            "id": 509,
+            "param": {
+              "lower": 20,
+              "upper": 80
+            },
+            "note": "battery 20-80"
+          },
+          {
+            "id": 2,
+            "note": "or group",
+            "filters": [
+              {
+                "id": 509,
+                "param": {
+                  "lower": 0,
+                  "upper": 30
+                },
+                "note": "battery 70-90"
+              },
+              {
+                "id": 509,
+                "param": {
+                  "lower": 70,
+                  "upper": 100
+                },
+                "note": "battery 70-100"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 6566,
+      "filter": {
+        "id": 1,
+        "note": "and group",
+        "filters": [
+          {
+            "id": 502,
+            "param": {
+              "longitude": 120.0256,
+              "latitude": 30.279,
+              "radius": 200,
+              "positive": true
+            },
+            "note": "in GeoFence(120.0256, 30.279, 200)"
+          },
+          {
+            "id": 511,
+            "param": {
+              "weatherCode": "03",
+              "positive": true
+            },
+            "note": "Is weather 03(阴)"
+          }
+        ]
+      }
+    },
+    {
+      "id": 6567,
+      "filter": {
+        "id": 1,
+        "note": "and group",
+        "filters": [
+          {
+            "id": 502,
+            "param":
+            {
+              "longitude": 120.0256,
+              "latitude": 30.279,
+              "radius": 200
+            },
+            "note": "in GeoFence(120.0256, 30.279, 200)"
+          },
+          {
+            "id": 511,
+            "param": {
+              "weatherCode": "03"
+            },
+            "note": "Is weather 03(阴)"
+          },
+          {
+            "id" : 510,
+            "param" :
+            {
+              "lower" : 2,
+              "upper" : 4
+            },
+            "note" : "天猫会员T2~T4"
+          }
+        ]
+      }
+    },
+    {
+      "id": 7878,
+      "trigger": {
+        "id": 5,
+        "note": "root start up"
+      },
+      "executor": {
+        "id": 4,
+        "param": {
+          "launch": true,
+          "scheme": 2680
+        },
+        "note": "start scheme 2680"
+      }
+    },
+    {
+      "id": 8099,
+      "trigger": {
+        "id": 5,
+        "note": "root start up"
+      },
+      "executor": {
+        "id": 4,
+        "param": {
+          "launch": true,
+          "scheme": 2947
+        },
+        "note": "start scheme 2947"
+      }
+    },
+    {
+      "id": 5465,
+      "trigger": {
+        "id": 5,
+        "note": "root start up"
+      },
+      "executor": {
+        "id": 4,
+        "param": {
+          "launch": true,
+          "scheme": 4593
+        },
+        "note": "start scheme 4593"
+      }
+    },
+    {
+      "id": 7329,
+      "trigger": {
+        "id": 5,
+        "note": "root start up"
+      },
+      "executor": {
+        "id": 4,
+        "param": {
+          "launch": true,
+          "scheme": 7557
+        },
+        "note": "start scheme 7557"
+      }
+    },
+    {
+      "id": 7339,
+      "trigger": {
+        "id": 5,
+        "note": "root start up"
+      },
+      "executor": {
+        "id": 4,
+        "param": {
+          "launch": true,
+          "scheme": 9314
+        },
+        "note": "start scheme 9314"
+      }
+    },
+    {
+      "id": 7240,
+      "trigger": {
+        "id": 5,
+        "note": "root start up"
+      },
+      "executor": {
+        "id": 4,
+        "param": {
+          "launch": true,
+          "scheme": 1285
+        },
+        "note": "start scheme 1285"
+      }
+    },
+    {
+      "id": 7241,
+      "trigger": {
+        "id": 5,
+        "note": "root start up"
+      },
+      "executor": {
+        "id": 4,
+        "param": {
+          "launch": true,
+          "scheme": 5279
+        },
+        "note": "start scheme 5279"
+      }
+    },
+    {
+      "id": 7242,
+      "trigger": {
+        "id": 5,
+        "note": "root start up"
+      },
+      "executor": {
+        "id": 4,
+        "param": {
+          "launch": true,
+          "scheme": 5162
+        },
+        "note": "start scheme 5162"
+      }
+    }
+  ]
+}

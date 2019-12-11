@@ -1,0 +1,34 @@
+<?xml version ='1.0' encoding ='UTF-8'?>
+<!-- a filter from taobao album -->
+<!-- params:input_image-->
+<filter ver='0.1' name='amaro' programCount='1'>
+    <program id='0'>
+        <shader type='ps' input_image='inputImageTexture'>
+            <uniform_var type='sampler2D' name='inputImageTexture'/>
+            <uniform_var type='sampler2D' name='overlay_map' value='amaro_overlay_map.png'/>
+            <uniform_var type='sampler2D' name='blackboard' value='amaro_blackboard.png'/>
+            <uniform_var type='sampler2D' name='map' value='amaro_map.png'/>
+            <code>
+varying highp vec2 textureCoordinate;
+uniform sampler2D inputImageTexture;
+uniform sampler2D overlay_map;
+uniform sampler2D blackboard;
+uniform sampler2D map;
+void main()
+{
+mediump vec3 texel = (texture2D(inputImageTexture, textureCoordinate)).rgb;
+mediump vec3 bbTexel = texture2D(blackboard, textureCoordinate).rgb;
+
+texel.r = texture2D(overlay_map, vec2(bbTexel.r, texel.r)).r;
+texel.g = texture2D(overlay_map, vec2(bbTexel.g, texel.g)).g;
+texel.b = texture2D(overlay_map, vec2(bbTexel.b, texel.b)).b;
+
+texel.r = texture2D(map, vec2(texel.r, .5)).r;
+texel.g = texture2D(map, vec2(texel.g, .5)).g;
+texel.b = texture2D(map, vec2(texel.b, .5)).b;
+gl_FragColor = vec4(texel, 1.0);
+}
+            </code>
+        </shader>
+    </program>
+</filter>

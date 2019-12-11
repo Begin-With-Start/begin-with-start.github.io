@@ -1,0 +1,34 @@
+[
+  {
+    "name": "geoFence",
+    "displayName": "地理围栏触发器",
+    "summary": "使用定位的经纬度，自己计算半径的方式处理地理围栏",
+    "clzName": "com.tmall.wireless.awareness.awareness2.core.impl.trigger.GeoFenceTrigger2",
+    "category": "LBS",
+    "author": "fangbo"
+  },
+  {
+    "name": "gravitySensorTrigger",
+    "displayName": "重力感应触发器",
+    "summary": "使用重力感应监测一些变化如转屏，这个触发器还没有迁移到Sensey,其他sensor类型的触发器已经完成迁移",
+    "clzName": "com.tmall.wireless.awareness.awareness2.core.impl.trigger.sensor.GravitySensorTrigger",
+    "category": "sensor",
+    "author": "anzheng"
+  },
+  {
+    "name": "sentry",
+    "displayName": "近场围栏",
+    "summary": "使用手淘盒马的近场感知库",
+    "clzName": "com.tmall.wireless.awareness.plugins.trigger.fence.SentryTrigger",
+    "category": "LBS",
+    "author": "fangbo"
+  },
+  {
+    "name": "connectedWifi",
+    "displayName": "连接上的wifi",
+    "summary": "判断和连接上的wifi是否匹配",
+    "clzName": "com.tmall.wireless.awareness.plugins.trigger.WifiConnectedTrigger",
+    "category": "LBS",
+    "author": "fangbo"
+  }
+]

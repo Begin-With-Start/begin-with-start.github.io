@@ -1,0 +1,13 @@
+{
+  "workflows": [
+    {
+      "path": [
+        "start_record",
+        "record_preview",
+        "preview_merge",
+        "merge_end"
+      ],
+      "sceneName": "iHomepublish"
+    }
+  ]
+}

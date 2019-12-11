@@ -1,0 +1,28 @@
+{
+"name": "animation3",
+"desc": "字幕3",
+"duration": 3.3,
+"author": "Jovial",
+"content": "[{\"type\":\"container\",\"x\":0.2,\"y\":0.8,\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[],\"elements\":[{\"type\":\"circle\",\"x\":-104,\"y\":70,\"radius\":1,\"fill\":\"${circleColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"radius\",\"type\":\"linear\",\"time\":[0,0.09,0.9,1],\"value\":[1,17,17,0]},{\"key\":\"x\",\"type\":\"linear\",\"time\":[0,0.03,0.27,0.48,0.69,0.87,1],\"value\":[-104,-104,382,-104,-104,382,-104]}]},{\"type\":\"container\",\"x\":0,\"y\":0,\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[],\"mask\":{\"type\":\"rect\",\"x\":577,\"y\":70,\"width\":440,\"height\":22,\"fill\":\"#ffffff\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"animation\":[{\"key\":\"x\",\"type\":\"linear\",\"time\":[0,0.29,0.5,0.67,0.85],\"value\":[577,577,145,145,577]}]},\"elements\":[{\"type\":\"text\",\"x\":-75,\"y\":70,\"align\":\"left\",\"value\":\"${text}\",\"fontFamily\":\"Georgia, 黑体\",\"fontStyle\":\"normal\",\"fontWeight\":\"normal\",\"fontSize\":22,\"fill\":\"${textColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[]}]},{\"type\":\"container\",\"x\":0,\"y\":0,\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[],\"mask\":{\"type\":\"rect\",\"x\":139,\"y\":70,\"width\":520,\"height\":20,\"fill\":\"#ffffff\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"animation\":[]},\"elements\":[{\"type\":\"text\",\"x\":-104,\"y\":46,\"value\":\"${serialNumber}\",\"fontFamily\":\"Georgia, 黑体\",\"fontStyle\":\"normal\",\"fontWeight\":\"normal\",\"fontSize\":16,\"fill\":\"${serialNumberColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"y\",\"type\":\"linear\",\"time\":[0,0.42,0.54],\"value\":[46,46,70]},{\"key\":\"x\",\"type\":\"linear\",\"time\":[0,0.69,0.87,1],\"value\":[-104,-104,382,-104]},{\"key\":\"fontSize\",\"type\":\"linear\",\"time\":[0,0.9,1],\"value\":[16,16,1]}]}]}]}]",
+"paramsName": {
+"text": "标题",
+"textColor": "标题颜色",
+"serialNumber":"左侧序号",
+"serialNumberColor": "左侧序号颜色",
+"circleColor": "左侧圆颜色"
+},
+"paramsTypes": {
+"text": "String",
+"textColor": "Color",
+"serialNumber": "String",
+"serialNumberColor": "Color",
+"circleColor": "Color"
+},
+"defaultParams": {
+"text": "这条目录是辅助说明文案，文字长度20字符",
+"textColor": "#FFFFFF",
+"serialNumber": "01",
+"serialNumberColor": "#FFFFFF",
+"circleColor": "#FF0000"
+}
+}

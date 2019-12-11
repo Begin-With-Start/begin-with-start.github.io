@@ -1,0 +1,71 @@
+{
+    "page": "Page_Shop1",
+    "title": "image margin",
+    "view": {
+      "styleBinding": {
+        "height": -1,
+        "layout": "linearLayout"
+      },
+      "subViews": [
+        {
+          "dataBinding": {
+            "value": "有margin"
+          },
+          "styleBinding": {
+            "align": 5,
+            "backgroundColor": "#ffffff",
+            "borderColor": "#dddddd",
+            "borderWidth": 1,
+            "fontSize": 28,
+            "fontStyle": 1,
+            "gravity": 5,
+            "height": 84,
+            "textColor": "#3d3f45"
+          },
+          "type": "label"
+        },
+        {
+          "dataBinding": {
+            "url": "http://img02.config-vip.taobaocdn.net/imgextra/i2/2066596281/TB2jpxcXXXXXXcfaVXXXXXXXXXX_!!2066596281.jpeg"
+          },
+          "styleBinding": {
+            "height": 296,
+            "marginBottom": 24,
+            "marginLeft": 25,
+            "marginRight": 26,
+            "marginTop": 23
+          },
+          "type": "image",
+          "viewId":"imageWithMargin"
+        },
+        {
+          "dataBinding": {
+            "value": "没有margin"
+          },
+          "styleBinding": {
+            "align": 5,
+            "backgroundColor": "#ffffff",
+            "borderColor": "#dddddd",
+            "borderWidth": 1,
+            "fontSize": 28,
+            "fontStyle": 1,
+            "gravity": 5,
+            "height": 84,
+            "textColor": "#3d3f45"
+          },
+          "type": "label"
+        },
+        {
+          "dataBinding": {
+            "url": "http://img02.config-vip.taobaocdn.net/imgextra/i2/2066596281/TB2jpxcXXXXXXcfaVXXXXXXXXXX_!!2066596281.jpeg"
+          },
+          "styleBinding": {
+            "height": 296
+          },
+          "type": "image",
+          "viewId":"imageWithoutMargin"
+        }
+      ],
+      "type": "container"
+    }
+}

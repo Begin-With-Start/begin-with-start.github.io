@@ -1,0 +1,45 @@
+{
+ "entrance":"Start",
+ "edges": [
+    {
+      "from":"Start",
+      "to":"WaitSurf",
+      "event":"OpenCamera"
+    },
+    {
+      "from":"Start",
+      "to":"WaitCameraOpen",
+      "event":"SurfReady"
+    },
+    {
+      "from":"WaitSurf",
+      "to":"Preview",
+      "event":"SurfReady"
+    },
+    {
+      "from":"WaitCameraOpen",
+      "to":"Preview",
+      "event":"OpenCamera"
+    },
+    {
+      "from":"Preview",
+      "to":"Preview",
+      "event":"OpenCamera"
+    },
+    {
+      "from":"Preview",
+      "to":"Preview",
+      "event":"SwitchCamera"
+    },
+    {
+      "from":"Preview",
+      "to":"Closed",
+      "event":"CloseCamera"
+    },
+    {
+      "from":"Closed",
+      "to":"Preview",
+      "event":"OpenCamera"
+    }
+  ]
+}

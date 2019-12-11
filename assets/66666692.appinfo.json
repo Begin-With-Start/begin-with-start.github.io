@@ -1,0 +1,19 @@
+{
+  "container": {},
+  "extend_info": {},
+  "appInfo": {
+    "appId": "66666692",
+    "developerVersion": "1.20.2.4",
+    "deployVersion": "0.1.1909031601.32",
+    "packageUrl": "https://mini-app-packages-cdn.taobao.com/yaoyy_66666692/afts/file/A*z9BIRKUN6SAAAAAAAAAAAAAAAQAAAQ",
+    "size": "224036",
+    "fallbackBaseUrl": "http://alipay-rmsdeploy-image.cn-hangzhou.alipay.aliyun-inc.com/jet-dev/AP_66666692/u7dirm6ha3s/",
+    "vhost": "https://render.alipay.com",
+    "mainUrl": "/www/",
+    "preset": 1,
+    "name": "小程序资源包",
+    "desc": "",
+    "nbl_id": "AP_66666692"
+  },
+  "permission": {}
+}

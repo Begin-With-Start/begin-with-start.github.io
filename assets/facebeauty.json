@@ -1,0 +1,86 @@
+{
+    "1": {
+        "name": "瘦脸",
+        "image": "thin_face",
+        "min": "0",
+        "max": "100"
+    },
+    "2": {
+        "name": "小脸",
+        "image": "small_face",
+        "min": "0",
+        "max": "100"
+    },
+    "3": {
+        "name": "削脸",
+        "image": "cut_face",
+        "min": "0",
+        "max": "100"
+    },
+    "4": {
+        "name": "额头",
+        "image": "forehead",
+        "min": "0",
+        "max": "100"
+    },
+    "5": {
+        "name": "颧骨",
+        "image": "cheekbone",
+        "min": "0",
+        "max": "100"
+    },
+    "6": {
+        "name": "大眼",
+        "image": "big_eye",
+        "min": "0",
+        "max": "100"
+    },
+    "7": {
+        "name": "眼角",
+        "image": "eye_angle",
+        "min": "0",
+        "max": "100"
+    },
+    "8": {
+        "name": "眼距",
+        "image": "canthus",
+        "min": "0",
+        "max": "100"
+    },
+    "9": {
+        "name": "瘦鼻",
+        "image": "thin_nose",
+        "min": "0",
+        "max": "100"
+    },
+    "10": {
+        "name": "鼻翼",
+        "image": "nosewing",
+        "min": "0",
+        "max": "100"
+    },
+    "11": {
+        "name": "鼻高",
+        "image": "nasal_height",
+        "min": "-100",
+        "max": "100"
+    },
+    "12": {
+        "name": "下巴",
+        "image": "lower_jaw",
+        "min": "0",
+        "max": "100"
+    },
+    "13": {
+        "name": "嘴形",
+        "image": "mouth_shape",
+        "min": "0",
+        "max": "100"
+    },
+    "14": {
+        "name": "嘴高",
+        "image": "mouth_high",
+        "min": "0",
+        "max": "100"
+    }
+}

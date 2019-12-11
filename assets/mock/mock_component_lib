@@ -1,0 +1,371 @@
+{
+  "view": {
+    "subViews": [
+      {
+        "viewId":"module1",
+        "moduleType": "single_goods",
+        "moduleId": "123",
+        "initMapping": {
+          "prefix": "123"
+        },
+        "type": "publicModule",
+        "styleBinding": {},
+        "dataBinding": {}
+      },
+      {
+      	"viewId":"module2",
+        "moduleType": "text",
+        "initMapping": {
+          "prefix": "456"
+        },
+        "type": "innerModule",
+        "styleBinding": {},
+        "dataBinding": {}
+      }
+    ],
+    "type": "container",
+    "styleBinding": {
+      "height": -1,
+      "backgroundColor": "#eeeeee",
+      "width": -1,
+      "layout": "absoluteLayout"
+    }
+  },
+  "publicRefs": {
+    "single_goods": "{
+      \"headerView\": {
+        \"subViews\": [
+          {
+            \"type\": \"label\",
+            \"styleBinding\": {
+              \"textColor\": \"#3d4245\",
+              \"height\": 36,
+              \"marginLeft\": 24,
+              \"width\": -2,
+              \"align\": 4,
+              \"lines\": 1,
+              \"fontSize\": 32
+            },
+            \"dataBinding\": {
+              \"value\": \"$#{prefix}.title\"
+            }
+          },
+          {
+            \"type\": \"image\",
+            \"styleBinding\": {
+              \"height\": 0,
+              \"invisible\": \"true\",
+              \"width\": 14,
+              \"marginRight\": 24,
+              \"align\": 6
+            },
+            \"dataBinding\": {
+              \"url\": \"http://gtms02.alicdn.com/tps/i2/T11ftRFpXaXXa8IXfX-14-26.png\"
+            },
+            \"conditions\": [
+              {
+                \"leftCondition\": {
+                  \"left\": \"$#{prefix}.title\",
+                  \"right\": \"null\",
+                  \"type\": \"!=\"
+                },
+                \"rightCondition\": {
+                  \"left\": \"$#{prefix}.title\",
+                  \"right\": \"null\",
+                  \"type\": \"!=\"
+                },
+                \"type\": \"&&\",
+                \"styleBinding\": {
+                  \"height\": 26,
+                  \"invisible\": \"false\"
+                }
+              }
+            ]
+          }
+        ],
+        \"type\": \"container\",
+        \"styleBinding\": {
+          \"backgroundColor\": \"#FFFFFF\",
+          \"width\": -1,
+          \"layout\": \"absoluteLayout\",
+          \"invisibleSpace\": \"true\"
+        },
+        \"events\": [
+          {
+            \"type\": \"click\",
+            \"actions\": [
+              {
+                \"type\": \"userTrack\",
+                \"condition\": {
+                  \"left\": \"$#{prefix}.moreLink\",
+                  \"right\": \"null\",
+                  \"type\": \"!=\"
+                },
+                \"param\": {
+                  \"utParams\": {
+                    \"wp_m\": \"MODULE_KEY_PLACE_HOLDER\",
+                    \"wp_pk\": \"$wp_pk\",
+                    \"wp_app\": \"weapp\"
+                  },
+                  \"utType\": \"HypeLink\",
+                  \"utName\": \"moreLink\"
+                }
+              },
+              {
+                \"type\": \"openURL\",
+                \"condition\": {
+                  \"left\": \"$#{prefix}.moreLink\",
+                  \"right\": \"null\",
+                  \"type\": \"!=\"
+                },
+                \"param\": {
+                  \"title\": \"$#{prefix}.title\",
+                  \"param\": {
+                    \"wp_m\": \"MODULE_KEY_PLACE_HOLDER\",
+                    \"wp_pk\": \"$wp_pk\",
+                    \"wp_app\": \"weapp\"
+                  },
+                  \"url\": \"$#{prefix}.moreLink\"
+                }
+              }
+            ]
+          }
+        ],
+        \"conditions\": [
+          {
+            \"left\": \"$#{prefix}.title\",
+            \"right\": \"null\",
+            \"type\": \"==\",
+            \"styleBinding\": {
+              \"height\": 24
+            }
+          },
+          {
+            \"left\": \"$#{prefix}.title\",
+            \"right\": \"null\",
+            \"type\": \"!=\",
+            \"styleBinding\": {
+              \"height\": 80
+            }
+          }
+        ]
+      },
+      \"cell\": {
+        \"subViews\": [
+          {
+            \"type\": \"image\",
+            \"styleBinding\": {
+              \"marginBottom\": 8,
+              \"height\": 592,
+              \"marginLeft\": 24,
+              \"width\": 592,
+              \"marginRight\": 24
+            },
+            \"dataBinding\": {
+              \"url\": \"${#{prefix}_api}.list.[?].imgUrl\"
+            }
+          },
+          {
+            \"type\": \"label\",
+            \"styleBinding\": {
+              \"marginBottom\": 16,
+              \"textColor\": \"#3d4245\",
+              \"height\": 68,
+              \"marginLeft\": 24,
+              \"width\": -1,
+              \"marginRight\": 24,
+              \"lines\": 2,
+              \"fontSize\": 28
+            },
+            \"dataBinding\": {
+              \"value\": \"${#{prefix}_api}.list.[?].title\"
+            }
+          },
+          {
+            \"subViews\": [
+              {
+                \"type\": \"label\",
+                \"styleBinding\": {
+                  \"textColor\": \"#ff5500\",
+                  \"width\": -2,
+                  \"lines\": 1,
+                  \"fontSize\": 42
+                },
+                \"dataBinding\": {
+                  \"prefix\": \"￥\",
+                  \"value\": \"${#{prefix}_api}.list.[?].price\"
+                }
+              },
+              {
+                \"type\": \"image\",
+                \"styleBinding\": {
+                  \"marginBottom\": 10,
+                  \"height\": 21,
+                  \"marginLeft\": 8,
+                  \"marginTop\": 10,
+                  \"width\": 82
+                },
+                \"dataBinding\": {
+                  \"url\": \"http://gtms01.alicdn.com/tps/i1/T1c_RpFSdXXXbNJrzp-82-21.png\"
+                },
+                \"conditions\": [
+                  {
+                    \"leftCondition\": {
+                      \"left\": \"$auctionTag\",
+                      \"right\": \"null\",
+                      \"type\": \"==\"
+                    },
+                    \"rightCondition\": {
+                      \"left\": \"$auctionTag\",
+                      \"right\": \"1234\",
+                      \"type\": \"!=\"
+                    },
+                    \"type\": \"||\",
+                    \"styleBinding\": {
+                      \"invisible\": \"true\"
+                    }
+                  }
+                ]
+              }
+            ],
+            \"type\": \"container\",
+            \"styleBinding\": {
+              \"marginBottom\": 2,
+              \"orientation\": \"horizontal\",
+              \"height\": 44,
+              \"marginLeft\": 24,
+              \"width\": -1,
+              \"marginRight\": 24,
+              \"layout\": \"linearLayout\"
+            }
+          },
+          {
+            \"subViews\": [
+              {
+                \"type\": \"label\",
+                \"styleBinding\": {
+                  \"lineType\": 2,
+                  \"textColor\": \"#999999\",
+                  \"lineColor\": \"#999999\",
+                  \"width\": -2,
+                  \"align\": 4,
+                  \"lines\": 1,
+                  \"fontSize\": 26
+                },
+                \"dataBinding\": {
+                  \"prefix\": \"￥\",
+                  \"value\": \"${#{prefix}_api}.list.[?].reservePrice\"
+                }
+              },
+              {
+                \"type\": \"label\",
+                \"styleBinding\": {
+                  \"textColor\": \"#999999\",
+                  \"width\": -2,
+                  \"align\": 6,
+                  \"marginRight\": 24,
+                  \"lines\": 1,
+                  \"fontSize\": 24
+                },
+                \"dataBinding\": {
+                  \"prefix\": \"月销量\",
+                  \"value\": \"${#{prefix}_api}.list.[?].sold30daysQuantity\"
+                }
+              }
+            ],
+            \"type\": \"container\",
+            \"styleBinding\": {
+              \"marginBottom\": 40,
+              \"height\": 26,
+              \"marginLeft\": 24,
+              \"layout\": \"absoluteLayout\"
+            }
+          }
+        ],
+        \"type\": \"container\",
+        \"styleBinding\": {
+          \"height\": 796,
+          \"backgroundColor\": \"#FFFFFF\",
+          \"layout\": \"linearLayout\"
+        },
+        \"events\": [
+          {
+            \"type\": \"click\",
+            \"actions\": [
+              {
+                \"type\": \"userTrack\",
+                \"param\": {
+                  \"utParams\": {
+                    \"wp_m\": \"MODULE_KEY_PLACE_HOLDER\",
+                    \"wp_pk\": \"$wp_pk\",
+                    \"wp_app\": \"weapp\",
+                    \"itemId\": \"${#{prefix}_api}.list.[?].nid\"
+                  },
+                  \"utType\": \"Button\",
+                  \"utName\": \"Item\"
+                }
+              },
+              {
+                \"type\": \"openURL\",
+                \"param\": {
+                  \"param\": {
+                    \"wp_m\": \"MODULE_KEY_PLACE_HOLDER\",
+                    \"wp_pk\": \"$wp_pk\",
+                    \"from\": \"inshop\",
+                    \"wp_app\": \"weapp\"
+                  },
+                  \"url\": \"${#{prefix}_api}.list.[?].h5Url\"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      \"needDownRefresh\": false,
+      \"needNextPage\": false,
+      \"unScroll\": true,
+      \"type\": \"list\",
+      \"styleBinding\": {
+        \"bmHeight\": 80,
+        \"marginBottom\": 24,
+        \"height\": -2,
+        \"borderColor\": \"#dddddd\",
+        \"backgroundColor\": \"#FFFFFF\",
+        \"borderWidth\": 1
+      },
+      \"dataBinding\": {
+        \"showErrorView\": false,
+        \"apiName\": \"mtop.taobao.geb.enhenced.itemList.get\",
+        \"apiAlias\": \"#{prefix}_api\",
+        \"param\": {
+          \"itemIds\": \"$#{prefix}.itemIds\",
+          \"sort\": \"$#{prefix}.sort\",
+          \"ownerId\": \"$userId\",
+          \"pageId\": \"$pageId\",
+          \"auctionTag\": \"$auctionTag\",
+          \"pageSize\": \"$#{prefix}.pageSize\",
+          \"endPrice\": \"$#{prefix}.filterPrice.endPrice\",
+          \"catId\": \"$#{prefix}.catId\",
+          \"startPrice\": \"$#{prefix}.filterPrice.startPrice\",
+          \"isAuto\": \"$#{prefix}.isAuto\",
+          \"keyWord\": \"$#{prefix}.keyWord\",
+          \"userType\": \"1\"
+        },
+        \"needLogin\": false
+      }
+    }"
+  },
+  "innerRefs": {
+    "text": "{
+      \"type\": \"label\",
+      \"styleBinding\": {},
+      \"dataBinding\": {
+        \"value\": \"$#{prefix}.content\"
+      }
+    }"
+  },
+  "data": {
+    "itemIds": "2100502546742",
+    "userId": "2065731274"
+  }
+}

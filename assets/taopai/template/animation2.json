@@ -1,0 +1,28 @@
+{
+  "name": "animation2",
+  "desc": "字幕2",
+  "duration": 3.3,
+  "author": "Jovial",
+  "content": "[{\"type\":\"container\",\"x\":0.2,\"y\":0.8,\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[],\"elements\":[{\"type\":\"rect\",\"visible\":true,\"x\":-104,\"y\":32,\"width\":1,\"height\":1,\"fill\":\"${rectColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"animation\":[{\"key\":\"width\",\"type\":\"linear\",\"time\":[0,0.12,0.93,1],\"value\":[1,38,38,0]},{\"key\":\"height\",\"type\":\"linear\",\"time\":[0,0.12,0.93,1],\"value\":[1,38,38,0]},{\"key\":\"x\",\"type\":\"linear\",\"time\":[0,0.03,0.15,0.33,0.6,0.81,0.93],\"value\":[-104,-104,176,-104,-104,176,-104]}]},{\"type\":\"container\",\"x\":0,\"y\":0,\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[],\"mask\":{\"type\":\"rect\",\"x\":36,\"y\":32,\"width\":230,\"height\":38,\"fill\":\"#ffffff\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"animation\":[]},\"elements\":[{\"type\":\"text\",\"x\":151,\"y\":32,\"align\":\"left\",\"value\":\"${text}\",\"fontFamily\":\"Georgia, 黑体\",\"fontStyle\":\"normal\",\"fontWeight\":\"normal\",\"fontSize\":38,\"fill\":\"${textColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"x\",\"type\":\"linear\",\"time\":[0,0.18,0.38,0.6,0.77],\"value\":[151,151,-79,-79,151]}]}]},{\"type\":\"container\",\"x\":0,\"y\":0,\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[],\"mask\":{\"type\":\"rect\",\"x\":117,\"y\":68,\"width\":480,\"height\":22,\"fill\":\"#ffffff\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"animation\":[]},\"elements\":[{\"type\":\"text\",\"x\":-123,\"y\":42,\"align\":\"left\",\"value\":\"${subText}\",\"fontFamily\":\"Georgia, 黑体\",\"fontStyle\":\"normal\",\"fontWeight\":\"normal\",\"fontSize\":22,\"fill\":\"${subTextColor}\",\"rotation\":0,\"alpha\":1,\"scale\":1,\"visible\":true,\"animation\":[{\"key\":\"y\",\"type\":\"linear\",\"time\":[0,0.24,0.42,0.57,0.72],\"value\":[42,42,68,68,42]}]}]}]}]",
+  "paramsName": {
+    "text": "标题",
+    "textColor": "标题颜色",
+    "subText":"副标题",
+    "subTextColor": "副标题颜色",
+    "rectColor": "左侧图颜色"
+  },
+  "paramsTypes": {
+    "text": "String",
+    "textColor": "Color",
+    "subText": "String",
+    "subTextColor": "Color",
+    "rectColor": "Color"
+  },
+  "defaultParams": {
+    "text": "产品卖点文字",
+    "textColor": "#FFFFFF",
+    "subText": "这条目录是辅助说明文案，文字长度20字符",
+    "subTextColor": "#FFFFFF",
+    "rectColor": "#FF0000"
+  }
+}

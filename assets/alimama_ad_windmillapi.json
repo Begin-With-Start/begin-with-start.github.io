@@ -1,0 +1,47 @@
+{
+  "registerApi": [
+    {
+      "moduleName": "MunionWebViewJs",
+      "moduleClass": "AlimamaAdMiniappBridge",
+      "moduleClassPackage": "com.taobao.alimama",
+      "methods": {
+        "commitO2OExpoEvent": {
+          "version": "1.0",
+          "params": {
+            "expo": {
+              "type": "String"
+            },
+            "namespace": {
+              "type": "String"
+            }
+          },
+          "success": {},
+          "fail": {}
+        },
+        "genO2OClickIdBy": {
+          "version": "1.0",
+          "params": {
+            "url": {
+              "type": "String"
+            }
+          },
+          "success": {},
+          "fail": {}
+        }
+      }
+    }
+  ],
+  "registerDsl": {
+    "scope": "alimama",
+    "map": [
+      {
+        "moduleMethod": "MunionWebViewJs.commitO2OExpoEvent",
+        "apiName": "commitO2OExpoEvent"
+      },
+      {
+        "moduleMethod": "MunionWebViewJs.genO2OClickIdBy",
+        "apiName": "genO2OClickIdBy"
+      }
+    ]
+  }
+}

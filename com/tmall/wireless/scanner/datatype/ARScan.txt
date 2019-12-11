@@ -1,0 +1,6 @@
+{
+    "bizType" : "markerScript",
+    "dispatchContent" : {
+        "resPackage" : "https://dtmall-tel.alicdn.com/minsk/online/fileware/201704/1ecc7b31-a8ca-4907-9221-c598cb08b776"
+    },
+}

@@ -1,0 +1,58 @@
+ {
+    "data": {
+      "userTbId": 2066793680,
+      "imgUrl":"http://imgindatapoo.png"
+    },
+    "page": "Page_Shop",
+    "title": "image condition",
+    "view": {
+      "dataBinding": {
+        "apiAlias": "getShopActivity",
+        "apiName": "weplugin.activityReadService.getShopActivity",
+        "apiVersion": "1.0",
+        "needLogin": false,
+        "param": {
+          "userTbId": "$userTbId"
+        },
+        "showErrorView": false
+      },
+      "styleBinding": {
+        "backgroundColor": "#fffeee",
+        "height": 500,
+        "layout": "linearLayout"
+      },
+      "subViews": [
+        {
+          "dataBinding": {
+            "url": "$imgUrl"
+          },
+          "styleBinding": {
+            "backgroundColor": "#FF0000",
+            "borderColor": "#dddddd",
+            "borderWidth": 1,
+            "height": 0,
+            "marginTop": 0,
+            "width": -1
+          },
+          "type": "image",
+          "viewId":"imageWithDataFormDataPool"
+        },
+        {
+          "dataBinding": {
+            "url": "${getShopActivity}.imgUrl"
+          },
+          "styleBinding": {
+            "backgroundColor": "#FF0000",
+            "borderColor": "#dddddd",
+            "borderWidth": 1,
+            "height": 100,
+            "marginTop": 0,
+            "width": -1
+          },
+          "type": "image",
+          "viewId":"imageWithDataFormRequest"
+        }
+      ],
+      "type": "container"
+    }
+}

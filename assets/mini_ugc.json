@@ -1,0 +1,1398 @@
+{
+  "main": {
+    "type": "div",
+    "uid": 0,
+    "class": "root",
+    "children": [
+      {
+        "type": "template",
+        "uid": 1,
+        "attrs": {
+          "src": "ios-main"
+        },
+        "bindattrs": {
+          "if": "{{$.system.os}} == iOS"
+        }
+      },
+      {
+        "type": "template",
+        "uid": 2,
+        "attrs": {
+          "src": "main-bar"
+        },
+        "bindattrs": {
+          "if": "{{$.system.os}} != iOS"
+        }
+      },
+      {
+        "type": "template",
+        "uid": 3,
+        "attrs": {
+          "src": "main-bottom-pannel"
+        },
+        "bindattrs": {
+          "if": "{{$.system.os}} != iOS"
+        }
+      }
+    ],
+    "_styles": {
+      ".root": {
+        "flex": "1"
+      }
+    },
+    "_data": {
+      "globalUi": {
+        "showType": "none",
+        "action": "false",
+        "emoji": "true",
+        "image": "false",
+        "video": "false",
+        "item": "false",
+        "disable": "false"
+      },
+      "emoticon": {
+        "api": {
+          "apiName": "mtop.taobao.social.emoji.packages.get",
+          "version": "1.0",
+          "params": {
+            "type": "129"
+          }
+        },
+        "ids": [
+          "1"
+        ]
+      },
+      "page": {
+        "submitApi": {
+          "apiName": "mtop.taobao.social.comment.add",
+          "version": "2.0"
+        },
+        "notify": "SendCommentNotification"
+      },
+      "input": {
+        "type": "input",
+        "submit": "true",
+        "attr": {
+          "maxLines": "6",
+          "minLines": "1",
+          "minLength": 1,
+          "placeholder": "回复楼主",
+          "auto-focus": "true"
+        },
+        "text": ""
+      },
+      "image": {
+        "type": "image",
+        "submit": "true",
+        "attr": {
+          "maxNum": "6",
+          "minNum": "0",
+          "bizCode": "tbbala"
+        },
+        "images": []
+      }
+    }
+  },
+  "main-bottom-pannel": {
+    "type": "div",
+    "uid": 0,
+    "class": "root",
+    "attrs": {
+      "onclick": ""
+    },
+    "children": [
+      {
+        "type": "template",
+        "uid": 1,
+        "bindattrs": {
+          "if": "'{{globalUi.showType}}' == 'action'"
+        },
+        "attrs": {
+          "src": "function-pannel"
+        }
+      },
+      {
+        "type": "template",
+        "uid": 2,
+        "bindattrs": {
+          "if": "'{{globalUi.showType}}' == 'image'"
+        },
+        "attrs": {
+          "src": "image-pannel"
+        }
+      },
+      {
+        "type": "template",
+        "uid": 3,
+        "bindattrs": {
+          "if": "'{{globalUi.showType}}' == 'item'"
+        },
+        "attrs": {
+          "src": "item-pannel"
+        }
+      },
+      {
+        "type": "template",
+        "uid": 4,
+        "bindattrs": {
+          "if": "'{{globalUi.showType}}' == 'video'"
+        },
+        "attrs": {
+          "src": "video-pannel"
+        }
+      },
+      {
+        "type": "template",
+        "uid": 5,
+        "bindattrs": {
+          "if": "'{{globalUi.showType}}' == 'emoji'"
+        },
+        "attrs": {
+          "src": "emoji-pannel"
+        }
+      }
+    ],
+    "_styles": {
+      ".root": {
+        "width": "750"
+      }
+    },
+    "_data": {}
+  },
+  "emoji-pannel": {
+    "type": "div",
+    "uid": 0,
+    "class": "root",
+    "children": [
+      {
+        "type": "emoji",
+        "uid": 1,
+        "class": "emoji",
+        "attrs": {
+          "onemoji": "onemoji",
+          "vm": "emoticon",
+          "oncreate": "oncreate"
+        }
+      }
+    ],
+    "_styles": {
+      ".root": {
+        "width": "750",
+        "height": "442",
+        "background-color": "#f4f4f4"
+      },
+      ".emoji": {
+        "flex": "1"
+      }
+    }
+  },
+  "video-pannel": {
+    "type": "div",
+    "uid": 0,
+    "class": "root",
+    "children": [
+      {
+        "type": "scrollView",
+        "uid": 1,
+        "attrs": {
+          "horizontal": "true",
+          "horizontal-indicator": "false"
+        },
+        "class": "scrollview",
+        "children": [
+          {
+            "type": "div",
+            "uid": 2,
+            "class": "content",
+            "children": [
+              {
+                "type": "div",
+                "uid": 3,
+                "class": "item",
+                "bindattrs": {
+                  "repeat": "{{video.videos}}"
+                },
+                "children": [
+                  {
+                    "type": "image",
+                    "uid": 4,
+                    "class": "icon",
+                    "bindattrs": {
+                      "src": "{{localCoverUrl}}"
+                    },
+                    "attrs": {
+                      "onclick": "videoPreviewHandler",
+                      "vm": "video"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "uid": 5,
+                    "class": "close",
+                    "attrs": {
+                      "text": "@icon-round_close_fill",
+                      "onclick": "videoRemoveHandler",
+                      "vm": "video"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "uid": 6,
+                "bindattrs": {
+                  "if": "{{video.videos|len}} < {{video.attr.maxNum}}"
+                },
+                "class": "addpic",
+                "attrs": {
+                  "text": "@icon-record_light",
+                  "onclick": "videoAddHandler",
+                  "vm": "video"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "richText",
+        "uid": 7,
+        "class": "desc",
+        "bindattrs": {
+          "html-text": "<span>还可以添加<span style='color:#ff5000;'>{{video.permitCount}}</span>个视频</span>"
+        }
+      },
+      {
+        "type": "template",
+        "uid": 8,
+        "attrs": {
+          "src": "sender"
+        }
+      }
+    ],
+    "_styles": {
+      ".root": {
+        "width": "750",
+        "height": "376",
+        "background-color": "#f4f4f4"
+      },
+      ".scrollview": {
+        "width": "750",
+        "margin-top": "45",
+        "flex": "1"
+      },
+      ".content": {
+        "flex-direction": "row"
+      },
+      ".item": {
+        "width": "202",
+        "height": "202",
+        "margin-left": "24",
+        "align-items": "flex-end",
+        "justify-content": "flex-start",
+        "flex-direction": "row"
+      },
+      ".icon": {
+        "width": "183",
+        "height": "183"
+      },
+      ".close": {
+        "font-size": "40",
+        "font-style": "taobao",
+        "position": "fixed",
+        "top": "0",
+        "right": "0",
+        "width": "40",
+        "height": "40",
+        "color": "#232323",
+        "background-color": "#f4f4f4",
+        "border-radius": "20"
+      },
+      ".play": {
+        "width": "88",
+        "height": "88",
+        "right": "57",
+        "top": "57",
+        "position": "fixed"
+      },
+      ".addpic": {
+        "margin-top": "20",
+        "margin-left": "24",
+        "margin-right": "24",
+        "width": "183",
+        "height": "183",
+        "text-align": "center",
+        "border-width": "1",
+        "border-color": "#b5b5b5",
+        "font-size": "64",
+        "color": "#b5b5b5",
+        "font-style": "taobao",
+        "background-color": "white"
+      },
+      ".desc": {
+        "text-align": "center",
+        "margin-bottom": "40",
+        "color": "#666666",
+        "font-size": "24"
+      }
+    },
+    "_data": {}
+  },
+  "sender": {
+    "type": "div",
+    "uid": 0,
+    "class": "root",
+    "bindattrs": {
+      "if": "{{$.system.os}} == iOS"
+    },
+    "children": [
+      {
+        "type": "text",
+        "uid": 1,
+        "class": "sendbtn",
+        "attrs": {
+          "onclick": "oncommit",
+          "text": "发送"
+        },
+        "bindattrs": {
+          "if": "{{input.text|len}} > 0 || {{image.images|len}} > 0 || {{video.videos|len}} > 0 || {{item.items|len}} > 0"
+        }
+      },
+      {
+        "type": "text",
+        "uid": 2,
+        "class": "sendbtn disabled",
+        "bindattrs": {
+          "if": "{{input.text|len}} == 0 && {{image.images|len}} ==0 && {{video.videos|len}} == 0 && {{item.items|len}} == 0"
+        },
+        "attrs": {
+          "text": "发送"
+        }
+      }
+    ],
+    "_styles": {
+      ".root": {
+        "right": "40",
+        "bottom": "27",
+        "width": "116",
+        "height": "54",
+        "clip": "1",
+        "position": "fixed"
+      },
+      ".sendbtn": {
+        "flex": "1",
+        "background-color": "#ff5500",
+        "border-radius": "27",
+        "text-align": "center",
+        "font-size": "24",
+        "color": "white",
+        "clip": "1",
+        "background": "linear-gradient(left, #ff8000, #ff5000)"
+      },
+      ".disabled": {
+        "background-color": "gray",
+        "background": "linear-gradient(left, gray, gray)"
+      }
+    }
+  },
+  "item-pannel": {
+    "type": "div",
+    "uid": 0,
+    "class": "root",
+    "children": [
+      {
+        "type": "scrollView",
+        "uid": 1,
+        "attrs": {
+          "horizontal": "true",
+          "horizontal-indicator": "false"
+        },
+        "class": "scrollview",
+        "children": [
+          {
+            "type": "div",
+            "uid": 2,
+            "class": "content",
+            "children": [
+              {
+                "type": "div",
+                "uid": 3,
+                "class": "item",
+                "bindattrs": {
+                  "repeat": "{{item.items}}"
+                },
+                "children": [
+                  {
+                    "type": "image",
+                    "uid": 4,
+                    "class": "icon",
+                    "bindattrs": {
+                      "src": "{{pic}}"
+                    },
+                    "attrs": {
+                      "onclick": "itemPreviewHandler",
+                      "vm": "item"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "uid": 5,
+                    "class": "close",
+                    "attrs": {
+                      "text": "@icon-round_close_fill",
+                      "onclick": "itemRemoveHandler",
+                      "vm": "item"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "uid": 6,
+                    "class": "price",
+                    "bindattrs": {
+                      "text": "¥{{price}}"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "uid": 7,
+                "class": "addfunction",
+                "bindattrs": {
+                  "if": "{{item.items|len}} < {{item.attr.maxNum}}"
+                },
+                "attrs": {
+                  "text": "@icon-goods_light",
+                  "onclick": "itemAddHandler",
+                  "vm": "item"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "richText",
+        "uid": 8,
+        "class": "desc",
+        "bindattrs": {
+          "html-text": "<span>还可以添加<span style='color:#ff5000;'>{{item.permitCount}}</span>个宝贝</span>"
+        }
+      },
+      {
+        "type": "template",
+        "uid": 9,
+        "attrs": {
+          "src": "sender"
+        }
+      }
+    ],
+    "_styles": {
+      ".root": {
+        "width": "750",
+        "height": "376",
+        "background-color": "#f4f4f4",
+        "justify-content": "space-between"
+      },
+      ".scrollview": {
+        "width": "750",
+        "margin-top": "45",
+        "flex": "1"
+      },
+      ".content": {
+        "flex-direction": "row"
+      },
+      ".item": {
+        "width": "202",
+        "height": "202",
+        "margin-left": "24",
+        "align-items": "flex-end",
+        "justify-content": "flex-start",
+        "flex-direction": "row"
+      },
+      ".icon": {
+        "width": "183",
+        "height": "183"
+      },
+      ".close": {
+        "font-size": "40",
+        "font-style": "taobao",
+        "position": "fixed",
+        "top": "0",
+        "right": "0",
+        "width": "40",
+        "height": "40",
+        "color": "#232323",
+        "background-color": "#f4f4f4",
+        "border-radius": "20"
+      },
+      ".play": {
+        "width": "88",
+        "height": "88",
+        "right": "57",
+        "top": "57",
+        "position": "fixed"
+      },
+      ".addfunction": {
+        "margin-top": "20",
+        "margin-left": "24",
+        "margin-right": "24",
+        "width": "183",
+        "height": "183",
+        "text-align": "center",
+        "border-width": "1",
+        "border-color": "#b5b5b5",
+        "font-size": "64",
+        "color": "#b5b5b5",
+        "font-style": "taobao",
+        "background-color": "white"
+      },
+      ".desc": {
+        "text-align": "center",
+        "margin-bottom": "40",
+        "color": "#666666",
+        "font-size": "24"
+      },
+      ".sendbtn": {
+        "right": "40",
+        "bottom": "31",
+        "width": "116",
+        "height": "54",
+        "background-color": "#ff5500",
+        "border-radius": "6",
+        "text-align": "center",
+        "font-size": "24",
+        "color": "white",
+        "clip": "1",
+        "position": "fixed"
+      },
+      ".price": {
+        "position": "fixed",
+        "right": "22",
+        "bottom": "0",
+        "font-size": "20",
+        "padding-left": "10",
+        "padding-right": "10",
+        "padding-top": "5",
+        "padding-bottom": "5",
+        "color": "#ffffff",
+        "background-color": "#000000cc"
+      }
+    },
+    "_data": {}
+  },
+  "image-pannel": {
+    "type": "div",
+    "uid": 0,
+    "class": "root",
+    "children": [
+      {
+        "type": "scrollView",
+        "uid": 1,
+        "attrs": {
+          "horizontal": "true",
+          "horizontal-indicator": "false"
+        },
+        "class": "scrollview",
+        "children": [
+          {
+            "type": "div",
+            "uid": 2,
+            "class": "content",
+            "children": [
+              {
+                "type": "div",
+                "uid": 3,
+                "class": "item",
+                "bindattrs": {
+                  "repeat": "{{image.images}}"
+                },
+                "children": [
+                  {
+                    "type": "image",
+                    "uid": 4,
+                    "class": "icon",
+                    "bindattrs": {
+                      "src": "{{localPath}}"
+                    },
+                    "attrs": {
+                      "onclick": "imagePreviewHandler",
+                      "vm": "image",
+                      "clip": "1"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "uid": 5,
+                    "class": "close",
+                    "attrs": {
+                      "text": "@icon-round_close_fill",
+                      "onclick": "imageRemoveHandler",
+                      "vm": "image"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "uid": 6,
+                "class": "addfunction",
+                "bindattrs": {
+                  "if": "{{image.images|len}} < {{image.attr.maxNum}}"
+                },
+                "attrs": {
+                  "text": "@icon-camera_light",
+                  "onclick": "imageAddHandler",
+                  "vm": "image"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "richText",
+        "uid": 7,
+        "class": "desc",
+        "bindattrs": {
+          "html-text": "<span>还可以添加<span style='color:#ff5000;'>{{image.permitCount}}</span>张图片</span>"
+        }
+      },
+      {
+        "type": "template",
+        "uid": 8,
+        "attrs": {
+          "src": "sender"
+        }
+      }
+    ],
+    "_styles": {
+      ".root": {
+        "width": "750",
+        "height": "376",
+        "background-color": "#f4f4f4"
+      },
+      ".scrollview": {
+        "width": "750",
+        "margin-top": "45",
+        "flex": "1"
+      },
+      ".content": {
+        "flex-direction": "row"
+      },
+      ".item": {
+        "width": "202",
+        "height": "202",
+        "margin-left": "14",
+        "align-items": "flex-end",
+        "justify-content": "flex-start",
+        "flex-direction": "row"
+      },
+      ".icon": {
+        "width": "183",
+        "height": "183"
+      },
+      ".close": {
+        "font-size": "40",
+        "font-style": "taobao",
+        "position": "fixed",
+        "top": "0",
+        "right": "0",
+        "width": "40",
+        "height": "40",
+        "color": "#232323",
+        "background-color": "#f4f4f4",
+        "border-radius": "20"
+      },
+      ".play": {
+        "width": "88",
+        "height": "88",
+        "right": "57",
+        "top": "57",
+        "position": "fixed"
+      },
+      ".addfunction": {
+        "margin-top": "20",
+        "margin-left": "24",
+        "margin-right": "24",
+        "width": "183",
+        "height": "183",
+        "text-align": "center",
+        "border-width": "1",
+        "border-color": "#b5b5b5",
+        "font-size": "64",
+        "font-style": "taobao",
+        "color": "#b5b5b5",
+        "background-color": "white"
+      },
+      ".desc": {
+        "text-align": "center",
+        "margin-bottom": "40",
+        "color": "#666666",
+        "font-size": "24"
+      }
+    },
+    "_data": {}
+  },
+  "function-pannel": {
+    "type": "div",
+    "uid": 0,
+    "class": "root",
+    "children": [
+      {
+        "type": "template",
+        "uid": 1,
+        "bindattrs": {
+          "if": "{{globalUi.image}} == true"
+        },
+        "attrs": {
+          "src": "image-function"
+        }
+      },
+      {
+        "type": "template",
+        "uid": 2,
+        "bindattrs": {
+          "if": "{{globalUi.video}} == true"
+        },
+        "attrs": {
+          "src": "video-function"
+        }
+      },
+      {
+        "type": "template",
+        "uid": 3,
+        "bindattrs": {
+          "if": "{{globalUi.item}} == true"
+        },
+        "attrs": {
+          "src": "item-function"
+        }
+      },
+      {
+        "type": "template",
+        "uid": 4,
+        "attrs": {
+          "src": "sender"
+        }
+      }
+    ],
+    "_styles": {
+      ".root": {
+        "width": "750",
+        "background-color": "#f4f4f4",
+        "flex-direction": "row",
+        "flex-wrap": "wrap",
+        "min-height": "376",
+        "clip": "1"
+      }
+    },
+    "_data": {}
+  },
+  "item-function": {
+    "type": "div",
+    "uid": 0,
+    "class": "root",
+    "attrs": {
+      "onclick": "itemHandler",
+      "oncreate": "onCreate",
+      "vm": "item"
+    },
+    "children": [
+      {
+        "type": "div",
+        "uid": 1,
+        "class": "item",
+        "children": [
+          {
+            "type": "text",
+            "uid": 2,
+            "class": "btn",
+            "attrs": {
+              "text": "@icon-goods_fill"
+            }
+          },
+          {
+            "type": "text",
+            "uid": 3,
+            "bindattrs": {
+              "if": "{{item.items|len}} > 0",
+              "text": "{{item.items|len}}"
+            },
+            "class": "indicator"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "uid": 4,
+        "class": "title",
+        "attrs": {
+          "text": "宝贝"
+        }
+      }
+    ],
+    "_styles": {
+      ".root": {
+        "margin": "54,30,0,20",
+        "width": "130",
+        "height": "180",
+        "align-items": "center"
+      },
+      ".item": {
+        "width": "130",
+        "height": "130",
+        "align-items": "flex-end",
+        "justify-content": "flex-start",
+        "flex-direction": "row"
+      },
+      ".btn": {
+        "width": "120",
+        "height": "120",
+        "text-align": "center",
+        "border-radius": "14",
+        "background-color": "white",
+        "font-size": "64",
+        "font-style": "taobao",
+        "color": "#777777"
+      },
+      ".indicator": {
+        "width": "34",
+        "height": "34",
+        "right": "0",
+        "top": "0",
+        "background-color": "#ff5000",
+        "border-radius": "17",
+        "color": "white",
+        "font-size": "24",
+        "text-align": "center",
+        "position": "fixed"
+      },
+      ".title": {
+        "font-size": "24",
+        "text-align": "center",
+        "margin-top": "12",
+        "color": "#666666",
+        "margin-left": "-10"
+      }
+    }
+  },
+  "video-function": {
+    "type": "div",
+    "uid": 0,
+    "class": "root",
+    "attrs": {
+      "onclick": "videoHandler",
+      "oncreate": "onCreate",
+      "vm": "video"
+    },
+    "children": [
+      {
+        "type": "div",
+        "uid": 1,
+        "class": "item",
+        "children": [
+          {
+            "type": "text",
+            "uid": 2,
+            "class": "btn",
+            "attrs": {
+              "text": "@icon-record_fill"
+            }
+          },
+          {
+            "type": "text",
+            "uid": 3,
+            "bindattrs": {
+              "if": "{{video.videos|len}} > 0",
+              "text": "{{video.videos|len}}"
+            },
+            "class": "indicator"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "uid": 4,
+        "class": "title",
+        "attrs": {
+          "text": "视频"
+        }
+      }
+    ],
+    "_styles": {
+      ".root": {
+        "margin": "54,30,0,20",
+        "width": "130",
+        "height": "180",
+        "align-items": "center"
+      },
+      ".item": {
+        "width": "130",
+        "height": "130",
+        "align-items": "flex-end",
+        "justify-content": "flex-start",
+        "flex-direction": "row"
+      },
+      ".btn": {
+        "width": "120",
+        "height": "120",
+        "text-align": "center",
+        "border-radius": "14",
+        "background-color": "white",
+        "font-size": "64",
+        "font-style": "taobao",
+        "color": "#777777"
+      },
+      ".indicator": {
+        "width": "34",
+        "height": "34",
+        "right": "0",
+        "top": "0",
+        "background-color": "#ff5000",
+        "border-radius": "17",
+        "color": "white",
+        "font-size": "24",
+        "text-align": "center",
+        "position": "fixed"
+      },
+      ".title": {
+        "font-size": "24",
+        "text-align": "center",
+        "margin-top": "12",
+        "color": "#666666",
+        "margin-left": "-10"
+      }
+    }
+  },
+  "image-function": {
+    "type": "div",
+    "uid": 0,
+    "class": "root",
+    "attrs": {
+      "onclick": "imageHandler",
+      "vm": "image",
+      "oncreate": "onCreate"
+    },
+    "children": [
+      {
+        "type": "div",
+        "uid": 1,
+        "class": "item",
+        "children": [
+          {
+            "type": "text",
+            "uid": 2,
+            "class": "btn",
+            "attrs": {
+              "text": "@icon-pic_fill"
+            }
+          },
+          {
+            "type": "text",
+            "uid": 3,
+            "bindattrs": {
+              "if": "{{image.images|len}} > 0",
+              "text": "{{image.images|len}}"
+            },
+            "class": "indicator"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "uid": 4,
+        "class": "title",
+        "attrs": {
+          "text": "相册"
+        }
+      }
+    ],
+    "_styles": {
+      ".root": {
+        "margin": "54, 30, 0, 20",
+        "width": "130",
+        "height": "180",
+        "align-items": "center"
+      },
+      ".item": {
+        "width": "130",
+        "height": "130",
+        "align-items": "flex-end",
+        "justify-content": "flex-start",
+        "flex-direction": "row"
+      },
+      ".btn": {
+        "width": "120",
+        "height": "120",
+        "text-align": "center",
+        "border-radius": "14",
+        "background-color": "white",
+        "font-size": "64",
+        "font-style": "taobao",
+        "color": "#777777"
+      },
+      ".indicator": {
+        "width": "34",
+        "height": "34",
+        "right": "0",
+        "top": "0",
+        "background-color": "#ff5000",
+        "border-radius": "17",
+        "color": "white",
+        "font-size": "24",
+        "text-align": "center",
+        "position": "fixed"
+      },
+      ".title": {
+        "font-size": "24",
+        "text-align": "center",
+        "margin-top": "12",
+        "color": "#666666",
+        "margin-left": "-10"
+      }
+    },
+    "_data": {}
+  },
+  "main-bar": {
+    "type": "div",
+    "uid": 0,
+    "children": [
+      {
+        "type": "text",
+        "uid": 1,
+        "class": "line"
+      },
+      {
+        "type": "div",
+        "uid": 2,
+        "class": "content",
+        "bindattrs": {
+          "enabled": "{{globalUi.disable|?:(false, true)}}"
+        },
+        "children": [
+          {
+            "type": "div",
+            "uid": 3,
+            "bindattrs": {
+              "class": "{{globalUi.disable|?:(enableContainer, container)}}"
+            },
+            "children": [
+              {
+                "type": "textarea",
+                "uid": 4,
+                "class": "input",
+                "attrs": {
+                  "id": "input",
+                  "oncreate": "onCreate",
+                  "vm": "input",
+                  "onchange": "changeHandler",
+                  "onreturn": "oncommit",
+                  "onediting": "onediting",
+                  "ios-returnKeyType": "send"
+                },
+                "bindattrs": {
+                  "placeholder": "{{input.attr.placeholder}}",
+                  "text": "{{input.text}}",
+                  "auto-focus": "{{input.attr.auto-focus}}",
+                  "lines": "{{input.attr.maxLines}}",
+                  "max-length": "{{input.attr.maxLength}}",
+                  "enabled": "{{globalUi.disable|?:(false, true)}}"
+                }
+              }
+            ]
+          },
+          {
+            "type": "template",
+            "uid": 5,
+            "attrs": {
+              "src": "emoji-icon"
+            },
+            "bindattrs": {
+              "if": "{{globalUi.emoji}} == true"
+            }
+          },
+          {
+            "type": "template",
+            "uid": 6,
+            "attrs": {
+              "src": "main-bar-plugin"
+            },
+            "bindattrs": {
+              "if": "'{{globalUi.action}}' == 'false'"
+            }
+          },
+          {
+            "type": "text",
+            "uid": 7,
+            "bindattrs": {
+              "class": "{{globalUi.disable|?:(enableIcon,icon)}}",
+              "if": "{{globalUi.action}} == true"
+            },
+            "attrs": {
+              "text": "@icon-round_add_light",
+              "onclick": "functionHandler"
+            }
+          },
+          {
+            "type": "text",
+            "uid": 8,
+            "bindattrs": {
+              "class": "{{globalUi.disable|?:(enableSendbtn,sendbtn)}}",
+              "if": "{{$.system.os}} != iOS"
+            },
+            "attrs": {
+              "onclick": "sendHandler",
+              "text": "发送"
+            }
+          }
+        ]
+      }
+    ],
+    "_styles": {
+      ".root": {
+        "background-color": "#fcfcfc"
+      },
+      ".content": {
+        "flex-direction": "row",
+        "align-items": "center",
+        "background-color": "#fcfcfc",
+        "padding-left": "24",
+        "padding-right": "18"
+      },
+      ".line": {
+        "width": "750",
+        "height": "1",
+        "background-color": "#cdcdcd"
+      },
+      ".container": {
+        "padding-top": "16",
+        "padding-bottom": "16",
+        "padding-left": "10",
+        "padding-right": "10",
+        "background-color": "white",
+        "border-radius": "10",
+        "border-color": "#cdcdcd",
+        "border-width": "1",
+        "flex": "1",
+        "margin-right": "10",
+        "margin-top": "20",
+        "margin-bottom": "20"
+      },
+      ".input": {
+        "font-size": "28",
+        "lines": "6",
+        "placeholder-color": "#b5b5b5",
+        "color": "#051b28",
+        "background-color": "clear"
+      },
+      ".enableContainer": {
+        "padding-top": "16",
+        "padding-bottom": "16",
+        "padding-left": "10",
+        "padding-right": "10",
+        "border-radius": "10",
+        "flex": "1",
+        "margin-right": "10",
+        "margin-top": "20",
+        "margin-bottom": "20",
+        "background-color": "#ededed"
+      },
+      ".icon": {
+        "width": "76",
+        "height": "106",
+        "min-width": "76",
+        "font-size": "56",
+        "font-style": "taobao",
+        "color": "#444444",
+        "align": "center"
+      },
+      ".enableIcon": {
+        "width": "76",
+        "height": "106",
+        "min-width": "76",
+        "font-size": "56",
+        "font-style": "taobao",
+        "color": "#b5b5b5",
+        "align": "center"
+      },
+      ".sendbtn": {
+        "width": "100",
+        "height": "60",
+        "margin-left": "10",
+        "background": "linear-gradient(left, #ff8000, #ff5000)",
+        "border-radius": "30",
+        "text-align": "center",
+        "font-size": "28",
+        "color": "white",
+        "clip": "1"
+      },
+      ".enableSendbtn": {
+        "width": "100",
+        "height": "60",
+        "margin-left": "10",
+        "color": "#b5b5b5",
+        "border-radius": "30",
+        "text-align": "center",
+        "font-size": "28",
+        "background": "linear-gradient(left, #ededed, #ededed)",
+        "clip": "1"
+      }
+    }
+  },
+  "main-bar-plugin": {
+    "type": "div",
+    "uid": 0,
+    "class": "root",
+    "children": [
+      {
+        "type": "text",
+        "uid": 1,
+        "bindattrs": {
+          "class": "{{globalUi.disable|?:(enableIcon,icon)}}",
+          "if": "'{{globalUi.image}}' == 'true'"
+        },
+        "attrs": {
+          "text": "@icon-camera_light",
+          "onclick": "imageHandler",
+          "vm": "image"
+        }
+      },
+      {
+        "type": "text",
+        "uid": 2,
+        "bindattrs": {
+          "class": "{{globalUi.disable|?:(enableIcon,icon)}}",
+          "if": "'{{globalUi.item}}' == 'true'"
+        },
+        "attrs": {
+          "text": "@icon-goods_light",
+          "onclick": "itemHandler",
+          "vm": "item"
+        }
+      },
+      {
+        "type": "text",
+        "uid": 3,
+        "bindattrs": {
+          "class": "{{globalUi.disable|?:(enableIcon,icon)}}",
+          "if": "'{{globalUi.video}}' == 'true'"
+        },
+        "attrs": {
+          "text": "@icon-video_light",
+          "onclick": "videoHandler",
+          "vm": "video"
+        }
+      }
+    ],
+    "_styles": {
+      ".root": {
+        "flex-direction": "row",
+        "align-items": "center"
+      },
+      ".icon": {
+        "width": "76",
+        "height": "106",
+        "min-width": "76",
+        "font-size": "56",
+        "font-style": "taobao",
+        "color": "#444444",
+        "align": "center"
+      },
+      ".enableIcon": {
+        "width": "76",
+        "height": "106",
+        "min-width": "76",
+        "font-size": "56",
+        "font-style": "taobao",
+        "color": "#b5b5b5",
+        "align": "center"
+      }
+    }
+  },
+  "emoji-icon": {
+    "type": "div",
+    "uid": 0,
+    "children": [
+      {
+        "type": "text",
+        "uid": 1,
+        "bindattrs": {
+          "class": "{{globalUi.disable|?:(enableIcon, icon)}}",
+          "if": "'{{globalUi.showType}}' != 'emoji'"
+        },
+        "attrs": {
+          "text": "@icon-emoji_light",
+          "onclick": "emojiHandler"
+        }
+      },
+      {
+        "type": "text",
+        "uid": 2,
+        "class": "icon",
+        "attrs": {
+          "text": "@icon-keyboard_light",
+          "onclick": "keyboardHandler"
+        },
+        "bindattrs": {
+          "if": "'{{globalUi.showType}}' == 'emoji'"
+        }
+      }
+    ],
+    "_styles": {
+      ".icon": {
+        "width": "76",
+        "height": "106",
+        "min-width": "76",
+        "font-size": "56",
+        "font-style": "taobao",
+        "color": "#444444",
+        "align": "center"
+      },
+      ".enableIcon": {
+        "width": "76",
+        "height": "106",
+        "min-width": "76",
+        "font-size": "56",
+        "font-style": "taobao",
+        "color": "#b5b5b5",
+        "align": "center"
+      }
+    }
+  },
+  "ios-main": {
+    "type": "maskLayer",
+    "uid": 0,
+    "class": "keyboardbar",
+    "attrs": {
+      "ios-msghandler": "TBOMiniPublisher",
+      "onhitTest": "onhitTest"
+    },
+    "children": [
+      {
+        "type": "template",
+        "uid": 1,
+        "attrs": {
+          "src": "main-bar"
+        }
+      },
+      {
+        "type": "template",
+        "uid": 2,
+        "attrs": {
+          "src": "main-bottom-pannel"
+        }
+      },
+      {
+        "type": "keyboardPannel",
+        "uid": 3
+      }
+    ],
+    "_styles": {
+      ".keyboardbar": {
+        "flex": "1",
+        "justify-content": "flex-end"
+      }
+    }
+  }
+}

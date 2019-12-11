@@ -1,0 +1,17 @@
+{
+   "components": [
+      {
+         "name": "playcontainer",
+         "className": "com.taobao.android.tbplay.PlayContainer",
+         "appendTree": false,
+         "methods": [
+            "setUrl",
+            "startGame",
+            "registerCallback",
+            "updateGame",
+            "innerRecvMsgCallback",
+            "innerSendMsg"
+         ]
+      }
+   ]
+}

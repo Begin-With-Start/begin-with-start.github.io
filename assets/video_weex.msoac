@@ -1,0 +1,11 @@
+[
+    {
+        "bizName": "video_weex",
+        "serviceDependency": [
+            {
+                "serviceId": "msoa.taobao.cart.sdk.add",
+                "version": "2.0"
+            }
+        ]
+    }
+]

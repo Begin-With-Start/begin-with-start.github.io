@@ -1,0 +1,185 @@
+{
+  "page": "mock_foreach",
+  "title": "mock_foreach",
+  "view": {
+    "subViews": [
+      {
+        "viewId": "combos1",
+        "type": "container",
+        "styleBinding": {
+          "height": 190,
+          "width": -1,
+          "borderWidth": 0,
+          "layout": "linearLayout",
+          "orientation": "horizontal"
+        },
+        "foreach": {
+          "array": "$combos",
+          "template": {
+            "dataBinding": {
+              "value": "$combos.[?].name"
+            },
+            "styleBinding": {
+              "height": 32,
+              "width": -1
+            },
+            "type": "label"
+          }
+        }
+      },
+      {
+        "viewId": "combos2",
+        "type": "container",
+        "styleBinding": {
+          "height": 190,
+          "width": -1,
+          "borderWidth": 0,
+          "layout": "linearLayout",
+          "orientation": "horizontal"
+        },
+        "foreach": {
+          "start": 1,
+          "end": 3,
+          "array": "$combos",
+          "template": {
+            "dataBinding": {
+              "value": "$combos.[?].name"
+            },
+            "styleBinding": {
+              "height": 32,
+              "width": -1
+            },
+            "type": "label"
+          }
+        }
+      },
+      {
+        "viewId": "combos3",
+        "type": "container",
+        "styleBinding": {
+          "height": 190,
+          "width": -1,
+          "borderWidth": 0,
+          "layout": "linearLayout",
+          "orientation": "horizontal"
+        },
+        "foreach": {
+          "start": "$startindex",
+          "end": 20,
+          "step": 2,
+          "array": "$combos",
+          "template": {
+            "dataBinding": {
+              "value": "$combos.[?].name"
+            },
+            "styleBinding": {
+              "height": 32,
+              "width": -1
+            },
+            "type": "label"
+          }
+        }
+      },
+      {
+        "viewId": "combos4",
+        "type": "container",
+        "styleBinding": {
+          "height": 190,
+          "width": -1,
+          "borderWidth": 0,
+          "layout": "linearLayout",
+          "orientation": "horizontal"
+        },
+        "foreach": {
+          "start": "$startindex",
+          "end": "$endindex",
+          "step": "$step",
+          "array": "$combos",
+          "template": {
+            "dataBinding": {
+              "value": "$combos.[?].name"
+            },
+            "styleBinding": {
+              "height": 32,
+              "width": -1
+            },
+            "type": "label"
+          }
+        }
+      }
+    ],
+    "type": "container",
+    "styleBinding": {
+      "height": 280,
+      "width": -1,
+      "layout": "linearLayout"
+    }
+  },
+  "data": {
+    "startindex": 2,
+    "endindex": 10,
+    "step": 3,
+    "combos": [
+      {
+        "id": "1896067",
+        "name": "combos0",
+        "comboDescription": "优惠21.00元"
+      },
+      {
+        "id": "1896067",
+        "name": "combos1",
+        "comboDescription": "优惠21.00元"
+      },
+      {
+        "id": "2250147",
+        "name": "combos2",
+        "comboDescription": "优惠74.00元"
+      },
+      {
+        "id": "2250148",
+        "name": "combos3",
+        "comboDescription": "优惠235.00元"
+      },
+      {
+        "id": "2250148",
+        "name": "combos4",
+        "comboDescription": "优惠235.00元"
+      },
+      {
+        "id": "2250148",
+        "name": "combos5",
+        "comboDescription": "优惠235.00元"
+      },
+      {
+        "id": "2250148",
+        "name": "combos6",
+        "comboDescription": "优惠235.00元"
+      },
+      {
+        "id": "2250148",
+        "name": "combos7",
+        "comboDescription": "优惠235.00元"
+      },
+      {
+        "id": "2250148",
+        "name": "combos8",
+        "comboDescription": "优惠235.00元"
+      },
+      {
+        "id": "2250148",
+        "name": "combos9",
+        "comboDescription": "优惠235.00元"
+      },
+      {
+        "id": "2250148",
+        "name": "combos10",
+        "comboDescription": "优惠235.00元"
+      },
+      {
+        "id": "2250148",
+        "name": "combos11",
+        "comboDescription": "优惠235.00元"
+      }
+    ]
+  }
+}

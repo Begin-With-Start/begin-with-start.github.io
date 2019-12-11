@@ -1,0 +1,552 @@
+{
+	"api": "mtop.tmall.tac.gateway.execute",
+	"data": {
+		"2019031203": {
+			"data":{
+				"templates": [
+					{
+						"sign": "6E451E5B72C942B4B6172EEE7EB69007",
+						"type": "tmall_pioneertrendrank_goods_v2",
+						"category": "dx",
+						"priority": 0,
+						"version": 1,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1568789547676/tmall_pioneertrendrank_goods_v2.zip"
+					},
+					{
+						"sign": "AA4DA3B1BE1C414EF5211DEE0F9CB3A9",
+						"type": "tmall_my_big_promotion",
+						"category": "dx",
+						"priority": 0,
+						"version": 1,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1558347048524/tmall_my_big_promotion.zip"
+					},
+					{
+						"sign": "CF4FF9B9C6F805FB6772A8AEE7B51CD5",
+						"type": "membershop_opencard_new",
+						"category": "dx",
+						"priority": 0,
+						"version": 17,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1558353194524/membershop_opencard_new.zip"
+					},
+					{
+						"sign": null,
+						"type": "tm_frontpage_memberstore",
+						"category": "dx",
+						"priority": 0,
+						"version": 5,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1557028931753/tm_frontpage_memberstore.zip"
+					},
+					{
+						"sign": "1D7BDED2E0113A058050E1D594615001",
+						"type": "tmall_my_recommend_title",
+						"category": "dx",
+						"priority": 0,
+						"version": 1,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1565166181217/tmall_my_recommend_title.zip"
+					},
+					{
+						"sign": "8D76A7B7E57DF92334CA2873871FDCEF",
+						"type": "tmall_2019_single_channel",
+						"category": "dx",
+						"priority": 0,
+						"version": 1,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1558343901604/tmall_2019_single_channel.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_frontpage_newer_redpacket_header",
+						"category": "dx",
+						"priority": 0,
+						"version": 4,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1555058519888/tmall_frontpage_newer_redpacket_header.zip"
+					},
+					{
+						"sign": "FBDE3989FE686D10AF4C7366493A703C",
+						"type": "tmall_2019_goods_2",
+						"category": "dx",
+						"priority": 0,
+						"version": 1,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1558343874606/tmall_2019_goods_2.zip"
+					},
+					{
+						"sign": "2DBB8FD213A19ED200DB20618A42A94F",
+						"type": "tmall_m_h_v6_6in1_main_entrance",
+						"category": "dx",
+						"priority": 0,
+						"version": 7,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1568977519441/tmall_m_h_v6_6in1_main_entrance.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_frontpage_newer_goods",
+						"category": "dx",
+						"priority": 0,
+						"version": 4,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1555058662609/tmall_frontpage_newer_goods.zip"
+					},
+					{
+						"sign": "290C31DF2147C698944A822442F72149",
+						"type": "tmall_2019_tag_and_sort",
+						"category": "dx",
+						"priority": 0,
+						"version": 10,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1566810491185/tmall_2019_tag_and_sort.zip"
+					},
+					{
+						"sign": "C43394B7AAAB178BCF8F6CC13EFBBB12",
+						"type": "membershop_mind_title_android",
+						"category": "dx",
+						"priority": 0,
+						"version": 5,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1568950860385/membershop_mind_title_android.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_2019_four_reuse_king_kong",
+						"category": "dx",
+						"priority": 0,
+						"version": 7,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1556072399463/tmall_2019_four_reuse_king_kong.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_my_tools_page_tool_1",
+						"category": "dx",
+						"priority": 0,
+						"version": 1,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1552030271216/tmall_my_tools_page_tool_1.zip"
+					},
+					{
+						"sign": "CC446841A5E17185243CADBAA240701D",
+						"type": "membershop_mid_autumn_card",
+						"category": "dx",
+						"priority": 0,
+						"version": 12,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1568950760247/membershop_mid_autumn_card.zip"
+					},
+					{
+						"sign": "94EF8C4EF555E780C1A9E0A38D9ECF5A",
+						"type": "tmall_frontpage_category_select_image",
+						"category": "dx",
+						"priority": 0,
+						"version": 21,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1570588687468/tmall_frontpage_category_select_image.zip"
+					},
+					{
+						"sign": "B7BF5232721C13A5BC0A5229ACAEAA7E",
+						"type": "membershop_margin_item",
+						"category": "dx",
+						"priority": 0,
+						"version": 48,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1564025182987/membershop_margin_item.zip"
+					},
+					{
+						"sign": null,
+						"type": "membershop_super_hasmore",
+						"category": "dx",
+						"priority": 0,
+						"version": 4,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1556431568906/membershop_super_hasmore.zip"
+					},
+					{
+						"sign": "6DF1D60B4915A980BA01A0BAA0A259C0",
+						"type": "membershop_free_mail",
+						"category": "dx",
+						"priority": 0,
+						"version": 15,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1558351929956/membershop_free_mail.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_2019_flash_sale",
+						"category": "dx",
+						"priority": 0,
+						"version": 5,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1554124840227/tmall_2019_flash_sale.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_my_title",
+						"category": "dx",
+						"priority": 0,
+						"version": 4,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1552982414071/tmall_my_title.zip"
+					},
+					{
+						"sign": "5750D4D453D4302B221C3BD5E28A3AA5",
+						"type": "tmall_trendrank_goods_v2",
+						"category": "dx",
+						"priority": 0,
+						"version": 3,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1562812940924/tmall_trendrank_goods_v2.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_my_tools_page_tool_2",
+						"category": "dx",
+						"priority": 0,
+						"version": 1,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1552030806552/tmall_my_tools_page_tool_2.zip"
+					},
+					{
+						"sign": "EAB8C9AC2DCE8193262C98800161A11C",
+						"type": "tmall_favorite_shop_new_product",
+						"category": "dx",
+						"priority": 0,
+						"version": 2,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1557909640267/tmall_favorite_shop_new_product.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_my_userinfo",
+						"category": "dx",
+						"priority": 0,
+						"version": 26,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1555347916740/tmall_my_userinfo.zip"
+					},
+					{
+						"sign": "890C5F0A7571E996E97FC1091AC3F355",
+						"type": "membershop_item",
+						"category": "dx",
+						"priority": 0,
+						"version": 43,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1563959611115/membershop_item.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_my_tool_message",
+						"category": "dx",
+						"priority": 0,
+						"version": 5,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1554986062334/tmall_my_tool_message.zip"
+					},
+					{
+						"sign": "150E28EF1D70A1A1FE53C9E03D97F9D9",
+						"type": "tmall_surprise_redpacket_fix",
+						"category": "dx",
+						"priority": 0,
+						"version": 2,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1564035644384/tmall_surprise_redpacket_fix.zip"
+					},
+					{
+						"sign": "70B799DB4F22580386687C68091FE888",
+						"type": "tm_grass_circle_card",
+						"category": "dx",
+						"priority": 0,
+						"version": 5,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1565871549909/tm_grass_circle_card.zip"
+					},
+					{
+						"sign": "05CB4D49BF22B97E1C86AC68E6256E8A",
+						"type": "tm_frontpage_memberstore2",
+						"category": "dx",
+						"priority": 0,
+						"version": 3,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1565506512023/tm_frontpage_memberstore2.zip"
+					},
+					{
+						"sign": "1CACE070D34A6B33E7B078EAF9F2FBDF",
+						"type": "membershop_float_opencard",
+						"category": "dx",
+						"priority": 0,
+						"version": 11,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1563004228372/membershop_float_opencard.zip"
+					},
+					{
+						"sign": "EC977468CDF16BF5DD6878895D518B8D",
+						"type": "tmall_2019_lbs_super_market",
+						"category": "dx",
+						"priority": 0,
+						"version": 7,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1566884914576/tmall_2019_lbs_super_market.zip"
+					},
+					{
+						"sign": "43B5EBAEB33449213ED524570C3952D9",
+						"type": "tmall_2019_uniform_two_component",
+						"category": "dx",
+						"priority": 0,
+						"version": 4,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1570534075885/tmall_2019_uniform_two_component.zip"
+					},
+					{
+						"sign": "EC005D255E6230E8CB53A04574685455",
+						"type": "tmall_favorite_shop_logo",
+						"category": "dx",
+						"priority": 0,
+						"version": 5,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1557988930796/tmall_favorite_shop_logo.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_my_collection_item",
+						"category": "dx",
+						"priority": 0,
+						"version": 4,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1552478624447/tmall_my_collection_item.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_my_88vip",
+						"category": "dx",
+						"priority": 0,
+						"version": 1,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1551891865941/tmall_my_88vip.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_frontpage_newer_redpacket",
+						"category": "dx",
+						"priority": 0,
+						"version": 6,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1557133902573/tmall_frontpage_newer_redpacket.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_my_order_item",
+						"category": "dx",
+						"priority": 0,
+						"version": 11,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1553669961207/tmall_my_order_item.zip"
+					},
+					{
+						"sign": "C9154B03E20945E01809BDD739CADECA",
+						"type": "tmall_m_h_v6_4in1_main_entrance",
+						"category": "dx",
+						"priority": 0,
+						"version": 14,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1568962104033/tmall_m_h_v6_4in1_main_entrance.zip"
+					},
+					{
+						"sign": "245FE62972DD73C7C0167C23668C21C6",
+						"type": "tmall_my_recommend_item",
+						"category": "dx",
+						"priority": 0,
+						"version": 8,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1565768055926/tmall_my_recommend_item.zip"
+					},
+					{
+						"sign": "49300DB5D786F55F566B969D5E1FFE97",
+						"type": "tmall_flashget_test",
+						"category": "dx",
+						"priority": 0,
+						"version": 3,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1565144405167/tmall_flashget_test.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_2019_goods",
+						"category": "dx",
+						"priority": 0,
+						"version": 3,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1554345014412/tmall_2019_goods.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_2019_recommend_tag",
+						"category": "dx",
+						"priority": 0,
+						"version": 2,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1557488013740/tmall_2019_recommend_tag.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_my_tool_item",
+						"category": "dx",
+						"priority": 0,
+						"version": 6,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1552986455989/tmall_my_tool_item.zip"
+					},
+					{
+						"sign": "459555BFD90CB2039670D00C8B75C93D",
+						"type": "tmall_recommend_hot_search_rank",
+						"category": "dx",
+						"priority": 0,
+						"version": 2,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1558344123680/tmall_recommend_hot_search_rank.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_frontpage_newer_0",
+						"category": "dx",
+						"priority": 0,
+						"version": 8,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1555421888728/tmall_frontpage_newer_0.zip"
+					},
+					{
+						"sign": "CC992AF19627DAB465DEFAC3D3E536D8",
+						"type": "tmall_m_h_v6_animation_entrance_270px",
+						"category": "dx",
+						"priority": 0,
+						"version": 4,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1569747695368/tmall_m_h_v6_animation_entrance_270px.zip"
+					},
+					{
+						"sign": "EB0B19DD633B9F4F4DBF1A87EEBFBE6B",
+						"type": "tmall_recommend_brand_single",
+						"category": "dx",
+						"priority": 0,
+						"version": 14,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1562813456328/tmall_recommend_brand_single.zip"
+					},
+					{
+						"sign": "689B623C502C0FDC18E6DCF5985F90D5",
+						"type": "tmall_2019_kqj_four_component",
+						"category": "dx",
+						"priority": 0,
+						"version": 7,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1570535447878/tmall_2019_kqj_four_component.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_frontpage_newer_1",
+						"category": "dx",
+						"priority": 0,
+						"version": 8,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1555411965315/tmall_frontpage_newer_1.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_my_tools_page_title",
+						"category": "dx",
+						"priority": 0,
+						"version": 2,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1552545287815/tmall_my_tools_page_title.zip"
+					},
+					{
+						"sign": "7C822A0DC5A1950DF8C674CF84453C2A",
+						"type": "tmall_surprise_redpacket_banner",
+						"category": "dx",
+						"priority": 0,
+						"version": 2,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1564026702594/tmall_surprise_redpacket_banner.zip"
+					},
+					{
+						"sign": "CB19E14C21254FE0E280C06D94B723CB",
+						"type": "membershop_opencard",
+						"category": "dx",
+						"priority": 0,
+						"version": 1,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1558350874693/membershop_opencard.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_my_vip88_type_1",
+						"category": "dx",
+						"priority": 0,
+						"version": 9,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1555569312410/tmall_my_vip88_type_1.zip"
+					},
+					{
+						"sign": "4B41A1014C980E9A72E3C26AEE28BACA",
+						"type": "tmall_2019_easy_home_component",
+						"category": "dx",
+						"priority": 0,
+						"version": 4,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1570535893175/tmall_2019_easy_home_component.zip"
+					},
+					{
+						"sign": "83A84228A1C56646594020FF9B62FBE0",
+						"type": "tmall_home_recommend_item",
+						"category": "dx",
+						"priority": 0,
+						"version": 19,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1569582684679/tmall_home_recommend_item.zip"
+					},
+					{
+						"sign": "694FAC1BA302E0350E1BDCD09260C00D",
+						"type": "tmall_2019_recommend_living",
+						"category": "dx",
+						"priority": 0,
+						"version": 5,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1567481500755/tmall_2019_recommend_living.zip"
+					},
+					{
+						"sign": "2602208CDA5505208A4ED9E8E2B4DF5B",
+						"type": "membershop_special_title",
+						"category": "dx",
+						"priority": 0,
+						"version": 7,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1559723120727/membershop_special_title.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_2019_recommend_for_you",
+						"category": "dx",
+						"priority": 0,
+						"version": 4,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1554127132678/tmall_2019_recommend_for_you.zip"
+					},
+					{
+						"sign": "6EF7DCF7AAABA4A6C79BEDA2C1F5A9D3",
+						"type": "membershop_topitem_new",
+						"category": "dx",
+						"priority": 0,
+						"version": 9,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1560492275184/membershop_topitem_new.zip"
+					},
+					{
+						"sign": "FABEC2ADE835A972489D752B39784BC7",
+						"type": "membershop_float_icon",
+						"category": "dx",
+						"priority": 0,
+						"version": 2,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1558323898139/membershop_float_icon.zip"
+					},
+					{
+						"sign": "8D803CB1A819E4090B886E1F12468E79",
+						"type": "tmall_2019_kqj_two_component",
+						"category": "dx",
+						"priority": 0,
+						"version": 7,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1570535774527/tmall_2019_kqj_two_component.zip"
+					},
+					{
+						"sign": "0E6EC31C147079884085A22F0C6C3938",
+						"type": "tm_grass_feeds_topic",
+						"category": "dx",
+						"priority": 0,
+						"version": 6,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1565757339011/tm_grass_feeds_topic.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_my_image",
+						"category": "dx",
+						"priority": 0,
+						"version": 3,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1553149593342/tmall_my_image.zip"
+					},
+					{
+						"sign": null,
+						"type": "tmall_my_vip88_type_2",
+						"category": "dx",
+						"priority": 0,
+						"version": 8,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1555571438309/tmall_my_vip88_type_2.zip"
+					},
+					{
+						"sign": "BACC78C1641F8CB1CA9D315388CA3AFE",
+						"type": "membershop_alwaysbuy_new",
+						"category": "dx",
+						"priority": 0,
+						"version": 17,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1558352787861/membershop_alwaysbuy_new.zip"
+					},
+					{
+						"sign": null,
+						"type": "tm_frontpage_memberstore_simple",
+						"category": "dx",
+						"priority": 0,
+						"version": 5,
+						"url": "https://ossgw.alicdn.com/rapid-oss-bucket/1557028194725/tm_frontpage_memberstore_simple.zip"
+					}
+				],
+				"token": "c101975fbcd43ffc6f54d0883aa55ba9#1570602589000"
+			},
+			"success": "true",
+			"msCode": "2019031203"
+		}
+	},
+	"ret": ["SUCCESS::调用成功"],
+	"v": "1.0"
+}

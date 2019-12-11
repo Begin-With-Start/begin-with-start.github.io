@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">CommonSocialSDK</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="social_comment">回复</string>
+    <string name="social_like">赞</string>
+
+    <string name="social_publish_success">发布成功</string>
+    <string name="social_publish_failure">发布失败</string>
+
+    <string name="social_publish_begin">开始发布</string>
+
+    <string name="social_copy">复制成功</string>
+
+    <string name="social_delete_success">删除成功</string>
+
+    <string name="social_set_top_success">置顶成功</string>
+
+    <string name="social_cancle_set_top_success">取消置顶成功</string>
+
+
+    <string name="social_report_success">举报成功</string>
+
+    <string name="social_comment_no_msg">沙发还空着，快来抢吧~</string>
+
+    <string name="social_comment_invalid_request">无效请求!</string>
+
+    <string name="social_report_failure">举报失败</string>
+
+    <string name="comment_msg_title">无法评论</string>
+
+
+</resources>

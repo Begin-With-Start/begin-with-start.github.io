@@ -1,0 +1,11 @@
+{
+  "modules": [
+    {
+      "name": "TaobaoSetting",
+      "className": "com.taobao.mytaobao.homepage.plugin.WXTaobaoSettting",
+      "methods": [
+        "getSetting"
+      ]
+    }
+  ]
+}

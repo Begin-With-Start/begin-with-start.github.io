@@ -1,0 +1,20 @@
+{
+    "modules": [
+        {
+            "name": "alipayInside", 
+            "className": "com.tmall.wireless.membercode.WXAlipayInsideModule", 
+            "methods": [
+                "preCheck", 
+                "auth",
+                "generateCode",
+                "unAuth",
+                "queryPay",
+                "handleInsidePush",
+                "enablePush",
+                "disablePush",
+                "sendACCSRequest",
+                "destroy"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,753 @@
+{
+  "main": {
+    "type": "list",
+    "uid": 0,
+    "attrs": {
+      "id": "comment_list",
+      "onloading": "onLoadMore",
+      "onrefresh": "onRefresh",
+      "onenddragging": "onEndDragging",
+      "onenddecelerating": "onEndDecelerating"
+    },
+    "class": "commentList",
+    "children": [
+      {
+        "type": "section",
+        "uid": 1,
+        "children": [
+          {
+            "type": "header",
+            "uid": 2,
+            "bindattrs": {
+              "if": "{{features.commentListTitle|isNotEmpty}}==true"
+            },
+            "class": "header",
+            "children": [
+              {
+                "type": "template",
+                "uid": 3,
+                "attrs": {
+                  "src": "../component/title"
+                }
+              }
+            ]
+          },
+          {
+            "type": "cells",
+            "uid": 4,
+            "children": [
+              {
+                "type": "template",
+                "uid": 5,
+                "attrs": {
+                  "src": "../cell/normalCell"
+                },
+                "bindattrs": {
+                  "repeat": "{{list}}",
+                  "config": "{{config}}"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "_styles": {
+      ".commentList": {
+        "flex": "1",
+        "background-color": "#f4f4f4"
+      },
+      ".header": {
+        "background-color": "white"
+      }
+    }
+  },
+  "../cell/normalCell": {
+    "type": "cell",
+    "uid": 0,
+    "children": [
+      {
+        "type": "template",
+        "uid": 1,
+        "attrs": {
+          "src": "../component/listSingleCardComponent"
+        }
+      }
+    ]
+  },
+  "../component/listSingleCardComponent": {
+    "type": "div",
+    "uid": 0,
+    "class": "cell",
+    "bindattrs": {
+      "background-color": "{{config.cellBg}}"
+    },
+    "attrs": {
+      "onclick": "onClickAll",
+      "onlongpress": "onClickMore"
+    },
+    "children": [
+      {
+        "type": "template",
+        "uid": 1,
+        "attrs": {
+          "src": "../component/headerComponent"
+        }
+      },
+      {
+        "type": "richText",
+        "uid": 2,
+        "bindattrs": {
+          "if": "{{isReplyOwner}}==true && {{content|isNotEmpty}}==true",
+          "html-text": "<span>{{content|escapeXMLCharactor|parseEmotion(40)}}</span>"
+        },
+        "attrs": {
+          "onlongpress": "onClickMore",
+          "onclick": "onClickContentComment"
+        },
+        "class": "contentText"
+      },
+      {
+        "type": "richText",
+        "uid": 3,
+        "bindattrs": {
+          "if": "{{isReplyOwner}}!=true && {{content|isNotEmpty}}==true",
+          "html-text": "<span>回复<span style=\"font-size: 28;color: #3069b7;\">{{parentCommenterNick}}：</span>{{content|escapeXMLCharactor|parseEmotion(40)}}</span>"
+        },
+        "attrs": {
+          "onlongpress": "onClickMore",
+          "onclick": "onClickContentComment"
+        },
+        "class": "contentText"
+      },
+      {
+        "type": "div",
+        "uid": 4,
+        "bindattrs": {
+          "if": "{{elements|len}}>0"
+        },
+        "attrs": {
+          "onclick": "onClickImageGrid",
+          "onlongpress": "onClickMore"
+        },
+        "children": [
+          {
+            "type": "template",
+            "uid": 5,
+            "bindattrs": {
+              "if": "{{elements|len}}==1"
+            },
+            "attrs": {
+              "src": "../component/grid1"
+            }
+          },
+          {
+            "type": "template",
+            "uid": 6,
+            "bindattrs": {
+              "if": "{{elements|len}}==4"
+            },
+            "attrs": {
+              "src": "../component/grid4"
+            }
+          },
+          {
+            "type": "template",
+            "uid": 7,
+            "bindattrs": {
+              "if": "{{elements|len}}<=9 && {{elements|len}}!=4 && {{elements|len}}!=1"
+            },
+            "attrs": {
+              "src": "../component/grid6"
+            }
+          }
+        ]
+      },
+      {
+        "type": "div",
+        "uid": 8,
+        "class": "richTextContent",
+        "bindattrs": {
+          "if": "{{replys|len}}>0"
+        },
+        "attrs": {
+          "background-image": "./SocializeSDK.bundle/replyback.9.png",
+          "onlongpress": "",
+          "onclick": "onClickAllReplyComment"
+        },
+        "children": [
+          {
+            "type": "div",
+            "uid": 9,
+            "bindattrs": {
+              "repeat": "{{replys}}"
+            },
+            "children": [
+              {
+                "type": "richText",
+                "uid": 10,
+                "bindattrs": {
+                  "if": "{{isReplyOwner}}==true",
+                  "html-text": "<span><span style=\"font-size: 28;color: #3069b7;\">{{commenterNick|escapeXMLCharactor}}：</span>{{content|escapeXMLCharactor|parseEmotion(40)}}{{elements|len|isShowReplyImg}}</span>"
+                },
+                "class": "richText"
+              },
+              {
+                "type": "richText",
+                "uid": 11,
+                "bindattrs": {
+                  "if": "{{isReplyOwner}}!=true",
+                  "html-text": "<span><span style=\"font-size: 28;color: #3069b7;\">{{commenterNick|escapeXMLCharactor}}</span>回复<span style=\"font-size: 28;color: #3069b7;\">{{parentCommenterNick|escapeXMLCharactor}}：</span>{{content|escapeXMLCharactor|parseEmotion(40)}}{{elements|len|isShowReplyImg}}</span>"
+                },
+                "class": "richText"
+              }
+            ]
+          },
+          {
+            "type": "richText",
+            "uid": 12,
+            "bindattrs": {
+              "if": "{{interactDatas.replyCount}}>{{replys|len}}",
+              "html-text": "<span><span style=\"font-size: 28;color: #3069b7;\">共{{interactDatas.replyCount}}条回复></span></span>"
+            },
+            "class": "allCommentText"
+          }
+        ]
+      }
+    ],
+    "_styles": {
+      ".cell": {
+        "flex-direction": "column",
+        "align-items": "stretch",
+        "justify-content": "flex-start",
+        "padding-bottom": "30"
+      },
+      ".contentText": {
+        "font-size": "28",
+        "color": "#333333",
+        "margin-top": "24",
+        "margin-left": "104",
+        "margin-right": "24"
+      },
+      ".richTextContent": {
+        "margin-left": "104",
+        "margin-right": "24",
+        "margin-top": "10",
+        "padding-top": "30",
+        "padding-left": "20",
+        "padding-right": "20",
+        "padding-bottom": "20"
+      },
+      ".richText": {
+        "font-size": "28",
+        "color": "#333333",
+        "line-spacing": "4",
+        "margin-bottom": "4"
+      },
+      ".allCommentText": {
+        "lines": "1",
+        "font-size": "28",
+        "color": "#3069b7"
+      },
+      ".backImage": {
+        "position": "absolute",
+        "flex": "1"
+      },
+      ".line": {
+        "margin-left": "24",
+        "margin-right": "24",
+        "margin-top": "30",
+        "height": "1",
+        "background-color": "#eeeeee"
+      }
+    }
+  },
+  "../component/grid6": {
+    "type": "div",
+    "uid": 0,
+    "class": "hFlex S0",
+    "children": [
+      {
+        "type": "image",
+        "uid": 1,
+        "bindattrs": {
+          "src": "{{picPath}}",
+          "repeat": "{{elements}}"
+        },
+        "attrs": {
+          "name": "Bitmap",
+          "onclick": "onClickImageGridItem"
+        },
+        "class": " S1"
+      }
+    ],
+    "_styles": {
+      ".vFlex": {
+        "position": "relative",
+        "display": "flex",
+        "flex-direction": "column"
+      },
+      ".hFlex": {
+        "display": "flex",
+        "flex-direction": "row",
+        "flex-wrap": "wrap"
+      },
+      ".S0": {
+        "margin-top": "24",
+        "margin-left": "104",
+        "margin-right": "98"
+      },
+      ".S1": {
+        "height": "176",
+        "width": "176",
+        "margin-bottom": "6",
+        "margin-right": "6",
+        "background-color": "#fafafa",
+        "foreground-color": "#00000005"
+      }
+    }
+  },
+  "../component/grid4": {
+    "type": "div",
+    "uid": 0,
+    "class": "hFlex S0",
+    "children": [
+      {
+        "type": "image",
+        "uid": 1,
+        "bindattrs": {
+          "src": "{{picPath}}",
+          "repeat": "{{elements}}"
+        },
+        "attrs": {
+          "name": "Bitmap",
+          "onclick": "onClickImageGridItem"
+        },
+        "class": "S1"
+      }
+    ],
+    "_styles": {
+      ".vFlex": {
+        "position": "relative",
+        "display": "flex",
+        "flex-direction": "column"
+      },
+      ".hFlex": {
+        "position": "relative",
+        "display": "flex",
+        "flex-direction": "row"
+      },
+      ".S0": {
+        "margin-top": "24",
+        "margin-left": "104",
+        "width": "496",
+        "flex-wrap": "wrap"
+      },
+      ".S1": {
+        "height": "176",
+        "width": "176",
+        "margin-bottom": "6",
+        "margin-right": "6",
+        "background-color": "#fafafa",
+        "foreground-color": "#00000005"
+      }
+    }
+  },
+  "../component/grid1": {
+    "type": "div",
+    "uid": 0,
+    "attrs": {
+      "name": "fork55"
+    },
+    "class": "hFlex S0",
+    "children": [
+      {
+        "type": "image",
+        "uid": 1,
+        "bindattrs": {
+          "image": "{{picPath}}",
+          "repeat": "{{elements}}"
+        },
+        "attrs": {
+          "name": "image",
+          "onclick": "onClickImageGridItem"
+        },
+        "class": "S1"
+      }
+    ],
+    "_styles": {
+      ".hFlex": {
+        "position": "relative",
+        "display": "flex",
+        "flex-direction": "row"
+      },
+      ".S0": {
+        "margin-top": "24",
+        "margin-left": "104",
+        "margin-right": "24"
+      },
+      ".S1": {
+        "height": "358",
+        "width": "358",
+        "margin-left": "0",
+        "background-color": "#fafafa",
+        "foreground-color": "#00000005"
+      }
+    }
+  },
+  "../component/headerComponent": {
+    "type": "div",
+    "uid": 0,
+    "class": "header",
+    "attrs": {
+      "ios-virtual": "true"
+    },
+    "children": [
+      {
+        "type": "image",
+        "uid": 1,
+        "class": "userIcon",
+        "bindattrs": {
+          "image": "{{commenterLogo}}"
+        },
+        "attrs": {
+          "onclick": "onClickUserIcon"
+        }
+      },
+      {
+        "type": "div",
+        "uid": 2,
+        "class": "textDisplay",
+        "attrs": {
+          "ios-virtual": "true"
+        },
+        "children": [
+          {
+            "type": "div",
+            "uid": 3,
+            "class": "textNick",
+            "attrs": {
+              "ios-virtual": "true"
+            },
+            "children": [
+              {
+                "type": "text",
+                "uid": 4,
+                "class": "commenterNick",
+                "bindattrs": {
+                  "text": "{{commenterNick}}"
+                }
+              },
+              {
+                "type": "image",
+                "uid": 5,
+                "class": "labelIcon",
+                "bindattrs": {
+                  "repeat": "{{commenterIcons}}",
+                  "image": "{{picPath}}",
+                  "width": "{{.|imageWidth(32)}}"
+                }
+              }
+            ]
+          },
+          {
+            "type": "div",
+            "uid": 6,
+            "class": "textRow",
+            "attrs": {
+              "ios-virtual": "true"
+            },
+            "children": [
+              {
+                "type": "text",
+                "uid": 7,
+                "class": "timestamp",
+                "bindattrs": {
+                  "text": "{{timestamp|feedtime}}"
+                }
+              },
+              {
+                "type": "text",
+                "uid": 8,
+                "class": "floor",
+                "bindattrs": {
+                  "if": "{{floor}}>=0",
+                  "text": "{{floor}}楼"
+                }
+              },
+              {
+                "type": "text",
+                "uid": 9,
+                "bindattrs": {
+                  "if": "'{{$.system.os}}' != iOS && '{{adminCode}}'=='delete'",
+                  "repeat": "{{admins}}"
+                },
+                "class": "delete",
+                "attrs": {
+                  "onclick": "onClickDelete",
+                  "text": "删除"
+                }
+              },
+              {
+                "type": "div",
+                "uid": 10,
+                "bindattrs": {
+                  "if": "{{$.system.os}} == iOS",
+                  "repeat": "{{admins}}"
+                },
+                "class": "emptyDiv",
+                "children": [
+                  {
+                    "type": "text",
+                    "uid": 11,
+                    "class": "delete",
+                    "bindattrs": {
+                      "if": "'{{adminCode}}'=='delete'"
+                    },
+                    "attrs": {
+                      "onclick": "onClickDelete",
+                      "text": "删除"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "div",
+        "uid": 12,
+        "attrs": {
+          "name": "likeView",
+          "onclick": "onClickLike"
+        },
+        "bindattrs": {
+          "if": "{{config.showLikeButton}}==true"
+        },
+        "class": "rowdirection",
+        "children": [
+          {
+            "type": "text",
+            "uid": 13,
+            "attrs": {
+              "name": "likeImage",
+              "id": "like",
+              "onclick": "onClickLike",
+              "text": "@icon-appreciate_fill"
+            },
+            "class": "iconfont",
+            "bindattrs": {
+              "color": "{{interactDatas.likeStatus|changeLikeStatus(#c6c6c6,#ff5000)}}"
+            }
+          },
+          {
+            "type": "text",
+            "uid": 14,
+            "bindattrs": {
+              "if": "{{$.system.os}} != iOS",
+              "text": "{{interactDatas.likeCount|displayLikeNum}}",
+              "color": "{{interactDatas.likeStatus|changeLikeStatus(#c6c6c6,#ff5000)}}"
+            },
+            "attrs": {
+              "name": "likeNum"
+            },
+            "class": "likeText"
+          },
+          {
+            "type": "text",
+            "uid": 15,
+            "bindattrs": {
+              "if": "{{$.system.os}} == iOS",
+              "text": "{{interactDatas.likeCount|displayLikeNum}}",
+              "color": "{{interactDatas.likeStatus|changeLikeStatus(#c6c6c6,#ff5000)}}"
+            },
+            "attrs": {
+              "name": "likeNum"
+            },
+            "class": "ios_likeText"
+          }
+        ]
+      }
+    ],
+    "_styles": {
+      ".header": {
+        "height": "102",
+        "flex-direction": "row",
+        "align-items": "center",
+        "justify-content": "space-between"
+      },
+      ".rowdirection": {
+        "display": "flex",
+        "flex-direction": "row",
+        "justify-content": "flex-start",
+        "align-items": "flex-start",
+        "height": "102",
+        "flex-shrink": "1",
+        "flex-wrap": "nowrap"
+      },
+      ".likeText": {
+        "margin-left": "10",
+        "margin-right": "35",
+        "font-size": "24",
+        "margin-top": "32",
+        "align-items": "flex-start",
+        "text-align": "left",
+        "lines": "1",
+        "color": "#c6c6c6",
+        "flex-shrink": "0"
+      },
+      ".ios_likeText": {
+        "margin-left": "10",
+        "margin-right": "35",
+        "font-size": "24",
+        "margin-top": "34",
+        "align-items": "flex-start",
+        "text-align": "left",
+        "lines": "1",
+        "color": "#c6c6c6",
+        "flex-shrink": "0"
+      },
+      ".iconfont": {
+        "font-size": "32",
+        "margin-top": "32",
+        "margin-left": "30",
+        "align-items": "flex-start",
+        "color": "#c6c6c6",
+        "font-style": "taobao"
+      },
+      ".userIcon": {
+        "background-color": "#fafafa",
+        "margin-top": "30",
+        "height": "60",
+        "width": "60",
+        "margin-left": "24",
+        "border-radius": "30",
+        "foreground-color": "#00000005"
+      },
+      ".textDisplay": {
+        "flex-direction": "column",
+        "justify-content": "space-between",
+        "margin-left": "20",
+        "margin-right": "16",
+        "margin-top": "32",
+        "height": "72",
+        "flex": "1"
+      },
+      ".textNick": {
+        "flex-direction": "row",
+        "justify-content": "flex-start",
+        "align-items": "center",
+        "margin-top": "1"
+      },
+      ".textRow": {
+        "flex-direction": "row",
+        "justify-content": "flex-start",
+        "align-items": "center",
+        "margin-bottom": "1"
+      },
+      ".commenterNick": {
+        "lines": "1",
+        "font-size": "28",
+        "color": "#333333",
+        "ellipsize": "end",
+        "flex-shrink": "1",
+        "font-style": "bold"
+      },
+      ".labelIcon": {
+        "height": "32",
+        "margin-left": "15",
+        "flex-shrink": "0"
+      },
+      ".timestamp": {
+        "lines": "1",
+        "font-size": "24",
+        "color": "#9b9b9b"
+      },
+      ".floor": {
+        "lines": "1",
+        "font-size": "24",
+        "margin-left": "16",
+        "color": "#9b9b9b"
+      },
+      ".delete": {
+        "lines": "1",
+        "font-size": "24",
+        "margin-left": "16",
+        "color": "#3A66A3"
+      },
+      ".emptyDiv": {
+        "flex-direction": "row",
+        "justify-content": "flex-start"
+      }
+    }
+  },
+  "../component/title": {
+    "type": "div",
+    "uid": 0,
+    "children": [
+      {
+        "type": "div",
+        "uid": 1,
+        "class": "title",
+        "children": [
+          {
+            "type": "image",
+            "uid": 2,
+            "class": "commentIcon",
+            "bindattrs": {
+              "if": "{{features.commentListIcon|isNotEmpty}}==true",
+              "image": "{{features.commentListIcon}}"
+            }
+          },
+          {
+            "type": "text",
+            "uid": 3,
+            "class": "titleText",
+            "bindattrs": {
+              "text": "{{features.commentListTitle}}"
+            }
+          },
+          {
+            "type": "text",
+            "uid": 4,
+            "class": "titleText",
+            "bindattrs": {
+              "if": "{{features.totalCount}}>0",
+              "text": "({{features.totalCount}})"
+            }
+          }
+        ]
+      },
+      {
+        "type": "div",
+        "uid": 5,
+        "class": "line"
+      }
+    ],
+    "_styles": {
+      ".title": {
+        "height": "90",
+        "flex-direction": "row",
+        "align-items": "center",
+        "background-color": "white"
+      },
+      ".commentIcon": {
+        "height": "48",
+        "width": "48",
+        "align-items": "center",
+        "margin-left": "24",
+        "margin-right": "16"
+      },
+      ".titleText": {
+        "align-items": "center",
+        "font-size": "32",
+        "color": "#333333"
+      },
+      ".line": {
+        "height": "1",
+        "background-color": "#eeeeee"
+      }
+    }
+  }
+}

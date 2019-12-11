@@ -1,0 +1,51 @@
+{
+  "version": "2.0",
+  "features": "{\"mockVersion\":\"3.23\"}",
+  "rules": {
+    "subRules": [{
+      "name": "shop_text_32",
+      "type": "text",
+      "regex": true,
+      "content": "^tmall://page.tm/shop?.*"
+    }],
+    "successor": {
+      "subRules": [
+        {
+          "subRules": [
+            {
+              "regex": "true",
+              "type": "text",
+              "content": "^http(s)?://shop[0-9]+.taobao.com/(campaign|dc)-.*"
+
+            },
+            {
+              "regex": "true",
+              "type": "text",
+              "content": "^http(s)?://[a-z,0-9,-]+.(tmall|taobao|fliggy).(com|hk)/(campaign|dc)-.*"
+            }
+          ],
+          "regex":"false",
+          "name":"shop_coll_12",
+          "type":"collection",
+          "content":""
+        }
+      ],
+      "regex": "false",
+      "name": "shop_ruleSet_promotion_page",
+      "actionAfterMiss": "return",
+      "type": "ruleSet",
+      "actionAfterMatch": "toH5",
+      "target": "http://market.wapa.taobao.com/app/tb-source-app/shopindex/pages/campaign",
+      "handleType": "NEED_PROCESS"
+    },
+    "actionAfterMiss": "toNext",
+    "type": "ruleSet",
+    "content": "shop_text_32",
+    "regex": false,
+    "target": "",
+    "name": "shop_ruleSet_shop",
+    "actionAfterMatch": "toNative",
+    "handleType":"NEED_PROCESS"
+  },
+  "author": "guangxia"
+}

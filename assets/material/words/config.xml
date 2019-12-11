@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<materials version="0.1" >
+
+    <material id="100000" image="100000.tbp" thumbnail="100000.thu" text_color="#ff000000" text_range="0,0,0,0" />
+    <material id="100001" image="100001.tbp" thumbnail="100001.thu" text_color="#ff101010" text_range="48,36,423,318" />
+    <material id="100002" image="100002.tbp" thumbnail="100002.thu" text_color="#ffffffff" text_range="68,65,410,420" />
+    <material id="100003" image="100003.tbp" thumbnail="100003.thu" text_color="#ff000000" text_range="68,54,362,230" />
+    <material id="100004" image="100004.tbp" thumbnail="100004.thu" text_color="#ff408080" text_range="61,60,305,189" />
+    <material id="100005" image="100005.tbp" thumbnail="100005.thu" text_color="#ffffffff" text_range="56,32,331,249" />
+    <material id="100006" image="100006.tbp" thumbnail="100006.thu" text_color="#ffffffff" text_range="56,51,406,344" />
+    <material id="100007" image="100007.tbp" thumbnail="100007.thu" text_color="#ff000000" text_range="25,126,549,412" />
+    <material id="100008" image="100008.tbp" thumbnail="100008.thu" text_color="#ffffffff" text_range="102,129,397,422" />
+    <material id="100009" image="100009.tbp" thumbnail="100009.thu" text_color="#ffffffff" text_range="52,35,416,324" />
+    <material id="100010" image="100010.tbp" thumbnail="100010.thu" text_color="#ffffffff" text_range="69,151,416,486" />
+
+</materials>

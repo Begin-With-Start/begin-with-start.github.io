@@ -1,0 +1,18 @@
+[
+  {
+    "name": "data",
+    "displayName": "采集数据库数据",
+    "summary": "采集数据库数据",
+    "clzName": "com.tmall.awareness_sdk.plugin.collector.DataCollector",
+    "category": "data",
+    "author": "fangbo"
+  },
+  {
+    "name": "time",
+    "displayName": "采集时间",
+    "summary": "采集当前时间",
+    "clzName": "com.tmall.awareness_sdk.plugin.collector.TimeCollector",
+    "category": "data",
+    "author": "fangbo"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "modules": [
+    {
+      "name": "shopReport",
+      "className": "com.taobao.android.shop.weex.ShopReportModule",
+      "methods": [
+        "report"
+      ]
+    },
+    {
+      "name": "shopData",
+      "className": "com.taobao.android.shop.weex.ShopDataModule",
+      "methods": [
+        "get",
+        "getAsync"
+      ]
+    }
+  ]
+}

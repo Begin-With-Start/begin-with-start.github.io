@@ -1,0 +1,172 @@
+[
+  {
+    "searchTypeKey": "default",
+    "categoryRootName": "",
+    "suggestTag": "1",
+    "hotSuggestSrc": "tmall_app",
+    "description": "全站打底"
+  },
+  {
+    "searchTypeKey": "chaoshi",
+    "categoryRootName": "chaoshi",
+    "suggestTag": "513",
+    "hotSuggestSrc": "chaoshi.index.m",
+    "description": "天猫超市"
+  },
+  {
+    "searchTypeKey": "guoji",
+    "categoryRootName": "guoji",
+    "suggestTag": "13186",
+    "hotSuggestSrc": "tmallhk.list.app",
+    "searchChannel":"tmallhk",
+    "description": "国际"
+  },
+  {
+    "searchTypeKey": "tmallhk",
+    "categoryRootName": "guoji",
+    "suggestTag": "13186",
+    "hotSuggestSrc": "tmallhk.list.app",
+    "searchChannel":"tmallhk",
+    "description": "国际兼容"
+  },
+  {
+    "searchTypeKey": "jujia",
+    "categoryRootName": "jujia",
+    "suggestTag": "1",
+    "hotSuggestSrc": "jia..pc",
+    "description": "家居"
+  },
+  {
+    "searchTypeKey": "nvzhuang",
+    "categoryRootName": "nvzhuang",
+    "suggestTag": "1",
+    "hotSuggestSrc": "nvzhuang..pc",
+    "description": "女装"
+  },
+  {
+    "searchTypeKey": "nanzhuang",
+    "categoryRootName": "nanzhuang",
+    "suggestTag": "1",
+    "hotSuggestSrc": "nanzhuang..pc",
+    "description": "男装"
+  },
+  {
+    "searchTypeKey": "sports",
+    "categoryRootName": "sports",
+    "suggestTag": "1",
+    "hotSuggestSrc": "sports..pc",
+    "description": "运动"
+  },
+  {
+    "searchTypeKey": "chepin",
+    "categoryRootName": "chepin",
+    "suggestTag": "1",
+    "hotSuggestSrc": "car..pc",
+    "description": "车品"
+  },
+  {
+    "searchTypeKey": "meizhuang",
+    "categoryRootName": "meizhuang",
+    "suggestTag": "1",
+    "hotSuggestSrc": "mei..pc",
+    "description": "美妆"
+  },
+  {
+    "searchTypeKey": "xiangbao",
+    "categoryRootName": "xiangbao",
+    "suggestTag": "1",
+    "hotSuggestSrc": "bag..pc",
+    "description": "箱包"
+  },
+  {
+    "searchTypeKey": "shipin",
+    "categoryRootName": "shipin",
+    "suggestTag": "1",
+    "hotSuggestSrc": "food..pc",
+    "description": "食品"
+  },
+  {
+    "searchTypeKey": "miaoxs",
+    "categoryRootName": "miaoxs",
+    "suggestTag": "1",
+    "hotSuggestSrc": "miao..pc",
+    "description": "喵鲜生"
+  },
+  {
+    "searchTypeKey": "dianqc",
+    "categoryRootName": "dianqc",
+    "suggestTag": "1",
+    "hotSuggestSrc": "3c..pc",
+    "description": "电器城"
+  },
+  {
+    "searchTypeKey": "baby",
+    "categoryRootName": "baby",
+    "suggestTag": "1",
+    "hotSuggestSrc": "baby..pc",
+    "description": "母婴"
+  },
+  {
+    "searchTypeKey": "yiyao",
+    "categoryRootName": "yiyao",
+    "suggestTag": "1",
+    "hotSuggestSrc": "yao..pc",
+    "description": "医药"
+  },
+  {
+    "searchTypeKey": "shoubiao",
+    "categoryRootName": "shoubiao",
+    "suggestTag": "1",
+    "hotSuggestSrc": "shoubiao..pc",
+    "description": "手表"
+  },
+  {
+    "searchTypeKey": "tunla",
+    "categoryRootName": "tunla",
+    "suggestTag": "1",
+    "hotSuggestSrc": "tunla..pc",
+    "description": "囤啦"
+  },
+  {
+    "searchTypeKey": "neiyi",
+    "categoryRootName": "neiyi",
+    "suggestTag": "1",
+    "hotSuggestSrc": "neiyi..pc",
+    "description": "内衣"
+  },
+  {
+    "searchTypeKey": "nannvxie",
+    "categoryRootName": "nannvxie",
+    "suggestTag": "1",
+    "hotSuggestSrc": "nannvxie..pc",
+    "description": "男女鞋"
+  },
+  {
+    "searchTypeKey": "suning",
+    "categoryRootName": "suning",
+    "suggestTag": "1",
+    "hotSuggestSrc": "tmall_app",
+    "description": "苏宁"
+  },
+  {
+    "searchTypeKey": "glofans",
+    "categoryRootName": "glofans",
+    "suggestTag": "1",
+    "hotSuggestSrc": "tmall_app",
+    "description": "全球时尚"
+  },
+  {
+    "searchTypeKey": "cssx",
+    "categoryRootName": "cssx",
+    "suggestTag": "513",
+    "hotSuggestSrc": "chaoshi.fresh.m",
+    "description": "超市生鲜"
+  },
+  {
+    "searchTypeKey": "gloDirect",
+    "categoryRootName": "gloDirect",
+    "suggestTag": "1",
+    "hotSuggestSrc": "tmall_app",
+    "description": "海外直营"
+  }
+]

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DLinearLayout xmlns:attr="http://schemas.android.com/apk/res-auto"
+    attr:dWidth="375ap"
+    attr:dHeight="match_content"
+    attr:dBackgroundColor="#ffffff"
+    attr:dOrientation="vertical"
+    attr:onLongTap="@tmsMiniDetail{@data{itemId},@data{topCat},@data{miniDetailTracker}}"
+    attr:onTap="@tmsOpenUrl{@data{itemUrl},@data{itemTracker},@data{v2TrackerListParams},@data{v2TrackerOtherParams}}">
+        
+    <!--顶部标-->
+    <TMSOreoIconListView
+        attr:dMarginTop="8"
+        attr:dMarginLeft="3"
+        attr:dMarginRight="3"
+        attr:dWidth="match_parent"
+        attr:dHeight="12"
+        attr:dIconList="@data{topIconList}"
+        attr:dIconGap="5ap"
+        attr:dDivider="YES"
+        attr:dVisibility="@triple{@igreater{@len{@data{topIconList}}, '0'},'visible','gone'}"/>
+    <!--无标题的替补占坑-->
+    <DView 
+        attr:dWidth="1"
+        attr:dHeight="4" />
+
+    <DFrameLayout
+            attr:dWidth="375ap"
+            attr:dHeight="match_content"
+            attr:dOrientation="horizontal"
+            attr:dMarginTop="8"
+            attr:dMarginBottom="12">
+
+            <!-- 主图 -->
+            <TImageView
+                attr:dWidth="120ap"
+                attr:dHeight="120ap"
+                attr:tImageUrl="@data{picPathNew}"/>
+
+            <DLinearLayout
+                attr:dMarginLeft="132"
+                attr:dWidth="230"
+                attr:dHeight="match_content"
+                attr:dOrientation="vertical">
+                <!-- 标题 -->
+                <TMSTitleView
+                    attr:dWidth="230"
+                    attr:dHeight="match_content"
+                    attr:dTextSize="14"
+                    attr:dText="@data{titleNew}"
+                    attr:dTextColor="#333333"
+                    attr:dIconList="@data{titlePreIconList}"/>
+
+               <!-- 属性模块   需要修改实现方式，完全用dinamic原生组件来写               -->
+                <DLinearLayout
+                    attr:dVisibility= "@triple{@igreater{@len{@data{apiStanderdCatItemList}}, '0'},'visible','gone'}"
+                    attr:dMarginTop="10"
+                    attr:dWidth="230"
+                    attr:dHeight="30"
+                    attr:dOrientation="horizontal">
+                        <DLinearLayout
+                            attr:dVisibility="@triple{@igreater{@len{@data{apiStanderdCatItemList[0]}}, '0'},'visible','gone'}"
+                            attr:dWidth="72"
+                            attr:dMarginLeft="2"
+                            attr:dMarginRight="2"
+                            attr:dHeight="match_content"
+                            attr:dOrientation="vertical"
+                            attr:dGravity="center">
+                            <DTextView
+                                attr:dWidth="match_parent"
+                                attr:dHeight="match_content"
+                                attr:dTextSize="12"
+                                attr:dTextStyle="bold"
+                                attr:dText="@data{apiStanderdCatItemList[0].name}"
+                                attr:dTextColor="#666666"
+                                attr:dTextAlignment="center"/>
+                                <DTextView
+                                attr:dWidth="match_parent"
+                                attr:dHeight="match_content"
+                                attr:dTextSize="10"
+                                attr:dText="@data{apiStanderdCatItemList[0].extendStr}"
+                                attr:dTextColor="#999999"
+                                attr:dTextAlignment="center"/>
+                        </DLinearLayout>
+                        <DView
+                            attr:dVisibility="@triple{@igreater{@len{@data{apiStanderdCatItemList[1]}}, '0'},'visible','gone'}"
+                            attr:dWidth="0.5"
+                            attr:dHeight="match_parent"
+                            attr:dBackgroundColor="#e4e4e4"/>
+                        <DLinearLayout
+                            attr:dVisibility="@triple{@igreater{@len{@data{apiStanderdCatItemList[1]}}, '0'},'visible','gone'}"
+                            attr:dWidth="72"
+                            attr:dMarginLeft="2"
+                            attr:dMarginRight="2"
+                            attr:dHeight="match_content"
+                            attr:dOrientation="vertical"
+                            attr:dGravity="center">
+                            <DTextView
+                                attr:dWidth="match_parent"
+                                attr:dHeight="match_content"
+                                attr:dTextSize="12"
+                                attr:dTextStyle="bold"
+                                attr:dText="@data{apiStanderdCatItemList[1].name}"
+                                attr:dTextColor="#666666"
+                                attr:dTextAlignment="center"/>
+                                <DTextView
+                                attr:dWidth="match_parent"
+                                attr:dHeight="match_content"
+                                attr:dTextSize="10"
+                                attr:dText="@data{apiStanderdCatItemList[1].extendStr}"
+                                attr:dTextColor="#999999"
+                                attr:dTextAlignment="center"/>
+                        </DLinearLayout>
+                        <DView
+                            attr:dVisibility="@triple{@igreater{@len{@data{apiStanderdCatItemList[2]}}, '0'},'visible','gone'}"
+                            attr:dWidth="0.5"
+                            attr:dHeight="match_parent"
+                            attr:dBackgroundColor="#e4e4e4"/>
+                        <DLinearLayout
+                            attr:dVisibility="@triple{@igreater{@len{@data{apiStanderdCatItemList[2]}}, '0'},'visible','gone'}"
+                            attr:dWidth="72"
+                            attr:dMarginLeft="2"
+                            attr:dMarginRight="2"
+                            attr:dHeight="match_content"
+                            attr:dOrientation="vertical"
+                            attr:dGravity="center">
+                            <DTextView
+                                attr:dWidth="match_parent"
+                                attr:dHeight="match_content"
+                                attr:dTextSize="12"
+                                attr:dTextStyle="bold"
+                                attr:dText="@data{apiStanderdCatItemList[2].name}"
+                                attr:dTextColor="#666666"
+                                attr:dTextAlignment="center"/>
+                                <DTextView
+                                attr:dWidth="match_parent"
+                                attr:dHeight="match_content"
+                                attr:dTextSize="10"
+                                attr:dText="@data{apiStanderdCatItemList[2].extendStr}"
+                                attr:dTextColor="#999999"
+                                attr:dTextAlignment="center"/>
+                        </DLinearLayout>
+                </DLinearLayout>
+            </DLinearLayout>
+
+            <DLinearLayout
+                attr:dMarginLeft="132"
+                attr:dMarginTop="80"
+                attr:dWidth="240"
+                attr:dHeight="match_content"
+                attr:dOrientation="vertical">
+
+                <!-- 价格模块 -->
+                <DLinearLayout
+                    attr:dVisibility= "@triple{@igreater{@len{@data{convergeItem}}, '0'},'gone','visible'}"
+                    attr:dWidth="match_parent"
+                    attr:dHeight="match_content"
+                    attr:dOrientation="horizontal"
+                    attr:dMarginTop="5ap">
+                    <TMSPriceView
+                        attr:dWidth="match_content"
+                        attr:dHeight="match_content"
+                        attr:dText="@data{priceShort}"
+                        attr:dTextSize="17"
+                        attr:dTextColor="#FF0036"
+                        attr:dCurrency="￥"
+                        attr:dCurrencyRadio="0.63"
+                        attr:dDecimalRadio="0.7"/>
+                    <TMSOreoIconListView
+                        attr:dMarginLeft="6"
+                        attr:dWidth="match_parent"
+                        attr:dMarginTop="6"
+                        attr:dHeight="12"
+                        attr:dIconList="@data{bottomIconList}"
+                        attr:dIconGap="5"/>
+                </DLinearLayout>
+
+                <!--利益点模块-->
+                <TMSOreoIconListView
+                    attr:dWidth="match_parent"
+                    attr:dMarginTop="4"
+                    attr:dMarginBottom="4"
+                    attr:dHeight="12"
+                    attr:dIconList="@data{benefitIconList}"
+                    attr:dIconGap="5"
+                    attr:dDivider="YES"
+                    attr:dVisibility="@triple{@igreater{@len{@data{benefitIconList}}, '0'},'visible','gone'}"/>
+
+                <!-- 月销量 -->
+                <DTextView
+                        attr:dWidth="match_content"
+                        attr:dHeight="20"
+                        attr:dTextSize="10"
+                        attr:dText="@data{soldNew}"
+                        attr:dTextColor="#999999"/>
+            </DLinearLayout>
+
+            <!--行动点 加购-->
+            <TImageView
+                attr:dVisibility= "@triple{@igreater{@len{@data{convergeItem}}, '0'},'gone','visible'}"
+                attr:dWidth="40"
+                attr:dHeight="20"
+                attr:dGravity="rightTop"
+                attr:dMarginTop="102"
+                attr:dMarginRight="12"
+                attr:tImageUrl="https://img.alicdn.com/tfs/TB15632IgmTBuNjy1XbXXaMrVXa-60-60.png"
+                attr:onTap="@tmsCart{@data{itemId},@data{cartTracker},'dapei'}"/>
+
+    </DFrameLayout>
+
+
+    <!--List 分割线-->
+    <DView
+        attr:dWidth="match_parent"
+        attr:dHeight="0.5"
+        attr:dOrientation="horizontal"
+        attr:dBackgroundColor="#E4E4E4"
+        attr:dMarginLeft="132"
+        attr:dMarginRight="12"/>
+        
+</DLinearLayout>

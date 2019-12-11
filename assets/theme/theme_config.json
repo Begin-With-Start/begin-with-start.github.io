@@ -1,0 +1,9 @@
+{
+  "gradientThemeColor":"#FF0036",
+  "themeColor":"#FF0036",
+  "titleColor":"#333333",
+  "descColor":"#999999",
+  "cornerRadius":"2np",
+  "popupWindowTopRadius": "4",
+  "popupWindowBottomRadius": "0"
+}

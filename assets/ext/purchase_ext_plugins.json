@@ -1,0 +1,6 @@
+[
+  {
+    "extId": "aliPurchase",
+    "initiatorCls": "com.taobao.android.purchase.ext.PurchaseExtInitiator"
+  }
+]

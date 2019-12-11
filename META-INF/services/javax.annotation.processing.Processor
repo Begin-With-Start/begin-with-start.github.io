@@ -1,0 +1,4 @@
+com.taobao.message.container.compile.process.ExportAnnotationProcessor
+com.taobao.message.container.compile.process.KnifeAnnotationProcessor
+com.taobao.message.container.compile.process.StateAnnotationProcessor
+com.taobao.message.kit.eventbus.processor.EventBusAnnotationProcessor

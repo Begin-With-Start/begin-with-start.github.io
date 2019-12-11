@@ -1,0 +1,64 @@
+{
+  "data": {
+    "list": [
+      {
+        "title": "第一条"
+      },
+      {
+        "title": "第二条"
+      },
+      {
+        "title": "第三条"
+      },
+      {
+        "title": "第四条"
+      },
+      {
+        "title": "第五条"
+      },
+      {
+        "title": "第六条"
+      },
+      {
+        "title": "第N条..."
+      }
+    ]
+  },
+  "view": {
+    "type": "singleTagList",
+    "viewId": "singleTagList",
+    "styleBinding": {
+      "gap": 7,
+      "height": -2,
+      "width": 640
+    },
+    "dataBinding": {
+      "dataSource": "$list"
+    },
+    "cell": {
+      "dataBinding": {
+        "value": "$list.[?].title"
+      },
+      "styleBinding": {
+        "backgroundColor": "#e5841b",
+        "fontSize": 32,
+        "height": 57,
+        "textColor": "#ffffff",
+        "width": -2
+      },
+      "type": "label"
+    },
+    "selectedCell": {
+      "dataBinding": {
+        "value": "$list.[?].title"
+      },
+      "styleBinding": {
+        "backgroundColor": "#ffffff",
+        "fontSize": 32,
+        "height": 57,
+        "width": -2
+      },
+      "type": "label"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "registerApi": [
+    {
+      "moduleName": "audio",
+      "moduleClass": "AudioBridge",
+      "moduleClassPackage": "com.taobao.android.miniaudio.audio",
+      "methods": {
+        "canPlayType": {
+        },
+        "load": {
+        },
+        "setVolume": {
+        },
+        "play": {
+        },
+        "pause": {
+        },
+        "stop": {
+        },
+        "playVoice": {
+        },
+        "pauseVoice": {
+        },
+        "stopVoice": {
+        },
+        "startVoice": {
+        },
+        "startRecord": {
+        },
+        "stopRecord": {
+        },
+        "cancelRecord": {
+        }
+      }
+    }
+  ]
+}

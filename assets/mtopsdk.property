@@ -1,0 +1,3 @@
+# MTOPSDK extension property(key=value)
+#以“mtopsdk.”为前缀标示的key会拼接到url上，拼接到url时会自动去掉前缀“mtopsdk.”
+mtopsdk.debugMode=true

@@ -1,0 +1,55 @@
+{
+  "model_8.5.0": {
+      "updateMode": 2,
+      "tabbarFlag": "",
+      "tabbarBgColor": "",
+      "tabbarOffset": "",
+      "tabbarArray": [
+            {
+              "selectedIcon": "https://gw.alicdn.com/tfs/TB1DJ4_o4TpK1RjSZR0XXbEwXXa-194-148.png",
+              "title": "首页",
+              "icon": "https://gw.alicdn.com/tfs/TB1oJSaoY2pK1RjSZFsXXaNlXXa-194-148.png",
+              "url": "tmall://go/ju/today_home",
+              "selected": true,
+              "trackParams": {
+                "_trackId": "JuJRT",
+                "_trackName": "Tabbar今日团"
+              }
+            },
+            {
+              "selectedIcon": "https://gw.alicdn.com/tfs/TB1bA1qRpXXXXcHXVXXXXXXXXXX-194-148.png",
+              "title": "品牌闪购",
+              "icon": "https://gw.alicdn.com/tfs/TB1Wo9yRpXXXXcFXFXXXXXXXXXX-194-148.png",
+              "url": "https://jupage.taobao.com/wow/ju/act/ppt?wh_weex=true&isJuPlugin=true",
+              "selected": false,
+              "trackParams": {
+                "_trackId": "JuPPT",
+                "_trackName": "Tabbar品牌闪购"
+              }
+            },
+            {
+              "selectedIcon": "https://gw.alicdn.com/tfs/TB1DXR1X3mTBuNjy1XbXXaMrVXa-194-148.png",
+              "title": "预告",
+              "orgicon": "https://gw.alicdn.com/tps/TB1h.nSMXXXXXcQXVXXXXXXXXXX-192-147.png",
+              "icon": "https://gw.alicdn.com/tfs/TB1fBLPX_tYBeNjy1XdXXXXyVXa-194-148.png",
+              "url": "https://jupage.taobao.com/wow/ju/act/jupre?wh_weex=true&isInTabbar=true&wh_act_hidebar=1",
+              "selected": false,
+              "trackParams": {
+                "_trackId": "JuYG",
+                "_trackName": "Tabbar预告"
+              }
+            },
+            {
+              "icon": "https://gw.alicdn.com/tfs/TB1NFB7RpXXXXXlaFXXXXXXXXXX-194-148.png",
+              "title": "我的",
+              "selectedIcon": "https://gw.alicdn.com/tfs/TB1_Y4.RpXXXXb0apXXXXXXXXXX-194-148.png",
+              "url": "https://jupage.taobao.com/wow/ju/act/jhsmy?wh_biz=tm&wh_weex=true",
+              "selected": false,
+              "trackParams": {
+                "_trackId": "JuWD",
+                "_trackName": "Tabbar我的"
+              }
+            }
+          ]
+    }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "runningApp",
+    "displayName": "",
+    "summary": "采集正在运行的应用",
+    "clzName": "com.tmall.wireless.awareness.plugins.collector.RunningCollector",
+    "category": "data",
+    "author": "fangbo"
+  },
+  {
+    "name": "location",
+    "displayName": "采集位置",
+    "summary": "采集当前位置",
+    "clzName": "com.tmall.wireless.awareness.plugins.collector.LocationCollector",
+    "category": "data",
+    "author": "fangbo"
+  }
+]

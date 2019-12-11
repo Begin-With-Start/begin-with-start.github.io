@@ -1,0 +1,69 @@
+{
+  "v4.8.0": [
+    {
+      "groupName": "",
+      "array": [
+        {
+          "title": "聚收藏",
+          "url": "http://h5.m.taobao.com/jhsm/h5-app-jufav.html",
+          "imageUrl": "jhs_ic_personalcenter_list_collect",
+          "auth": "YES",
+          "actionName": "WD_BTN_JuShouCang",
+          "trackParams": {
+            "title": "WD_BTN_JuShouCang",
+            "ctrl": "个人中心-聚收藏",
+            "_click": "title,ctrl"
+          }
+        },
+        {
+          "title": "我的红包",
+          "url": "http://h5.m.taobao.com/jhsm/ju-app-coupon.html",
+          "imageUrl": "jhs_ic_personalcenter_list_red",
+          "auth": "YES",
+          "actionName": "WD_BTN_WoDeHongBao",
+          "trackParams": {
+            "title": "WD_BTN_WoDeHongBao",
+            "ctrl": "个人中心-我的红包",
+            "_click": "title,ctrl"
+          }
+        },
+        {
+          "title": "我的优惠劵",
+          "url": "http://h5.m.taobao.com/app/jucoupon/couponlist.html",
+          "imageUrl": "jhs_ic_personalcenter_list_coupon",
+          "auth": "YES",
+          "actionName": "WD_BTN_WoDeYouHuiJuan",
+          "trackParams": {
+            "title": "WD_BTN_WoDeYouHuiJuan",
+            "ctrl": "个人中心-我的优惠劵",
+            "_click": "title,ctrl"
+          }
+        },
+        {
+          "title": "我的夺宝",
+          "url": "https://1.ju.taobao.com/lucky/orders.htm",
+          "imageUrl": "jhs_ic_personalcenter_list_duobao",
+          "auth": "YES",
+          "actionName": "WD_BTN_WoDeDuoBao",
+          "trackParams": {
+            "title": "WD_BTN_WoDeDuoBao",
+            "ctrl": "个人中心-我的夺宝",
+            "_click": "title,ctrl"
+          }
+        },
+        {
+          "title": "意见反馈",
+          "url": "http://yq.open.taobao.com/m/feedback?productId=155&source=Wireless",
+          "imageUrl": "jhs_ic_personalcenter_list_feedback",
+          "auth": "YES",
+          "actionName": "WD_BTN_WoYaoFanKui",
+          "trackParams": {
+            "title": "WD_BTN_WoYaoFanKui",
+            "ctrl": "个人中心-意见反馈",
+            "_click": "title,ctrl"
+          }
+        }
+      ]
+    }
+  ]
+}

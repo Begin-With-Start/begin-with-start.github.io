@@ -1,0 +1,220 @@
+{
+	"api": "com.tmall.wireless.industrychannel.queryhome",
+	"v": "1.0",
+	"ret": ["SUCCESS::调用成功"],
+	"data": {
+		"cards": [{
+			"type": "1",
+			"id": "LIVE_TOP_BANNER",
+			"items": [{
+				"style": {
+					"ratio": 1.996
+				},
+				"data": [{
+					"subImg": "https://img.alicdn.com/tps/TB1FM0bKVXXXXa7XVXXXXXXXXXX-1125-291.png",
+					"content": "https://img.alicdn.com/imgextra/i3/2904044646/TB2G6SStXXXXXcYXpXXXXXXXXXX_!!2904044646.jpg",
+					"imgUrl": "http://gtms01.alicdn.com/tps/i1/TB1VPUMKVXXXXaJXXXXG6TT_XXX-1125-564.png",
+					"subTitle": "7月21日13:00",
+					"pageParam": "scm=1003.2.201607040.OTHER_1469368824988_981265",
+					"title": "快修先生为您深度讲解漆面镀晶",
+					"action": "https://pages.tmall.com/wow/hotspot/act/tmall-live-player?wh_cid=4cd1688c-ab33-4ca2-beea-6c98dddd9954",
+					"_pos_": "1"
+				}, {
+					"subImg": "https://img.alicdn.com/tps/TB1FM0bKVXXXXa7XVXXXXXXXXXX-1125-291.png",
+					"content": "https://img.alicdn.com/imgextra/i2/1097280647/TB2SxwZsVXXXXc6XpXXXXXXXXXX-1097280647.jpg",
+					"imgUrl": "http://gtms01.alicdn.com/tps/i1/TB1K1UJKVXXXXc9XXXXG6TT_XXX-1125-564.png",
+					"subTitle": "7月21日 14:00 武汉",
+					"pageParam": "scm=1003.2.201607040.OTHER_1468093204995_981265",
+					"title": "京天华盛带你玩转MOD",
+					"action": "https://pages.tmall.com/wow/hotspot/act/livepreview?spm=a312d.7832034.0.0.9XB9IO",
+					"_pos_": "2"
+				}],
+				"type": "2"
+			}],
+			"ctrClickParams": []
+		}, {
+			"type": "29",
+			"id": "LIVE_PROGRAM_TOP",
+			"style": {
+				"indicatorPosition": "inside",
+				"pageWidth": "160",
+				"margin": ["12", "0", "0", "0"],
+				"aspectRatio": "2.885",
+				"bgColor": "#FFFFFF",
+				"hGap": "6",
+				"pageRatio": "0.4276"
+			},
+			"items": [{
+				"subImg": "https://img.alicdn.com/tps/TB1SaI.KFXXXXXEXVXXXXXXXXXX-464-126.png",
+				"type": "1",
+				"content": "https://img.alicdn.com/imgextra/i4/2248304671/TB2_n5AtXXXXXakXXXXXXXXXXXX_!!0-tmallfun.jpg",
+				"imgUrl": "http://gtms01.alicdn.com/tps/i1/TB1lqlxKVXXXXb7XFXXIUww_XXX-1125-914.png",
+				"subTitle": "每日更新",
+				"pageParam": "scm=1003.2.201607041.OTHER_1467121629522_981127",
+				"title": "探访普罗旺斯",
+				"subTitle1": "颜值秀",
+				"action": "http://pages.tmall.com/wow/hotspot/act/tmall-live-player?wh_cid=2977fb0f-f8cc-4204-9036-cae061a92f11",
+				"_pos_": "1"
+			}, {
+				"subImg": "https://img.alicdn.com/tps/TB1SaI.KFXXXXXEXVXXXXXXXXXX-464-126.png",
+				"type": "1",
+				"content": "https://img.alicdn.com/imgextra/i3/581746910/TB2p1jysVXXXXXOXpXXXXXXXXXX_!!0-tmallfun.jpg",
+				"imgUrl": "http://gtms01.alicdn.com/tps/i1/TB1YTpEKVXXXXb.XFXXIUww_XXX-1125-914.png",
+				"subTitle": "今日更新",
+				"pageParam": "scm=1003.2.201607041.OTHER_1467243614562_981127",
+				"title": "MO&CO集团明星秀",
+				"subTitle1": "白日梦",
+				"action": "http://pages.tmall.com/wow/hotspot/act/tmall-live-player?wh_cid=7757a139-4ecf-49e9-b203-ae2866f8cdd9",
+				"_pos_": "2"
+			}, {
+				"subImg": "https://img.alicdn.com/tps/TB1SaI.KFXXXXXEXVXXXXXXXXXX-464-126.png",
+				"type": "1",
+				"content": "https://img.alicdn.com/imgextra/i1/2904044646/TB2g4yEsVXXXXXpXFXXXXXXXXXX_!!0-tmallfun.jpg",
+				"imgUrl": "http://gtms01.alicdn.com/tps/i1/TB1NFJkKVXXXXc8aXXXIUww_XXX-1125-914.png",
+				"subTitle": "每日更新",
+				"pageParam": "scm=1003.2.201607041.OTHER_1467835304882_981127",
+				"title": "镀晶透明车间一日游",
+				"subTitle1": "爱车生活",
+				"action": "http://pages.tmall.com/wow/hotspot/act/tmall-live-player?wh_cid=188528d8-d75b-43dc-a9a1-bec2e4bbc3f9",
+				"_pos_": "3"
+			}],
+			"ctrClickParams": []
+		},  {
+			"type": "1",
+			"id": "LIVE_HOT_PREVIEW",
+			"style": {
+				"margin": [0.5, "0", "0", "0"],
+				"bgColor": "#FFFFFF"
+			},
+			"items": [{
+				"imgUrl": "http://img.alicdn.com/tps/TB1.6wcKFXXXXcKXXXXXXXXXXXX-150-150.png",
+				"data": [{
+					"pageParam": "scm=1003.2.201606222.OTHER_1467497157102_981272",
+					"title": "看直播互动赢红包！",
+					"action": "https://pages.tmall.com/wow/hotspot/act/livepreview?spm=a312d.7832034.0.0.9XB9IO",
+					"_pos_": "1"
+				}, {
+					"pageParam": "scm=1003.2.201606222.OTHER_1469094570028_981272",
+					"title": "品牌直播边看边买！",
+					"action": "https://pages.tmall.com/wow/hotspot/act/livepreview?spm=a312d.7832034.0.0.9XB9IO",
+					"_pos_": "2"
+				}],
+				"action": "https://pages.tmall.com/wow/hotspot/act/livepreview?spm=a312d.7832034.0.0.SqWig1",
+				"logoUrl": "https://img.alicdn.com/tps/TB11DpAKFXXXXb_XXXXXXXXXXXX-54-42.png_300x300.jpg",
+				"type": "33"
+			}],
+			"ctrClickParams": []
+		}, {
+			"type": "1",
+			"id": "LIVE_RECOMMEND_TITLE",
+			"style": {
+				"forLabel": "LIVE_RECOMMEND",
+				"margin": ["0", "0", "0", "0"]
+			},
+			"items": [{
+				"imgUrl": "https://img.alicdn.com/tps/TB1OvU6KFXXXXbpXpXXXXXXXXXX-243-42.png_300x300.jpg",
+				"pageParam": "scm=1003.2.201606291.OTHER_1466124333546_937485",
+				"title": "热门推荐",
+				"style": {
+					"hasStyleLine": "true",
+					"titleColor": "#FF5E40",
+					"lineColor": "#FF5E40",
+					"lineWidth": "9",
+					"margin": "[10,0,10,0]"
+				},
+				"_pos_": "1",
+				"type": "39"
+			}],
+			"ctrClickParams": []
+		}, {
+			"type": "2",
+			"id": "LIVE_RECOMMEND",
+			"style": {
+				"hGap": "9",
+				"bgColor": "#FFFFFF",
+				"margin": ["12", "12", "12", "12"],
+				"vGap": "7"
+			},
+			"items": [{
+				"imgUrl": "https://img.alicdn.com/tps/TB1e4kVKFXXXXXIXFXXXXXXXXXX-1125-564.jpg",
+				"title": "真人大尺度套套测评嗨翻天",
+				"action": "https://pages.tmall.com/wow/hotspot/act/tmall-live-player?spm=0.0.0.0.ZWje4u&wh_cid=598789e0-d045-48e7-8b8e-b217761b730d",
+				"type": "510"
+			}, {
+				"imgUrl": "https://img.alicdn.com/tps/TB1FUwJKFXXXXXkaXXXXXXXXXXX-1125-564.jpg",
+				"title": "雅诗兰黛宋茜排浊秘笈直播",
+				"action": "https://pages.tmall.com/wow/hotspot/act/tmall-live-player?spm=0.0.0.0.ZWje4u&wh_cid=0deba9d4-ab91-4752-aeb6-8e5d289be10a",
+				"type": "510"
+			}, {
+				"imgUrl": "https://gw.alicdn.com/tps/TB1jTICKFXXXXX5apXXXXXXXXXX-1125-564.jpg",
+				"title": "金泫雅的嘴唇秘诀",
+				"action": "https://pages.tmall.com/wow/hotspot/act/tmall-live-player?spm=0.0.0.0.ZWje4u&wh_cid=4b651635-ccae-4a93-95dc-06d2bdb03d7d",
+				"type": "510"
+			}, {
+				"imgUrl": "https://gw.alicdn.com/tps/TB1.poIKFXXXXa4aXXXXXXXXXXX-1125-564.jpg",
+				"title": "三星c5发布会",
+				"action": "https://pages.tmall.com/wow/hotspot/act/tmall-live-player?spm=0.0.0.0.ZWje4u&wh_cid=91a94b6b-caba-41bb-9c7c-a0e0e605ea8a",
+				"type": "510"
+			}],
+			"ctrClickParams": []
+		}, {
+			"type": "1",
+			"id": "LIVE_MIDDLE_PROGRAM_1_TITLE",
+			"style": {
+				"forLabel": "LIVE_MIDDLE_PROGRAM_1",
+				"margin": ["0", "0", "0", "0"]
+			},
+			"items": [{
+				"pageParam": "scm=1003.2.201607043.OTHER_1468484978517_946861",
+				"title": "小东教你变达人",
+				"style": {
+					"margin": "[10,0,10,0]",
+					"hasStyleLine": "true",
+					"titleColor": "#FF5E40",
+					"lineColor": "#FF5E40",
+					"lineWidth": "9"
+				},
+				"_pos_": "1",
+				"type": "39"
+			}],
+			"ctrClickParams": []
+		}, {
+			"type": "3",
+			"id": "LIVE_MIDDLE_PROGRAM_1",
+			"style": {
+				"bgColor": "#FFFFFF",
+				"margin": ["9", "9", "9", "9"],
+				"hGap": "6"
+			},
+			"items": [{
+				"imgUrl": "http://gtms01.alicdn.com/tps/i1/TB1bv.8KFXXXXczapXXKwpuYVXX-1125-1015.png",
+				"content": "https://gw.alicdn.com/tps/TB1jTICKFXXXXX5apXXXXXXXXXX-1125-564.jpg",
+				"subTitle": "每周三更新",
+				"pageParam": "scm=1003.2.201607042.OTHER_1469878488305_949977",
+				"title": "金泫雅嘴唇秘诀",
+				"action": "https://pages.tmall.com/wow/hotspot/act/tmall-live-player?acm=201607042.1003.2.949977&aldid=SOrWnslk&spm=0.0.0.0.hNmJMX&wh_cid=4b651635-ccae-4a93-95dc-06d2bdb03d7d&scm=1003.2.201607042.OTHER_1469878488305_949977&pos=1",
+				"_pos_": "1",
+				"type": "1"
+			}, {
+				"imgUrl": "http://gtms01.alicdn.com/tps/i1/TB1OWlwKVXXXXXXXFXXKwpuYVXX-1125-1015.png",
+				"content": "https://gw.alicdn.com/tps/TB17jZ5KFXXXXaNXXXXXXXXXXXX-1125-564.jpg",
+				"subTitle": "每周三更新",
+				"pageParam": "scm=1003.2.201607042.OTHER_1469683309734_949977",
+				"title": "化妆术堪比整容",
+				"action": "https://pages.tmall.com/wow/hotspot/act/tmall-live-player?acm=201607042.1003.2.949977&aldid=SOrWnslk&spm=0.0.0.0.hNmJMX&wh_cid=6b0a40f4-a7e5-405c-b993-de608a22f92d&scm=1003.2.201607042.OTHER_1469683309734_949977&pos=2",
+				"_pos_": "2",
+				"type": "1"
+			}, {
+				"imgUrl": "http://gtms01.alicdn.com/tps/i1/TB1R4tCKVXXXXb_XXXXKwpuYVXX-1125-1015.png",
+				"content": "https://gw.alicdn.com/tps/TB1c6EHKFXXXXacaXXXXXXXXXXX-1125-564.jpg",
+				"subTitle": "每周三更新",
+				"pageParam": "scm=1003.2.201607042.OTHER_1469066371443_949977",
+				"title": "减肥妆术来啦",
+				"action": "https://pages.tmall.com/wow/hotspot/act/tmall-live-player?acm=201607042.1003.2.949977&aldid=SOrWnslk&spm=0.0.0.0.hNmJMX&wh_cid=e6b3b397-bcd4-438c-8134-6e32a02e7baf&scm=1003.2.201607042.OTHER_1469066371443_949977&pos=3",
+				"_pos_": "3",
+				"type": "1"
+			}],
+			"ctrClickParams": []
+		}]
+	}
+}

@@ -1,0 +1,624 @@
+{
+    "page": "Page_Register",
+    "title": "用户注册",
+    "forms": {
+      "validateAll": {
+        "method": "post",
+        "validateType": "all",
+        "params": [
+          {
+            "key": "form.user.name",
+            "value": "$idNameValue",
+            "validates": [
+              {
+                "type": "notNull",
+                "msg": "a"
+              },
+              {
+                "type": "length",
+                "expression": "-30",
+                "msg": "b"
+              },
+              {
+                "type": "length",
+                "expression": "100-200",
+                "msg": "c"
+              },
+              {
+                "type": "length",
+                "expression": "1-30",
+                "msg": "d"
+              },
+              {
+                "type": "length",
+                "expression": "0-1",
+                "msg": "e"
+              }
+            ]
+           },
+           {
+            "key": "form.user.name1",
+            "value": "$idNameValue",
+            "validates": [
+              {
+                "type": "notNull",
+                "msg": "a"
+              },
+              {
+                "type": "length",
+                "expression": "-30",
+                "msg": "b"
+              },
+              {
+                "type": "length",
+                "expression": "100-200",
+                "msg": "c"
+              },
+              {
+                "type": "length",
+                "expression": "1-30",
+                "msg": "d"
+              },
+              {
+                "type": "length",
+                "expression": "0-1",
+                "msg": "e"
+              }
+            ]
+           },
+           {
+            "key": "form.user.name2",
+            "value": "$idNameValue",
+            "validates": [
+              {
+                "type": "notNull",
+                "msg": "a"
+              },
+              {
+                "type": "length",
+                "expression": "-30",
+                "msg": "b"
+              },
+              {
+                "type": "length",
+                "expression": "100-200",
+                "msg": "c"
+              },
+              {
+                "type": "length",
+                "expression": "1-30",
+                "msg": "d"
+              },
+              {
+                "type": "length",
+                "expression": "0-1",
+                "msg": "e"
+              }
+            ]
+           }
+         ]
+      },
+      "validateBreak": {
+        "method": "post",
+        "validateType": "break",
+        "params": [
+          {
+            "key": "form.user.name",
+            "value": "$idNameValue",
+            "validates": [
+              {
+                "type": "notNull",
+                "msg": "a"
+              },
+              {
+                "type": "length",
+                "expression": "-30",
+                "msg": "b"
+              },
+              {
+                "type": "length",
+                "expression": "100-200",
+                "msg": "c"
+              },
+              {
+                "type": "length",
+                "expression": "1-30",
+                "msg": "d"
+              },
+              {
+                "type": "length",
+                "expression": "0-1",
+                "msg": "e"
+              }
+            ]
+           },
+           {
+            "key": "form.user.name1",
+            "value": "$idNameValue",
+            "validates": [
+              {
+                "type": "notNull",
+                "msg": "a"
+              },
+              {
+                "type": "length",
+                "expression": "-30",
+                "msg": "b"
+              },
+              {
+                "type": "length",
+                "expression": "100-200",
+                "msg": "c"
+              },
+              {
+                "type": "length",
+                "expression": "1-30",
+                "msg": "d"
+              },
+              {
+                "type": "length",
+                "expression": "0-1",
+                "msg": "e"
+              }
+            ]
+           },
+           {
+            "key": "form.user.name2",
+            "value": "$idNameValue",
+            "validates": [
+              {
+                "type": "notNull",
+                "msg": "a"
+              },
+              {
+                "type": "length",
+                "expression": "-30",
+                "msg": "b"
+              },
+              {
+                "type": "length",
+                "expression": "100-200",
+                "msg": "c"
+              },
+              {
+                "type": "length",
+                "expression": "1-30",
+                "msg": "d"
+              },
+              {
+                "type": "length",
+                "expression": "0-1",
+                "msg": "e"
+              }
+            ]
+           }
+           
+         ]
+      },
+      "allSuccess": {
+        "method": "post",
+        "validateType": "all",
+        "params": [
+          {
+            "key": "form.user.name",
+            "value": "$idNameValue",
+            "validates": [
+              {
+                "type": "notNull",
+                "msg": "名字不能为空"
+              },
+              {
+                "type": "length",
+                "expression": "-30",
+                "msg": "名字长度不能超过30个字符"
+              }
+            ]
+          },
+          {
+            "key": "age",
+            "value": "$idAgeValue",
+            "validates": [
+              {
+                "type": "notNull",
+                "msg": "必须填写年龄"
+              },
+              {
+                "type": "regex",
+                "expression": "^(?:[1-9][0-9]?|1[01][0-9]|120)$",
+                "msg": "请正确填写年龄"
+              }
+            ]
+          },
+          {
+            "key": "form.user.email",
+            "viewId":"idEmail",
+            "value": "$idEmailValue",
+            "validates": [
+              {
+                "type": "notNull",
+                "msg": "必须填写邮箱"
+              },
+              {
+                "type": "email",
+                "msg": "请填写正确的邮件格式"
+              }
+            ]
+          }
+         ]
+      },
+      "register": {
+        "method": "post",
+        "validateType": "all",
+        "params": [
+          {
+            "key": "form.user.name",
+            "value": "$idNameValue",
+            "validates": [
+              {
+                "type": "notNull",
+                "msg": "名字不能为空"
+              },
+              {
+                "type": "length",
+                "expression": "-30",
+                "msg": "名字长度不能超过30个字符"
+              }
+            ]
+          },
+          {
+            "key": "age",
+            "value": "$idAgeValue",
+            "validates": [
+              {
+                "type": "notNull",
+                "msg": "必须填写年龄"
+              },
+              {
+                "type": "regex",
+                "expression": "^(?:[1-9][0-9]?|1[01][0-9]|120)$",
+                "msg": "请正确填写年龄"
+              }
+            ]
+          },
+          {
+            "key": "form.user.email",
+            "viewId":"idEmail"
+          },
+          {
+            "key": "emailWithoutDefault",
+            "viewId":"idEmail",
+            "value": "$idEmailValue",
+            "validates": [
+              {
+                "type": "notNull",
+                "msg": "必须填写邮箱"
+              },
+              {
+                "type": "email",
+                "msg": "请填写正确的邮件格式"
+              }
+            ]
+          },
+          {
+            "key": "emailWithDfaultValidates",
+            "viewId":"idEmail",
+            "value": "$idEmailValue"
+          },
+          {
+            "key": "emailWithDfaultValue",
+            "viewId":"idEmail",
+            "validates": [
+              {
+                "type": "notNull",
+                "msg": "必须填写邮箱"
+              },
+              {
+                "type": "email",
+                "msg": "请填写正确的邮件格式"
+              }
+            ]
+          },
+          {
+            "key": "form.user.age",
+            "value": "$idPhoneValue",
+            "validates": [
+              {
+                "type": "regex",
+                "expression": "^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$",
+                "msg": "请正确填写手机号码"
+              }
+            ]
+          },
+          {
+            "key": "deletelist",
+            "type": "list",
+            "validates": [
+              {
+                "type": "length",
+                "expression": "5-10",
+                "msg": "请提交正确的数量"
+              }
+            ],
+            "source": "$env.delList",
+            "value": [
+              {
+                "key": "dl.id",
+                "value": "id",
+                "validates": [
+                  {
+                    "type": "number"
+                  }
+                ]
+              },
+              {
+                "key": "dl.pid",
+                "value": "pid",
+                "validates": [
+                  {
+                    "type": "number"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "form.user.deletelist",
+            "type": "list",
+            "validates": [
+              {
+                "type": "length",
+                "expression": "5-10",
+                "msg": "请提交正确的数量"
+              }
+            ],
+            "source": "$env.delList",
+            "value": [
+              {
+                "key": "dl.id",
+                "value": "id",
+                "validates": [
+                  {
+                    "type": "number"
+                  }
+                ]
+              },
+              {
+                "key": "dl.other.pid",
+                "value": "pid",
+                "validates": [
+                  {
+                    "type": "number"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "view": {
+      "styleBinding": {
+        "backgroundColor": "#FFFFFF",
+        "height": -1,
+        "layout": "linearLayout",
+        "marginBottom": 18,
+        "width": -1
+      },
+      "subViews": [
+        {
+          "type": "label",
+          "dataBinding": {
+            "value": "请填写以下信息"
+          },
+          "styleBinding": {
+            "height": -2
+          }
+        },
+        {
+          "viewId": "idName",
+          "type": "textField",
+          "dataBinding": {
+            "placeholderValue": "请填写姓名(必填,最多30个字符)"
+          },
+          "styleBinding": {
+            "height": 100
+          }
+        },
+        {
+          "viewId": "idAge",
+          "type": "textField",
+          "dataBinding": {
+            "placeholderValue": "请填写年龄(必填)"
+          },
+          "styleBinding": {
+            "height": 100
+          }
+        },
+        {
+          "viewId": "idEmail",
+          "type": "textField",
+          "dataBinding": {
+            "placeholderValue": "请填写邮箱(必填)"
+          },
+          "styleBinding": {
+            "height": 100
+          },
+	        "validates": [
+	          {
+	            "type": "notNull",
+	            "msg": "必须填写邮箱"
+	          },
+	          {
+	            "type": "email",
+	            "msg": "请填写正确的邮件格式"
+	          }
+	        ]
+        },
+        {
+          "viewId": "idPhone",
+          "type": "textField",
+          "dataBinding": {
+            "placeholderValue": "请填写手机号码(选填)"
+          },
+          "styleBinding": {
+            "height": 100
+          }
+        },
+        {
+          "dataBinding": {
+            "value": "提交信息"
+          },
+          "styleBinding": {
+            "marginTop": 40,
+            "height": 60,
+            "width": 200,
+            "marginRight": 40
+          },
+          "type": "button",
+          "events": [
+            {
+              "type": "click",
+              "actions": [
+                {
+                  "type": "submitForm",
+                  "param": {
+                    "apiVersion": "1.0",
+                    "apiName": "mtop.xxx.register",
+                    "formId": "register"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "type": "container"
+    },
+    "data": {
+      "mockParam":{
+      	"form":{
+      		"user":{
+      			"name":"hello",
+      			"email":"yyy@yyy.com"
+      		}
+      	},
+      	"age":20
+      },
+      "mockParam1":{
+      	"form":{
+      		"user":{
+      			"name":"hello",
+      			"name1":"hello",
+      			"name2":"hello",
+      		}
+      	}
+      },
+      "mockParam2":{
+      },
+      "mockListOther":[
+      	{
+      		"dl":{
+      			"id":"1111111",
+      			"other":{
+      				"pid":"p111111"
+      			}
+      		}
+      	},{
+      		"dl":{
+      			"id":"222222",
+      			"other":{
+      				"pid":"p22222"
+      			}
+      		}
+      	},{
+      		"dl":{
+      			"id": "33333",
+      			"other":{
+      				"pid":"p33333"
+      			}
+      		}
+      	},{
+      		"dl":{
+      			"id": "4444444",
+      			"other":{
+      				"pid":"p444444"
+      			}
+      		}
+      	},{
+      		"dl":{
+      			"id": "55555",
+      			"other":{
+      				"pid":"p55555"
+      			}
+      		}
+      	}
+      ],
+      "mockList":[
+      	{
+      		"dl":{
+      			"id":"1111111",
+      			"pid":"p111111"
+      		}
+      	},{
+      		"dl":{
+      			"id":"222222",
+      			"pid":"p22222"
+      		}
+      	},{
+      		"dl":{
+      			"id": "33333",
+            	"pid": "p33333"
+      		}
+      	},{
+      		"dl":{
+      			"id": "4444444",
+	            "pid": "p444444"
+      		}
+      	},{
+      		"dl":{
+      			"id": "55555",
+            	"pid": "p55555"
+      		}
+      	}
+      ],
+      "_forma":{
+      	"idEmail":"xxx@xxx.com"
+      },
+      "idNameValue":"hello",
+      "idAgeValue":20,
+      "idEmailValue":"yyy@yyy.com",
+      "min0":"0",
+      "min1":"1",
+      "min2":"2",
+      "max3":"3",
+      "max4":"4",
+      "max100":"100",
+      "env": {
+        "name": "",
+        "email": "testtest.com",
+        "number": "1888888888",
+        "delList": [
+          {
+            "id": "1111111",
+            "pid": "p111111"
+          },
+          {
+            "id": "222222",
+            "pid": "p22222"
+          },
+          {
+            "id": "33333",
+            "pid": "p33333"
+          },
+          {
+            "id": "4444444",
+            "pid": "p444444"
+          },
+          {
+            "id": "55555",
+            "pid": "p55555"
+          }
+        ]
+      }
+    }
+  }

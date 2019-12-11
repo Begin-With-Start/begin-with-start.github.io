@@ -1,0 +1,268 @@
+{
+  "defaultConfig": {
+    "showLikeButton": true,
+    "showReplyButton": false,
+    "showLikeUsers": true,
+    "showFloor": false,
+    "replyViewCount": 2,
+    "listStyle": "tile",
+    "configVersion": 0,
+    "commentListIcon": "https://img.alicdn.com/tps/TB1zlDeOVXXXXagXFXXXXXXXXXX-72-72.png",
+    "commentListTitle": "全部评论",
+    "publishRule": {
+      "imageMinLength": -1,
+      "placeholder": "回复楼主",
+      "textMinLength": "1"
+    }
+  },
+  "10000list_all_in_target": {
+    "namespace": 10000,
+    "page": "list_all_in_target",
+    "showLikeButton": true,
+    "showReplyButton": false,
+    "showLikeUsers": true,
+    "showFloor": false,
+    "replyViewCount": 2,
+    "listStyle": "tile",
+    "configVersion": 1,
+    "commentListIcon": "https://img.alicdn.com/tps/TB1zlDeOVXXXXagXFXXXXXXXXXX-72-72.png",
+    "commentListTitle": "全部评论",
+    "publishRule": {
+      "imageMinLength": "-1",
+      "placeholder": "回复楼主",
+      "textMinLength": "2"
+    }
+  },
+  "10002block_hot": {
+    "namespace": 10002,
+    "templateId": 1,
+    "page": "block_hot",
+    "showLikeButton": true,
+    "showReplyButton": false,
+    "showLikeUsers": true,
+    "showFloor": true,
+    "replyViewCount": 2,
+    "listStyle": "tile",
+    "configVersion": 1,
+    "pageSize": 3,
+    "commentListIcon": "https://img.alicdn.com/tps/TB1JVIQPXXXXXcxXFXXXXXXXXXX-72-72.png",
+    "commentListTitle": "热门评论"
+  },
+  "10002block_all": {
+    "namespace": 10002,
+    "templateId": 1,
+    "page": "block_all",
+    "showLikeButton": true,
+    "showReplyButton": false,
+    "showLikeUsers": true,
+    "showFloor": true,
+    "replyViewCount": 2,
+    "listStyle": "tile",
+    "configVersion": 1,
+    "pageSize": 3,
+    "commentListIcon": "https://img.alicdn.com/tps/TB1zlDeOVXXXXagXFXXXXXXXXXX-72-72.png",
+    "commentListTitle": "最新评论"
+  },
+  "10002block_hot_in_mix": {
+    "namespace": 10002,
+    "templateId": 1,
+    "page": "block_hot_in_mix",
+    "showLikeButton": true,
+    "showReplyButton": false,
+    "showLikeUsers": true,
+    "showFloor": true,
+    "replyViewCount": 0,
+    "listStyle": "tile",
+    "configVersion": 1,
+    "pageSize": 3,
+    "commentListIcon": "https://img.alicdn.com/tps/TB1JVIQPXXXXXcxXFXXXXXXXXXX-72-72.png",
+    "commentListTitle": "热门评论"
+  },
+  "10002list_all_in_mix": {
+    "namespace": 10002,
+    "templateId": 1,
+    "page": "list_all_in_mix",
+    "showLikeButton": true,
+    "showReplyButton": false,
+    "showLikeUsers": true,
+    "showFloor": true,
+    "replyViewCount": 2,
+    "listStyle": "tile",
+    "configVersion": 1,
+    "commentListIcon": "https://img.alicdn.com/tps/TB1zlDeOVXXXXagXFXXXXXXXXXX-72-72.png",
+    "commentListTitle": "全部评论",
+    "publishRule": {
+      "imageMaxLength": "1",
+      "imageMinLength": "0",
+      "placeholder": "回复楼主",
+      "textMinLength": "1"
+    }
+  },
+  "10021block_hot_in_mix": {
+    "namespace": 10021,
+    "templateId": 1,
+    "page": "block_hot_in_mix",
+    "showLikeButton": true,
+    "showReplyButton": false,
+    "showLikeUsers": true,
+    "showFloor": true,
+    "replyViewCount": 2,
+    "listStyle": "tile",
+    "configVersion": 1,
+    "pageSize": 3,
+    "commentListIcon": "https://img.alicdn.com/tps/TB1JVIQPXXXXXcxXFXXXXXXXXXX-72-72.png",
+    "commentListTitle": "热门评论",
+    "publishRule": {
+      "imageMaxLength": "1",
+      "imageMinLength": "0",
+      "placeholder": "回复楼主",
+      "textMinLength": "5"
+    }
+  },
+  "10021list_all_in_mix": {
+    "namespace": 10021,
+    "templateId": 1,
+    "page": "list_all_in_mix",
+    "showLikeButton": true,
+    "showReplyButton": false,
+    "showLikeUsers": true,
+    "showFloor": true,
+    "replyViewCount": 0,
+    "listStyle": "tile",
+    "configVersion": 1,
+    "commentListIcon": "https://img.alicdn.com/tps/TB1zlDeOVXXXXagXFXXXXXXXXXX-72-72.png",
+    "commentListTitle": "全部评论",
+    "publishRule": {
+      "imageMaxLength": "1",
+      "imageMinLength": "0",
+      "placeholder": "回复楼主",
+      "textMinLength": "5"
+    }
+  },
+  "10005list_all_in_mix": {
+    "namespace": 10005,
+    "templateId": 1,
+    "page": "list_all_in_mix",
+    "showLikeButton": true,
+    "showReplyButton": true,
+    "showLikeUsers": true,
+    "showFloor": true,
+    "replyViewCount": 3,
+    "listStyle": "fold",
+    "configVersion": 1,
+    "commentListIcon": "https://img.alicdn.com/tps/TB1zlDeOVXXXXagXFXXXXXXXXXX-72-72.png",
+    "commentListTitle": "全部评论",
+    "publishRule": {
+      "imageMinLength": "-1",
+      "textMinLength": "1",
+      "placeholder": "回复楼主"
+    }
+  },
+  "10005block_hot_in_mix": {
+    "namespace": 10005,
+    "templateId": 1,
+    "page": "block_hot_in_mix",
+    "showLikeButton": true,
+    "showReplyButton": true,
+    "showLikeUsers": true,
+    "showFloor": true,
+    "replyViewCount": 3,
+    "listStyle": "fold",
+    "configVersion": 1,
+    "pageSize": 3,
+    "commentListIcon": "https://img.alicdn.com/tps/TB1JVIQPXXXXXcxXFXXXXXXXXXX-72-72.png",
+    "commentListTitle": "热门评论",
+    "publishRule": {
+      "imageMinLength": "-1",
+      "textMinLength": "1",
+      "placeholder": "回复楼主"
+    }
+  },
+  "10005list_all_in_detail": {
+    "namespace": 10005,
+    "templateId": 1,
+    "page": "list_all_in_detail",
+    "showLikeButton": true,
+    "showReplyButton": false,
+    "showLikeUsers": true,
+    "showFloor": true,
+    "replyViewCount": 0,
+    "listStyle": "tile",
+    "configVersion": 1,
+    "publishRule": {
+      "imageMinLength": "-1",
+      "textMinLength": "1",
+      "placeholder": "回复楼主"
+    }
+  },
+  "10001list_all_in_target": {
+    "namespace": 10001,
+    "page": "list_all_in_target",
+    "showLikeButton": true,
+    "showReplyButton": false,
+    "showLikeUsers": true,
+    "showFloor": false,
+    "replyViewCount": 0,
+    "listStyle": "tile",
+    "configVersion": 1,
+    "commentListIcon": "https://img.alicdn.com/tps/TB1zlDeOVXXXXagXFXXXXXXXXXX-72-72.png",
+    "commentListTitle": "全部评论",
+    "publishRule": {
+      "imageMinLength": "-1",
+      "textMinLength": "1",
+      "placeholder": "回复楼主"
+    }
+  },
+  "10509list_all_in_target": {
+    "namespace": 10509,
+    "page": "list_all_in_target",
+    "showLikeButton": true,
+    "showReplyButton": false,
+    "showLikeUsers": true,
+    "showFloor": false,
+    "replyViewCount": 0,
+    "listStyle": "tile",
+    "configVersion": 1,
+    "commentListIcon": "https://img.alicdn.com/tps/TB1zlDeOVXXXXagXFXXXXXXXXXX-72-72.png",
+    "commentListTitle": "全部评论",
+    "publishRule": {
+      "imageMinLength": "-1",
+      "textMinLength": "1",
+      "placeholder": "回复楼主"
+    }
+  },
+  "10288block_hot_in_mix": {
+    "namespace": 10288,
+    "templateId": 1,
+    "page": "block_hot_in_mix",
+    "showLikeButton": true,
+    "showReplyButton": false,
+    "showLikeUsers": true,
+    "showFloor": true,
+    "replyViewCount": 0,
+    "listStyle": "tile",
+    "configVersion": 1,
+    "pageSize": 3,
+    "commentListIcon": "https://img.alicdn.com/tps/TB1JVIQPXXXXXcxXFXXXXXXXXXX-72-72.png",
+    "commentListTitle": "热门评论"
+  },
+  "10288list_all_in_mix": {
+    "namespace": 10288,
+    "templateId": 1,
+    "page": "list_all_in_mix",
+    "showLikeButton": true,
+    "showReplyButton": false,
+    "showLikeUsers": true,
+    "showFloor": true,
+    "replyViewCount": 2,
+    "listStyle": "tile",
+    "configVersion": 1,
+    "commentListIcon": "https://img.alicdn.com/tps/TB1zlDeOVXXXXagXFXXXXXXXXXX-72-72.png",
+    "commentListTitle": "全部评论",
+    "publishRule": {
+      "imageMinLength": "-1",
+      "placeholder": "回复楼主",
+      "textMinLength": "1"
+    }
+  }
+}

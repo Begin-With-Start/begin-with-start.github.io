@@ -1,0 +1,38 @@
+{
+  "cart_invalid_title": {
+    "version": 1,
+    "main.dx": "template/carts/cart_invalid_title/1/main.dx"
+  },
+  "cart_promotion": {
+    "version": 1,
+    "main.dx": "template/carts/cart_promotion/1/main.dx"
+  },
+  "cart_empty": {
+    "version": 1,
+    "main.dx": "template/carts/cart_empty/1/main.dx"
+  },
+  "cart_banner": {
+    "version": 1,
+    "main.dx": "template/carts/cart_banner/1/main.dx"
+  },
+  "cart_shop": {
+    "version": 1,
+    "main.dx": "template/carts/cart_shop/1/main.dx"
+  },
+  "cart_label": {
+    "version": 1,
+    "main.dx": "template/carts/cart_label/1/main.dx"
+  },
+  "cart_submit_promotion": {
+    "version": 1,
+    "main.dx": "template/carts/cart_submit_promotion/1/main.dx"
+  },
+  "cart_item": {
+    "version": 1,
+    "main.dx": "template/carts/cart_item/1/main.dx"
+  },
+  "cart_sub_head": {
+    "version": 1,
+    "main.dx": "template/carts/cart_sub_head/1/main.dx"
+  }
+}

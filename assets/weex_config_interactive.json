@@ -1,0 +1,85 @@
+{
+    "modules": [
+      {
+        "name": "videokeyboard",
+        "className": "com.taobao.android.interactive.wxplatform.module.WXKeyboardModule",
+        "methods": [
+          "start"
+        ]
+      },
+      {
+          "name": "videoutils",
+          "className": "com.taobao.android.interactive.wxplatform.module.WXInteractiveUtils",
+          "methods": [
+              "openUrl",
+              "getDisplayCutoutHeight",
+              "getCPUName",
+              "setContinuousPlayStatus",
+              "getContinuousPlayStatus",
+              "getContinuousPlayState",
+              "setContinuousPlayState"
+          ]
+      }
+    ],
+    "components": [
+        {
+            "name": "immersivevideo",
+            "className": "com.taobao.android.interactive.shortvideo.weex.IctImmersiveVideoWXComponent",
+            "appendTree": false,
+            "methods": [
+                "getDuration",
+                "play",
+                "pause",
+                "replay",
+                "getScreenMode",
+                "getMuted",
+                "setMuted",
+                "showOrHideTopMoreBtn",
+                "showOrHideTopDanmakuBtn",
+                "showOrHideTopShareBtn",
+                "destroy",
+                "callReportBtn",
+                "callDanmakuBtn",
+                "callShareBtn"
+            ]
+        },
+        {
+            "name": "interactiveVideo",
+            "className": "com.taobao.android.interactive.wxplatform.component.InteractiveVideoComponent",
+            "appendTree": false,
+            "methods": [
+                "getCurrentTime",
+                "setCurrentTime",
+                "getDuration",
+                "play",
+                "pause",
+                "setMuted",
+                "getMuted"
+            ]
+        },
+        {
+            "name": "interactiveVideoV2",
+            "className": "com.taobao.android.interactive.wxplatform.component.InteractiveVideoComponentV2",
+            "appendTree": false,
+            "methods": [
+                "getCurrentTime",
+                "setCurrentTime",
+                "getDuration",
+                "play",
+                "pause",
+                "setMuted",
+                "getMuted",
+                "onShowcontrols",
+                "setAnchors",
+                "navToUrl"
+            ]
+        },
+        {
+            "name": "videoshare",
+            "className": "com.taobao.android.interactive.wxplatform.component.InteractiveShareComponent",
+            "appendTree": false,
+            "methods": [
+            ]
+        }
+    ]
+}

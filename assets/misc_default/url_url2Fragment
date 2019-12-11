@@ -1,0 +1,29 @@
+{
+    "model": [
+        {
+            "url": "tmall://go/ju/life_home",
+            "className": "com.taobao.ju.android.life.view.JuLifeTabWebViewFragment"
+        },
+        {
+            "url": "tmall://go/ju/home",
+            "className": "com.taobao.ju.android.ui.main.recycler.RecyclerTab1Fragment"
+        },
+        {
+            "url": "tmall://go/ju/today_home",
+            "className": "com.taobao.ju.android.ui.main.recycler.RecyclerTab1Fragment"
+        },
+        {
+            "url": "tmall://go/ju/cart",
+            "className": "com.taobao.ju.android.ui.cart.JuCartFragment"
+        },
+        {
+            "url": "tmall://go/ju/luaview",
+            "className": "com.taobao.ju.android.luaview.JuLuaViewFragment"
+        },
+        {
+            "url": "tmall://go/ju/webview",
+            "className": "com.taobao.ju.android.luaview.JuLuaViewFragment"
+        }
+
+    ]
+}

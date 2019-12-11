@@ -1,0 +1,133 @@
+{
+"base":{
+   "Q":["Q90","Q75"],
+   "1.0":{
+      "banner":["320x320", "320x320"],
+	  "list_item":["120x120", "120x120"],
+	  "list_item_mid":["180x180", "180x180"],
+	  "list_item_big":["320x320", "320x320"],
+	  "brand_list_item":["200x200", "200x200"],
+	  "brand_list_item_logo":["60x60", "60x60"],
+	  "brand_detail_banner":["320x320", "320x320"],
+	  "brand_detail_logo":["60x60", "60x60"],
+	  "itemdetail_pic":["320x320", "320x320"],
+ 	  "itemdetail_desc":["350x10000", "350x10000"],
+ 	  "itemdetail_list_display":["320x320", "320x320"],
+ 	  "itemdetail_single_display":["350x10000", "350x10000"],
+	  "box_zdq":["180x180", "180x180"],
+	  "box_mustbuy":["180x180", "180x180"],
+      "itemdetail_sku":["120x120", "120x120"],
+      "trade_item":["120x120", "120x120"],
+      "trade_shop_icon":["120x120", "120x120"],
+      "trade_order_info":["120x120", "120x120"],
+      "trade_order_bond":["120x120", "120x120"]
+    },
+   "1.5":{
+      "banner":["480x480", "480x480"],
+	  "list_item":["180x180", "180x180"],
+	  "list_item_mid":["320x320", "320x320"],
+	  "list_item_big":["480x480", "480x480"],
+	  "brand_list_item":["300x300", "300x300"],
+	  "brand_list_item_logo":["90x90", "90x90"],
+	  "brand_detail_banner":["480x480", "480x480"],
+	  "brand_detail_logo":["90x90", "90x90"],
+	  "itemdetail_pic":["480x480", "480x480"],
+ 	  "itemdetail_desc":["450x10000", "450x10000"],
+ 	  "itemdetail_list_display":["480x480", "480x480"],
+ 	  "itemdetail_single_display":["450x10000", "450x10000"],
+	  "box_zdq":["320x320", "320x320"],
+	  "box_mustbuy":["320x320", "320x320"],
+      "itemdetail_sku":["120x120", "120x120"],
+      "trade_item":["120x120", "120x120"],
+      "trade_shop_icon":["120x120", "120x120"],
+      "trade_order_info":["120x120", "120x120"],
+      "trade_order_bond":["120x120", "120x120"]
+    },
+   "2.0":{
+      "banner":["640x640", "640x640"],
+	  "list_item":["240x240", "240x240"],
+	  "list_item_mid":["480x480", "480x480"],
+	  "list_item_big":["640x640", "640x640"],
+	  "brand_list_item":["400x400", "400x400"],
+	  "brand_list_item_logo":["120x120", "120x120"],
+	  "brand_detail_banner":["640x640", "640x640"],
+	  "brand_detail_logo":["120x120", "120x120"],
+	  "itemdetail_pic":["640x640", "640x640"],
+ 	  "itemdetail_desc":["620x10000", "620x10000"],
+ 	  "itemdetail_list_display":["640x640", "640x640"],
+ 	  "itemdetail_single_display":["620x10000", "620x10000"],
+	  "box_zdq":["480x480", "480x480"],
+	  "box_mustbuy":["480x480", "480x480"],
+      "itemdetail_sku":["120x120", "120x120"],
+      "trade_item":["120x120", "120x120"],
+      "trade_shop_icon":["120x120", "120x120"],
+      "trade_order_info":["120x120", "120x120"],
+      "trade_order_bond":["120x120", "120x120"]
+    },
+   "3.0":{
+      "banner":["960x960", "960x960"],
+	  "list_item":["360x360", "360x360"],
+	  "list_item_mid":["640x640", "640x640"],
+      "list_item_big":["960x960", "960x960"],
+	  "brand_list_item":["600x600", "600x600"],
+	  "brand_list_item_logo":["180x180", "180x180"],
+	  "brand_detail_banner":["960x960", "960x960"],
+	  "brand_detail_logo":["180x180", "180x180"],
+	  "itemdetail_pic":["960x960", "960x960"],
+ 	  "itemdetail_desc":["790x10000", "790x10000"],
+ 	  "itemdetail_list_display":["960x960", "960x960"],
+ 	  "itemdetail_single_display":["790x10000", "790x10000"],
+	  "box_zdq":["640x640", "640x640"],
+	  "box_mustbuy":["640x640", "640x640"],
+	  "itemdetail_sku":["120x120", "120x120"],
+	  "trade_item":["120x120", "120x120"],
+	  "trade_shop_icon":["120x120", "120x120"],
+	  "trade_order_info":["120x120", "120x120"],
+	  "trade_order_bond":["120x120", "120x120"]
+    }
+ },
+ "2g":{
+   "Q":["Q75","Q50"],
+   "1.0":{
+   },
+   "1.5":{
+   },
+   "2.0":{
+   },
+   "3.0":{
+   }
+ },
+ "3g":{
+   "Q":["Q90","Q75"],
+   "1.0":{
+   },
+   "1.5":{
+   },
+   "2.0":{
+   },
+   "3.0":{
+   }
+ },
+ "4g":{
+   "Q":["Q90","Q75"],
+   "1.0":{
+   },
+   "1.5":{
+   },
+   "2.0":{
+   },
+   "3.0":{
+   }
+ },
+ "wifi":{
+   "Q":["Q90","Q90"],
+   "1.0":{
+   },
+   "1.5":{
+   },
+   "2.0":{
+   },
+   "3.0":{
+   }
+ }
+}

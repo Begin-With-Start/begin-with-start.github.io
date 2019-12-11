@@ -1,0 +1,45 @@
+{
+  "4.7.0": {
+    "today": {
+      "url": "http://g.tbcdn.cn/ju/lua/3.9.708/today5.0.0.js",
+      "info": "首页坑位",
+      "sha256": "76fdc7fbf5f6951ebf0ac14d07265a0b963bc344a186132aa7b53de721ed3e79",
+      "predownload": true
+    },
+    "ppt": {
+      "url": "http://g.tbcdn.cn/ju/lua/3.9.726/ppt5.0.0.zip",
+      "info": "品牌团",
+      "sha256": "1f701217a269154ac162b709cfc5eb9aa45f8f928d9b01d8bfc9290263abcdec"
+    },
+    "lft": {
+      "url": "http://g.tbcdn.cn/ju/lua/3.9.680/lft5.0.0.js",
+      "time": "2016-04-12 16:25",
+      "info": "量贩团",
+      "sha256": "dc07eda0e972a99ebb148553c38c2cd5b32cbe1740e4cd69043b8ec4b64d4267"
+    },
+    "jmp": {
+      "url": "http://g.tbcdn.cn/ju/lua/3.9.679/jmp5.0.0.js",
+      "time": "2016-03-29 15:35",
+      "info": "聚名品",
+      "sha256": "89fed0ad4d088a5dfd4e2af58b49a0701e70f06344d5dbd5be43599ae71dba23"
+    },
+    "qqjx": {
+      "url": "http://g.tbcdn.cn/ju/lua/3.9.731/qqjx5.0.0.js",
+      "time": "2016-04-18 10:32",
+      "info": "全球精选",
+      "sha256": "88fff80f975fae03ad3bf0bc0aec9e3060974ac2bb7f76cafbc2ad78dc341d66"
+    },
+    "jujiazhuang": {
+      "url": "http://g.tbcdn.cn/ju/lua/3.9.679/jjz5.0.0.js",
+      "time": "2016-04-05 20:30",
+      "info": "聚家装",
+      "sha256": "35eaaead629c1a7f6d38638abb9e41fc86bf3f02bff116ef67c35e2385a54345"
+    },
+    "jianzhan": {
+      "url": "http://g.tbcdn.cn/ju/lua/3.9.679/jianzhan5.0.0.js",
+      "time": "2016-04-13 12:51",
+      "info": "建站",
+      "sha256": "087817a7b7a95517a2fcede4164dbf87cd7b8678751b94dadb03516633bb9c8b"
+    }
+  }
+}

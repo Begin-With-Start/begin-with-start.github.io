@@ -1,0 +1,576 @@
+{
+  "cards": [{
+    "topBarColor": "#FF0036",
+    "pageBackground": "https://gw.alicdn.com/tfs/TB1yBF6NirpK1RjSZFhXXXSdXXa-750-810.jpg",
+    "bizId": "mytmall_userinfo",
+    "componentInfo": [{
+      "name": "tmall_my_userinfo",
+      "id": "tmall_my_userinfo",
+      "type": "DinamicX",
+      "version": "18",
+      "url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1553344773972/tmall_my_userinfo.zip?spm=a1z3sm.12570833.0.0.3e03a1fcmWBX2K&file=tmall_my_userinfo.zip"
+    }],
+    "style": {
+      "margin": ["13rp", "0", "0", "0"]
+    },
+    "id": "mytmall_user_info_v3",
+    "type": "container-oneColumn",
+    "items": [{
+      "nick": "点击登录",
+      "tmallScoreActionClickParam": {
+        "args": {
+          "spm": "a1z60.11105170.user_info.tmall_score"
+        },
+        "eventId": "2101",
+        "arg1": "a1z60.11105170.user_info.tmall_score",
+        "page": "Page_MytmallFragment"
+      },
+      "clickParam": {
+        "args": {
+          "spm": "a1z60.11105170.user_info.1"
+        },
+        "eventId": "2101",
+        "arg1": "a1z60.11105170.user_info.1",
+        "page": "Page_MytmallFragment"
+      },
+      "level": "-1",
+      "topBarColor": "#FF0036",
+      "pageBackground": "https://gw.alicdn.com/tfs/TB1yBF6NirpK1RjSZFhXXXSdXXa-750-810.jpg",
+      "memberCenterActionClickParam": {
+        "args": {
+          "spm": "a1z60.11105170.user_info.member_ship"
+        },
+        "eventId": "2101",
+        "arg1": "a1z60.11105170.user_info.member_ship",
+        "page": "Page_MytmallFragment"
+      },
+      "action": "tmall://page.tm/login?spm=a1z60.11105170.user_info.1",
+      "avatar": "https://gw.alicdn.com/tfs/TB1RJM9jm_I8KJjy0FoXXaFnVXa-160-160.png",
+      "type": "tmall_my_userinfo",
+      "exposureParam": {
+        "args": {
+          "spm": "a1z60.11105170.user_info.1"
+        },
+        "eventId": "2201",
+        "arg1": "a1z60.11105170.user_info.1",
+        "page": "Page_MytmallFragment"
+      }
+    }]
+  }, {
+    "load": "mtop.tmall.tac.gateway.execute",
+    "loadParams": {
+      "msCodes": "2019031200",
+      "params": {}
+    },
+    "bizId": "mytmall_collection",
+    "componentInfo": [{
+      "name": "tmall_my_collection_item",
+      "id": "tmall_my_collection_item",
+      "type": "DinamicX",
+      "version": "4",
+      "url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1552478624447/tmall_my_collection_item.zip"
+    }],
+    "style": {
+      "margin": ["30rp", "0rp", "0rp", "0rp"]
+    },
+    "id": "mytmall_collection_v4",
+    "type": "container-fourColumn",
+    "items": [{
+      "clickParam": {
+        "args": {
+          "spm": "a1z60.11105170.user_collection_product201808.1"
+        },
+        "eventId": "2101",
+        "arg1": "a1z60.11105170.user_collection_product201808.1",
+        "page": "Page_MytmallFragment"
+      },
+      "number": "--",
+      "action": "tmall://page.tm/collectMain?collectType=1&spm=a1z60.11105170.user_collection_product201808.1#needLogin",
+      "title": "收藏夹",
+      "type": "tmall_my_collection_item",
+      "exposureParam": {
+        "args": {
+          "spm": "a1z60.11105170.user_collection_product201808.1"
+        },
+        "eventId": "2201",
+        "arg1": "a1z60.11105170.user_collection_product201808.1",
+        "page": "Page_MytmallFragment"
+      }
+    }, {
+      "clickParam": {
+        "args": {
+          "spm": "a1z60.11105170.user_collection_product201808.2"
+        },
+        "eventId": "2101",
+        "arg1": "a1z60.11105170.user_collection_product201808.2",
+        "page": "Page_MytmallFragment"
+      },
+      "number": "--",
+      "action": "tmall://page.tm/collectMain?collectType=2&spm=a1z60.11105170.user_collection_product201808.2#needLogin",
+      "title": "关注店铺",
+      "type": "tmall_my_collection_item",
+      "exposureParam": {
+        "args": {
+          "spm": "a1z60.11105170.user_collection_product201808.2"
+        },
+        "eventId": "2201",
+        "arg1": "a1z60.11105170.user_collection_product201808.2",
+        "page": "Page_MytmallFragment"
+      }
+    }, {
+      "clickParam": {
+        "args": {
+          "spm": "a1z60.11105170.user_collection_product201808.3"
+        },
+        "eventId": "2101",
+        "arg1": "a1z60.11105170.user_collection_product201808.3",
+        "page": "Page_MytmallFragment"
+      },
+      "number": "--",
+      "action": "tmall://page.tm/footprint?spm=a1z60.11105170.user_collection_product201808.3#needLogin",
+      "title": "足迹",
+      "type": "tmall_my_collection_item",
+      "exposureParam": {
+        "args": {
+          "spm": "a1z60.11105170.user_collection_product201808.3"
+        },
+        "eventId": "2201",
+        "arg1": "a1z60.11105170.user_collection_product201808.3",
+        "page": "Page_MytmallFragment"
+      }
+    }, {
+      "clickParam": {
+        "args": {
+          "spm": "a1z60.11105170.user_collection_product201808.4"
+        },
+        "eventId": "2101",
+        "arg1": "a1z60.11105170.user_collection_product201808.4",
+        "page": "Page_MytmallFragment"
+      },
+      "number": "--",
+      "action": "https://www.tmall.com/wow/coupon/act/tbcouponhome?wh_weex=true&wh_biz=tm&pos=4&acm=201808160.1003.2.3993621&scm=1003.2.201808160.OTHER_1533956421530_3993621&spm=a1z60.11105170.user_collection_product201808.4",
+      "title": "红包卡券",
+      "type": "tmall_my_collection_item",
+      "exposureParam": {
+        "args": {
+          "spm": "a1z60.11105170.user_collection_product201808.4"
+        },
+        "eventId": "2201",
+        "arg1": "a1z60.11105170.user_collection_product201808.4",
+        "page": "Page_MytmallFragment"
+      }
+    }]
+  }, {
+    "loadType": "2",
+    "nextCardMarginTop": "-233",
+    "bizId": "mytmall_vip88",
+    "isHeadLastCard": "true",
+    "componentInfo": [{
+      "name": "tmall_my_image",
+      "id": "tmall_my_image",
+      "type": "DinamicX",
+      "version": "3",
+      "url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1553149593342/tmall_my_image.zip"
+    }],
+    "style": {
+      "margin": ["28rp", "0rp", "0rp", "0rp"]
+    },
+    "id": "mytmall_vip88_v4",
+    "nextCardPullDownMaxDistance": "160",
+    "type": "container-oneColumn",
+    "items": [{
+      "imgUrl": "https://gw.alicdn.com/tfs/TB11_R.NhTpK1RjSZFKXXa2wXXa-702-262.png",
+      "clickParam": {
+        "args": {
+          "spm": "a1z60.11105170.88vip_big_card.1"
+        },
+        "eventId": "2101",
+        "arg1": "a1z60.11105170.88vip_big_card.1",
+        "page": "Page_MytmallFragment"
+      },
+      "width": "351",
+      "action": "https://market.m.taobao.com/apps/market/m-vip/member-intro.html?wh_weex=true&amp&wx_navbar_transparent=true&amp&scm=1003.2.201808140.OTHER_1534612452105_3973992&pos=1&amp&acm=201808140.1003.2.3973992&acm=201903221.1003.2.5563262&scm=1003.2.201903221.OTHER_1555203390819_5563262&amp&pos=1&spm=a1z60.11105170.88vip_big_card.1",
+      "style": {
+        "margin": ["0rp", "0rp", "0rp", "24rp"]
+      },
+      "type": "tmall_my_image",
+      "height": "131",
+      "exposureParam": {
+        "args": {
+          "spm": "a1z60.11105170.88vip_big_card.1"
+        },
+        "eventId": "2201",
+        "arg1": "a1z60.11105170.88vip_big_card.1",
+        "page": "Page_MytmallFragment"
+      }
+    }]
+  }, {
+    "loadType": "2",
+    "bizId": "mytmall_vip88_arc",
+    "componentInfo": [{
+      "name": "tmall_my_image",
+      "id": "tmall_my_image",
+      "type": "DinamicX",
+      "version": "3",
+      "url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1553149593342/tmall_my_image.zip"
+    }],
+    "id": "mytmall_arc",
+    "type": "container-oneColumn",
+    "items": [{
+      "imgUrl": "https://gw.alicdn.com/tfs/TB1HANiKwHqK1RjSZFEXXcGMXXa-750-54.png",
+      "clickParam": {
+        "args": {
+          "spm": "a1z60.11105170.88vip_big_card.1"
+        },
+        "eventId": "2101",
+        "arg1": "a1z60.11105170.88vip_big_card.1",
+        "page": "Page_MytmallFragment"
+      },
+      "width": "375",
+      "action": "https://market.m.taobao.com/apps/market/m-vip/member-intro.html?wh_weex=true&amp&wx_navbar_transparent=true&amp&scm=1003.2.201808140.OTHER_1534612452105_3973992&pos=1&amp&acm=201808140.1003.2.3973992&acm=201903221.1003.2.5563262&scm=1003.2.201903221.OTHER_1555203390819_5563262&amp&pos=1&spm=a1z60.11105170.88vip_big_card.1",
+      "type": "tmall_my_image",
+      "height": "27"
+    }]
+  }, {
+    "scriptId": "21",
+    "bizId": "mytmall_order",
+    "componentInfo": [{
+      "name": "tmall_my_title",
+      "id": "tmall_my_title",
+      "type": "DinamicX",
+      "version": "4",
+      "url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1552982414071/tmall_my_title.zip"
+    }, {
+      "name": "tmall_my_order_item",
+      "id": "tmall_my_order_item",
+      "type": "DinamicX",
+      "version": "10",
+      "url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1553233134511/tmall_my_order_item.zip"
+    }, {
+      "name": "tmall_my_image",
+      "id": "tmall_my_image",
+      "type": "DinamicX",
+      "version": "3",
+      "url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1553149593342/tmall_my_image.zip"
+    }],
+    "style": {
+      "background-color": "#F5F5F5"
+    },
+    "id": "mytmall_order_v3",
+    "type": "container-oneColumn",
+    "items": [{
+      "more": "查看全部",
+      "action": "tmall://page.tm/orderList?orderType=4#needLogin",
+      "style": {
+        "margin": ["40rp", "24rp", "0", "24rp"]
+      },
+      "title": "我的订单",
+      "type": "tmall_my_title"
+    }, {
+      "style": {
+        "padding": ["0rp", "48rp", "0", "48rp"],
+        "margin": ["10rp", "0", "0", "0"],
+        "background-image": "https://gw.alicdn.com/tfs/TB1xkxCMHvpK1RjSZFqXXcXUVXa-750-153.png"
+      },
+      "id": "mytmall_order_content_card",
+      "type": "container-fiveColumn",
+      "items": [{
+        "badge9Bg": "https://gw.alicdn.com/tfs/TB1XkCXMNnaK1RjSZFtXXbC2VXa-32-32.png",
+        "icon": "https://gw.alicdn.com/tfs/TB1CqqXNbvpK1RjSZFqXXcXUVXa-75-75.png",
+        "badge99Bg": "https://gw.alicdn.com/tfs/TB12F8NMG6qK1RjSZFmXXX0PFXa-47-32.png",
+        "bizId": "mytmall_order_to_be_paid",
+        "action": "tmall://page.tm/orderList?orderType=0#needLogin",
+        "label": "待付款",
+        "type": "tmall_my_order_item"
+      }, {
+        "badge9Bg": "https://gw.alicdn.com/tfs/TB1XkCXMNnaK1RjSZFtXXbC2VXa-32-32.png",
+        "icon": "https://gw.alicdn.com/tfs/TB1AjWfNkvoK1RjSZPfXXXPKFXa-75-75.png",
+        "badge99Bg": "https://gw.alicdn.com/tfs/TB12F8NMG6qK1RjSZFmXXX0PFXa-47-32.png",
+        "bizId": "mytmall_order_to_be_delivered",
+        "action": "tmall://page.tm/orderList?orderType=6#needLogin",
+        "label": "待发货",
+        "type": "tmall_my_order_item"
+      }, {
+        "badge9Bg": "https://gw.alicdn.com/tfs/TB1XkCXMNnaK1RjSZFtXXbC2VXa-32-32.png",
+        "icon": "https://gw.alicdn.com/tfs/TB1WMelNXzqK1RjSZFvXXcB7VXa-75-75.png",
+        "badge99Bg": "https://gw.alicdn.com/tfs/TB12F8NMG6qK1RjSZFmXXX0PFXa-47-32.png",
+        "bizId": "mytmall_order_to_be_received",
+        "action": "tmall://page.tm/orderList?orderType=1#needLogin",
+        "label": "待收货",
+        "type": "tmall_my_order_item"
+      }, {
+        "badge9Bg": "https://gw.alicdn.com/tfs/TB1XkCXMNnaK1RjSZFtXXbC2VXa-32-32.png",
+        "icon": "https://gw.alicdn.com/tfs/TB1zEqkNXzqK1RjSZFCXXbbxVXa-75-75.png",
+        "badge99Bg": "https://gw.alicdn.com/tfs/TB12F8NMG6qK1RjSZFmXXX0PFXa-47-32.png",
+        "bizId": "mytmall_order_to_be_rated",
+        "action": "tmall://page.tm/orderList?orderType=7#needLogin",
+        "label": "待评价",
+        "type": "tmall_my_order_item"
+      }, {
+        "badge9Bg": "https://gw.alicdn.com/tfs/TB1XkCXMNnaK1RjSZFtXXbC2VXa-32-32.png",
+        "icon": "https://gw.alicdn.com/tfs/TB1VymiNjTpK1RjSZKPXXa3UpXa-75-75.png",
+        "badge99Bg": "https://gw.alicdn.com/tfs/TB12F8NMG6qK1RjSZFmXXX0PFXa-47-32.png",
+        "bizId": "mytmall_order_to_be_refunded",
+        "action": "//refund.m.tmall.com/dispute/wirelessList.htm?pos=5&amp;acm=201712206.1003.2.2705777&amp;scm=1003.2.201712206.OTHER_1515901194579_2705777#needLogin",
+        "label": "退款/售后",
+        "type": "tmall_my_order_item"
+      }]
+    }, {
+      "imgUrl": "https://gw.alicdn.com/tfs/TB1369EMhjaK1RjSZKzXXXVwXXa-750-45.png",
+      "width": "375",
+      "type": "tmall_my_image",
+      "height": "22.5"
+    }],
+    "script": "importClass('android.os.Bundle');importClass('com.tmall.wireless.common.navigator.TMNav');function addTangramEvent(){registerTangramURLName('2','tangram://showlogistics','logisticsClick')}function showLogistics(index){var d=getEngineData('2');for(var i=0;i<d.__g(\"length\");i++){if(d[i]['bizId']=='mytmall_order'){var carditems=d[i].__g('items');for(var ii=0;ii<carditems.__g(\"length\");ii++){if(carditems[ii]['id']=='mytmall_order_content_card'){var items=carditems[ii].__g('items');for(var j=0,ll=items.__g(\"length\");j<ll;j++){var ps=items[j].__g('packageInfos');if(ps!=undefined){var bundle=new Bundle();bundle.__c(\"putString\",'data',JSON.__c(\"stringify\",ps));bundle.__c(\"putInt\",'currentPage',index);if(adapterVersion==1.0){TMNav.__c(\"from\",context).__c(\"withExtras\",bundle).__c(\"toUri\",'tmall://page.tm/LogisticDetailCard')}else{TangramBridge.__c(\"openUrlWithExtra\",'tmall://page.tm/LogisticDetailCard',bundle)}}}return}}}}}function logisticsClick(action,cellJson){var i=action.__g(\"index\");showLogistics(parseInt(i))}addTangramEvent();"
+  }, {
+    "componentInfo": [{
+      "name": "tmall_my_title",
+      "id": "tmall_my_title",
+      "type": "DinamicX",
+      "version": "4",
+      "url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1552982414071/tmall_my_title.zip"
+    }, {
+      "name": "tmall_my_tool_item",
+      "id": "tmall_my_tool_item",
+      "type": "DinamicX",
+      "version": "6",
+      "url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1552986455989/tmall_my_tool_item.zip"
+    }, {
+      "name": "tmall_my_image",
+      "id": "tmall_my_image",
+      "type": "DinamicX",
+      "version": "3",
+      "url": "https://ossgw.alicdn.com/rapid-oss-bucket/publish/1553149593342/tmall_my_image.zip"
+    }],
+    "style": {
+      "background-color": "#F5F5F5"
+    },
+    "id": "mytmall_tools_v4",
+    "type": "container-oneColumn",
+    "items": [{
+      "clickParam": {
+        "args": {
+          "spm": "a1z60.11105170.tools2.more"
+        },
+        "eventId": "2101",
+        "arg1": "a1z60.11105170.tools2.more",
+        "page": "Page_MytmallFragment"
+      },
+      "more": "查看全部",
+      "action": "tmall://page.tm/tangramcontainer?pageCode=my_tmall_tools&bundleVersion=1.0.0&title=%E6%88%91%E7%9A%84%E5%B7%A5%E5%85%B7&spm=a1z60.11105170.tools2.more",
+      "style": {
+        "margin": ["10rp", "24rp", "0rp", "24rp"]
+      },
+      "title": "我的工具",
+      "type": "tmall_my_title",
+      "exposureParam": {
+        "args": {
+          "spm": "a1z60.11105170.tools2.more"
+        },
+        "eventId": "2201",
+        "arg1": "a1z60.11105170.tools2.more",
+        "page": "Page_MytmallFragment"
+      }
+    }, {
+      "style": {
+        "padding": ["0rp", "24rp", "0rp", "24rp"],
+        "margin": ["10rp", "0", "0", "0"],
+        "vGap": "1rp",
+        "background-image": "https://gw.alicdn.com/tfs/TB17tocNb2pK1RjSZFsXXaNlXXa-750-640.png",
+        "hGap": "1rp"
+      },
+      "id": "my_tools_content_card",
+      "type": "container-twoColumn",
+      "items": [{
+        "clickParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.zichan2"
+          },
+          "eventId": "2101",
+          "arg1": "a1z60.11105170.tools2.zichan2",
+          "page": "Page_MytmallFragment"
+        },
+        "image": "https://gw.alicdn.com/tfs/TB1eIl5NgDqK1RjSZSyXXaxEVXa-200-200.jpg",
+        "icon": "https://gw.alicdn.com/tfs/TB1fnkAMq6qK1RjSZFmXXX0PFXa-120-120.png",
+        "action": "https://market.m.taobao.com/app/tmall-wireless/tmall-orders-rewards/pages/index?wh_weex=true&wx_navbar_transparent=true&pos=2&acm=201903073.1003.2.5526045&scm=1003.2.201903073.OTHER_1552827821598_5526045&spm=a1z60.11105170.tools2.zichan2",
+        "title": "下单有礼",
+        "type": "tmall_my_tool_item",
+        "desc": "下单赢红包好礼",
+        "exposureParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.zichan2"
+          },
+          "eventId": "2201",
+          "arg1": "a1z60.11105170.tools2.zichan2",
+          "page": "Page_MytmallFragment"
+        }
+      }, {
+        "clickParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.zichan3"
+          },
+          "eventId": "2101",
+          "arg1": "a1z60.11105170.tools2.zichan3",
+          "page": "Page_MytmallFragment"
+        },
+        "image": "https://gw.alicdn.com/tfs/TB1iJnrNbvpK1RjSZFqXXcXUVXa-200-200.jpg",
+        "icon": "https://gw.alicdn.com/tfs/TB18.oBMBLoK1RjSZFuXXXn0XXa-120-120.png",
+        "action": "https://market.m.taobao.com/app/tmall-wireless/share-pocket/pages/index?wh_weex=true&pos=3&wx_navbar_hidden=true&acm=201903073.1003.2.5526045&scm=1003.2.201903073.OTHER_1551930687227_5526045&spm=a1z60.11105170.tools2.zichan3",
+        "title": "邀请赚红包",
+        "type": "tmall_my_tool_item",
+        "desc": "赚5~100元",
+        "exposureParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.zichan3"
+          },
+          "eventId": "2201",
+          "arg1": "a1z60.11105170.tools2.zichan3",
+          "page": "Page_MytmallFragment"
+        }
+      }, {
+        "clickParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.shiyong1"
+          },
+          "eventId": "2101",
+          "arg1": "a1z60.11105170.tools2.shiyong1",
+          "page": "Page_MytmallFragment"
+        },
+        "image": "https://gw.alicdn.com/tfs/TB1_Cq7L3HqK1RjSZJnXXbNLpXa-200-200.jpg",
+        "icon": "https://gw.alicdn.com/tfs/TB1iv_bL4jaK1RjSZFAXXbdLFXa-120-120.png",
+        "action": "https://pages.tmall.com/wow/caigou/act/card-charge?pos=8&acm=201903073.1003.2.5526045&scm=1003.2.201903073.OTHER_1552002569981_5526045&spm=a1z60.11105170.tools2.shiyong1",
+        "title": "猫超卡",
+        "type": "tmall_my_tool_item",
+        "desc": "充值购物折上折",
+        "exposureParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.shiyong1"
+          },
+          "eventId": "2201",
+          "arg1": "a1z60.11105170.tools2.shiyong1",
+          "page": "Page_MytmallFragment"
+        }
+      }, {
+        "clickParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.zichan1"
+          },
+          "eventId": "2101",
+          "arg1": "a1z60.11105170.tools2.zichan1",
+          "page": "Page_MytmallFragment"
+        },
+        "image": "https://gw.alicdn.com/tfs/TB1JVKtNhjaK1RjSZKzXXXVwXXa-200-200.jpg",
+        "icon": "https://gw.alicdn.com/tfs/TB1i4CcNkvoK1RjSZFwXXciCFXa-120-120.png",
+        "action": "https://pages.tmall.com/wow/lafite/act/lqzxtm?wh_weex=true&wh_biz=tm&pos=1&acm=201903073.1003.2.5526045&scm=1003.2.201903073.OTHER_1555370215706_5526045&spm=a1z60.11105170.tools2.zichan1",
+        "title": "领券中心",
+        "type": "tmall_my_tool_item",
+        "desc": "发现优质好券",
+        "exposureParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.zichan1"
+          },
+          "eventId": "2201",
+          "arg1": "a1z60.11105170.tools2.zichan1",
+          "page": "Page_MytmallFragment"
+        }
+      }, {
+        "clickParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.zichan4"
+          },
+          "eventId": "2101",
+          "arg1": "a1z60.11105170.tools2.zichan4",
+          "page": "Page_MytmallFragment"
+        },
+        "image": "https://gw.alicdn.com/tfs/TB17JyYMSzqK1RjSZPcXXbTepXa-200-200.jpg",
+        "icon": "https://gw.alicdn.com/tfs/TB1XAPvMNTpK1RjSZFMXXbG_VXa-120-120.png",
+        "action": "https://market.m.taobao.com/apps/market/m-vip/index-tabbar.html?wh_weex=true&wx_navbar_transparent=true&pos=4&acm=201903073.1003.2.5526045&scm=1003.2.201903073.OTHER_1553916002150_5526045&spm=a1z60.11105170.tools2.zichan4",
+        "title": "会员中心",
+        "type": "tmall_my_tool_item",
+        "desc": "小积分兑大权益",
+        "exposureParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.zichan4"
+          },
+          "eventId": "2201",
+          "arg1": "a1z60.11105170.tools2.zichan4",
+          "page": "Page_MytmallFragment"
+        }
+      }, {
+        "clickParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.zichan5"
+          },
+          "eventId": "2101",
+          "arg1": "a1z60.11105170.tools2.zichan5",
+          "page": "Page_MytmallFragment"
+        },
+        "image": "https://gw.alicdn.com/tfs/TB1I40pNhjaK1RjSZFAXXbdLFXa-200-200.jpg",
+        "icon": "https://gw.alicdn.com/tfs/TB1OmRbNlLoK1RjSZFuXXXn0XXa-120-120.png",
+        "action": "https://www.tmall.com/wow/coupon/act/tbcouponhome?wh_weex=true&wh_biz=tm&pos=5&acm=201903073.1003.2.5526045&scm=1003.2.201903073.OTHER_1553990791312_5526045&spm=a1z60.11105170.tools2.zichan5",
+        "title": "红包卡券",
+        "type": "tmall_my_tool_item",
+        "desc": "个人资产管理",
+        "exposureParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.zichan5"
+          },
+          "eventId": "2201",
+          "arg1": "a1z60.11105170.tools2.zichan5",
+          "page": "Page_MytmallFragment"
+        }
+      }, {
+        "clickParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.zichan6"
+          },
+          "eventId": "2101",
+          "arg1": "a1z60.11105170.tools2.zichan6",
+          "page": "Page_MytmallFragment"
+        },
+        "image": "https://gw.alicdn.com/tfs/TB1ildKMhTpK1RjSZFKXXa2wXXa-200-200.png",
+        "icon": "https://img.alicdn.com/tfs/TB1QewgMHvpK1RjSZPiXXbmwXXa-120-120.png",
+        "action": "https://try.tmall.com/?pos=6&disableNav=YES&acm=201903073.1003.2.5526045&scm=1003.2.201903073.OTHER_1551696013762_5526045&spm=a1z60.11105170.tools2.zichan6",
+        "title": "U先试用",
+        "type": "tmall_my_tool_item",
+        "desc": "大牌试用1元起",
+        "exposureParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.zichan6"
+          },
+          "eventId": "2201",
+          "arg1": "a1z60.11105170.tools2.zichan6",
+          "page": "Page_MytmallFragment"
+        }
+      }, {
+        "clickParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.zichan7"
+          },
+          "eventId": "2101",
+          "arg1": "a1z60.11105170.tools2.zichan7",
+          "page": "Page_MytmallFragment"
+        },
+        "image": "https://gw.alicdn.com/tfs/TB1boRCMmzqK1RjSZPxXXc4tVXa-200-200.png",
+        "icon": "https://gw.alicdn.com/tfs/TB1mMhNMkPoK1RjSZKbXXX1IXXa-120-120.png",
+        "action": "https://invoice-ua.taobao.com/e-invoice/home.html?pos=7&acm=201903073.1003.2.5526045&scm=1003.2.201903073.OTHER_1552302376042_5526045&spm=a1z60.11105170.tools2.zichan7",
+        "title": "我的发票",
+        "type": "tmall_my_tool_item",
+        "desc": "发票管理",
+        "exposureParam": {
+          "args": {
+            "spm": "a1z60.11105170.tools2.zichan7"
+          },
+          "eventId": "2201",
+          "arg1": "a1z60.11105170.tools2.zichan7",
+          "page": "Page_MytmallFragment"
+        }
+      }]
+    }, {
+      "imgUrl": "https://gw.alicdn.com/tfs/TB1369EMhjaK1RjSZKzXXXVwXXa-750-45.png",
+      "width": "375",
+      "type": "tmall_my_image",
+      "height": "22.5"
+    }]
+  }]
+}

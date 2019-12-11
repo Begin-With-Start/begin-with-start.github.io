@@ -1,0 +1,13 @@
+{
+  "switch": {
+    "getPageFromCDN": "http://gjusp.alicdn.com/jucube/switch"
+  },
+  "boxsys": {
+    "JU_MAIN_ALL": "http://gjusp.alicdn.com/jucube/boxsys/JU_MAIN_ALL",
+    "TAOBAO_MAIN_ALL": "http://gjusp.alicdn.com/jucube/boxsys/TAOBAO_MAIN_ALL",
+    "TMALL_MAIN_ALL": "http://gjusp.alicdn.com/jucube/boxsys/TMALL_MAIN_ALL",
+    "JU_WAP_ALL": "http://gjusp.alicdn.com/jucube/boxsys/JU_WAP_ALL",
+    "JU_DISCOVERY_ALL": "http://gjusp.alicdn.com/jucube/boxsys/JU_DISCOVERY_ALL",
+    "JU_MAIN_ACTIVITY": "http://gjusp.alicdn.com/jucube/boxsys/JU_MAIN_ACTIVITY"
+  }
+}

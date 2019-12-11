@@ -1,0 +1,22 @@
+{
+  "tms_search_item":{
+    "name":"tms_search_item",
+    "version":"1560771582909",
+    "url":"https://ossgw.alicdn.com/rapid-oss-bucket/1560771582909/tms_search_item.zip"
+  },
+  "tms_search_waterfall_item":{
+    "name":"tms_search_waterfall_item",
+    "url":"https://ossgw.alicdn.com/rapid-oss-bucket/1560771538979/tms_search_waterfall_item.zip",
+    "version":"1560771538979"
+  },
+  "tms_coupon_list_template":{
+    "name":"tms_coupon_list_template",
+    "version":"1561360685166",
+    "url":"https://ossgw.alicdn.com/rapid-oss-bucket/1561360685166/tms_coupon_list_template.zip"
+  },
+  "tms_coupon_waterfall_template":{
+    "name":"tms_coupon_waterfall_template",
+    "version":"1560771664950",
+    "url":"https://ossgw.alicdn.com/rapid-oss-bucket/1560771664950/tms_coupon_waterfall_template.zip"
+  }
+}

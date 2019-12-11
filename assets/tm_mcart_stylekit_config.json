@@ -1,0 +1,476 @@
+{
+  "alicart_cid": {
+    "common_price": "common_price",
+    "shop_name": "shop_name",
+    "shop_btn_edit": "shop_btn_edit",
+    "shop_btn_promotion": "shop_btn_promotion",
+    "shop_btn_split_line": "shop_btn_split_line",
+    "shop_checkBox": "common_checkBox",
+    "shop_container": "shop_container",
+    "shop_icon_imageview": "shop_icon_imageview",
+    "shop_icon_b": "shop_icon_b",
+    "shop_icon_sm": "shop_icon_sm",
+    "shop_icon_hk": "shop_icon_hk",
+    "shop_icon_yy": "shop_icon_yy",
+    "shop_icon_textview": "shop_icon_textview",
+    "shop_bottomDivider": "shop_bottomDivider",
+    "cart_item_cbx": "common_checkBox",
+    "cart_item_cbx_select": "common_item_checkBox_select",
+    "cart_item_sku_need_select":"cart_item_sku_need_select",
+    "cart_item_sku_normal":"cart_item_sku_normal",
+    "relationGroup_next": "common_next",
+    "relationGroup_groupTextView": "relationGroup_groupTextView",
+    "relationGroup_nextTitle": "relationGroup_nextTitle",
+    "relationGroup_viewBottomLine": "relationGroup_viewBottomLine",
+    "relationGroup_promotionView": "relationGroup_promotionView",
+    "bundleBottom_buttonGatherOrder": "bundleBottom_buttonGatherOrder",
+    "bundleBottom_coudanView": "bundleBottom_coudanView",
+    "bundleBottom_next": "common_next",
+    "bundleBottom_textviewPromotion": "bundleBottom_textviewPromotion",
+    "bottomCharge_submit": "bottomCharge_submit",
+    "bottomCharge_share": "bottomCharge_share",
+    "bottomCharge_addFav": "bottomCharge_addFav",
+    "bottomCharge_delete": "bottomCharge_delete",
+    "bottomCharge_price": "bottomCharge_price",
+    "bottomCharge_checkBox": "common_checkBox",
+    "bottomCharge_discountMemo": "bottomCharge_discountMemo",
+    "bottomCharge_dynamic_promotion_title": "bottomCharge_dynamic_promotion_title",
+    "bottomCharge_dynamic_promotion_next_title": "bottomCharge_dynamic_promotion_next_title",
+    "bottomCharge_dynamic_promotion_next_title_arrow": "bottomCharge_dynamic_promotion_next_title_arrow",
+    "bottomCharge_dynamicPromotionSplitLine": "bottomCharge_dynamicPromotionSplitLine",
+    "bottomCharge_discount_detail_tip": "bottomCharge_discount_detail_tip",
+    "bottomCharge_discount_detail_icon": "bottomCharge_discount_detail_icon",
+    "bundleLine_bottom_line": "bundleLine_bottom_line",
+    "promotion_title_bar": "promotion_title_bar",
+    "promotion_promotion_title": "promotion_promotion_title",
+    "promotion_desc_title": "promotion_desc_title",
+    "promotion_close_btn": "promotion_close_btn",
+    "promotion_item_price": "promotion_item_price",
+    "promotion_item_currency_name": "promotion_item_currency_name",
+    "promotion_item_take_btn": "promotion_item_take_btn",
+    "promotion_rootLayout": "promotion_rootLayout",
+    "promotion_listView": "promotion_listView",
+    "cart_promotion_price_integer_part": "cart_promotion_price_integer_part",
+    "cart_promotion_price_decimal_part": "cart_promotion_price_decimal_part",
+    "promotion_item_unit": "promotion_item_unit",
+    "promotion_item_info": "promotion_item_info",
+    "promotion_item_time": "promotion_item_time",
+    "promotion_item_take_btn_normal": "promotion_item_take_btn_normal",
+    "promotion_item_take_btn_disable": "promotion_item_take_btn_disable",
+    "groupCharge_tipsIcon": "groupCharge_tipsIcon",
+    "group_charge_title": "group_charge_title",
+    "group_charge_close_btn": "group_charge_close_btn",
+    "group_charge_item_btn_charge": "group_charge_item_btn_charge",
+    "group_charge_item_total_quantity": "group_charge_item_total_quantity",
+    "group_charge_item_total_price": "group_charge_item_total_price",
+    "groupCharge_titleContainer": "groupCharge_titleContainer",
+    "groupCharge_itemRoot": "groupCharge_itemRoot",
+    "group_charge_item_group_title": "group_charge_item_group_title",
+    "cart_groupCharge_price_integer_part": "cart_groupCharge_price_integer_part",
+    "cart_groupCharge_price_decimal_part": "cart_groupCharge_price_decimal_part",
+    "cart_groupCharge_price_currency_part": "cart_groupCharge_price_currency_part",
+    "labelView_dividerLine3": "labelView_dividerLine3",
+    "cart_bottomCharge_price_currency_part": "cart_bottomCharge_price_currency_part",
+    "cart_bottomCharge_price_integer_part": "cart_bottomCharge_price_integer_part",
+    "cart_bottomCharge_price_decimal_part": "cart_bottomCharge_price_decimal_part",
+    "banner_layout": "banner_layout",
+    "banner_textBannerView": "banner_textBannerView",
+    "banner_bottomDivider": "banner_bottomDivider",
+    "banner_showDetailTip": "banner_showDetailTip",
+    "banner_cartActivityContent": "banner_cartActivityContent",
+    "banner_cartActivityContentArrow": "banner_cartActivityContentArrow",
+    "banner_bottomDividerView": "banner_bottomDividerView",
+    "invalid_button_similarity": "invalid_button_similarity",
+    "quantity_dialog_edit_text": "quantity_dialog_edit_text",
+    "quantity_dialog_ok_btn": "quantity_dialog_ok_btn"
+  },
+  "alicart_style": {
+    "groups": [
+      "ali_cart"
+    ],
+    "ali_cart": {
+      "common_style": {
+        "common_checkBox": {
+          "tltClrSlt": {
+            "tltNrlClr": "#b5b5b5",
+            "tltSltClr": "#ff0036",
+            "tltHltClr": "#b5b5b5"
+          }
+        },
+        "common_item_checkBox_select": {
+          "tltClrSlt": {
+            "tltNrlClr": "#b5b5b5",
+            "tltSltClr": "#ff0036",
+            "tltHltClr": "#ff0036"
+          }
+        },
+        "common_next": {
+          "textColor": "#FF0036"
+        },
+        "common_price": {
+          "textColor": "#FF0036",
+          "ems": "2",
+          "visible": "0",
+          "fontSize": "14"
+        }
+      },
+      "relationGroup_style": {
+        "relationGroup_groupTextView": {
+          "txtClr": "#666666"
+        },
+        "relationGroup_nextTitle": {
+          "txtClr": "#F6062D"
+        },
+        "relationGroup_viewBottomLine": {
+          "vsb": "0"
+        },
+        "relationGroup_promotionView": {
+          "pd": {
+            "pdLft": "37",
+            "pdRgt": "9"
+          }
+        }
+      },
+      "bundleBottom_style": {
+        "bundleBottom_textviewPromotion": {
+          "txtClr": "#666666",
+          "ftSz": "12"
+        },
+        "bundleBottom_buttonGatherOrder": {
+          "mgnSpc": {
+            "mgnRgt": "9"
+          }
+        },
+        "bundleBottom_coudanView": {
+          "pd": {
+            "pdLft": "37"
+          }
+        }
+      },
+      "shop_style": {
+        "shop_name": {
+          "ftSz": "14",
+          "txtClr": "#333333",
+          "numberOfLines": 1
+        },
+        "shop_btn_edit": {
+          "ftSz": "14",
+          "txtClr": "#999999"
+        },
+        "shop_btn_promotion": {
+          "ftSz": "14",
+          "txtClr": "#999999"
+        },
+        "shop_btn_split_line": {
+          "bgClr": "#1a000000"
+        },
+        "shop_icon_b": {
+          "image": "null"
+        },
+        "shop_icon_sm": {
+          "image": "tm_mcart_ic_tm_market"
+        },
+        "shop_icon_hk": {
+          "image": "tm_mcart_ic_tm_global"
+        },
+        "shop_icon_yy": {
+          "image": "tm_mcart_ic_tm_pharmacy"
+        },
+        "shop_icon_textview": {
+          "vsb": "0"
+        },
+        "shop_icon_imageview": {
+          "wt": "21",
+          "ht": "21"
+        },
+        "shop_bottomDivider": {
+          "vsb": "0"
+        }
+      },
+      "bottomCharge_style": {
+        "bottomCharge_submit": {
+          "bgSlr": {
+            "bgNrlClr": "#ffff0036",
+            "bgHltClr": "#b10000",
+            "bgDslClr": "#cccccc"
+          },
+          "cornerRadius": "18",
+          "ht": "36"
+        },
+        "bottomCharge_share": {
+          "bgSlr": {
+            "bgNrlClr": "#FFAD29",
+            "bgHltClr": "#E59B23",
+            "bgDslClr": "#D8D8D8"
+          }
+        },
+        "bottomCharge_addFav": {
+          "bgSlr": {
+            "bgNrlClr": "#FFAD29",
+            "bgHltClr": "#E59B23",
+            "bgDslClr": "#D8D8D8"
+          },
+          "cornerRadius": "18",
+          "ht": "36",
+          "txt": "@String/tm_mcart_str_add_to_fav"
+        },
+        "bottomCharge_delete": {
+          "bgSlr": {
+            "bgNrlClr": "#ffff0036",
+            "bgHltClr": "#b10000",
+            "bgDslClr": "#cccccc"
+          },
+          "cornerRadius": "18",
+          "ht": "36"
+        },
+        "bottomCharge_price": {
+          "txtClr": "#ff0036"
+        },
+        "cart_bottomCharge_price_currency_part": {
+          "ftSz": "12",
+          "fontWeight": "401"
+        },
+        "cart_bottomCharge_price_integer_part": {
+          "ftSz": "16",
+          "fontWeight": "401"
+        },
+        "cart_bottomCharge_price_decimal_part": {
+          "ftSz": "16",
+          "fontWeight": "401"
+        },
+        "bottomCharge_discountMemo": {
+          "txtClr": "#333333"
+        },
+        "bottomCharge_discount_detail_tip": {
+          "txtClr": "#FF0036"
+        },
+        "bottomCharge_discount_detail_icon": {
+          "bgImg": "@drawable/ack_icon_discount_detail_triangle"
+        },
+        "bottomCharge_dynamic_promotion_title": {
+          "txtClr": "#ff0036",
+          "ftSz": "12"
+        },
+        "bottomCharge_dynamic_promotion_next_title": {
+          "txtClr": "#FF0036",
+          "ftSz": "12"
+        },
+        "bottomCharge_dynamic_promotion_next_title_arrow": {
+          "txtClr": "#ff0036",
+          "ftSz": "12"
+        },
+        "bottomCharge_dynamicPromotionSplitLine": {
+          "bgClr": "#e7e7e7"
+        }
+      },
+      "bundleLine_style" : {
+        "bundleLine_bottom_line": {
+          "ht": "10",
+          "bgClr": "#F5F5F5"
+        }
+      },
+      "promotionLayer_style": {
+        "promotion_title_bar": {
+          "bgClr": "#ffffff"
+        },
+        "promotion_promotion_title": {
+          "vsb": "0"
+        },
+        "promotion_desc_title": {
+          "txtAlg": "5",
+          "txt": "@String/tm_mcart_str_coupon",
+          "ftSz": "16",
+          "txtClr": "#051b28"
+        },
+        "promotion_close_btn": {
+          "txt": "@String/tm_mcart_str_finish",
+          "ftSz": "16",
+          "ht": "48",
+          "bgSlr": {
+            "bgNrlClr": "#FF0036",
+            "bgDslClr": "#cccccc",
+            "bgHltClr": "#B10000"
+          }
+        },
+        "promotion_listView": {
+          "bgClr": "#ffffff"
+        },
+        "cart_promotion_price_integer_part": {
+          "ftSz": "18"
+        },
+        "cart_promotion_price_decimal_part": {
+          "ftSz": "14"
+        },
+        "promotion_item_unit": {
+          "txtClr": "#F6062D",
+          "mgnSpc": {
+            "mgnLft": "3"
+          }
+        },
+        "promotion_item_info": {
+          "txtClr": "#051b28",
+          "ftSz": "12",
+          "mgnSpc": {
+            "mgnBtm": "6",
+            "mgnLft": "16"
+          }
+        },
+        "promotion_item_time": {
+          "ftSz": "10",
+          "txtClr": "#999999"
+        },
+        "promotion_item_take_btn_normal": {
+          "txt": "领取",
+          "wt": "60",
+          "ht": "27",
+          "ftSz": "12",
+          "cnrRds": "4",
+          "bgClr": "#ffffff",
+          "bdrNlClr": "#ff0036",
+          "bdrNlWt": "0.5",
+          "txtClr": "#F6062D"
+        },
+        "promotion_item_take_btn_disable": {
+          "txt": "已领取",
+          "wt": "60",
+          "ht": "27",
+          "ftSz": "12",
+          "cnrRds": "4",
+          "bgClr": "#eeeeee",
+          "bdrNlClr": "#b5b5b5",
+          "bdrNlWt": "0.5",
+          "txtClr": "#999999"
+        }
+      },
+      "groupCharge_style": {
+        "groupCharge_tipsIcon": {
+          "vsb": "1"
+        },
+        "group_charge_title": {
+          "ftSz": "14",
+          "txtClr": "#f5a623"
+        },
+        "group_charge_close_btn": {
+          "txt": "@String/tm_mcart_str_finish",
+          "ftSz": "16",
+          "ht": "48",
+          "bgSlr": {
+            "bgNrlClr": "#FF0036",
+            "bgDslClr": "#cccccc",
+            "bgHltClr": "#B10000"
+          }
+        },
+        "group_charge_item_btn_charge": {
+          "wt": "60",
+          "ht": "27",
+          "ftSz": "12",
+          "cnrRds": "4",
+          "bgClr": "#ffffff",
+          "bdrNlClr": "#ff0036",
+          "bdrNlWt": "0.5",
+          "txtClr": "#F6062D",
+          "mgnSpc": {
+            "mgnRgt": "9"
+          }
+        },
+        "group_charge_item_total_quantity": {
+          "txtClr": "#999999",
+          "ftSz": "14",
+          "mgnSpc": {
+            "mgnTp": "9",
+            "mgnLft": "9"
+          }
+        },
+        "group_charge_item_group_title": {
+          "mgnSpc": {
+            "mgnLft": "9"
+          }
+        },
+        "group_charge_item_total_price": {
+          "txtClr": "#F6062D"
+        },
+        "groupCharge_titleContainer": {
+          "bgClr": "#ffffff"
+        },
+        "groupCharge_itemRoot": {
+          "pd": {
+            "pdTp": "9",
+            "pdBtm": "9"
+          }
+        },
+        "cart_groupCharge_price_integer_part": {
+          "ftSz": "18"
+        },
+        "cart_groupCharge_price_decimal_part": {
+          "ftSz": "14"
+        },
+        "cart_groupCharge_price_currency_part": {
+          "ftSz": "18"
+        }
+      },
+      "labelView_style": {
+        "labelView_dividerLine3": {
+          "ht": "9"
+        }
+      },
+      "banner_style": {
+        "banner_layout": {
+          "mgnSpc": {
+            "mgnBtm": "0"
+          }
+        },
+        "banner_textBannerView": {
+          "bgClr": "#FFFBF0"
+        },
+        "banner_bottomDivider": {
+          "vsb": "0"
+        },
+        "banner_showDetailTip": {
+          "vsb": "0"
+        },
+        "banner_cartActivityContent": {
+          "txtClr": "#555555",
+          "ftSz": "13",
+          "HltClr": "#FF1111"
+        },
+        "banner_cartActivityContentArrow": {
+          "txtClr": "#555555",
+          "vsb": "1"
+        },
+        "banner_bottomDividerView": {
+          "ht": "0",
+          "vsb": "0"
+        }
+      },
+      "item_style":{
+        "cart_item_sku_need_select":{
+          "ftSz":"12",
+          "txtClr":"#F5AC47",
+          "nmOfLns":"1"
+        },
+        "cart_item_sku_normal":{
+          "ftSz":"12",
+          "txtClr":"#999999",
+          "nmOfLns":"3"
+        },
+        "common_price_decimal_part": {
+          "ftSz": "12"
+        }
+      },
+      "invalid_style": {
+        "invalid_button_similarity": {
+          "txtClr":"#FF0036",
+          "bgImg":"@drawable/tm_mcart_drawable_find_similar"
+        }
+      },
+      "quantity_dialog_style": {
+        "quantity_dialog_edit_text": {
+          "txtClr":"#FF0036"
+        },
+        "quantity_dialog_ok_btn": {
+          "bgClr":"#FF0036"
+        }
+      }
+    }
+  }
+}

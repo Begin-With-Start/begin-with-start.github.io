@@ -1,0 +1,76 @@
+{"iconSelectedColor": "#FF0036",
+  "textNormalColor": "#999999",
+  "bgColor": "#FFFFFF",
+  "iconNormalColor": "#CCCCCC",
+  "textSelectedColor": "#FF0036",
+  "itemsByTag": [
+    {
+    "iconfontNormal": "e655",
+    "forceLogin": "false",
+    "iconfontSelected": "e655",
+    "tag": "home",
+    "title": "精选",
+    "intent": "tmall://page.tm/mainTabHomePage",
+    "jumpUrl": "",
+    "coverImageType": "0",
+    "fragmentClassName": "com.tmall.wireless.homepage.activity.TMHomePageFragment"
+  },
+    {
+    "iconfontNormal": "e656",
+    "forceLogin": "false",
+    "iconfontSelected": "e656",
+    "tag": "brandingHome",
+    "title": "种草猫",
+    "intent": "tmall://page.tm/brandingHome?isMainTab=true",
+    "jumpUrl": "",
+    "coverImageType": "0",
+    "fragmentClassName": "com.tmall.wireless.brandinghome.activity.TMBHIndexFragment"
+  },
+    {
+    "iconfontNormal": "e659",
+    "forceLogin": "false",
+    "iconfontSelected": "e659",
+    "tag": "vipPlusHome",
+    "title": "会员",
+    "intent": "tmall://page.tm/TMVipPlus",
+    "jumpUrl": "",
+    "coverImageType": "0",
+    "fragmentClassName": "com.tmall.wireless.memberPlus.MemberPlusFragment"
+  }, {
+    "iconfontNormal": "e657",
+    "forceLogin": "true",
+    "iconfontSelected": "e657",
+    "tag": "cart",
+    "title": "购物车",
+    "intent": "tmall://page.tm/cart#needLogin",
+    "jumpUrl": "",
+    "coverImageType": "0",
+    "fragmentClassName": "com.tmall.wireless.mcartv2.TMCartFragment"
+  }, {
+    "iconfontNormal": "e658",
+    "forceLogin": "false",
+    "iconfontSelected": "e658",
+    "tag": "myTmallNew",
+    "title": "我",
+    "intent": "tmall://page.tm/mytmallFragment?isMainTab=true",
+    "jumpUrl": "",
+    "coverImageType": "0",
+    "fragmentClassName": "com.tmall.wireless.mytmall.ui.TMMytmallFragment"
+  }],
+  "baseLayout": [{
+    "module": "tab.0",
+    "tag": "home"
+  }, {
+    "module": "tab.1",
+    "tag": "brandingHome"
+  },{
+    "module": "tab.2",
+    "tag": "vipPlusHome"
+  }, {
+    "module": "tab.3",
+    "tag": "cart"
+  }, {
+    "module": "tab.4",
+    "tag": "myTmallNew"
+  }]
+}
